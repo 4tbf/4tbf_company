@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      Home page
+      Home page DEV
       <main className={styles.main} />
     </>
   );
