@@ -1,0 +1,39 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+
+
+
+
+
+
+.heroSection {
+    background-color: $black;
+    padding: 140px 0 60px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 680px;
+    .heroRow {
+        @include RowItems(30);
+        :global {
+            .col_ {
+                &:first-child {
+                    flex: 0 0 60%
+                }
+                
+            }
+        }
+    }
+    .subTitle {
+        @include fontRem(16, 400, 22);
+        max-width: 313px;
+        width: 100%;
+        color: $white;
+        margin-bottom: 7px;
+    }
+    h1 {
+        font-family: "MADE";
+        color: $white;
+        @include fontRem(92, 400, 121);  
+    }
+}

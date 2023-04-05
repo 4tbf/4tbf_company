@@ -1,0 +1,104 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+
+    .headerWrapper {
+        @include flex-center-vert;
+        justify-content: space-between;
+        nav {
+            @include flex-center-vert;
+            gap: 32px;
+            .headerLinks {
+                cursor: pointer;
+                position: relative;
+                @include flex-center-vert;
+                padding: 30px 8px;
+                z-index: 2;
+                color: $white;
+                text-decoration: none;
+                @include fontRem(16, 400, 22);
+                &::before {
+                    content: "";
+                    @include absoluteCenter(horizontal);
+                    top: -100%;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $white;
+                    transition: 0.3s;
+                    z-index: 1;
+                }
+                span {
+                    z-index: 2;
+                }
+                .headerLanguage {
+                    list-style-type: none;
+                    padding: 0;
+                    z-index: 2;
+                    cursor: pointer;
+                    .languageControl {
+                        color: $white;
+                        @include fontRem(16, 400, 22);
+                        @include flex-center-vert;
+                        gap: 8px;
+                    }
+                }
+                &:hover {
+                    color: $black;
+                    &::before {
+                        top: 0;
+                    }
+                    .headerLanguage {
+                        z-index: 2;
+                        .languageControl {
+                            color: $black;
+                            svg {
+                                path {
+                                    stroke: $black;
+                                }
+                            }
+                        }
+                    }
+                    .dropdownWrapper {
+                        > ul {
+                            visibility: visible;
+                            opacity: 1;
+                            top: calc(100% + 30px);
+                        }
+                    }
+                }
+            }
+        }
+        .dropdownWrapper {
+            position: relative;
+
+            > ul {
+                min-width: 120px;
+                position: absolute;
+                list-style-type: none;
+                padding: 0;
+                top: calc(100% + 60px);
+                left: -8px;
+                background-color: $white;
+                box-shadow: 0 3px 6px rgba($black, 0.16);
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+                button {
+                    @include buttonNulled;
+                    padding: 8px 12px;
+                    width: 100%;
+                    text-align: left;
+                    &:hover {
+                        background-color: rgba($black, 0.05);
+                    }
+                }
+            }
+        }
+    }
+}
