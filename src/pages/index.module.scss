@@ -1,12 +1,6 @@
 @import "/src/styles/mixins";
 @import "/src/styles/pallete";
 
-
-
-
-
-
-
 .heroSection {
     background-color: $black;
     padding: 140px 0 60px;
@@ -18,9 +12,8 @@
         :global {
             .col_ {
                 &:first-child {
-                    flex: 0 0 60%
+                    flex: 0 0 60%;
                 }
-                
             }
         }
     }
@@ -34,6 +27,109 @@
     h1 {
         font-family: "MADE";
         color: $white;
-        @include fontRem(92, 400, 121);  
+        @include fontRem(92, 400, 121);
+    }
+}
+
+.scrolledSection {
+    width: 100%;
+    overflow: hidden;
+    padding: 23px 28px;
+    border-bottom: 2px solid $black;
+    .scroledItems {
+        @include flex-center-vert;
+        overflow: auto hidden;
+        flex-wrap: nowrap;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        .scroledItem {
+            position: relative;
+            &:not(:last-child) {
+                padding-right: 41px;
+                margin-right: 41px;
+                &::after {
+                    content: "";
+                    @include absoluteCenter(vertical);
+                    right: 0;
+                    transform: translate(50%, -50%);
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 13C8.05634 11.7183 11.9014 8.42253 13 0C13.9155 8.42253 18.3099 11.7183 26 13C18.3099 14.2817 14.2817 18.3099 13 26C11.7183 18.3099 8.05634 14.2817 0 13Z' fill='%233D65F7'/%3E%3C/svg%3E");
+                    width: 26px;
+                    height: 26px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+            p {
+                @include fontRem(28, 400, 37);
+                font-family: "MADE";
+                white-space: nowrap;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.ourServices {
+    padding-top: 150px;
+    margin-bottom: 110px;
+    .servicesRow {
+        @include flexRow(8, 3);
+        row-gap: 8px;
+        .mainItem {
+            position: relative;
+            transform: translateX(-40px);
+            .mainTitle {
+                font-family: "MADE";
+                @include fontRem(48, 400, 68);
+                margin-bottom: 39px;
+            }
+            .arrowLink {
+                font-family: "MADE";
+                @include flex-center-vert;
+                gap: 8px;
+                @include fontRem(16, 400, 21);
+                transition: 0.3s;
+                color: $blue;
+                text-decoration: none;
+                &:hover {
+                    gap: 18px;
+                }
+                &:active {
+                    gap: 8px;
+                    font-size: 14px !important;
+                }
+            }
+        }
+        .clasicItem {
+            border: 1px solid $black;
+            padding: 18px 31px 24px 31px;
+            transition: 0.3s;
+            display: block;
+            text-decoration: none;
+            .serviceTitle {
+                font-family: "MADE";
+
+                @include fontRem(24, 400, 32);
+                max-width: 290px;
+                margin-bottom: 12px;
+                color: $black;
+            }
+            .serviceDescr {
+                font-family: inherit;
+                @include fontRem(16, 400, 22);
+                color: $black;
+            }
+            &:hover {
+                border-color: $blue;
+                background-color: $blue;
+                * {
+                    color: $white;
+                }
+            }
+        }
     }
 }
