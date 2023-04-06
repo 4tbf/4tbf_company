@@ -1,0 +1,31 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.whywe {
+    background-color: $white;
+    padding: 130px;
+    .whyWeRow {
+        @include RowItems(80);
+        :global {
+            .col_ {
+                &:first-child {
+                    flex: 0 1 30%;
+                }
+            }
+        }
+        .whyWeLeft {
+            h2 {
+                font-family: "MADE";
+                @include fontRem(48, 400, 63);
+                margin-bottom: 54px;
+            }
+        }
+        .whyweRight {
+            p {
+                @include fontRem(18, 400, 25);
+                width: 100%;
+                max-width: 864px;
+            }
+        }
+    }
+}

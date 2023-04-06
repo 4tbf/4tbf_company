@@ -1,0 +1,19 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.arrowLink {
+    font-family: "MADE";
+    @include flex-center-vert;
+    gap: 8px;
+    @include fontRem(16, 400, 21);
+    transition: 0.3s;
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+        gap: 18px;
+    }
+    &:active {
+        gap: 8px;
+        font-size: 14px !important;
+    }
+}
