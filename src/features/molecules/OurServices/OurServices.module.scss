@@ -1,0 +1,63 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.ourServices {
+    padding-top: 150px;
+    margin-bottom: 110px;
+    .servicesRow {
+        @include flexRow(8, 3);
+        row-gap: 8px;
+        .mainItem {
+            position: relative;
+            transform: translateX(-40px);
+            .mainTitle {
+                font-family: "MADE";
+                @include fontRem(48, 400, 68);
+                margin-bottom: 39px;
+            }
+            .arrowLink {
+                font-family: "MADE";
+                @include flex-center-vert;
+                gap: 8px;
+                @include fontRem(16, 400, 21);
+                transition: 0.3s;
+                color: $blue;
+                text-decoration: none;
+                &:hover {
+                    gap: 18px;
+                }
+                &:active {
+                    gap: 8px;
+                    font-size: 14px !important;
+                }
+            }
+        }
+        .clasicItem {
+            border: 1px solid $black;
+            padding: 18px 31px 24px 31px;
+            transition: 0.3s;
+            display: block;
+            text-decoration: none;
+            .serviceTitle {
+                font-family: "MADE";
+
+                @include fontRem(24, 400, 32);
+                max-width: 290px;
+                margin-bottom: 12px;
+                color: $black;
+            }
+            .serviceDescr {
+                font-family: inherit;
+                @include fontRem(16, 400, 22);
+                color: $black;
+            }
+            &:hover {
+                border-color: $blue;
+                background-color: $blue;
+                * {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

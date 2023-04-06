@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import ArrowIcon from '../svgs/ArrowIcon';
+import ArrowIcon from '../../svgs/ArrowIcon';
 
 const Header = () => {
   return (
