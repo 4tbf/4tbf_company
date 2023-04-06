@@ -1,3 +1,9 @@
 {
-    "exampleMessage": "привет" 
+    "main.breadCrumb.quality": "Quality assurance",
+    "main.breadCrumb.safety": "Safety", 
+    "main.breadCrumb.modernity": "Modernity", 
+    "main.breadCrumb.rapiditly": "Rapidity", 
+    "main.breadCrumb.adaptability": "Adaptability", 
+    "main.breadCrumb.uniqueness": "Uniqueness", 
+    "main.breadCrumb.prices": "Affordable prices"
 }
