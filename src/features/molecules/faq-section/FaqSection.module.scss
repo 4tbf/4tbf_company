@@ -1,0 +1,21 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.faqSection {
+    padding: 76px 0;
+    color: $white;
+    background-color: $black;
+    .faqTitle {
+        @include fontRem(48, 400, 63);
+        font-family: "MADE";
+        margin-bottom: 24px;
+    }
+    .faqDescr {
+        @include fontRem(14, 400, 19);
+        max-width: 520px;
+    }
+    .faqList {
+        margin-top: 56px;
+      
+    }
+}

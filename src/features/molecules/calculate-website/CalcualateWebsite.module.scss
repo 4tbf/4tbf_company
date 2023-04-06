@@ -1,0 +1,53 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+
+.calcuateWEbsite {
+    margin-top: 110px;
+    background-color: $black;
+    padding: 120px 0;
+    color: $white;
+    .calculateBigTitle {
+        position: relative;
+        @include fontRem(56, 400, 74);
+        display: inline-block;
+        font-family: 'MADE';
+        margin-bottom: 24px;
+        .starIcon {
+            position: absolute;
+            top: -100%;
+            right: -60px;
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+    .calculateDescr {
+        @include fontRem(18, 400, 25);
+        max-width: 864px;
+    }
+    .calculateItems {
+        margin-top: 72px;
+        .calculateRow {
+            @include flexRow(26, 2);
+        }
+        .calculateItem {
+            display: block;
+            padding: 48px 32px;
+            border: 1px solid $white;
+            text-decoration: none;
+            color: $white;
+            .calcualteTitle {
+                font-family: "MADE";
+                @include fontRem(40, 400, 53);
+                margin-bottom: 16px;
+            }
+            .calcuatetext {
+                @include fontRem(18, 400, 25);
+                margin-bottom: 32px;
+            }
+        }
+    }
+}

@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './OurServices.module.scss';
-import LongArrowIcon from '../../../components/svgs/LongArrowIcon';
 import Text from '../../atoms/text';
+import ArrowButton from '../../../components/multiusable/arrow-button/ArrowButton';
 
 const OurServices: React.FC = () => {
   return (
@@ -15,9 +15,7 @@ const OurServices: React.FC = () => {
               <Text className={styles.mainTitle} as="h2">
                 OUR SERVICES
               </Text>
-              <Link href="#" className={styles.arrowLink}>
-                Show more <LongArrowIcon />
-              </Link>
+              <ArrowButton href="#" text="Show more" />
             </div>
           </div>
           <div className="col_">
