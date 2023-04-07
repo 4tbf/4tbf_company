@@ -6,7 +6,7 @@ const useCollapse = () => {
   const handleToggle = () => {
     setOpen((prev) => !prev);
   };
-  const contentRef = useRef();
+  const contentRef: any = useRef();
   return {
     open,
     contentRef,
