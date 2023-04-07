@@ -144,6 +144,7 @@
     "eqeqeq": ["error", "smart"],
     "no-plusplus": 0,
     "no-duplicate-imports": 0,
+    "react/no-children-prop": 0,
     "react/function-component-definition": [
       2,
       {
