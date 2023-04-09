@@ -1,0 +1,18 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.whoWe {
+    padding-top: 120px;
+    background-color: $black;
+    .whoWeTitle {
+        @include fontRem(64, 400, 84);
+        color: $white;
+        font-family: "MADE";
+    }
+    .whoWeDescr {
+        @include fontRem(16, 400, 22);
+        color: $white;
+        max-width: 840px;
+        margin: 32px 0;
+    }
+}

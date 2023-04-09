@@ -1,0 +1,42 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.button {
+    padding: 12px 16px;
+    font-family: "MADE";
+    background-color: transparent;
+    @include fontRem(14, 400, 18);
+    @include flex-center;
+    transition: 0.3s;
+    &:active,
+    &:focus {
+        background-color: transparent;
+    }
+    &.light {
+        border: 1px solid $white;
+        color: $white;
+        &:hover {
+            color: $black;
+            border-color: $white;
+            background-color: $white;
+        }
+        &:disabled {
+            background-color: transparent;
+            border-color: rgba(255, 255, 255, 0.32);
+            color: rgba(255, 255, 255, 0.32);
+        }
+    }
+    &.dark {
+        border: 1px solid $black;
+        color: $black;
+        &:hover {
+            color: $white;
+            background-color: $black;
+        }
+        &:disabled {
+            background-color: transparent;
+            border-color: rgba(18, 24, 31, 0.56);
+            color: rgba(18, 24, 31, 0.56);
+        }
+    }
+}

@@ -73,6 +73,12 @@
                         }
                     }
                 }
+                &.currentPage {
+                    color: $black;
+                    &::before {
+                        top: 0;
+                    }
+                }
             }
         }
         .dropdownWrapper {

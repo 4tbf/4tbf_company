@@ -1,0 +1,49 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.progess {
+    background-image: url('/images/progress_bg.png');
+    margin-top: 120px;
+    background-size: contain;
+    height: 327px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+}
+.barWrapper {
+    position: relative;
+    border-bottom: 5px solid $white;
+    .barRow {
+        @include flexRow(50, 5);
+        .barItem {
+            position: relative;
+            padding-bottom: 23px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 18px;
+                height: 18px;
+                min-width: 18px;
+                min-height: 18px;
+                max-width: 18px;
+                max-height: 18px;
+                border-radius: 50%;
+                background-color: $white;
+                transform: translateY(calc(-50% + 2.5px));
+            }
+            .barTitle {
+                @include fontRem(16, 400, 21);
+                font-family: "MADE";
+                color: $white;
+            }
+            .barText {
+                margin-top: 12px;
+                color: $white;
+                @include fontRem(16, 400, 22);
+            }
+        }
+    }
+}

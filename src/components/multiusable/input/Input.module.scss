@@ -1,0 +1,24 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.inputWrapper {
+    label {
+        display: inline-block;
+        margin-bottom: 8px;
+        @include fontRem(16, 400, 22);
+        color: $white;
+    }
+    input, textarea {
+        padding: 13px 12px;
+        background-color: transparent;
+        display: block;
+        @include fontRem(16, 400, 22);
+        color: $white;
+        border: 1px solid $white;
+        width: 100%;
+    }
+    textarea {
+        resize: vertical;
+        min-height: 170px;
+    }
+}

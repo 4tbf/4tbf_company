@@ -1,3 +1,6 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
 html,
 body {
   height: 100%;
@@ -100,4 +103,7 @@ legend {
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+.about-page, .contact-page {
+  background-color: $black;
 }

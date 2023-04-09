@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './Header.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
 
@@ -9,24 +10,24 @@ const Header = () => {
         <div className={styles.headerWrapper}>
           <div className={styles.logo} />
           <nav>
-            <a className={styles.headerLinks} href="#">
+            <Link className={styles.headerLinks} href="#">
               <span> Why We?</span>
-            </a>
-            <a className={styles.headerLinks} href="#">
+            </Link>
+            <Link className={styles.headerLinks} href="#">
               <span> Services</span>
-            </a>
-            <a className={styles.headerLinks} href="#">
+            </Link>
+            <Link className={styles.headerLinks} href="#">
               <span> Case Studies</span>
-            </a>
-            <a className={styles.headerLinks} href="#">
+            </Link>
+            <Link className={styles.headerLinks} href="#">
               <span> Cost Calculator</span>
-            </a>
-            <a className={styles.headerLinks} href="#">
+            </Link>
+            <Link className={styles.headerLinks} href="/about">
               <span> About Us</span>
-            </a>
-            <a className={styles.headerLinks} href="#">
+            </Link>
+            <Link className={styles.headerLinks} href="/contact-us">
               <span> Contact Us</span>
-            </a>
+            </Link>
             <div className={styles.headerLinks}>
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
