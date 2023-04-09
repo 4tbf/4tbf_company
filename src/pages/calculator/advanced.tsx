@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Header from '../../components/dumb/header/Header';
+import AdvancedCalculator from '../../features/organisms/AdvancedCalculator';
 
-export default function AdvancedCalculator() {
+export default function CalculatorAdvanced() {
   return (
     <>
       <Head>
@@ -10,7 +11,7 @@ export default function AdvancedCalculator() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>asfaf</main>
+      <AdvancedCalculator />
     </>
   );
 }

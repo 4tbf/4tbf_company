@@ -55,7 +55,7 @@ const CalcualateWebsite = () => {
                   Lorem ipsum dolor sit amet consectetur. Non nunc habitant nisl id ut leo et
                   commodo consectetur. Suspendisse semper tellus accumsan nec.
                 </Text>
-                <ArrowButton href="#" text="Calculate" />
+                <ArrowButton href="/calculator/basic" text="Calculate" />
               </motion.div>
             </div>
             <div className="col_">
@@ -73,7 +73,7 @@ const CalcualateWebsite = () => {
                   Lorem ipsum dolor sit amet consectetur. Non nunc habitant nisl id ut leo et
                   commodo consectetur. Suspendisse semper tellus accumsan nec.
                 </Text>
-                <ArrowButton href="#" text="Calculate" />
+                <ArrowButton href="/calculator/advanced" text="Calculate" />
               </motion.div>
             </div>
           </div>
