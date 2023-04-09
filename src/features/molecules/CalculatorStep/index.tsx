@@ -1,10 +1,12 @@
 import React from 'react';
+import { FormikProps } from 'formik';
 import { IStepWizardCommon } from '../../../constants_types/global.types';
 import styles from './CalculatorStep.module.scss';
 import { TCalculatorCurrentElement } from '../../../constants_types/calculator.types';
 
 interface ICalculatorStep extends IStepWizardCommon {
   currentStepData: any;
+  formik: FormikProps<Record<string, string>>;
 }
 
 const CalculatorStep: React.FC<ICalculatorStep> = ({
@@ -13,8 +15,13 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
   currentStep,
   currentStepData,
   totalSteps,
+  formik,
 }) => {
-  console.log(currentStep, totalSteps);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>, key: string) => {
+    const { value } = event.target;
+    formik.setFieldValue(key, value);
+  };
+
   return (
     <div className={styles.stepWrapper}>
       {currentStepData.map((element: TCalculatorCurrentElement) => {
@@ -23,24 +30,33 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
             <div>{element.title}</div>
             <div className={styles.inpurWrapper}>
               {element.mode === 'multiple'
-                ? element.values.map((currInputValue, currentInputIndex) => {
-                    const isChecked =
-                      typeof element.defaultIndex === 'number' &&
-                      currentInputIndex === element.defaultIndex;
+                ? element.values.map((currInputValue) => {
+                    const isChecked = formik.values[element.key] === currInputValue;
                     return (
                       <div key={currInputValue}>
-                        <input name={element.key} type="checkbox" checked={isChecked} readOnly />
+                        <input
+                          onChange={(event) => handleChange(event, element.key)}
+                          name={element.key}
+                          value={currInputValue}
+                          type="checkbox"
+                          checked={isChecked}
+                        />
                         <span>{currInputValue}</span>
                       </div>
                     );
                   })
-                : element.values.map((currInputValue, currentInputIndex) => {
-                    const isChecked =
-                      typeof element.defaultIndex === 'number' &&
-                      currentInputIndex === element.defaultIndex;
+                : element.values.map((currInputValue) => {
+                    const isChecked = formik.values[element.key] === currInputValue;
+
                     return (
                       <div key={currInputValue}>
-                        <input name={element.key} type="checkbox" checked={isChecked} readOnly />
+                        <input
+                          onChange={(event) => handleChange(event, element.key)}
+                          name={element.key}
+                          value={currInputValue}
+                          type="checkbox"
+                          checked={isChecked}
+                        />
                         <span>{currInputValue}</span>
                       </div>
                     );
@@ -60,7 +76,12 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
             NEXT
           </button>
         ) : (
-          <button type="button" onClick={() => console.log('calculate')}>
+          <button
+            type="submit"
+            onClick={() => {
+              nextStep?.();
+            }}
+          >
             Calculate
           </button>
         )}

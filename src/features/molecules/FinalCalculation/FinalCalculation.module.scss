@@ -1,0 +1,40 @@
+.finalWrapper{
+    position: relative;
+    height: 400px;
+    .recalculate {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: red;
+    background: aqua;
+    border: navajowhite;
+    height: 30px;
+    border-radius: 30px;
+    }
+    .submit{
+        position: absolute;
+        width: 100%;
+        bottom: 50px;
+        color: red;
+        background: blanchedalmond;
+        border: navajowhite;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .submitText{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+        .email{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            span{
+                color: red;
+            }
+        }
+    }
+}
