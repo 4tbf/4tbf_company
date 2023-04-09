@@ -1,9 +1,40 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from './Header.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
 
+const LANGS = [
+  {
+    locale: 'ru',
+    title: 'Русский',
+  },
+  {
+    locale: 'en',
+    title: 'English',
+  },
+  {
+    locale: 'de',
+    title: 'German',
+  },
+  {
+    locale: 'es',
+    title: 'Spain',
+  },
+  {
+    locale: 'fr',
+    title: 'French',
+  },
+  {
+    locale: 'zh',
+    title: 'Chiness',
+  },
+];
 const Header = () => {
+  const router = useRouter();
+  const changeLang = (locale: string) => {
+    router.push(router.pathname, null, { locale });
+  };
   return (
     <header className={styles.header}>
       <div className="container">
@@ -36,30 +67,15 @@ const Header = () => {
                     <ArrowIcon />
                   </div>
                   <ul>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
-                    <li>
-                      <button type="button">RU</button>
-                    </li>
+                    {LANGS.map((curr) => {
+                      return (
+                        <li key={curr.locale}>
+                          <button onClick={() => changeLang(curr.locale)} type="button">
+                            {curr.title}
+                          </button>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
               </ul>

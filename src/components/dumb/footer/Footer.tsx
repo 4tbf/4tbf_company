@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from './Footer.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
 import LinkedInIcon from '../../svgs/LinkedInIcon';
@@ -9,7 +10,38 @@ import InstagramIcon from '../../svgs/InstagramIcon';
 import CopyrightIcon from '../../svgs/CopyrightIcon';
 import Text from '../../../features/atoms/text';
 
+const LANGS = [
+  {
+    locale: 'ru',
+    title: 'Русский',
+  },
+  {
+    locale: 'en',
+    title: 'English',
+  },
+  {
+    locale: 'de',
+    title: 'German',
+  },
+  {
+    locale: 'es',
+    title: 'Spain',
+  },
+  {
+    locale: 'fr',
+    title: 'French',
+  },
+  {
+    locale: 'zh',
+    title: 'Chiness',
+  },
+];
+
 const Footer = () => {
+  const router = useRouter();
+  const changeLang = (locale: string) => {
+    router.push(router.pathname, null, { locale });
+  };
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -43,30 +75,15 @@ const Footer = () => {
                       <ArrowIcon />
                     </div>
                     <ul>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
-                      <li>
-                        <button type="button">RU</button>
-                      </li>
+                      {LANGS.map((curr) => {
+                        return (
+                          <li key={curr.locale}>
+                            <button onClick={() => changeLang(curr.locale)} type="button">
+                              {curr.title}
+                            </button>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </li>
                 </ul>

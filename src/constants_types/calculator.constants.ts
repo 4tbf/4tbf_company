@@ -1,0 +1,102 @@
+import { TCalculator } from './calculator.types';
+
+export const CALCULATOR: TCalculator = {
+  basic: [
+    [
+      {
+        key: 'number_of_pages',
+        title: 'Number of pages',
+        mode: 'multiple',
+        values: ['1 – 5', '5-15', '15-30', 'unlimited'],
+        defaultIndex: 0,
+        requiere: true,
+        prices: [100, 200, 300, 1000],
+      },
+      {
+        key: 'pages_copywrite',
+        title: 'Pages Copywriting',
+        mode: 'multiple',
+        values: ['None', 'partly', 'all pages'],
+        requiere: true,
+        defaultIndex: 0,
+        prices: [0, 100, 200],
+      },
+    ],
+    [
+      {
+        key: 'styled_of_design',
+        title: 'Style of design',
+        mode: 'multiple',
+        values: [
+          'No design needed',
+          'Simple yet attractive',
+          'Moderately stylized',
+          'high end',
+          'world class',
+        ],
+        defaultIndex: 1,
+        requiere: true,
+        prices: [0, 100, 200, 300, 500],
+      },
+      {
+        key: 'logo',
+        title: 'Logo',
+        mode: 'multiple',
+        values: ['Not need', 'Basic logo', 'Modern logo'],
+        requiere: true,
+        defaultIndex: 0,
+        prices: [0, 250, 500],
+      },
+    ],
+    [
+      {
+        key: 'db_integration',
+        title: 'Database integration',
+        mode: 'multiple',
+        values: ['None', 'Basic', 'Advanced', 'Full development'],
+        requiere: true,
+        defaultIndex: 0,
+        prices: [0, 100, 200, 300],
+      },
+      {
+        key: 'form_email',
+        title: 'Forms and emails',
+        mode: 'multiple',
+        values: ['Not need', 'Basic', 'hard'],
+        defaultIndex: 1,
+        requiere: true,
+        prices: [0, 100, 200],
+      },
+    ],
+    [
+      {
+        key: 'e_commerece',
+        title: 'E-Commerce',
+        mode: 'multiple',
+        values: ['Not need', '5-25 items', '25 – 100 Items', '100 + items'],
+        requiere: true,
+        defaultIndex: 0,
+        prices: [0, 100, 200, 300],
+      },
+      {
+        key: 'cms',
+        title: 'CMS integration',
+        mode: 'multiple',
+        values: ['Not need', 'partly', 'fully'],
+        requiere: true,
+        defaultIndex: 0,
+        prices: [0, 100, 200],
+      },
+      {
+        key: 'seo',
+        title: 'SEO',
+        mode: 'simple',
+        values: ['yes', 'no'],
+        defaultIndex: 0,
+        requiere: true,
+        prices: [100, 0],
+      },
+    ],
+  ],
+  advanced: [],
+};
