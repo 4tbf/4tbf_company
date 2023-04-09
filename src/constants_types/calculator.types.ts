@@ -4,9 +4,10 @@ export type TCalculatorCurrentElement = {
   key: string;
   title: string;
   mode: TCalculatorModes;
-  values: string[] | number[];
+  values: string[];
   defaultIndex?: number;
   requiere: boolean;
+  prices: number[];
 };
 
 export type TCalculatorTypes = 'basic' | 'advanced';
