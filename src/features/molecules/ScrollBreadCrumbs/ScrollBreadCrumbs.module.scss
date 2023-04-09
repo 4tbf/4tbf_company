@@ -5,6 +5,15 @@
     overflow: hidden;
     padding: 23px 28px;
     border-bottom: 2px solid $black;
+    :global {
+        .marquee-container {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
     .scroledItems {
         @include flex-center-vert;
         flex-wrap: nowrap;

@@ -1,0 +1,17 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.contactHero {
+    padding-top: 92px;
+    .contactTitle {
+        @include fontRem(80, 400, 116);
+        font-family: "MADE";
+        color: $white;
+    }
+    .contactSubTitle {
+        margin-top: 60px;
+        color: $white;
+        max-width: 768px;
+        @include fontRem(40, 400, 54);
+    }
+}

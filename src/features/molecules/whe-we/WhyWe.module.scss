@@ -8,6 +8,7 @@
         @include RowItems(80);
         :global {
             .col_ {
+                flex: 1;
                 &:first-child {
                     flex: 0 1 30%;
                 }
