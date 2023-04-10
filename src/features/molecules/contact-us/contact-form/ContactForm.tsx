@@ -8,10 +8,14 @@ import LinkedInIcon from '../../../../components/svgs/LinkedInIcon';
 import TwiiterIcon from '../../../../components/svgs/TwiiterIcon';
 import FacebookIcon from '../../../../components/svgs/FacebookIcon';
 import InstagramIcon from '../../../../components/svgs/InstagramIcon';
+import SuccessModal from '../../../atoms/SuccessModal';
 
 const ContactForm = () => {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
   return (
     <section className={styles.contactFrom}>
+      <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
       <div className="container">
         <div className={styles.contactRow}>
           <div className="col_">
@@ -32,7 +36,7 @@ const ContactForm = () => {
                 <div className="col_">
                   <Input type="textarea" label="Message" placeholder="Message" />
                 </div>
-                <div className="col_">
+                <div className="col_" onClick={() => setIsOpen(true)}>
                   <Button type="submit" children="Submit" />
                 </div>
               </div>
