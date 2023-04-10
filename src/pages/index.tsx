@@ -1,21 +1,17 @@
 import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
-import Image from 'next/image';
-import Header from '../components/header/Header';
-import styles from './index.module.scss';
-import LongArrowIcon from '../components/svgs/LongArrowIcon';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>4The BRIGHT Future</title>
+        <title>4TBF</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main className={styles.main}>
+      {/* <Header /> */}
+      {/* <main className={styles.main}>
         <section
           className={styles.heroSection}
           style={{ backgroundImage: 'url(/images/brand_image.png)' }}
@@ -122,6 +118,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+      </main> */}
+      <main className={styles.soon}>
+        <h1>coming soon</h1>
       </main>
     </>
   );
