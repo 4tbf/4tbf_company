@@ -25,8 +25,8 @@ export default function Home() {
         <CalcualateWebsite />
         <WhyWe />
         <FaqSection />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

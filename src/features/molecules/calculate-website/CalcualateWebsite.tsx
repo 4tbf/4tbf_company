@@ -4,7 +4,6 @@ import { useInView } from 'react-intersection-observer';
 import styles from './CalcualateWebsite.module.scss';
 import Text from '../../atoms/text';
 import ArrowButton from '../../../components/multiusable/arrow-button/ArrowButton';
-import StarIcon from '../../../components/svgs/StarIcon';
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
@@ -28,9 +27,7 @@ const CalcualateWebsite = () => {
       <div className="container">
         <motion.h2 className={styles.calculateBigTitle}>
           Calculate Website Cost
-          <Text as="span" className={styles.starIcon}>
-            <StarIcon />
-          </Text>{' '}
+          <Text as="span" className={styles.starIcon} />
         </motion.h2>
         <Text as="p" className={styles.calculateDescr}>
           Lorem ipsum dolor sit amet consectetur. Non nunc habitant nisl id ut leo et commodo

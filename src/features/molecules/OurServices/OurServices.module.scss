@@ -4,16 +4,27 @@
 .ourServices {
     padding-top: 150px;
     margin-bottom: 110px;
+    @media (max-width: 1279.98px) {
+       padding-top: 90px;
+       margin-bottom: 90px;
+    }
     .servicesRow {
         @include flexRow(8, 3);
         row-gap: 8px;
         .mainItem {
             position: relative;
             transform: translateX(-40px);
+            @media (max-width: 1279.98px) {
+                transform: translateX(0);
+            }
             .mainTitle {
                 font-family: "MADE";
                 @include fontRem(48, 400, 68);
                 margin-bottom: 39px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(40, 400, 53);
+                    margin-bottom: 22px;
+                }
             }
             
         }
@@ -30,11 +41,18 @@
                 max-width: 290px;
                 margin-bottom: 12px;
                 color: $black;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(18, 400, 24);
+                    margin-bottom: 8px;
+                }
             }
             .serviceDescr {
                 font-family: inherit;
                 @include fontRem(16, 400, 22);
                 color: $black;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(14, 400, 19);
+                }
             }
             &:hover {
                 border-color: $blue;

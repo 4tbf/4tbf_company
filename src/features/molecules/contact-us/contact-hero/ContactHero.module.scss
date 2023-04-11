@@ -3,6 +3,10 @@
 
 .contactHero {
     padding-top: 92px;
+    background-image: url('/images/contact_bg.png');
+    background-repeat: no-repeat;
+    background-position: right -70px;
+    padding-bottom: 180px;
     .contactTitle {
         @include fontRem(80, 400, 116);
         font-family: "MADE";

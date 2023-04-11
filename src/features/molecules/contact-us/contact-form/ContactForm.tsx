@@ -9,6 +9,7 @@ import TwiiterIcon from '../../../../components/svgs/TwiiterIcon';
 import FacebookIcon from '../../../../components/svgs/FacebookIcon';
 import InstagramIcon from '../../../../components/svgs/InstagramIcon';
 import SuccessModal from '../../../atoms/SuccessModal';
+import ErrorMessage from '../../../../components/multiusable/error-message/ErrorMessage';
 
 const ContactForm = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -22,7 +23,8 @@ const ContactForm = () => {
             <div className={styles.formWrapper}>
               <div className={styles.formRow}>
                 <div className="col_">
-                  <Input type="text" label="Name" placeholder="name" />
+                  <Input error type="text" label="Name" placeholder="name" />
+                  <ErrorMessage text="Error message." />
                 </div>
                 <div className="col_">
                   <Input type="text" label="Surname" placeholder="Surname" />
@@ -35,6 +37,13 @@ const ContactForm = () => {
                 </div>
                 <div className="col_">
                   <Input type="textarea" label="Message" placeholder="Message" />
+                </div>
+                <div className="col_">
+                  <Input
+                    type="file"
+                    label="Upload File  ( PDF, JPG, PNG )"
+                    placeholder="Drag & Drop to Upload or Browse"
+                  />
                 </div>
                 <div className="col_" onClick={() => setIsOpen(true)}>
                   <Button type="submit" children="Submit" />

@@ -1,35 +1,39 @@
 @import "/src/styles/mixins";
 @import "/src/styles/pallete";
 
-
 .calcuateWEbsite {
     margin-top: 110px;
     background-color: $black;
     padding: 120px 0;
+    @media (max-width: 1279.98px) {
+        margin-top: 0;
+        padding: 56px 0;
+    }
     color: $white;
     .calculateBigTitle {
         position: relative;
         @include fontRem(56, 400, 74);
         display: inline-block;
-        font-family: 'MADE';
+        font-family: "MADE";
         margin-bottom: 24px;
-        .starIcon {
-            position: absolute;
-            top: -100%;
-            right: -60px;
-            svg {
-                path {
-                    fill: $white;
-                }
-            }
+        @media (max-width: 1279.98px) {
+            @include fontRem(40, 400, 53);
+            max-width: 408px;
         }
     }
     .calculateDescr {
         @include fontRem(18, 400, 25);
         max-width: 864px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(14, 400, 20);
+            max-width: 509px;
+        }
     }
     .calculateItems {
         margin-top: 72px;
+        @media (max-width: 1279.98px) {
+            margin-top: 48px;
+        }
         .calculateRow {
             @include flexRow(26, 2);
         }
@@ -39,14 +43,23 @@
             border: 1px solid $white;
             text-decoration: none;
             color: $white;
+            @media (max-width: 1279.98px) {
+                padding: 24px;
+            }
             .calcualteTitle {
                 font-family: "MADE";
                 @include fontRem(40, 400, 53);
                 margin-bottom: 16px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(18, 400, 24);
+                }
             }
             .calcuatetext {
                 @include fontRem(18, 400, 25);
                 margin-bottom: 32px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(14, 400, 20);
+                }
             }
         }
     }

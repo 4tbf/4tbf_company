@@ -6,10 +6,12 @@ const Button = ({
   type = 'button',
   children,
   variant = 'light',
+  onClick,
 }: {
   children: any;
   type?: any;
   variant?: any;
+  onClick?: any;
 }) => {
   return (
     <button className={clsx(styles.button, styles[variant])} type={type}>

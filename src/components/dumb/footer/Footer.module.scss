@@ -8,10 +8,18 @@
     .footerMainRow {
         row-gap: 33px;
         @include flex-center-column;
+        @media (max-width: 1279.98px) {
+            row-gap: 27px;
+        }
     }
     menu {
+        padding: 0;
         @include flex-center-vert;
         gap: 32px;
+        @media (max-width: 1279.98px) {
+            gap: 16px;
+            margin: 0;
+        }
         .footerLinks {
             cursor: pointer;
             position: relative;
@@ -21,6 +29,9 @@
             color: $white;
             text-decoration: none;
             @include fontRem(16, 400, 22);
+            @media (max-width: 1279.98px) {
+                @include fontRem(14, 400, 20);
+            }
             &::before {
                 content: "";
                 @include absoluteCenter(horizontal);
@@ -43,6 +54,9 @@
                     color: $white;
                     @include fontRem(16, 400, 22);
                     @include flex-center-vert;
+                    @media (max-width: 1279.98px) {
+                        @include fontRem(14, 400, 20);
+                    }
                     gap: 8px;
                     svg {
                         transform: rotate(180deg);
@@ -129,6 +143,9 @@
         a {
             color: $white;
             text-decoration: none;
+            @media (max-width: 1279.98px) {
+                @include fontRem(14, 400, 20);
+            }
             &:hover {
                 text-decoration: underline;
             }
@@ -140,6 +157,9 @@
         justify-content: space-between;
         p {
             color: $white;
+            @media (max-width: 1279.98px) {
+                @include fontRem(14, 400, 20);
+            }
             a {
                 color: inherit;
                 text-decoration: none;

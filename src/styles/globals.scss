@@ -13,12 +13,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   font-family: "Open Sans", sans-serif;
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-
+#__next {
+  overflow: hidden;
+}
 @font-face {
   font-family: "MADE";
   src: url("/fonts/MADESoulmaze.eot");
@@ -95,7 +100,11 @@ legend {
   color: inherit;
   white-space: normal;
 }
-
+main {
+  @media (max-width: 1279.98px) {
+    padding-top: 85px;
+  }
+}
 .container {
   max-width: 1196px;
   width: 100%;
@@ -103,7 +112,13 @@ legend {
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 1279.98px) {
+    padding: 0 24px;
+    margin: 0;
+    max-width: 100%;
+  }
 }
-.about-page, .contact-page {
+.about-page,
+.contact-page {
   background-color: $black;
 }

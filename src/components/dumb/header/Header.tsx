@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import clsx from 'clsx';
 import styles from './Header.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
+import LogoIcon from '../../svgs/LogoIcon';
+import { useMediaQuery } from '../../../hooks/useMediaQuery';
+import BurgerIcon from '../../svgs/BurgerIcon';
 
 const LANGS = [
   {
@@ -31,7 +35,22 @@ const LANGS = [
   },
 ];
 const Header = () => {
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+  const handleBurgerClick = useCallback(() => {
+    setIsBurgerOpen((prev) => !prev);
+  }, []);
+
+  useEffect(() => {
+    if (isBurgerOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }, [isBurgerOpen]);
+
   const router = useRouter();
+  const tablet = useMediaQuery('(max-width: 1279.98px)');
   const changeLang = (locale: string) => {
     router.push(router.pathname, null, { locale });
   };
@@ -39,8 +58,12 @@ const Header = () => {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.headerWrapper}>
-          <div className={styles.logo} />
-          <nav>
+          <div className={styles.logo}>
+            <Link href="/">
+              <LogoIcon />
+            </Link>
+          </div>
+          <nav className={clsx({ [styles.menuOpen]: isBurgerOpen })}>
             <Link className={styles.headerLinks} href="#">
               <span> Why We?</span>
             </Link>
@@ -81,6 +104,16 @@ const Header = () => {
               </ul>
             </div>
           </nav>
+          {tablet && (
+            <div
+              onClick={handleBurgerClick}
+              className={clsx(styles.burgerItem, {
+                [styles.open]: isBurgerOpen,
+              })}
+            >
+              <BurgerIcon />
+            </div>
+          )}
         </div>
       </div>
     </header>

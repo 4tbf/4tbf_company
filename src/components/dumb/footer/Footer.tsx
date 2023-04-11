@@ -9,6 +9,7 @@ import FacebookIcon from '../../svgs/FacebookIcon';
 import InstagramIcon from '../../svgs/InstagramIcon';
 import CopyrightIcon from '../../svgs/CopyrightIcon';
 import Text from '../../../features/atoms/text';
+import LogoIcon from '../../svgs/LogoIcon';
 
 const LANGS = [
   {
@@ -46,7 +47,9 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.footerMainRow}>
-          <div className={styles.footerHeader}>Logo</div>
+          <div className={styles.footerHeader}>
+            <LogoIcon />
+          </div>
           <div className={styles.footerMenu}>
             <menu>
               <Link className={styles.footerLinks} href="#">
