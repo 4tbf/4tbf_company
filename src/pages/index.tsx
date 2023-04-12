@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
+import Logo from '../../public/logo.png';
 
 export default function Home() {
   return (
@@ -120,7 +122,10 @@ export default function Home() {
         </section>
       </main> */}
       <main className={styles.soon}>
-        <h1>coming soon</h1>
+        <div>
+          <Image alt="logo" src={Logo} />
+          <h1>coming soon</h1>
+        </div>
       </main>
     </>
   );
