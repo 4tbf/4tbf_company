@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>4The BRIGHT Future</title>
+        <title>4TBF</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

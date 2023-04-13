@@ -64,13 +64,13 @@ const Header = () => {
             </Link>
           </div>
           <nav className={clsx({ [styles.menuOpen]: isBurgerOpen })}>
-            <Link className={styles.headerLinks} href="#">
+            <Link className={styles.headerLinks} href="/why-we">
               <span> Why We?</span>
             </Link>
             <Link className={styles.headerLinks} href="#">
               <span> Services</span>
             </Link>
-            <Link className={styles.headerLinks} href="#">
+            <Link className={styles.headerLinks} href="/case-studies">
               <span> Case Studies</span>
             </Link>
             <Link className={styles.headerLinks} href="#">
