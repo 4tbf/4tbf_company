@@ -1,0 +1,29 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.whyeWeItems {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 92px;
+    background-image: url('/images/why_we_bg.png');
+    background-repeat: no-repeat;
+    background-position: right -50px;
+    padding-top: 230px;
+    .itemsRow {
+        @include flexRow(24, 2);
+        row-gap: 24px;
+        .itemContent {
+            padding: 48px 32px;
+            border: 1px solid $white;
+            color: $white;
+            .itemTitle {
+                @include fontRem(32, 400, 32);
+                margin-bottom: 16px;
+                font-family: 'MADE';
+            }
+            .itemDescr {
+                @include fontRem(16, 400, 22);
+            }
+        }
+    }
+}

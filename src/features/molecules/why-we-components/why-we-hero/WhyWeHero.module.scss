@@ -1,0 +1,17 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.whyweHero {
+    padding-top: 92px;
+    .heroTitle {
+        @include fontRem(80, 400, 116);
+        font-family: "MADE";
+        color: $white;
+    }
+    .heroSubTitle {
+        margin-top: 60px;
+        color: $white;
+        max-width: 768px;
+        @include fontRem(40, 400, 54);
+    }
+}
