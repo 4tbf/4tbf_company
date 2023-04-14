@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { useFormik } from 'formik';
+import { object, string } from 'yup';
 import styles from './ContactForm.module.scss';
 import Input from '../../../../components/multiusable/input/Input';
 import Button from '../../../../components/multiusable/button/Button';
@@ -10,10 +12,26 @@ import FacebookIcon from '../../../../components/svgs/FacebookIcon';
 import InstagramIcon from '../../../../components/svgs/InstagramIcon';
 import SuccessModal from '../../../atoms/SuccessModal';
 import ErrorMessage from '../../../../components/multiusable/error-message/ErrorMessage';
+import { CONTACT_US } from './constants';
+
+const validationSchema = object({
+  name: string().required('Requiere Field'),
+  email: string().email('Not Valid Email').required('Requiere Field'),
+  phone: string()
+    .matches(/^\+?[1-9][0-9]{7,14}$/, 'Not valid phone')
+    .required('Requiere Field'),
+});
 
 const ContactForm = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
-
+  const { setFieldValue, errors, values, handleSubmit } = useFormik({
+    initialValues: CONTACT_US,
+    validationSchema,
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+  console.log(values);
   return (
     <section className={styles.contactFrom}>
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
@@ -23,29 +41,73 @@ const ContactForm = () => {
             <div className={styles.formWrapper}>
               <div className={styles.formRow}>
                 <div className="col_">
-                  <Input error type="text" label="Name" placeholder="name" />
-                  <ErrorMessage text="Error message." />
+                  <Input
+                    error={errors.name}
+                    type="text"
+                    label="Name"
+                    placeholder="name"
+                    value={values.name}
+                    onChange={(e) => setFieldValue('name', e.target.value)}
+                  />
+                  {errors.name && <ErrorMessage text={errors.name} />}
                 </div>
                 <div className="col_">
-                  <Input type="text" label="Surname" placeholder="Surname" />
+                  <Input
+                    type="text"
+                    label="Surname"
+                    placeholder="Surname"
+                    value={values.surname}
+                    onChange={(e) => setFieldValue('surname', e.target.value)}
+                  />
                 </div>
                 <div className="col_">
-                  <Input type="email" label="Email" placeholder="Email" />
+                  <Input
+                    type="email"
+                    label="Email"
+                    placeholder="Email"
+                    error={errors.email}
+                    value={values.email}
+                    onChange={(e) => setFieldValue('email', e.target.value)}
+                  />
+                  {errors.email && <ErrorMessage text={errors.email} />}
                 </div>
                 <div className="col_">
-                  <Input type="tel" label="Phone" placeholder="Phone" />
+                  <Input
+                    type="tel"
+                    label="Phone"
+                    placeholder="Phone"
+                    error={errors.phone}
+                    value={values.phone}
+                    onChange={(e) => setFieldValue('phone', e.target.value)}
+                  />
+                  {errors.phone && <ErrorMessage text={errors.phone} />}
                 </div>
                 <div className="col_">
-                  <Input type="textarea" label="Message" placeholder="Message" />
+                  <Input
+                    type="textarea"
+                    label="Message"
+                    placeholder="Message"
+                    value={values.message}
+                    onChange={(e) => setFieldValue('message', e.target.value)}
+                  />
                 </div>
                 <div className="col_">
                   <Input
                     type="file"
                     label="Upload File  ( PDF, JPG, PNG )"
-                    placeholder="Drag & Drop to Upload or Browse"
+                    placeholder="Upload File"
+                    onChange={(e) => {
+                      setFieldValue('file', e.target.files[0]);
+                    }}
                   />
                 </div>
-                <div className="col_" onClick={() => setIsOpen(true)}>
+                <div
+                  className="col_"
+                  onClick={() => {
+                    handleSubmit();
+                    setIsOpen(true);
+                  }}
+                >
                   <Button type="submit" children="Submit" />
                 </div>
               </div>
