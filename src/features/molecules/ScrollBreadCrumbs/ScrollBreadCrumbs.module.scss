@@ -3,8 +3,11 @@
 .scrolledSection {
     width: 100%;
     overflow: hidden;
-    padding: 23px 28px;
+    padding: 23px 0px;
     border-bottom: 2px solid $black;
+    [class="overlay"]{
+        display: none;
+    }
     :global {
         .marquee-container {
             &::-webkit-scrollbar {

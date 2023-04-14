@@ -23,16 +23,20 @@ const Input = ({
   const input = () => {
     switch (type) {
       case 'textarea':
-        return <textarea placeholder={placeholder || ''} />;
+        return <textarea onChange={onChange} placeholder={placeholder || ''} />;
       case 'file':
         return (
           <label className={styles.fileInputWrapper}>
-            <input type="file" accept="application/pdf, image/*" />
+            <input
+              onChange={onChange}
+              type="file"
+              accept="application/pdf, image/*, .csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+            />
             <Text>{placeholder}</Text>
           </label>
         );
       default:
-        return <input type={type} placeholder={placeholder || ''} />;
+        return <input onChange={onChange} type={type} placeholder={placeholder || ''} />;
     }
   };
 
