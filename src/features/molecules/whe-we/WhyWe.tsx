@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './WhyWe.module.scss';
 import Text from '../../atoms/text';
 import ArrowButton from '../../../components/multiusable/arrow-button/ArrowButton';
+import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
 const WhyWe = () => {
+  const mobile = useMediaQuery('(max-width: 767.98px)');
   return (
     <section className={styles.whywe}>
       <div className="container">
@@ -11,7 +13,7 @@ const WhyWe = () => {
           <div className="col_">
             <div className={styles.whyWeLeft}>
               <Text as="h2">WHY WE</Text>
-              <ArrowButton href="#" text="Read More" />
+              {!mobile && <ArrowButton href="#" text="Read More" />}
             </div>
           </div>
           <div className="col_">
@@ -25,6 +27,7 @@ const WhyWe = () => {
                 pellentesque tortor penatibus in. Tempor egestas nunc etiam vel ultricies in vel.
                 libero.
               </Text>
+              {mobile && <ArrowButton href="#" text="Read More" />}
             </div>
           </div>
         </div>

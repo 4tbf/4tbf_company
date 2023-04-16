@@ -8,32 +8,55 @@
        padding-top: 90px;
        margin-bottom: 90px;
     }
+    @media (max-width: 767.98px) {
+       padding-top: 45px;
+       margin-bottom: 45px;
+    }
+    .mainItem {
+        position: relative;
+        transform: translateX(-40px);
+        @media (max-width: 1279.98px) {
+            transform: translateX(0);
+        }
+        .mainTitle {
+            font-family: "MADE";
+            @include fontRem(48, 400, 68);
+            margin-bottom: 39px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(40, 400, 53);
+                margin-bottom: 22px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(32, 400, 42);
+            }
+        }
+        
+    }
     .servicesRow {
         @include flexRow(8, 3);
         row-gap: 8px;
-        .mainItem {
-            position: relative;
-            transform: translateX(-40px);
-            @media (max-width: 1279.98px) {
-                transform: translateX(0);
+        @media (max-width: 767.98px) {
+            margin-top: 22px;
+            @include fontRem(14, 400, 19);
+           flex-wrap: nowrap;
+           overflow: auto;
+           :global {
+            .col_ {
+                flex: 0 0 230px;
+                max-width: 230px;
             }
-            .mainTitle {
-                font-family: "MADE";
-                @include fontRem(48, 400, 68);
-                margin-bottom: 39px;
-                @media (max-width: 1279.98px) {
-                    @include fontRem(40, 400, 53);
-                    margin-bottom: 22px;
-                }
-            }
-            
+           }
         }
+        
         .clasicItem {
             border: 1px solid $black;
             padding: 18px 31px 24px 31px;
             transition: 0.3s;
             display: block;
             text-decoration: none;
+            @media (max-width: 767.98px) {
+                padding: 18px 24px 24px 24px;
+            }
             .serviceTitle {
                 font-family: "MADE";
 

@@ -8,12 +8,19 @@
     @media (max-width: 1279.98px) {
         padding: 60px 0;
     }
+    @media (max-width: 767.98px) {
+        padding: 37px 0;
+    }
     .faqTitle {
         @include fontRem(48, 400, 63);
         font-family: "MADE";
         margin-bottom: 24px;
         @media (max-width: 1279.98px) {
             @include fontRem(40, 400, 53);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(32, 400, 42);
+            margin-bottom: 16px;
         }
     }
     .faqDescr {
@@ -22,5 +29,8 @@
     }
     .faqList {
         margin-top: 56px;
+        @media (max-width: 767.98px) {
+            margin-top: 22px;
+        }
     }
 }
