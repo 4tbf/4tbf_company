@@ -13,6 +13,7 @@
             }
         }
         .stepLet {
+            overflow: hidden;
             border: 1px solid $white;
             padding: 24px;
         }
@@ -45,10 +46,24 @@
                     }
                     &.selectedStep {
                         .stepNumber {
-                            cursor: pointer;
                             background-color: $blue;
                         }
                         &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            height: calc(100% - 34px);
+                            width: 1px;
+                            right: 16px;
+                            background-color: $blue;
+                        }
+                    }
+                    &.selectedLastStep {
+                        .stepNumber {
+                            background-color: $blue;
+                        }
+                        &::after {
+                            display: none;
                             content: "";
                             position: absolute;
                             bottom: 0;
