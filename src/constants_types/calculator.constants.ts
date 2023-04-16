@@ -6,6 +6,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'number_of_pages',
         title: 'Number of pages',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['1 – 5', '5-15', '15-30', 'unlimited'],
         defaultIndex: 0,
@@ -15,6 +17,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'pages_copywrite',
         title: 'Pages Copywriting',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['None', 'partly', 'all pages'],
         requiere: true,
@@ -26,6 +30,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'styled_of_design',
         title: 'Style of design',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: [
           'No design needed',
@@ -41,6 +47,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'logo',
         title: 'Logo',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic logo', 'Modern logo'],
         requiere: true,
@@ -52,6 +60,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'db_integration',
         title: 'Database integration',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['None', 'Basic', 'Advanced', 'Full development'],
         requiere: true,
@@ -61,6 +71,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'form_email',
         title: 'Forms and emails',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'hard'],
         defaultIndex: 1,
@@ -72,6 +84,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'e_commerece',
         title: 'E-Commerce',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', '5-25 items', '25 – 100 Items', '100 + items'],
         requiere: true,
@@ -81,6 +95,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'cms',
         title: 'CMS integration',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'partly', 'fully'],
         requiere: true,
@@ -90,6 +106,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'seo',
         title: 'SEO',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,
@@ -103,6 +121,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'number_of_pages',
         title: 'Number of pages',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['1 – 5', '5 – 15', '15 -30', 'unlimited'],
         defaultIndex: 0,
@@ -112,6 +132,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'copywrite',
         title: 'Pages Copywriting',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['None', 'partly', 'all pages'],
         defaultIndex: 0,
@@ -121,6 +143,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'auth',
         title: ' Authorization / Registration',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'basic', 'hard', 'web3'],
         defaultIndex: 0,
@@ -132,6 +156,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'styled_of_design',
         title: 'Style of design',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: [
           'No design needed',
@@ -147,6 +173,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'logo',
         title: 'Logo',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic logo', 'Modern logo'],
         requiere: true,
@@ -156,6 +184,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'animation',
         title: 'Animation',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Modern', 'Extra hard'],
         requiere: true,
@@ -165,6 +195,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'mobile_tablet',
         title: 'Mobile and tablet friendly design',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,
@@ -176,6 +208,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'db_integration',
         title: 'Database integration',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Advanced', 'Full development'],
         requiere: true,
@@ -185,6 +219,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'livetime_actions',
         title: 'Live time actions => chat, notifications',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -194,6 +230,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'day_scheduling',
         title: 'Day scheduling functionality',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -203,6 +241,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'mail_sender',
         title: 'Email sender functionality',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -214,6 +254,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'e_commerece',
         title: 'E-Commerce',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', '5-25 items', '25 – 100 Items', '100 + items'],
         requiere: true,
@@ -223,6 +265,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'items_filtrations_categories',
         title: 'Items filtration and categories',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -232,6 +276,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'checkout',
         title: 'Checkout',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -243,6 +289,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'forms_emails',
         title: 'Forms and emails',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -252,6 +300,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'different_roles',
         title: 'Users with different roles',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -263,6 +313,8 @@ export const CALCULATOR: TCalculator = {
         title: 'Images gallery',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
@@ -270,6 +322,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'blog_reviews',
         title: 'Blog and Reviews',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -279,6 +333,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'third_part',
         title: 'Third part services',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -290,6 +346,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'admin_panel',
         title: 'Custom admin panel',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -299,6 +357,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'multy_lang',
         title: 'Multi language',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,
@@ -308,6 +368,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'cms',
         title: 'CMS integration',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
@@ -319,6 +381,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'seo',
         title: 'SEO',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,
@@ -328,6 +392,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'metrica',
         title: 'Metrica',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,
@@ -337,6 +403,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'webvisor',
         title: 'Webvisor',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,
@@ -348,6 +416,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'support',
         title: 'Support for app',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'multiple',
         values: ['Not need', 'part of day', '24/7'],
         requiere: true,
@@ -357,6 +427,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'error_loger',
         title: 'Application errors logger',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,
@@ -366,6 +438,8 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'protection',
         title: 'Protection against intruders ',
+        description:
+          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
         mode: 'simple',
         values: ['yes', 'no'],
         defaultIndex: 0,

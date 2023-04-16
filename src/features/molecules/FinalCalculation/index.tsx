@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { FormikProps } from 'formik';
 import styles from './FinalCalculation.module.scss';
 import { IStepWizardCommon } from '../../../constants_types/global.types';
+import Text from '../../atoms/text';
+import Input from '../../../components/multiusable/input/Input';
+import ErrorMessage from '../../../components/multiusable/error-message/ErrorMessage';
+import Button from '../../../components/multiusable/button/Button';
+import RestoreIcon from '../../../components/svgs/RestoreIcon';
 
 interface IFinalCalculation extends IStepWizardCommon {
   formik: FormikProps<Record<string, string>>;
@@ -37,16 +42,29 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({ goToStep, formik, cost 
 
   return (
     <div className={styles.finalWrapper}>
-      <div>FinalCalculation</div>
-      <div>Approximate cost ${cost}</div>
-      <div className={styles.submitText}>
-        If you want to make clarifications or know the details, please write your mail below and
-        click Sumbit
+      <div className={styles.finalHeader}>
+        <Text as="h3" className={styles.finalTitle}>
+          FinalCalculation
+        </Text>
+        <Text as="p" className={styles.appoximateName}>
+          Approximate cost
+        </Text>
+        <Text as="p" className={styles.count}>
+          {cost}
+        </Text>
+      </div>
+      <div className={styles.submitItem}>
+        <Text as="p" className={styles.submitText}>
+          If you want to make clarifications or know the details, please write your mail below and
+          click <strong>Sumbit</strong>
+        </Text>
         <div className={styles.email}>
-          <input
-            placeholder="email"
-            type="emal"
+          <Input
+            type="email"
             value={email}
+            placeholder="Email"
+            label="Email"
+            error={emailError}
             onChange={(e) => {
               if (emailError) {
                 setEmailError(false);
@@ -54,15 +72,17 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({ goToStep, formik, cost 
               setEmail(e.target.value);
             }}
           />
-          {emailError && <span>Email is not valid</span>}
+          {emailError && <ErrorMessage text="Email is not valid" />}
         </div>
       </div>
-      <button className={styles.submit} type="submit" onClick={handleSubmit}>
-        SUBMIT
-      </button>
-      <button className={styles.recalculate} type="button" onClick={() => goToStep?.(1)}>
-        Recalculate
-      </button>
+      <div className={styles.finalButtons}>
+        <button className={styles.recalculate} type="button" onClick={() => goToStep?.(1)}>
+          <RestoreIcon /> Recalculate
+        </button>
+        <Button type="submit" onClick={handleSubmit}>
+          SUBMIT
+        </Button>
+      </div>
     </div>
   );
 };
