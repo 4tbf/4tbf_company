@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import StepWizard from 'react-step-wizard';
 import { useFormik, FormikProps } from 'formik';
 import clsx from 'clsx';
@@ -11,10 +11,13 @@ import CalculateHeader from '../../molecules/calculate-header/CalculateHeader';
 import styles from './AdvancedCalculator.module.scss';
 import Text from '../../atoms/text';
 import CheckIcon from '../../../components/svgs/CheckIcon';
+import { TCalculatorCurrentElement } from '../../../constants_types/calculator.types';
 
 const AdvancedCalculator: React.FC = () => {
   const currentCalcSteps = CALCULATOR.advanced;
   const { iitialValues, validationSchem } = useAdvancedCalculator(currentCalcSteps);
+  const [step, setStep] = useState(1);
+
   const formik: FormikProps<Record<string, string>> = useFormik({
     initialValues: iitialValues,
     validationSchema: validationSchem,
@@ -23,8 +26,7 @@ const AdvancedCalculator: React.FC = () => {
     },
   });
   const cost = useCalculateData(formik.values, currentCalcSteps);
-  // TODO CHANGE TO CORRECT BOOLEAN
-  const selectedNumber = true;
+
   return (
     <div>
       <CalculateHeader
@@ -36,7 +38,10 @@ const AdvancedCalculator: React.FC = () => {
           <div className={styles.stepRow}>
             <div className="col_">
               <div className={styles.stepLet}>
-                <StepWizard className={styles.stepMainItem}>
+                <StepWizard
+                  onStepChange={({ activeStep }: { activeStep: number }) => setStep(activeStep)}
+                  className={styles.stepMainItem}
+                >
                   <CalculatorStep formik={formik} currentStepData={currentCalcSteps[0]} />
                   <CalculatorStep formik={formik} currentStepData={currentCalcSteps[1]} />
                   <CalculatorStep formik={formik} currentStepData={currentCalcSteps[2]} />
@@ -52,40 +57,27 @@ const AdvancedCalculator: React.FC = () => {
             <div className="col_">
               <div className={styles.stepRight}>
                 <ul className={styles.setepList}>
-                  <li
-                    className={clsx({
-                      [styles.selectedStep]: selectedNumber,
-                    })}
-                  >
-                    <div className={styles.stepContent}>
-                      <Text as="p" className={styles.stepText}>
-                        overal
-                      </Text>
-                      <Text as="p" className={styles.stepNumber}>
-                        {selectedNumber ? <CheckIcon /> : '1'}
-                      </Text>
-                    </div>
-                  </li>
-                  <li>
-                    <div className={styles.stepContent}>
-                      <Text as="p" className={styles.stepText}>
-                        Contacts
-                      </Text>
-                      <Text as="p" className={styles.stepNumber}>
-                        2
-                      </Text>
-                    </div>
-                  </li>
-                  <li>
-                    <div className={styles.stepContent}>
-                      <Text as="p" className={styles.stepText}>
-                        Work History
-                      </Text>
-                      <Text as="p" className={styles.stepNumber}>
-                        3
-                      </Text>
-                    </div>
-                  </li>
+                  {currentCalcSteps.map((current: TCalculatorCurrentElement[], index) => {
+                    return (
+                      <li
+                        key={current[0].stepName}
+                        className={clsx({
+                          [styles.selectedStep]: index < step,
+                          [styles.selectedLastStep]:
+                            index === currentCalcSteps.length - 1 && index < step,
+                        })}
+                      >
+                        <div className={styles.stepContent}>
+                          <Text as="p" className={styles.stepText}>
+                            {current[0].stepName}
+                          </Text>
+                          <Text as="p" className={styles.stepNumber}>
+                            {index < step - 1 ? <CheckIcon /> : index + 1}
+                          </Text>
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>

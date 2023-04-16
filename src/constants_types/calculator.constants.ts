@@ -13,6 +13,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 0,
         requiere: true,
         prices: [100, 200, 300, 1000],
+        stepName: '1111',
       },
       {
         key: 'pages_copywrite',
@@ -43,6 +44,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 1,
         requiere: true,
         prices: [0, 100, 200, 300, 500],
+        stepName: '2222',
       },
       {
         key: 'logo',
@@ -67,6 +69,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 100, 200, 300],
+        stepName: '3333',
       },
       {
         key: 'form_email',
@@ -91,6 +94,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 100, 200, 300],
+        stepName: '4444',
       },
       {
         key: 'cms',
@@ -128,6 +132,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 0,
         requiere: true,
         prices: [100, 200, 300, 500],
+        stepName: '1111',
       },
       {
         key: 'copywrite',
@@ -169,6 +174,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 1,
         requiere: true,
         prices: [0, 100, 200, 300, 500],
+        stepName: '2222',
       },
       {
         key: 'logo',
@@ -215,6 +221,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500, 750],
+        stepName: '3333',
       },
       {
         key: 'livetime_actions',
@@ -261,6 +268,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 100, 200, 300],
+        stepName: '4444',
       },
       {
         key: 'items_filtrations_categories',
@@ -296,6 +304,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
+        stepName: '5555',
       },
       {
         key: 'different_roles',
@@ -353,6 +362,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
+        stepName: '6666',
       },
       {
         key: 'multy_lang',
@@ -388,6 +398,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 0,
         requiere: true,
         prices: [100, 0],
+        stepName: '7777',
       },
       {
         key: 'metrica',
@@ -423,6 +434,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
+        stepName: '8888',
       },
       {
         key: 'error_loger',
