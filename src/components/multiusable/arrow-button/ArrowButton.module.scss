@@ -9,6 +9,12 @@
     transition: 0.3s;
     color: $blue;
     text-decoration: none;
+    @media (max-width: 767.98px) {
+        @include fontRem(14, 400, 19);
+        svg {
+            width: 28px;
+        }
+    }
     &:hover {
         gap: 18px;
     }

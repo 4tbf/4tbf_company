@@ -119,6 +119,9 @@ main {
     margin: 0;
     max-width: 100%;
   }
+  @media (max-width: 767.98px) {
+    padding: 0 16px;
+  }
 }
 .about-page,
 .contact-page,

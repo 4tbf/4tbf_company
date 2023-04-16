@@ -20,6 +20,10 @@
             gap: 16px;
             margin: 0;
         }
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+            row-gap: 16px;
+        }
         .footerLinks {
             cursor: pointer;
             position: relative;
@@ -32,6 +36,9 @@
             @media (max-width: 1279.98px) {
                 @include fontRem(14, 400, 20);
             }
+            @media (max-width: 767.98px) {
+                padding: 0;
+            }
             &::before {
                 content: "";
                 @include absoluteCenter(horizontal);
@@ -41,6 +48,9 @@
                 background-color: $white;
                 transition: 0.3s;
                 z-index: 1;
+                @media (max-width: 767.98px) {
+                    content: none;
+                }
             }
             span {
                 z-index: 2;
@@ -57,14 +67,23 @@
                     @media (max-width: 1279.98px) {
                         @include fontRem(14, 400, 20);
                     }
+                    @media (max-width: 767.98px) {
+                        color: $white;
+                        @include flex-center;
+                    }
                     gap: 8px;
                     svg {
-                        transform: rotate(180deg);
+                        transform: rotate(180deg);@media (max-width: 767.98px) {
+                            transform: none;
+                        }
                     }
                 }
             }
             &:hover {
                 color: $black;
+                @media (max-width: 767.98px) {
+                    color: $white;
+                }
                 &::before {
                     top: 0;
                 }
@@ -72,15 +91,23 @@
                     z-index: 2;
                     .languageControl {
                         color: $black;
+                        @media (max-width: 767.98px) {
+                            color: $white;
+                            @include flex-center;
+                        }
                         svg {
                             path {
                                 stroke: $black;
+                                @media (max-width: 767.98px) {
+                                    stroke: $white;
+                                }
                             }
                         }
                     }
                 }
                 .dropdownWrapper {
                     > ul {
+                        display: block;
                         visibility: visible;
                         opacity: 1;
                         bottom: calc(100% + 30px);
@@ -124,9 +151,18 @@
                 padding: 8px 12px;
                 width: 100%;
                 text-align: left;
+                @media (max-width: 767.98px) {
+                    text-align: center;
+                    color: $white;
+                }
                 &:hover {
                     background-color: rgba($black, 0.05);
                 }
+            }
+            @media (max-width: 767.98px) {
+                position: static;
+                background-color: transparent;
+                display: none;
             }
         }
     }
@@ -155,6 +191,11 @@
         margin-top: 13px;
         @include flex-center-vert;
         justify-content: space-between;
+        @media (max-width: 767.98px) {
+            flex-direction: column-reverse;
+            gap: 16px;
+            margin-top: 32px;
+        }
         p {
             color: $white;
             @media (max-width: 1279.98px) {
