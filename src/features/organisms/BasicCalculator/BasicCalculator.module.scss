@@ -1,11 +1,65 @@
-.calculatorWrapper {
-    position: absolute;
-    background: lightgray;
-    width: 450px;
-    height: 500px;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    padding: 50px;
-    overflow: hidden;
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.stepContainer {
+    .stepRow {
+        @include RowItems(30);
+        :global {
+            .col_ {
+                flex: 1;
+                &:first-child {
+                    flex: 0 0 65%;
+                }
+            }
+        }
+        .stepLet {
+            border: 1px solid $white;
+            padding: 24px;
+        }
+        .stepRight {
+            color: $white;
+            .setepList {
+                @include flex-column;
+                align-items: flex-end;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    padding-bottom: 32px;
+                    position: relative;
+                    .stepContent {
+                        @include flex-center-vert;
+                        z-index: 1;
+                        position: relative;
+                        gap: 16px;
+                        .stepText {
+                            @include fontRem(16, 400, 19);
+                        }
+                        .stepNumber {
+                            @include fontRem(20, 700, 24);
+                            width: 33px;
+                            height: 33px;
+                            border: 1px solid $blue;
+                            border-radius: 50%;
+                            @include flex-center;
+                        }
+                    }
+                    &.selectedStep {
+                        .stepNumber {
+                            cursor: pointer;
+                            background-color: $blue;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            height: calc(100% - 34px);
+                            width: 1px;
+                            right: 16px;
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

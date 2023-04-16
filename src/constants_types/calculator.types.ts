@@ -3,6 +3,7 @@ export type TCalculatorModes = 'simple' | 'multiple';
 export type TCalculatorCurrentElement = {
   key: string;
   title: string;
+  description: string;
   mode: TCalculatorModes;
   values: string[];
   defaultIndex?: number;

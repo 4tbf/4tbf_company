@@ -1,20 +1,72 @@
-.stepWrapper{
-    position: relative;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    .calcCurrElementWrapper{
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.stepWrapper {
+    color: $white;
+    @include flex-column;
+    gap: 48px;
+    .calcCurrElementWrapper {
+        .title {
+            @include fontRem(20, 400, 26);
+            font-family: "MADE";
+        }
+        .descr {
+            @include fontRem(14, 400, 19);
+            margin: 8px 0 24px;
+            max-width: 406px;
+        }
+        .inpurWrapper {
+            @include flex-center-vert;
+            flex-wrap: wrap;
+            gap: 8px;
+            label {
+                input {
+                    display: none;
+                }
+                .checkItem {
+                    @include fontRem(16, 600, 22);
+                    @include flex-center-vert;
+                    gap: 6px;
+                    padding: 4px 12px;
+                    background: rgba(255, 255, 255, 0.24);
+                    cursor: pointer;
+                    svg {
+                        display: none;
+                    }
+                    &.checked {
+                        background-color: $blue;
+                        svg {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
     }
-    .inpurWrapper {
-        display: flex;
-        gap: 10px;
-    }
-    .buttonWrapper{
-        position: absolute;
-        bottom: 0;
+    .buttonWrapper {
+        
+        @include flex-center-vert;
+        gap: 32px;
+        justify-content: flex-end;
+        .prevButton {
+            @include buttonNulled;
+            font-family: "MADE";
+            @include flex-center-vert;
+            gap: 8px;
+            @include fontRem(16, 400, 21);
+            transition: 0.3s;
+            color: $blue;
+            text-decoration: none;
+            svg {
+                transform: rotate(180deg);
+            }
+            &:hover {
+                gap: 18px;
+            }
+            &:active {
+                gap: 8px;
+                font-size: 14px !important;
+            }
+        }
     }
 }

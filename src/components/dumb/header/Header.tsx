@@ -70,6 +70,28 @@ const Header = () => {
             <Link className={styles.headerLinks} href="#">
               <span> Services</span>
             </Link>
+            <div className={styles.headerLinks}>
+              <ul className={styles.headerLanguage}>
+                <li className={styles.dropdownWrapper}>
+                  <div className={styles.languageControl}>
+                    <span>Cost Calculator</span>
+                    <ArrowIcon />
+                  </div>
+                  <ul>
+                    <li>
+                      <Link href="/case-studies">
+                        <span> Case Studies</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/case-studies">
+                        <span> Case Studies</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
             <Link className={styles.headerLinks} href="/case-studies">
               <span> Case Studies</span>
             </Link>

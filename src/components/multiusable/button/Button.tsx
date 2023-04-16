@@ -14,7 +14,7 @@ const Button = ({
   onClick?: any;
 }) => {
   return (
-    <button className={clsx(styles.button, styles[variant])} type={type}>
+    <button onClick={onClick} className={clsx(styles.button, styles[variant])} type={type}>
       {children}
     </button>
   );
