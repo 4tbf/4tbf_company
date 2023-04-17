@@ -31,7 +31,6 @@ const ContactForm = () => {
       console.log(values);
     },
   });
-  console.log(values);
   return (
     <section className={styles.contactFrom}>
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
