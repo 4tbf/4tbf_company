@@ -18,6 +18,7 @@
 .contentTextWapper {
     color: $white;
     @include absoluteCenter(both);
+    @include flex-center-column;
     @media (max-width: 1279.98px) {
         width: 100%;
         padding: 0 30px;
@@ -45,6 +46,12 @@
         @media (max-width: 1279.98px) {
             @include fontRem(16, 400, 20);
             max-width: 100%;
+        }
+    }
+    button {
+        margin-top: 55px;
+        @media (max-width: 1279.98px) {
+            margin-top: 32px;
         }
     }
 }
