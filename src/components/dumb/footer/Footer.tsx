@@ -107,10 +107,10 @@ const Footer = () => {
               <InstagramIcon />
             </Link>
           </div>
-          <div className={styles.footerDocumens}>
+          {/* <div className={styles.footerDocumens}>
             <Link href="#">Support</Link>
             <Link href="#">Privary</Link>
-          </div>
+          </div> */}
         </div>
         <div className={styles.footerCopyRight}>
           <Text as="p">
