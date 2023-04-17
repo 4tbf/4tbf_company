@@ -6,22 +6,20 @@ export const CALCULATOR: TCalculator = {
       {
         key: 'number_of_pages',
         title: 'Number of pages',
-        description:
-          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
+        description: 'Please select the approximate number of pages your application should have.',
         mode: 'multiple',
-        values: ['1 – 5', '5-15', '15-30', 'unlimited'],
+        values: ['1 – 5', '5-15', '15-30', 'Unlimited'],
         defaultIndex: 0,
         requiere: true,
         prices: [100, 200, 300, 1000],
-        stepName: '1111',
+        stepName: 'Pages',
       },
       {
         key: 'pages_copywrite',
-        title: 'Pages Copywriting',
-        description:
-          'Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor mi fringilla elit posuere sit proin.',
+        title: 'Copywriting of pages',
+        description: 'Select the part of the pages that need copywriting',
         mode: 'multiple',
-        values: ['None', 'partly', 'all pages'],
+        values: ['None', 'Partly', 'All pages'],
         requiere: true,
         defaultIndex: 0,
         prices: [0, 100, 200],
@@ -44,7 +42,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 1,
         requiere: true,
         prices: [0, 100, 200, 300, 500],
-        stepName: '2222',
+        stepName: 'Design and Logo',
       },
       {
         key: 'logo',
@@ -69,7 +67,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 100, 200, 300],
-        stepName: '3333',
+        stepName: 'Database and Forms',
       },
       {
         key: 'form_email',
@@ -94,7 +92,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 100, 200, 300],
-        stepName: '4444',
+        stepName: 'Integrations',
       },
       {
         key: 'cms',
