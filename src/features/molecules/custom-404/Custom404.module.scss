@@ -1,0 +1,57 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.pageContent {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 82px);
+    overflow: hidden;
+    background-image: url("/images/404_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -180px;
+    @media (max-width: 1279.98px) {
+        background-position: top right;
+        height: 100vh;
+    }
+}
+.contentTextWapper {
+    color: $white;
+    @include absoluteCenter(both);
+    @include flex-center-column;
+    @media (max-width: 1279.98px) {
+        width: 100%;
+        padding: 0 30px;
+    }
+    h1 {
+        @include fontRem(100, 400, 131);
+        text-align: center;
+        margin-bottom: 11px;
+        font-family: "MADE";
+        @media (max-width: 1279.98px) {
+            @include fontRem(80, 400, 100);
+        }
+    }
+    p {
+        max-width: 450px;
+        margin: auto;
+        text-align: center;
+        @include fontRem(20, 400, 28);
+        &:first-of-type {
+            @include fontRem(32, 600, 41);
+            @media (max-width: 1279.98px) {
+                @include fontRem(22, 400, 26);
+            }
+        }
+        @media (max-width: 1279.98px) {
+            @include fontRem(16, 400, 20);
+            max-width: 100%;
+        }
+    }
+    button {
+        margin-top: 55px;
+        @media (max-width: 1279.98px) {
+            margin-top: 32px;
+        }
+    }
+}
