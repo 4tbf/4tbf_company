@@ -11,7 +11,7 @@ export const CALCULATOR: TCalculator = {
         values: ['1 – 5', '5-15', '15-30', 'Unlimited'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 200, 300, 1000],
+        prices: [1000, 2000, 3000, 4000],
         stepName: 'Pages',
       },
       {
@@ -22,7 +22,7 @@ export const CALCULATOR: TCalculator = {
         values: ['None', 'Partly', 'All pages'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 100, 200],
+        prices: [0, 500, 1000],
       },
     ],
     [
@@ -41,7 +41,7 @@ export const CALCULATOR: TCalculator = {
         ],
         defaultIndex: 1,
         requiere: true,
-        prices: [0, 100, 200, 300, 500],
+        prices: [0, 1000, 1500, 2500, 4000],
         stepName: 'Design and Logo',
       },
       {
@@ -53,7 +53,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic logo', 'Modern logo'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 200, 400],
       },
     ],
     [
@@ -66,7 +66,7 @@ export const CALCULATOR: TCalculator = {
         values: ['None', 'Basic', 'Advanced', 'Full development'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 100, 200, 300],
+        prices: [0, 1000, 2000, 3000],
         stepName: 'Database and Forms',
       },
       {
@@ -78,7 +78,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'hard'],
         defaultIndex: 1,
         requiere: true,
-        prices: [0, 100, 200],
+        prices: [0, 500, 1000],
       },
     ],
     [
@@ -91,7 +91,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', '5-25 items', '25 – 100 Items', '100 + items'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 100, 200, 300],
+        prices: [0, 1000, 1500, 2000],
         stepName: 'Integrations',
       },
       {
@@ -103,7 +103,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'partly', 'fully'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 100, 200],
+        prices: [0, 500, 1000],
       },
       {
         key: 'seo',
@@ -114,7 +114,7 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
+        prices: [1000, 0],
       },
     ],
   ],
@@ -129,8 +129,8 @@ export const CALCULATOR: TCalculator = {
         values: ['1 – 5', '5 – 15', '15 -30', 'unlimited'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 200, 300, 500],
-        stepName: '1111',
+        prices: [1000, 2000, 3000, 4000],
+        stepName: 'Fundamental Points',
       },
       {
         key: 'copywrite',
@@ -141,7 +141,7 @@ export const CALCULATOR: TCalculator = {
         values: ['None', 'partly', 'all pages'],
         defaultIndex: 0,
         requiere: true,
-        prices: [0, 200, 300],
+        prices: [0, 500, 1000],
       },
       {
         key: 'auth',
@@ -152,7 +152,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'basic', 'hard', 'web3'],
         defaultIndex: 0,
         requiere: true,
-        prices: [0, 200, 300, 400],
+        prices: [0, 500, 1000, 1500],
       },
     ],
     [
@@ -171,8 +171,8 @@ export const CALCULATOR: TCalculator = {
         ],
         defaultIndex: 1,
         requiere: true,
-        prices: [0, 100, 200, 300, 500],
-        stepName: '2222',
+        prices: [0, 1000, 1500, 2500, 4000],
+        stepName: 'Design',
       },
       {
         key: 'logo',
@@ -183,7 +183,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic logo', 'Modern logo'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 200, 400],
       },
       {
         key: 'animation',
@@ -194,7 +194,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Modern', 'Extra hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500, 750],
+        prices: [0, 500, 1000, 3000],
       },
       {
         key: 'mobile_tablet',
@@ -205,7 +205,7 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
+        prices: [500, 0],
       },
     ],
     [
@@ -218,8 +218,8 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Advanced', 'Full development'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500, 750],
-        stepName: '3333',
+        prices: [0, 1000, 2000, 3000],
+        stepName: 'Database Implementation',
       },
       {
         key: 'livetime_actions',
@@ -230,7 +230,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 750, 1500],
       },
       {
         key: 'day_scheduling',
@@ -241,7 +241,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 500, 1000],
       },
       {
         key: 'mail_sender',
@@ -252,7 +252,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 500, 1000],
       },
     ],
     [
@@ -265,8 +265,8 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', '5-25 items', '25 – 100 Items', '100 + items'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 100, 200, 300],
-        stepName: '4444',
+        prices: [0, 1000, 1500, 2000],
+        stepName: 'E-Commerce',
       },
       {
         key: 'items_filtrations_categories',
@@ -277,7 +277,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 350, 700],
       },
       {
         key: 'checkout',
@@ -288,7 +288,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 500, 1000],
       },
     ],
     [
@@ -301,8 +301,8 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
-        stepName: '5555',
+        prices: [0, 500, 1000],
+        stepName: 'Services',
       },
       {
         key: 'different_roles',
@@ -313,7 +313,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 500, 1000],
       },
       {
         key: 'images',
@@ -346,7 +346,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 500, 1000],
       },
     ],
     [
@@ -359,8 +359,8 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
-        stepName: '6666',
+        prices: [0, 1500, 3000],
+        stepName: 'Features',
       },
       {
         key: 'multy_lang',
@@ -371,7 +371,7 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
+        prices: [400, 0],
       },
       {
         key: 'cms',
@@ -382,7 +382,7 @@ export const CALCULATOR: TCalculator = {
         values: ['Not need', 'Basic', 'Hard'],
         requiere: true,
         defaultIndex: 0,
-        prices: [0, 250, 500],
+        prices: [0, 500, 1000],
       },
     ],
     [
@@ -395,8 +395,8 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
-        stepName: '7777',
+        prices: [1000, 0],
+        stepName: 'SEO and Analytics',
       },
       {
         key: 'metrica',
@@ -407,7 +407,7 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
+        prices: [500, 0],
       },
       {
         key: 'webvisor',
@@ -418,7 +418,7 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
+        prices: [500, 0],
       },
     ],
     [
@@ -432,7 +432,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
-        stepName: '8888',
+        stepName: 'Support',
       },
       {
         key: 'error_loger',
@@ -443,7 +443,7 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
+        prices: [500, 0],
       },
       {
         key: 'protection',
@@ -454,7 +454,7 @@ export const CALCULATOR: TCalculator = {
         values: ['yes', 'no'],
         defaultIndex: 0,
         requiere: true,
-        prices: [100, 0],
+        prices: [500, 0],
       },
     ],
   ],

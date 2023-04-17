@@ -53,7 +53,6 @@ const BasicCalculator: React.FC = () => {
               <div className={styles.stepRight}>
                 <ul className={styles.setepList}>
                   {currentCalcSteps.map((current: TCalculatorCurrentElement[], index) => {
-                    console.log(step, index);
                     return (
                       <li
                         key={current[0].stepName}
