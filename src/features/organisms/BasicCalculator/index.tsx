@@ -29,8 +29,8 @@ const BasicCalculator: React.FC = () => {
   return (
     <div>
       <CalculateHeader
-        title="Parz Calculator"
-        descr="Hit a line and our friendly folks will get back to you as soon as possible."
+        title="Basic Calculator"
+        descr="Go thorough all steps,discover the True Cost of Your Website"
       />
       <div className="container">
         <div className={styles.stepContainer}>

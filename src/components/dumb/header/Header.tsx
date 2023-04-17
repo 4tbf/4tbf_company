@@ -70,6 +70,9 @@ const Header = () => {
             <Link className={styles.headerLinks} href="#">
               <span> Services</span>
             </Link>
+            <Link className={styles.headerLinks} href="/case-studies">
+              <span> Case Studies</span>
+            </Link>
             <div className={styles.headerLinks}>
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
@@ -92,12 +95,9 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            <Link className={styles.headerLinks} href="/case-studies">
-              <span> Case Studies</span>
-            </Link>
-            <Link className={styles.headerLinks} href="#">
+            {/* <Link className={styles.headerLinks} href="#">
               <span> Cost Calculator</span>
-            </Link>
+            </Link> */}
             <Link className={styles.headerLinks} href="/about">
               <span> About Us</span>
             </Link>
