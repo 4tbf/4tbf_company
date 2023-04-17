@@ -130,7 +130,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 0,
         requiere: true,
         prices: [100, 200, 300, 500],
-        stepName: '1111',
+        stepName: 'Fundamental Points',
       },
       {
         key: 'copywrite',
@@ -172,7 +172,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 1,
         requiere: true,
         prices: [0, 100, 200, 300, 500],
-        stepName: '2222',
+        stepName: 'Design',
       },
       {
         key: 'logo',
@@ -219,7 +219,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500, 750],
-        stepName: '3333',
+        stepName: 'Database Implementation',
       },
       {
         key: 'livetime_actions',
@@ -266,7 +266,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 100, 200, 300],
-        stepName: '4444',
+        stepName: 'E-Commerce',
       },
       {
         key: 'items_filtrations_categories',
@@ -302,7 +302,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
-        stepName: '5555',
+        stepName: 'Services',
       },
       {
         key: 'different_roles',
@@ -360,7 +360,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
-        stepName: '6666',
+        stepName: 'Features',
       },
       {
         key: 'multy_lang',
@@ -396,7 +396,7 @@ export const CALCULATOR: TCalculator = {
         defaultIndex: 0,
         requiere: true,
         prices: [100, 0],
-        stepName: '7777',
+        stepName: 'SEO and Analytics',
       },
       {
         key: 'metrica',
@@ -432,7 +432,7 @@ export const CALCULATOR: TCalculator = {
         requiere: true,
         defaultIndex: 0,
         prices: [0, 250, 500],
-        stepName: '8888',
+        stepName: 'Support',
       },
       {
         key: 'error_loger',

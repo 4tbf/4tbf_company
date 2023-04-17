@@ -39,7 +39,14 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({ goToStep, formik, cost 
       setEmailError(false);
     };
   }, []);
+  function numberWithCommas(x) {
+    x = x.toString();
+    const pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x)) x = x.replace(pattern, '$1.$2');
+    return x;
+  }
 
+  const finalCost = cost < 1000 ? cost * 8 : cost * 3.2;
   return (
     <div className={styles.finalWrapper}>
       <div className={styles.finalHeader}>
@@ -50,7 +57,8 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({ goToStep, formik, cost 
           Approximate cost
         </Text>
         <Text as="p" className={styles.count}>
-          {cost}
+          ${numberWithCommas(Math.round(0.9 * finalCost))} - $
+          {numberWithCommas(Math.round(1.1 * finalCost))}
         </Text>
       </div>
       <div className={styles.submitItem}>
