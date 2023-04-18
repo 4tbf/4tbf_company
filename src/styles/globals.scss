@@ -21,9 +21,6 @@ body {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-#__next {
-  overflow: hidden;
-}
 
 @font-face {
   font-family: "MADE";
@@ -126,6 +123,7 @@ main {
 .about-page,
 .contact-page,
 .why-we-page,
-.calc-page {
+.calc-page,
+.services-page {
   background-color: $black;
 }
