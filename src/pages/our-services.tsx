@@ -3,20 +3,20 @@ import Head from 'next/head';
 import React from 'react';
 import Header from '../components/dumb/header/Header';
 import Footer from '../components/dumb/footer/Footer';
-import ContactHero from '../features/molecules/contact-us/contact-hero/ContactHero';
-import ContactForm from '../features/molecules/contact-us/contact-form/ContactForm';
+import OurServicesHero from '../features/molecules/our-services-components/our-services-hero/OurServicesHero';
+import Technologies from '../features/molecules/our-services-components/technologies/Technologies';
 
-export default function ContactUs() {
+export default function OurServices() {
   return (
-    <div className="contact-page">
+    <div className="services-page">
       <Head>
         <title>4The BRIGHT Future</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main>
-        <ContactHero />
-        <ContactForm />
+        <OurServicesHero />
+        <Technologies />
       </main>
       <Footer />
     </div>
