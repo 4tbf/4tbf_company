@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { useFormik } from 'formik';
 import { object, string } from 'yup';
+import emailjs from '@emailjs/browser';
+import { useTranslation } from 'next-i18next';
 import styles from './ContactForm.module.scss';
 import Input from '../../../../components/multiusable/input/Input';
 import Button from '../../../../components/multiusable/button/Button';
@@ -13,24 +15,37 @@ import InstagramIcon from '../../../../components/svgs/InstagramIcon';
 import SuccessModal from '../../../atoms/SuccessModal';
 import ErrorMessage from '../../../../components/multiusable/error-message/ErrorMessage';
 import { CONTACT_US } from './constants';
-
-const validationSchema = object({
-  name: string().required('Requiere Field'),
-  email: string().email('Not Valid Email').required('Requiere Field'),
-  phone: string()
-    .matches(/^\+?[1-9][0-9]{7,14}$/, 'Not valid phone')
-    .required('Requiere Field'),
-});
+import { blank } from '../../../../utils/blank';
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+  const validationSchema = object({
+    name: string().required(t('contact.error')),
+    email: string().email(t('contact.field.error.email')).required(t('contact.error')),
+    phone: string()
+      .matches(/^\+?[1-9][0-9]{7,14}$/, t('contact.field.error.phone'))
+      .required(t('contact.error')),
+  });
+
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const handleFetch = async (values: Record<string, string>) => {
+    const newValues = values.file ? { ...values, file: 'FILE' } : values;
+
+    await emailjs.send('service_e4pwdli', 'template_0hd5k5r', newValues, 's9kdGmtpc_11aAgwC');
+    setIsOpen(true);
+  };
+
   const { setFieldValue, errors, values, handleSubmit } = useFormik({
     initialValues: CONTACT_US,
     validationSchema,
-    onSubmit: (values) => {
-      console.log(values);
+    validateOnChange: false,
+    validateOnBlur: true,
+    onSubmit: (values, { resetForm }) => {
+      handleFetch(values);
+      resetForm({ values: CONTACT_US });
     },
   });
+
   return (
     <section className={styles.contactFrom}>
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
@@ -43,8 +58,8 @@ const ContactForm = () => {
                   <Input
                     error={errors.name}
                     type="text"
-                    label="Name"
-                    placeholder="name"
+                    label={t('contact.field.name')}
+                    placeholder={t('contact.field.name')}
                     value={values.name}
                     onChange={(e) => setFieldValue('name', e.target.value)}
                   />
@@ -53,8 +68,8 @@ const ContactForm = () => {
                 <div className="col_">
                   <Input
                     type="text"
-                    label="Surname"
-                    placeholder="Surname"
+                    label={t('contact.field.surname')}
+                    placeholder={t('contact.field.surname')}
                     value={values.surname}
                     onChange={(e) => setFieldValue('surname', e.target.value)}
                   />
@@ -62,8 +77,8 @@ const ContactForm = () => {
                 <div className="col_">
                   <Input
                     type="email"
-                    label="Email"
-                    placeholder="Email"
+                    label={t('contact.field.email')}
+                    placeholder={t('contact.field.email')}
                     error={errors.email}
                     value={values.email}
                     onChange={(e) => setFieldValue('email', e.target.value)}
@@ -73,8 +88,8 @@ const ContactForm = () => {
                 <div className="col_">
                   <Input
                     type="tel"
-                    label="Phone"
-                    placeholder="Phone"
+                    label={t('contact.field.phone')}
+                    placeholder={t('contact.field.phone')}
                     error={errors.phone}
                     value={values.phone}
                     onChange={(e) => setFieldValue('phone', e.target.value)}
@@ -84,8 +99,8 @@ const ContactForm = () => {
                 <div className="col_">
                   <Input
                     type="textarea"
-                    label="Message"
-                    placeholder="Message"
+                    label={t('contact.field.message')}
+                    placeholder={t('contact.field.message')}
                     value={values.message}
                     onChange={(e) => setFieldValue('message', e.target.value)}
                   />
@@ -93,8 +108,10 @@ const ContactForm = () => {
                 <div className="col_">
                   <Input
                     type="file"
-                    label="Upload File  ( PDF, JPG, PNG )"
-                    placeholder="Upload File"
+                    label={t('contact.field.upload')}
+                    placeholder={t('contact.field.upload.placeholder')}
+                    value={values.file}
+                    hanldeFileDelete={() => setFieldValue('file', null)}
                     onChange={(e) => {
                       setFieldValue('file', e.target.files[0]);
                     }}
@@ -104,10 +121,9 @@ const ContactForm = () => {
                   className="col_"
                   onClick={() => {
                     handleSubmit();
-                    setIsOpen(true);
                   }}
                 >
-                  <Button type="submit" children="Submit" />
+                  <Button type="submit" children={t('contact.form.submit')} />
                 </div>
               </div>
             </div>
@@ -116,33 +132,39 @@ const ContactForm = () => {
             <div className={styles.getInTouch}>
               <div className={styles.getInTouchTop}>
                 <Text className={styles.getInTouchTitle} as="h2">
-                  Get In touch
+                  {t('contact.getinTouch')}
                 </Text>
-                <Link href="mailto:barevaxpers@xareb.com">barevaxpers@xareb.com</Link>
-                <Link href="tel:+374 99 38 48 88">+374 99 38 48 88</Link>
+                <Link href="mailto:4tbf.company@gmail.com">4tbf.company@gmail.com</Link>
+                <Link href="tel:+374 99 62 45 53">+374 (99) 62-45-53</Link>
+                <Link href="tel:+1 661 401 5426">+1 (661) 401-5426</Link>
+
                 <div className={styles.socialList}>
-                  <Link href="#" target="_blank">
+                  <div onClick={() => blank('https://www.linkedin.com/company/93818519')}>
                     <LinkedInIcon />
-                  </Link>
-                  <Link href="#" target="_blank">
+                  </div>
+                  <div onClick={() => blank('https://twitter.com/4tbf_company')}>
                     <TwiiterIcon />
-                  </Link>
-                  <Link href="#" target="_blank">
+                  </div>
+                  <div
+                    onClick={() =>
+                      blank('https://www.facebook.com/people/4The-Bright-Future/100091433303988')
+                    }
+                  >
                     <FacebookIcon />
-                  </Link>
-                  <Link href="#" target="_blank">
+                  </div>
+                  <div onClick={() => blank('https://www.instagram.com/4the.brightfuture')}>
                     <InstagramIcon />
-                  </Link>
+                  </div>
                 </div>
               </div>
-              <div className={styles.getInTouchBottom}>
+              {/* <div className={styles.getInTouchBottom}>
                 <Text className={styles.getInTouchTitle} as="h2">
                   Visit Us
                 </Text>
                 <Text className={styles.getInTouchAddress} as="p">
                   Aystex karox e linel dzer hascen
                 </Text>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

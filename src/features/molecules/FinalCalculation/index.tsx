@@ -11,6 +11,8 @@ import RestoreIcon from '../../../components/svgs/RestoreIcon';
 interface IFinalCalculation extends IStepWizardCommon {
   formik: FormikProps<Record<string, string>>;
   cost: number;
+  email: string;
+  setEmail: (arg: string) => void;
 }
 
 const validateEmail = (email) => {
@@ -21,13 +23,19 @@ const validateEmail = (email) => {
     );
 };
 
-const FinalCalculation: React.FC<IFinalCalculation> = ({ goToStep, formik, cost }) => {
-  const [email, setEmail] = useState('');
+const FinalCalculation: React.FC<IFinalCalculation> = ({
+  goToStep,
+  formik,
+  cost,
+  email,
+  setEmail,
+}) => {
   const [emailError, setEmailError] = useState(false);
   const handleSubmit = () => {
     const isValid = validateEmail(email);
     if (isValid) {
       formik.handleSubmit();
+      goToStep(1);
     } else {
       setEmailError(true);
     }

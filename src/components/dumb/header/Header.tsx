@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
+import { useTranslation } from 'next-i18next';
 import styles from './Header.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
 import LogoIcon from '../../svgs/LogoIcon';
@@ -10,31 +11,33 @@ import BurgerIcon from '../../svgs/BurgerIcon';
 
 const LANGS = [
   {
-    locale: 'ru',
-    title: 'Русский',
-  },
-  {
     locale: 'en',
     title: 'English',
   },
   {
-    locale: 'de',
-    title: 'German',
+    locale: 'ru',
+    title: 'Русский',
   },
-  {
-    locale: 'es',
-    title: 'Spain',
-  },
-  {
-    locale: 'fr',
-    title: 'French',
-  },
-  {
-    locale: 'zh',
-    title: 'Chiness',
-  },
+
+  // {
+  //   locale: 'de',
+  //   title: 'German',
+  // },
+  // {
+  //   locale: 'es',
+  //   title: 'Spain',
+  // },
+  // {
+  //   locale: 'fr',
+  //   title: 'French',
+  // },
+  // {
+  //   locale: 'zh',
+  //   title: 'Chiness',
+  // },
 ];
 const Header = () => {
+  const { t, i18n } = useTranslation();
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const handleBurgerClick = useCallback(() => {
@@ -65,30 +68,30 @@ const Header = () => {
           </div>
           <nav className={clsx({ [styles.menuOpen]: isBurgerOpen })}>
             <Link className={styles.headerLinks} href="/why-we">
-              <span> Why We?</span>
+              <span>{t('header.footer.whywe')}</span>
             </Link>
-            <Link className={styles.headerLinks} href="#">
-              <span> Services</span>
+            <Link className={styles.headerLinks} href="/services">
+              <span>{t('header.footer.services')}</span>
             </Link>
             <Link className={styles.headerLinks} href="/case-studies">
-              <span> Case Studies</span>
+              <span>{t('header.footer.case')}</span>
             </Link>
             <div className={styles.headerLinks}>
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
                   <div className={styles.languageControl}>
-                    <span>Cost Calculator</span>
+                    <span>{t('header.footer.calc')}</span>
                     <ArrowIcon />
                   </div>
                   <ul>
                     <li>
-                      <Link href="/case-studies">
-                        <span> Case Studies</span>
+                      <Link href="/calculator/basic">
+                        <span>{t('header.footer.calc.basic')}</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/case-studies">
-                        <span> Case Studies</span>
+                      <Link href="/calculator/advanced">
+                        <span>{t('header.footer.calc.advanced')}</span>
                       </Link>
                     </li>
                   </ul>
@@ -99,16 +102,16 @@ const Header = () => {
               <span> Cost Calculator</span>
             </Link> */}
             <Link className={styles.headerLinks} href="/about">
-              <span> About Us</span>
+              <span>{t('header.footer.about')}</span>
             </Link>
             <Link className={styles.headerLinks} href="/contact-us">
-              <span> Contact Us</span>
+              <span>{t('header.footer.contact')}</span>
             </Link>
             <div className={styles.headerLinks}>
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
-                  <div className={styles.languageControl}>
-                    <span>EN</span>
+                  <div className={styles.languageControl} style={{ textTransform: 'uppercase' }}>
+                    <span>{i18n && i18n.options && i18n.options.lng}</span>
                     <ArrowIcon />
                   </div>
                   <ul>
