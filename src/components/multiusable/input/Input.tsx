@@ -2,6 +2,8 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './Input.module.scss';
 import Text from '../../../features/atoms/text';
+import { X } from '../../../assets/X';
+import { Document } from '../../../assets/Document';
 
 const Input = ({
   label,
@@ -11,6 +13,7 @@ const Input = ({
   value,
   name,
   error,
+  hanldeFileDelete,
 }: {
   placeholder?: any;
   label?: any;
@@ -19,24 +22,38 @@ const Input = ({
   value?: any;
   name?: any;
   error?: any;
+  hanldeFileDelete?: () => void;
 }) => {
   const input = () => {
     switch (type) {
       case 'textarea':
-        return <textarea onChange={onChange} placeholder={placeholder || ''} />;
+        return <textarea value={value} onChange={onChange} placeholder={placeholder || ''} />;
       case 'file':
         return (
-          <label className={styles.fileInputWrapper}>
+          <label
+            className={clsx(styles.fileInputWrapper, {
+              [styles.fileInputWrapperWithValue]: value,
+            })}
+          >
             <input
               onChange={onChange}
               type="file"
               accept="application/pdf, image/*, .csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
             />
-            <Text>{placeholder}</Text>
+            {value ? (
+              <div className={styles.document}>
+                <Document />
+                <Text>{value.name}</Text>
+              </div>
+            ) : (
+              <Text>{placeholder}</Text>
+            )}
           </label>
         );
       default:
-        return <input onChange={onChange} type={type} placeholder={placeholder || ''} />;
+        return (
+          <input value={value} onChange={onChange} type={type} placeholder={placeholder || ''} />
+        );
     }
   };
 
@@ -47,6 +64,11 @@ const Input = ({
       })}
     >
       {label && <label>{label}</label>}
+      {type === 'file' && value && (
+        <span onClick={hanldeFileDelete} className={styles.x}>
+          <X />
+        </span>
+      )}
 
       {input()}
     </div>

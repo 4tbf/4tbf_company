@@ -17,14 +17,14 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              Hit a line and our friendly folks will get back to you as soon as possible.
+              Spark your success with our bright development solutions.
             </motion.p>
             <motion.h1
               initial={{ x: -1000, scale: 0.7 }}
               animate={{ x: 0, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
-              Stex Mi Hat Bomb Title Mrrr
+              Crafting Exceptional Digital Solutions
             </motion.h1>
           </div>
         </div>

@@ -2,6 +2,7 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
 import Head from 'next/head';
+import { AnimatePresence } from 'framer-motion';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +13,9 @@ function App({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
       </Head>
-      <Component {...pageProps} />
+      <AnimatePresence mode="wait" initial={false}>
+        <Component {...pageProps} />
+      </AnimatePresence>
     </>
   );
 }

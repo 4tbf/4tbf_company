@@ -78,6 +78,7 @@
                     z-index: 2;
                     cursor: pointer;
                     .languageControl {
+
                         color: $white;
                         @include fontRem(16, 400, 22);
                         @include flex-center-vert;

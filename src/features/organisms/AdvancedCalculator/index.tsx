@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import StepWizard from 'react-step-wizard';
 import { useFormik, FormikProps } from 'formik';
 import clsx from 'clsx';
+import emailjs from '@emailjs/browser';
 import CalculatorStep from '../../molecules/CalculatorStep';
 import { CALCULATOR } from '../../../constants_types/calculator.constants';
 import FinalCalculation from '../../molecules/FinalCalculation';
@@ -12,17 +13,30 @@ import styles from './AdvancedCalculator.module.scss';
 import Text from '../../atoms/text';
 import CheckIcon from '../../../components/svgs/CheckIcon';
 import { TCalculatorCurrentElement } from '../../../constants_types/calculator.types';
+import SuccessModal from '../../atoms/SuccessModal';
 
 const AdvancedCalculator: React.FC = () => {
   const currentCalcSteps = CALCULATOR.advanced;
   const { iitialValues, validationSchem } = useAdvancedCalculator(currentCalcSteps);
   const [step, setStep] = useState(1);
+  const [email, setEmail] = useState('');
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
+  const handleFetch = async (values: Record<string, string>) => {
+    await emailjs.send(
+      'service_e4pwdli',
+      'template_hhjw6i9',
+      { data: JSON.stringify(values), email },
+      's9kdGmtpc_11aAgwC'
+    );
+    setIsOpen(true);
+  };
   const formik: FormikProps<Record<string, string>> = useFormik({
     initialValues: iitialValues,
     validationSchema: validationSchem,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: (values, { resetForm }) => {
+      resetForm({ values: iitialValues });
+      handleFetch(values);
     },
   });
   const cost = useCalculateData(formik.values, currentCalcSteps);
@@ -33,6 +47,7 @@ const AdvancedCalculator: React.FC = () => {
         title="Parz Calculator"
         descr="Hit a line and our friendly folks will get back to you as soon as possible."
       />
+      <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
       <div className="container">
         <div className={styles.stepContainer}>
           <div className={styles.stepRow}>
@@ -50,7 +65,7 @@ const AdvancedCalculator: React.FC = () => {
                   <CalculatorStep formik={formik} currentStepData={currentCalcSteps[5]} />
                   <CalculatorStep formik={formik} currentStepData={currentCalcSteps[6]} />
                   <CalculatorStep formik={formik} currentStepData={currentCalcSteps[7]} />
-                  <FinalCalculation cost={cost} formik={formik} />
+                  <FinalCalculation email={email} setEmail={setEmail} cost={cost} formik={formik} />
                 </StepWizard>
               </div>
             </div>

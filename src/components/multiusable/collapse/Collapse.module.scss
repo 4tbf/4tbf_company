@@ -52,6 +52,7 @@
             p {
                 margin-top: 11px;
                 @include fontRem(14, 400, 19);
+                padding: 0 15px 0 10px;
             }
         }
     }

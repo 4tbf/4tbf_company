@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-bind */
 import React from 'react';
 import Modal from 'react-modal';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import styles from './SuccessModal.module.scss';
 import CloseIcon from '../../../components/svgs/CloseIcon';
 import Text from '../text';
@@ -14,6 +16,9 @@ interface ISuccessModal {
 Modal.setAppElement(typeof window !== 'undefined' && document.getElementById('__next'));
 
 const SuccessModal: React.FC<ISuccessModal> = ({ modalIsOpen, setIsOpen }) => {
+  const { t } = useTranslation();
+
+  const router = useRouter();
   const afterOpenModal = () => {
     document.body.style.overflow = 'hidden';
   };
@@ -38,15 +43,22 @@ const SuccessModal: React.FC<ISuccessModal> = ({ modalIsOpen, setIsOpen }) => {
         </button>
         <div className={styles.modalBody}>
           <Text className={styles.modalTitle} as="h3">
-            SUCCESS
+            {t('modal.success.title')}
           </Text>
           <Text className={styles.modalSubTitle} as="p">
-            Hit a line and our friendly folks will get back to you as soon as possible.
+            {t('modal.success.decription')}
           </Text>
           <div>
             <CheckWithShadowIcon />
           </div>
-          <Button type="button" children="Back To home" />
+          <Button
+            type="button"
+            children="Back To home"
+            onClick={() => {
+              closeModal();
+              router.push('/');
+            }}
+          />
         </div>
       </Modal>
     </div>

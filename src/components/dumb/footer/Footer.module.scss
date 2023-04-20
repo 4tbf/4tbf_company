@@ -61,6 +61,9 @@
                 z-index: 2;
                 cursor: pointer;
                 .languageControl {
+                    span{
+                        text-transform: uppercase;
+                    }
                     color: $white;
                     @include fontRem(16, 400, 22);
                     @include flex-center-vert;
@@ -90,6 +93,9 @@
                 .footerLanguage {
                     z-index: 2;
                     .languageControl {
+                        span{
+                            text-transform: uppercase;
+                        }
                         color: $black;
                         @media (max-width: 767.98px) {
                             color: $white;
@@ -198,6 +204,10 @@
         }
         p {
             color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
             @media (max-width: 1279.98px) {
                 @include fontRem(14, 400, 20);
             }

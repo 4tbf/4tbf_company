@@ -2,6 +2,7 @@
 @import "/src/styles/pallete";
 
 .inputWrapper {
+    position: relative;
     label {
         display: inline-block;
         margin-bottom: 8px;
@@ -39,5 +40,20 @@
             display: none;
 
         }
+    }
+    .fileInputWrapperWithValue{
+        background: rgba(255, 255, 255, 0.12);
+        .document{
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+    .x{
+        position: absolute;
+        right: 0;
+        cursor: pointer;
     }
 }

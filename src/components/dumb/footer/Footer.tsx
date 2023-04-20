@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import styles from './Footer.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
 import LinkedInIcon from '../../svgs/LinkedInIcon';
@@ -20,25 +21,26 @@ const LANGS = [
     locale: 'en',
     title: 'English',
   },
-  {
-    locale: 'de',
-    title: 'German',
-  },
-  {
-    locale: 'es',
-    title: 'Spain',
-  },
-  {
-    locale: 'fr',
-    title: 'French',
-  },
-  {
-    locale: 'zh',
-    title: 'Chiness',
-  },
+  // {
+  //   locale: 'de',
+  //   title: 'German',
+  // },
+  // {
+  //   locale: 'es',
+  //   title: 'Spain',
+  // },
+  // {
+  //   locale: 'fr',
+  //   title: 'French',
+  // },
+  // {
+  //   locale: 'zh',
+  //   title: 'Chiness',
+  // },
 ];
 
 const Footer = () => {
+  const { i18n } = useTranslation();
   const router = useRouter();
   const changeLang = (locale: string) => {
     router.push(router.pathname, null, { locale });
@@ -74,7 +76,7 @@ const Footer = () => {
                 <ul className={styles.footerLanguage}>
                   <li className={styles.dropdownWrapper}>
                     <div className={styles.languageControl}>
-                      <span>EN</span>
+                      <span>{i18n && i18n.options && i18n.options.lng}</span>
                       <ArrowIcon />
                     </div>
                     <ul>
@@ -115,7 +117,7 @@ const Footer = () => {
         <div className={styles.footerCopyRight}>
           <Text as="p">
             <CopyrightIcon />
-            Copyright
+            Copyright 2023 4TBF
           </Text>
           <Text as="p">
             Design By:
