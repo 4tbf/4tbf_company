@@ -11,6 +11,7 @@ import InstagramIcon from '../../svgs/InstagramIcon';
 import CopyrightIcon from '../../svgs/CopyrightIcon';
 import Text from '../../../features/atoms/text';
 import LogoIcon from '../../svgs/LogoIcon';
+import { blank } from '../../../utils/blank';
 
 const LANGS = [
   {
@@ -40,7 +41,7 @@ const LANGS = [
 ];
 
 const Footer = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const router = useRouter();
   const changeLang = (locale: string) => {
     router.push(router.pathname, null, { locale });
@@ -54,23 +55,42 @@ const Footer = () => {
           </div>
           <div className={styles.footerMenu}>
             <menu>
-              <Link className={styles.footerLinks} href="#">
-                <span> Why We?</span>
+              <Link className={styles.footerLinks} href="/why-we">
+                <span>{t('header.footer.whywe')}</span>
               </Link>
-              <Link className={styles.footerLinks} href="#">
-                <span> Services</span>
+              <Link className={styles.footerLinks} href="/services">
+                <span>{t('header.footer.services')}</span>
               </Link>
-              <Link className={styles.footerLinks} href="#">
-                <span> Case Studies</span>
+              <Link className={styles.footerLinks} href="/case-studies">
+                <span>{t('header.footer.case')}</span>
               </Link>
-              <Link className={styles.footerLinks} href="#">
-                <span> Cost Calculator</span>
-              </Link>
+              <div className={styles.footerLinks}>
+                <ul className={styles.footerLanguage}>
+                  <li className={styles.dropdownWrapper}>
+                    <div className={styles.languageControl}>
+                      <span>{t('header.footer.calc')}</span>
+                      <ArrowIcon />
+                    </div>
+                    <ul>
+                      <li>
+                        <Link href="/calculator/basic">
+                          <span>{t('header.footer.calc.basic')}</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/calculator/advanced">
+                          <span>{t('header.footer.calc.advanced')}</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
               <Link className={styles.footerLinks} href="/about">
-                <span> About Us</span>
+                <span>{t('header.footer.about')}</span>
               </Link>
               <Link className={styles.footerLinks} href="/contact-us">
-                <span> Contact Us</span>
+                <span>{t('header.footer.contact')}</span>
               </Link>
               <div className={styles.footerLinks}>
                 <ul className={styles.footerLanguage}>
@@ -96,18 +116,22 @@ const Footer = () => {
             </menu>
           </div>
           <div className={styles.footerSocials}>
-            <Link href="#" target="_blank">
+            <div onClick={() => blank('https://www.linkedin.com/company/93818519')}>
               <LinkedInIcon />
-            </Link>
-            <Link href="#" target="_blank">
+            </div>
+            <div onClick={() => blank('https://twitter.com/4tbf_company')}>
               <TwiiterIcon />
-            </Link>
-            <Link href="#" target="_blank">
+            </div>
+            <div
+              onClick={() =>
+                blank('https://www.facebook.com/people/4The-Bright-Future/100091433303988')
+              }
+            >
               <FacebookIcon />
-            </Link>
-            <Link href="#" target="_blank">
+            </div>
+            <div onClick={() => blank('https://www.instagram.com/4the.brightfuture')}>
               <InstagramIcon />
-            </Link>
+            </div>
           </div>
           {/* <div className={styles.footerDocumens}>
             <Link href="#">Support</Link>

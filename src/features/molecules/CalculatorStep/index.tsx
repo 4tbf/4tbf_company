@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormikProps } from 'formik';
 import clsx from 'clsx';
+import dynamic from 'next/dynamic';
 import { IStepWizardCommon } from '../../../constants_types/global.types';
 import styles from './CalculatorStep.module.scss';
 import { TCalculatorCurrentElement } from '../../../constants_types/calculator.types';
@@ -9,6 +10,12 @@ import CheckIcon from '../../../components/svgs/CheckIcon';
 import Button from '../../../components/multiusable/button/Button';
 import LongArrowIcon from '../../../components/svgs/LongArrowIcon';
 
+const CustomToolTIp = dynamic(
+  () => import('../../../components/multiusable/CustomToolTIp/CustomToolTIp'),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
 interface ICalculatorStep extends IStepWizardCommon {
   currentStepData: any;
   formik: FormikProps<Record<string, string>>;
@@ -32,9 +39,12 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
       {currentStepData.map((element: TCalculatorCurrentElement) => {
         return (
           <div className={styles.calcCurrElementWrapper} key={element.key}>
-            <Text as="h3" className={styles.title}>
-              {element.title}
-            </Text>
+            <div className={styles.tooltipWrapper}>
+              <Text as="h3" className={styles.title}>
+                {element.title}
+              </Text>
+              <CustomToolTIp text="uashdhnaskjdn alkjsandkjas uashdhnaskjdn alkjsandkjuashdhnaskjdn alkjsandkjuashdhnaskjdn alkjsandkjuashdhnaskjdn alkjsandkjuashdhnaskjdn alkjsandkj nsjkdna kjdnkjs jkasj dajsnd jknsdjn ajnd jdjn ajsdn " />
+            </div>
             <Text as="p" className={styles.descr}>
               {element.description}
             </Text>

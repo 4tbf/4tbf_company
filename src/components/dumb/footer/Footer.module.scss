@@ -120,10 +120,10 @@
                     }
                 }
             }
-            &:not(:last-child) {
+            &:not(:nth-child(4)):not(:nth-child(7)) {
                 overflow: hidden;
             }
-            &:last-child {
+            &:nth-child(4), &:nth-child(7) {
                 &::before {
                     visibility: hidden;
                     transition: top 0.3s, visibility 0s !important;
@@ -174,6 +174,7 @@
     }
     .footerSocials {
         @include flex-center;
+        cursor: pointer;
         gap: 28px;
         a {
             @include flex-center-vert;
