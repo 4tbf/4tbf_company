@@ -21,6 +21,7 @@
         .count {
             @include fontRem(32, 400, 36);
             font-family: "MADE";
+            margin-top: 15px;
             color: $blue;
         }
     }

@@ -1,0 +1,17 @@
+.wrapper{
+    width: 24px;
+    cursor: pointer;
+    .tooltip{
+        max-width: 280px;
+        padding: 18px;
+        background: #FFFFFF;
+        opacity: 1;
+        font-weight: 400;
+        font-size: 14px;
+        color: #12181F;
+        z-index: 9999;
+    }
+    .item{
+        display: flex;
+    }
+}

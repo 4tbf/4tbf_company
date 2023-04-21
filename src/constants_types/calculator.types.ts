@@ -10,6 +10,7 @@ export type TCalculatorCurrentElement = {
   requiere: boolean;
   prices: number[];
   stepName?: string;
+  tooltipText?: string;
 };
 
 export type TCalculatorTypes = 'basic' | 'advanced';

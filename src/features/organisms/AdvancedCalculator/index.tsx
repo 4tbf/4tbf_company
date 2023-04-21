@@ -3,6 +3,7 @@ import StepWizard from 'react-step-wizard';
 import { useFormik, FormikProps } from 'formik';
 import clsx from 'clsx';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'next-i18next';
 import CalculatorStep from '../../molecules/CalculatorStep';
 import { CALCULATOR } from '../../../constants_types/calculator.constants';
 import FinalCalculation from '../../molecules/FinalCalculation';
@@ -17,7 +18,8 @@ import SuccessModal from '../../atoms/SuccessModal';
 
 const AdvancedCalculator: React.FC = () => {
   const currentCalcSteps = CALCULATOR.advanced;
-  const { iitialValues, validationSchem } = useAdvancedCalculator(currentCalcSteps);
+  const { t } = useTranslation();
+  const { iitialValues, validationSchem } = useAdvancedCalculator(currentCalcSteps, t);
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState('');
   const [modalIsOpen, setIsOpen] = React.useState(false);

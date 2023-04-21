@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FormikProps } from 'formik';
+import { useTranslation } from 'next-i18next';
 import styles from './FinalCalculation.module.scss';
 import { IStepWizardCommon } from '../../../constants_types/global.types';
 import Text from '../../atoms/text';
@@ -31,6 +32,8 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({
   setEmail,
 }) => {
   const [emailError, setEmailError] = useState(false);
+  const { t } = useTranslation();
+
   const handleSubmit = () => {
     const isValid = validateEmail(email);
     if (isValid) {
@@ -58,10 +61,10 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({
     <div className={styles.finalWrapper}>
       <div className={styles.finalHeader}>
         <Text as="h3" className={styles.finalTitle}>
-          FinalCalculation
+          {t('calculator.finalcalc.title')}
         </Text>
         <Text as="p" className={styles.appoximateName}>
-          Approximate cost
+          {t('calculator.finalcalc.subtitle')}
         </Text>
         <Text as="p" className={styles.count}>
           ${numberWithCommas(10000)} - ${numberWithCommas(15000)}
@@ -69,8 +72,7 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({
       </div>
       <div className={styles.submitItem}>
         <Text as="p" className={styles.submitText}>
-          If you want to make clarifications or know the details, please write your mail below and
-          click <strong>Sumbit</strong>
+          {t('calculator.finalcalc.text')}
         </Text>
         <div className={styles.email}>
           <Input
@@ -86,15 +88,23 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({
               setEmail(e.target.value);
             }}
           />
-          {emailError && <ErrorMessage text="Email is not valid" />}
+          {emailError && <ErrorMessage text={t('calculator.finalcalc.email.error')} />}
         </div>
       </div>
       <div className={styles.finalButtons}>
-        <button className={styles.recalculate} type="button" onClick={() => goToStep?.(1)}>
-          <RestoreIcon /> Recalculate
+        <button
+          className={styles.recalculate}
+          type="button"
+          onClick={() => {
+            setEmail('');
+            setEmailError(false);
+            goToStep?.(1);
+          }}
+        >
+          <RestoreIcon /> {t('calculator.finalcalc.recalc')}
         </button>
         <Button type="submit" onClick={handleSubmit}>
-          SUBMIT
+          {t('calculator.finalcalc.submit')}
         </Button>
       </div>
     </div>

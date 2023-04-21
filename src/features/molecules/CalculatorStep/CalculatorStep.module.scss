@@ -6,6 +6,12 @@
     @include flex-column;
     gap: 48px;
     .calcCurrElementWrapper {
+        .tooltipWrapper{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 18px;
+        }
         .title {
             @include fontRem(20, 400, 26);
             font-family: "MADE";

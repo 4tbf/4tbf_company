@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'next-i18next';
 import styles from './CalcualateWebsite.module.scss';
 import Text from '../../atoms/text';
 import ArrowButton from '../../../components/multiusable/arrow-button/ArrowButton';
@@ -11,6 +12,7 @@ const boxVariant = {
 };
 
 const CalcualateWebsite = () => {
+  const { t } = useTranslation();
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -26,14 +28,11 @@ const CalcualateWebsite = () => {
     <section className={styles.calcuateWEbsite}>
       <div className="container">
         <motion.h2 className={styles.calculateBigTitle}>
-          Calculate Website Cost
+          {t('main.calculator.title')}
           <Text as="span" className={styles.starIcon} />
         </motion.h2>
         <Text as="p" className={styles.calculateDescr}>
-          Lorem ipsum dolor sit amet consectetur. Non nunc habitant nisl id ut leo et commodo
-          consectetur. Suspendisse semper tellus accumsan nec. Et at lectus feugiat lobortis.
-          Egestas hendrerit risus fringilla quis. Faucibus suspendisse ac in viverra pretium. Tortor
-          mi fringilla elit posuere sit proin.
+          {t('main.calculator.subtitle')}
         </Text>
         <div className={styles.calculateItems}>
           <div className={styles.calculateRow}>
@@ -46,11 +45,10 @@ const CalcualateWebsite = () => {
                 className={styles.calculateItem}
               >
                 <Text as="h3" className={styles.calcualteTitle}>
-                  parz hashvark
+                  {t('main.calculator.basic.title')}
                 </Text>
                 <Text as="p" className={styles.calcuatetext}>
-                  Lorem ipsum dolor sit amet consectetur. Non nunc habitant nisl id ut leo et
-                  commodo consectetur. Suspendisse semper tellus accumsan nec.
+                  {t('main.calculator.basic.description')}
                 </Text>
                 <ArrowButton href="/calculator/basic" text="Calculate" />
               </motion.div>
@@ -64,11 +62,10 @@ const CalcualateWebsite = () => {
                 className={styles.calculateItem}
               >
                 <Text as="h3" className={styles.calcualteTitle}>
-                  bard hashvark
+                  {t('main.calculator.advanced.title')}
                 </Text>
                 <Text as="p" className={styles.calcuatetext}>
-                  Lorem ipsum dolor sit amet consectetur. Non nunc habitant nisl id ut leo et
-                  commodo consectetur. Suspendisse semper tellus accumsan nec.
+                  {t('main.calculator.advanced.description')}
                 </Text>
                 <ArrowButton href="/calculator/advanced" text="Calculate" />
               </motion.div>
