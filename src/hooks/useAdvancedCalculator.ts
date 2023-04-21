@@ -1,7 +1,7 @@
 import { object, string } from 'yup';
 import { TCalculatorCurrentElement } from '../constants_types/calculator.types';
 
-export const useAdvancedCalculator = (values: Array<TCalculatorCurrentElement[]>) => {
+export const useAdvancedCalculator = (values: Array<TCalculatorCurrentElement[]>, t) => {
   const merged = values.flat(1);
   const iitialValues = {};
   const validationSchem = object({
@@ -37,7 +37,7 @@ export const useAdvancedCalculator = (values: Array<TCalculatorCurrentElement[]>
   merged.forEach((current) => {
     const defaultValue =
       typeof current.defaultIndex === 'number' ? current.values[current.defaultIndex] : undefined;
-    iitialValues[current.key] = defaultValue;
+    iitialValues[current.key] = defaultValue.includes('.') ? t(defaultValue) : defaultValue;
   });
   return {
     iitialValues,

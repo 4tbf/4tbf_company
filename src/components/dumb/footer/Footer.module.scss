@@ -64,6 +64,9 @@
                     span{
                         text-transform: uppercase;
                     }
+                    a{
+                        text-transform: uppercase;
+                    }
                     color: $white;
                     @include fontRem(16, 400, 22);
                     @include flex-center-vert;

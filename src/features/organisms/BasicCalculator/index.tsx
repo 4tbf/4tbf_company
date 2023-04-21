@@ -3,6 +3,7 @@ import StepWizard from 'react-step-wizard';
 import { useFormik, FormikProps } from 'formik';
 import clsx from 'clsx';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'next-i18next';
 import CalculatorStep from '../../molecules/CalculatorStep';
 import { CALCULATOR } from '../../../constants_types/calculator.constants';
 import styles from './BasicCalculator.module.scss';
@@ -17,7 +18,9 @@ import SuccessModal from '../../atoms/SuccessModal';
 
 const BasicCalculator: React.FC = () => {
   const currentCalcSteps = CALCULATOR.basic;
-  const { iitialValues, validationSchem } = useBasicCalculator(currentCalcSteps);
+  const { t } = useTranslation();
+
+  const { iitialValues, validationSchem } = useBasicCalculator(currentCalcSteps, t);
   const [step, setStep] = useState(1);
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [email, setEmail] = useState('');
@@ -36,18 +39,16 @@ const BasicCalculator: React.FC = () => {
     initialValues: iitialValues,
     validationSchema: validationSchem,
     onSubmit: (values, { resetForm }) => {
-      resetForm({ values: iitialValues });
-      handleFetch(values);
+      console.log(values);
+      // resetForm({ values: iitialValues });
+      // handleFetch(values);
     },
   });
   const cost = useCalculateData(formik.values, currentCalcSteps);
 
   return (
     <div>
-      <CalculateHeader
-        title="Basic Calculator"
-        descr="Go thorough all steps,discover the True Cost of Your Website"
-      />
+      <CalculateHeader title={t('main.calculator.basic.title')} descr={t('calculator.subtitle')} />
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
       <div className="container">
         <div className={styles.stepContainer}>
@@ -81,7 +82,7 @@ const BasicCalculator: React.FC = () => {
                       >
                         <div className={styles.stepContent}>
                           <Text as="p" className={styles.stepText}>
-                            {current[0].stepName}
+                            {t(current[0].stepName)}
                           </Text>
                           <Text as="p" className={styles.stepNumber}>
                             {index < step - 1 ? <CheckIcon /> : index + 1}
