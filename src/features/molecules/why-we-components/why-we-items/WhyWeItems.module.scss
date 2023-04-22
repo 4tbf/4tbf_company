@@ -9,6 +9,11 @@
     background-repeat: no-repeat;
     background-position: right -50px;
     padding-top: 230px;
+    @media (max-width: 1279.98px) {
+        transform: translateY(-150px);
+        padding-bottom: 0;
+       
+    }
     @media (max-width: 767.98px) {
         transform: translateY(-100px);
         background-image: none;
@@ -18,6 +23,10 @@
     .itemsRow {
         @include flexRow(24, 2);
         row-gap: 24px;
+        @media (max-width: 1279.98px) {
+            @include flexRow(10, 2);
+            row-gap: 10px;
+        }
         @media (max-width: 767.98px) {
             @include flexRow(24, 1);
         }
@@ -25,16 +34,27 @@
             padding: 48px 32px;
             border: 1px solid $white;
             color: $white;
+            @media (max-width: 1279.98px) {
+                min-height: 320px;
+                padding: 28px 24px;
+            }
             @media (max-width: 767.98px) {
                 padding: 32px 24px;
+                min-height: unset;
             }
             .itemTitle {
                 @include fontRem(32, 400, 32);
                 margin-bottom: 16px;
                 font-family: "MADE";
+                @media (max-width: 1279.98px) {
+                    @include fontRem(24, 400, 32);
+                }
             }
             .itemDescr {
                 @include fontRem(16, 400, 22);
+                @media (max-width: 1279.98px) {
+                    @include fontRem(14, 400, 20);
+                }
             }
         }
     }

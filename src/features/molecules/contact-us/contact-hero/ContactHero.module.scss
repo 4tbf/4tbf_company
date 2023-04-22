@@ -15,6 +15,9 @@
         @include fontRem(80, 400, 116);
         font-family: "MADE";
         color: $white;
+        @media (max-width: 1279.98px) {
+            @include fontRem(64, 400, 90);
+        }
         @media (max-width: 767.98px) {
             @include fontRem(34, 400, 46);
         }
@@ -24,6 +27,10 @@
         color: $white;
         max-width: 768px;
         @include fontRem(40, 400, 54);
+        @media (max-width: 1279.98px) {
+            @include fontRem(20, 400, 27);
+            margin-top: 24px;
+        }
         @media (max-width: 767.98px) {
             margin-top: 16px;
             @include fontRem(16, 400, 22);
