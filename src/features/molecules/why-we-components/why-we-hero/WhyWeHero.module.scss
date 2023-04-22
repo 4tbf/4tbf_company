@@ -3,15 +3,30 @@
 
 .whyweHero {
     padding-top: 92px;
+    @media (max-width: 767.98px) {
+        background-image: url("/images/contact_bg.png");
+        background-repeat: no-repeat;
+        background-position: 20px top;
+        background-size: 600px;
+        padding-bottom: 220px;
+        padding-top: 40px;
+    }
     .heroTitle {
         @include fontRem(80, 400, 116);
         font-family: "MADE";
         color: $white;
+        @media (max-width: 767.98px) {
+            @include fontRem(34, 400, 46);
+        }
     }
     .heroSubTitle {
         margin-top: 60px;
         color: $white;
         max-width: 768px;
         @include fontRem(40, 400, 54);
+        @media (max-width: 767.98px) {
+            margin-top: 16px;
+            @include fontRem(16, 400, 22);
+        }
     }
 }
