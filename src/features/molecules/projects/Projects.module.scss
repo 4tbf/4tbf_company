@@ -1,0 +1,39 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.projectsSection {
+    background-color: $lightBlue;
+    padding: 0 24px;
+    height: 700px;
+    .projectsContainer {
+        .projectsRow {
+            @include flexRow(45, 2);
+            align-items: center;
+            .projecstsImage {
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .aboutProjectInfo {
+                max-width: 480px;
+                .projectName {
+                    @include fontRem(14, 400, 19);
+                }
+                .projectTitle {
+                    @include fontRem(40, 400, 53);
+                    font-family: "MADE";
+                }
+                .projectDescr {
+                    margin-top: 12px;
+                    @include fontRem(14, 400, 19);
+                    max-width: 368px;
+                }
+                button {
+                    margin-top: 59px;
+                }
+            }
+        }
+    }
+}

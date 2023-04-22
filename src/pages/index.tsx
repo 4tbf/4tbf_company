@@ -8,6 +8,7 @@ import CalcualateWebsite from '../features/molecules/calculate-website/Calcualat
 import WhyWe from '../features/molecules/whe-we/WhyWe';
 import FaqSection from '../features/molecules/faq-section/FaqSection';
 import Footer from '../components/dumb/footer/Footer';
+import Projects from '../features/molecules/projects/Projects';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <OurServices />
         <CalcualateWebsite />
         <WhyWe />
+        <Projects />
         <FaqSection />
       </main>
       <Footer />
