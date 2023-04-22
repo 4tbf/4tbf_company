@@ -3,11 +3,29 @@
 .ourServicesHero {
     padding-top: 92px;
     background-color: $black;
+    @media (max-width: 767.98px) {
+        background-image: url("/images/contact_bg.png");
+        background-repeat: no-repeat;
+        background-position: 20px top;
+        background-size: 600px;
+        padding-bottom: 0;
+        padding-top: 40px;
+    }
     h1 {
         @include fontRem(88, 400, 116);
         color: $white;
         font-family: "MADE";
         margin-bottom: 32px;
+        @media (max-width: 767.98px) {
+            @include fontRem(34, 400, 46);
+        }
+    }
+    .mainTitle {
+        @media (max-width: 767.98px) {
+            @include fontRem(16, 400, 22);
+            color: $white;
+            margin-bottom: 40px;
+        } 
     }
 }
 .ourServices {
@@ -33,14 +51,14 @@
         @include flexRow(8, 3);
         row-gap: 8px;
         @media (max-width: 767.98px) {
+            row-gap: 16px;
             margin-top: 22px;
             @include fontRem(14, 400, 19);
-            flex-wrap: nowrap;
-            overflow: auto;
+            flex-wrap: wrap;
             :global {
                 .col_ {
-                    flex: 0 0 230px;
-                    max-width: 230px;
+                    flex: 0 0 100%;
+                    max-width: 100%;
                 }
             }
         }

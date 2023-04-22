@@ -12,15 +12,12 @@ const WhoWe = () => {
         <Text as="h2" className={styles.whoWeTitle}>
           {t('about.whoweare')}
         </Text>
-        <Text as="p" className={styles.whoWeDescr}>
-          {t('about.part.1')}
-          <br />
-          {t('about.part.2')}
-          <br />
-          {t('about.part.3')}
-          <br />
-          {t('about.part.4')}
-        </Text>
+        <div className={styles.whoWeDescr}>
+          <Text as="p"> {t('about.part.1')}</Text>
+          <Text as="p"> {t('about.part.2')}</Text>
+          <Text as="p"> {t('about.part.3')}</Text>
+          <Text as="p"> {t('about.part.4')}</Text>
+        </div>
       </div>
     </section>
   );
