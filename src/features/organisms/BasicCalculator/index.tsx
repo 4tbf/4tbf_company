@@ -39,9 +39,8 @@ const BasicCalculator: React.FC = () => {
     initialValues: iitialValues,
     validationSchema: validationSchem,
     onSubmit: (values, { resetForm }) => {
-      console.log(values);
-      // resetForm({ values: iitialValues });
-      // handleFetch(values);
+      resetForm({ values: iitialValues });
+      handleFetch(values);
     },
   });
   const cost = useCalculateData(formik.values, currentCalcSteps);
