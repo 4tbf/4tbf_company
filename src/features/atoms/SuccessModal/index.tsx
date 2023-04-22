@@ -53,7 +53,7 @@ const SuccessModal: React.FC<ISuccessModal> = ({ modalIsOpen, setIsOpen }) => {
           </div>
           <Button
             type="button"
-            children="Back To home"
+            children={t('modal.success.back')}
             onClick={() => {
               closeModal();
               router.push('/');

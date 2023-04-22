@@ -1,6 +1,7 @@
 {
-    "modal.success.title": "Success!",
+    "modal.success.title": "Success !",
     "modal.success.decription": "Your message has been received and we will be in touch with you shortly. Thank you for choosing 4TBF for your web and mobile development needs.",
+    "modal.success.back": "Back to Home",
     "main.breadCrumb.quality": "Quality assurance",
     "main.breadCrumb.safety": "Safety", 
     "main.breadCrumb.modernity": "Modernity", 
@@ -251,6 +252,18 @@
     "calculator.global.yes": "Yes",
     "calculator.global.no": "No",
     "calculator.global.notneed": "Not need",
-    "calculator.global.basic": "basic",
-    "calculator.global.hard": "hard"
+    "calculator.global.basic": "Basic",
+    "calculator.global.hard": "Hard",
+    "whywe.title": "Why Choose Us?",
+    "whywe.title2": "The Benefits of Working with 4TBF",
+    "whywe.subtitle": "We believe that our success is tied to our clients' success. That's why we're always looking for new and innovative ways to help our clients achieve their goals online.",
+    "whywe.1.title": "Latest technology",
+    "whywe.1.subtitle": "Some of the best technologies we work with include DevOps architecture, BackEnd and FrontEnd methodologies for micro frontends and microservices and the latest design patterns.",
+    "whywe.1.subtitle.2": "Using these powerful tools, we can create custom websites that are not only visually stunning, but also highly functional and easy for use.",
+    "whywe.2.title": "Project transparency",
+    "whywe.2.subtitle": "At 4TBF, we believe in transparency and collaboration when it comes to web development. That's why we make sure that our clients are always in the loop about the status of their projects, and that they have the opportunity to participate in every step of the development process.",
+    "whywe.3.title": "Project Management and Releases",
+    "whywe.3.subtitle": "One of the key benefits of working from Scrum or Agile methodologies is that we have regular release periods, typically every two weeks. This means that our clients can see real results from their projects on a regular basis, and have the opportunity to provide feedback and make changes along the way.",
+    "whywe.4.title": "Unique team",
+    "whywe.4.subtitle": "We create a new team for each project, made up of dedicated developers, designers, and project managers who work together to create a website that meets our clients' needs and exceeds their expectations."
 }
