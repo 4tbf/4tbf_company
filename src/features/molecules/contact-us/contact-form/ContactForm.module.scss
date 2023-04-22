@@ -19,7 +19,7 @@
                     flex: 0 0 75%;
                     max-width: 75%;
                 }
-                @media (max-width: 767.98px) {
+                @media (max-width: 1279.98px) {
                     flex: 0 0 100% !important;
                     max-width: 100% !important;
                 }
@@ -34,6 +34,9 @@
             button {
                 margin-top: 80px;
                 min-width: 133px;
+                @media (max-width: 1279.98px) {
+                    margin-top: 40px;
+                }
                 @media (max-width: 767.98px) {
                     width: 100%;
                     margin-top: 50px;
@@ -67,10 +70,14 @@
         }
     }
     .getInTouch {
+        @media (max-width: 1279.98px) {
+            margin-top: 56px;
+            margin-bottom: 56px;
+        }
         @media (max-width: 767.98px) {
-           margin-top: 56px;
-           margin-bottom: 56px;
-          }
+            margin-top: 56px;
+            margin-bottom: 56px;
+        }
         .getInTouchTitle {
             @include fontRem(24, 400, 32);
             margin-bottom: 32px;
