@@ -1,0 +1,121 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.projectsSection {
+    background-color: $lightBlue;
+    padding: 0 24px;
+    max-height: 700px;
+    font-size: 0;
+    @media (max-width: 1279.98px) {
+        padding: 0 16px 0 36px;
+    }
+    @media (max-width: 767.98px) {
+        max-height: unset;
+        overflow: hidden;
+        padding: 32px 32px 0;
+    }
+
+    .projectsContainer {
+        position: relative;
+        .projectsRow {
+            @include flexRow(45, 2);
+            align-items: center;
+            @media (max-width: 1279.98px) {
+                @include flexRow(30, 2);
+                justify-content: center;
+                align-items: center;
+            }
+            @media (max-width: 767.98px) {
+                @include flexRow(45, 1);
+                flex-direction: column-reverse;
+            }
+            .projecstsImage {
+                max-height: 440px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    @media (max-width: 1279.98px) {
+                        min-height: 560px;
+                    }
+                    @media (max-width: 767.98px) {
+                        min-height: unset;
+                    }
+                }
+            }
+            .aboutProjectInfo {
+                max-width: 480px;
+                @media (max-width: 1279.98px) {
+                    max-width: 394px;
+                }
+                .projectName {
+                    @include fontRem(14, 400, 19);
+                    @media (max-width: 767.98px) {
+                      margin-bottom: 8px;
+                    }
+                }
+                .projectTitle {
+                    @include fontRem(40, 400, 53);
+                    font-family: "MADE";
+                    @media (max-width: 1279.98px) {
+                        @include fontRem(32, 400, 42);
+                    }
+                    @media (max-width: 767.98px) {
+                        @include fontRem(28, 400, 37);
+                    }
+                }
+                .projectDescr {
+                    margin-top: 12px;
+                    @include fontRem(14, 400, 19);
+                    max-width: 368px;
+                    @media (max-width: 767.98px) {
+                        margin-top: 16px;
+                    }
+                }
+                button {
+                    margin-top: 59px;
+                    @media (max-width: 1279.98px) {
+                        margin-top: 28px;
+                    }
+                    @media (max-width: 767.98px) {
+                       margin: 24px 0;
+                    }
+                }
+            }
+        }
+        .projectsDots {
+            @include absoluteCenter(vertical);
+            right: 55px;
+            @media (max-width: 1279.98px) {
+                right: 24px;
+                bottom: 54px;
+                top: unset;
+                transform: unset;
+            }
+            .dotsItem {
+                @include buttonNulled;
+                position: relative;
+                width: 23px;
+                height: 23px;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                @include flex-center;
+                row-gap: 14px;
+                &::after {
+                    content: "";
+                    @include absoluteCenter(both);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: rgba(18, 24, 31, 0.56);
+                }
+                &.activeDots {
+                    border-color: $black;
+                    &::after {
+                        background-color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
