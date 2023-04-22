@@ -46,8 +46,8 @@ const AdvancedCalculator: React.FC = () => {
   return (
     <div>
       <CalculateHeader
-        title="Parz Calculator"
-        descr="Hit a line and our friendly folks will get back to you as soon as possible."
+        title={t('main.calculator.advanced.title')}
+        descr={t('main.calculator.advanced.description')}
       />
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
       <div className="container">
@@ -86,7 +86,7 @@ const AdvancedCalculator: React.FC = () => {
                       >
                         <div className={styles.stepContent}>
                           <Text as="p" className={styles.stepText}>
-                            {current[0].stepName}
+                            {t(current[0].stepName)}
                           </Text>
                           <Text as="p" className={styles.stepNumber}>
                             {index < step - 1 ? <CheckIcon /> : index + 1}
