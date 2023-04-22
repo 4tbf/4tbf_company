@@ -5,21 +5,33 @@
     position: relative;
     z-index: 2;
     padding-bottom: 92px;
-    background-image: url('/images/why_we_bg.png');
+    background-image: url("/images/why_we_bg.png");
     background-repeat: no-repeat;
     background-position: right -50px;
     padding-top: 230px;
+    @media (max-width: 767.98px) {
+        transform: translateY(-100px);
+        background-image: none;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
     .itemsRow {
         @include flexRow(24, 2);
         row-gap: 24px;
+        @media (max-width: 767.98px) {
+            @include flexRow(24, 1);
+        }
         .itemContent {
             padding: 48px 32px;
             border: 1px solid $white;
             color: $white;
+            @media (max-width: 767.98px) {
+                padding: 32px 24px;
+            }
             .itemTitle {
                 @include fontRem(32, 400, 32);
                 margin-bottom: 16px;
-                font-family: 'MADE';
+                font-family: "MADE";
             }
             .itemDescr {
                 @include fontRem(16, 400, 22);
