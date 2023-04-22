@@ -4,15 +4,34 @@
 .aboutHero {
     padding-top: 90px;
     background-color: $black;
+    @media (max-width: 767.98px) {
+        padding-top: 32px;
+    }
     .aboutTitle {
         @include fontRem(88, 400, 116);
         color: $white;
         font-family: "MADE";
+        @media (max-width: 1279.98px) {
+            @include fontRem(68, 400, 80);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(38, 400, 50);
+        }
     }
     .aboutSubTitle {
         @include fontRem(40, 400, 54);
         color: $white;
         max-width: 652px;
         margin: 32px 0;
+
+        @media (max-width: 1279.98px) {
+            @include fontRem(20, 400, 28);
+            max-width: 340px;
+            margin: 24px 0;
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(16, 400, 22);
+            margin: 16px 0;
+        }
     }
 }

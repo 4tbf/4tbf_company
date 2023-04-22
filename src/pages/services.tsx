@@ -6,6 +6,7 @@ import Header from '../components/dumb/header/Header';
 import Footer from '../components/dumb/footer/Footer';
 import OurServicesHero from '../features/molecules/our-services-components/our-services-hero/OurServicesHero';
 import Technologies from '../features/molecules/our-services-components/technologies/Technologies';
+import Industries from '../features/molecules/our-services-components/induscries/Industries';
 
 export default function OurServices() {
   return (
@@ -29,6 +30,7 @@ export default function OurServices() {
       <main>
         <OurServicesHero />
         <Technologies />
+        <Industries />
       </main>
       <Footer />
     </motion.div>
