@@ -17,6 +17,11 @@ body {
     overflow: hidden;
   }
 }
+#__next {
+  @media (max-width: 1279.98px) {
+    overflow-x: hidden;;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
