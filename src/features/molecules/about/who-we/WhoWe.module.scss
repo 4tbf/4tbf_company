@@ -4,15 +4,31 @@
 .whoWe {
     padding-top: 120px;
     background-color: $black;
+    @media (max-width: 767.98px) {
+        padding-top: 64px;
+    }
+    @media (max-width: 1279.98px) {
+        padding-top: 90px;
+    }
     .whoWeTitle {
         @include fontRem(64, 400, 84);
         color: $white;
         font-family: "MADE";
+        @media (max-width: 1279.98px) {
+            @include fontRem(32, 400, 42);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(24, 400, 32);
+        }
     }
     .whoWeDescr {
         @include fontRem(16, 400, 22);
         color: $white;
         max-width: 840px;
         margin: 32px 0;
+        @media (max-width: 767.98px) {
+            @include fontRem(16, 400, 22);
+            margin: 22px 0;
+        }
     }
 }

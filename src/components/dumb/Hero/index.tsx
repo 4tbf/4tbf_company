@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
               animate={{ x: 0, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
-              Crafting Exceptional Digital Solutions
+              Crafting <br /> exceptional <br /> digital <br /> solutions .
             </motion.h1>
           </div>
         </div>
