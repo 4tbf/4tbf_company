@@ -4,7 +4,6 @@ import Image from 'next/image';
 import styles from './OurServicesHero.module.scss';
 import Text from '../../../atoms/text';
 import { useMediaQuery } from '../../../../hooks/useMediaQuery';
-import ArrowButton from '../../../../components/multiusable/arrow-button/ArrowButton';
 
 const OurServicesHero = () => {
   const mobile = useMediaQuery('(max-width: 767.98px)');
@@ -17,9 +16,9 @@ const OurServicesHero = () => {
             {mobile && (
               <div className={styles.mainItem}>
                 <Text className={styles.mainTitle} as="h2">
-                  OUR SERVICES
+                  Lorem ipsum dolor sit amet consectetur. At volutpat gravida est magna sem sit.
+                  Quam faucibus faucibus scelerisque vestibulum enim vitae.
                 </Text>
-                <ArrowButton href="#" text="Show more" />
               </div>
             )}
             <div className={styles.servicesRow}>

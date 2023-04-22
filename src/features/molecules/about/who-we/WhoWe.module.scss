@@ -22,13 +22,21 @@
         }
     }
     .whoWeDescr {
-        @include fontRem(16, 400, 22);
-        color: $white;
-        max-width: 840px;
         margin: 32px 0;
+        max-width: 840px;
         @media (max-width: 767.98px) {
-            @include fontRem(16, 400, 22);
             margin: 22px 0;
+        }
+        p {
+            width: 100%;
+            @include fontRem(16, 400, 22);
+            color: $white;
+            margin-bottom: 10px;
+            @media (max-width: 767.98px) {
+                @include fontRem(16, 400, 22);
+                margin: 22px 0;
+                margin-bottom: 6px;
+            }
         }
     }
 }

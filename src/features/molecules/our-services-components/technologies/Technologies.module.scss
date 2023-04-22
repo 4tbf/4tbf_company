@@ -3,12 +3,18 @@
 
 .technologies {
     padding: 102px 0;
-    color: $white;
+    color: $white;  
+    @media (max-width: 767.98px) {
+        padding-top: 64px;
+    }
     h2 {
         @include fontRem(64, 400, 84);
         max-width: 600px;
         margin-bottom: 48px;
         font-family: "MADE";
+        @media (max-width: 767.98px) {
+            @include fontRem(32, 400, 48);
+        }
     }
     .technologiesWrapper {
         .technologiesList {
@@ -19,6 +25,9 @@
                     font-family: "MADE";
                     @include fontRem(32, 400, 42);
                     margin-bottom: 24px;
+                    @media (max-width: 767.98px) {
+                        @include fontRem(24, 400, 31);
+                    }
                 }
                 .technologiesItems {
                     @include flex-center-vert;
