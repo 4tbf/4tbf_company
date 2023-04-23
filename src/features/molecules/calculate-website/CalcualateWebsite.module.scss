@@ -53,7 +53,8 @@
             }
         }
         .calculateItem {
-            display: block;
+            @include flex-column;
+            justify-content: space-between;
             padding: 48px 32px;
             border: 1px solid $white;
             text-decoration: none;

@@ -6,9 +6,14 @@
     background-image: url('/images/contact_bg.png');
     background-repeat: no-repeat;
     background-position: right -70px;
+    @media (max-width: 1279.98px) {
+       background-position: 100% bottom;
+       background-size: 600px;
+       padding-bottom: 230px;
+    }
     @media (max-width: 767.98px) {
        background-position: 20px top;
-       background-size: 600px;
+       background-size: 500px;
        padding-bottom: 0;
     }
     .contactTitle {
@@ -16,10 +21,10 @@
         font-family: "MADE";
         color: $white;
         @media (max-width: 1279.98px) {
-            @include fontRem(64, 400, 90);
+            @include fontRem(48, 400, 63);
         }
         @media (max-width: 767.98px) {
-            @include fontRem(34, 400, 46);
+            @include fontRem(26, 400, 34);
         }
     }
     .contactSubTitle {
