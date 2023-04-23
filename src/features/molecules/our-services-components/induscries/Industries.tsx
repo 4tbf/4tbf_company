@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 import styles from './Industries.module.scss';
 import Text from '../../../atoms/text';
 import OnDemandIcon from '../../../../components/svgs/OnDemandIcon';
@@ -15,64 +16,66 @@ import EventIcon from '../../../../components/svgs/EventIcon';
 import GroceryIcon from '../../../../components/svgs/GroceryIcon';
 
 const Industries = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.industriesSection}>
       <div className="container">
         <div className={styles.industriesWrapper}>
           <Text as="h2" className={styles.industriesTitle}>
-            Industries we serve
+            {t('services.industry.title')}
           </Text>
           <Text as="h2" className={styles.industriesDesc}>
-            Successfully Delivered Digital Products
+            {t('services.industry.subtitle')}
           </Text>
           <div className={styles.industriesContent}>
             <div className={styles.industriesRow}>
               <div className="col_">
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
-                    <OnDemandIcon /> On - Demand
+                    <OnDemandIcon /> {t('services.industry.demand')}
                   </Text>
                 </div>
               </div>
               <div className="col_">
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
-                    <GameIcon /> Game
+                    <GameIcon /> {t('services.industry.game')}
                   </Text>
                 </div>
               </div>
               <div className="col_">
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
-                    <EcommerceIcon /> eCommerce
+                    <EcommerceIcon /> {t('services.industry.commerce')}
                   </Text>
                 </div>
               </div>
               <div className="col_">
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
-                    <FinanceIcon /> Finance
+                    <FinanceIcon /> {t('services.industry.finance')}
                   </Text>
                 </div>
               </div>
               <div className="col_">
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
-                    <HealthcareIcon /> Healthcare
+                    <HealthcareIcon /> {t('services.industry.healtcare')}
                   </Text>
                 </div>
               </div>
               <div className="col_">
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
-                    <RestaurantIcon /> Restaurant
+                    <RestaurantIcon /> {t('services.industry.rest')}
                   </Text>
                 </div>
               </div>
               <div className="col_">
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
-                    <RealEstateIcon /> Real Estate
+                    <RealEstateIcon /> {t('services.industry.estate')}
                   </Text>
                 </div>
               </div>
@@ -80,7 +83,7 @@ const Industries = () => {
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
                     <TourIcon />
-                    Tour & Travels
+                    {t('services.industry.travel')}
                   </Text>
                 </div>
               </div>
@@ -88,7 +91,7 @@ const Industries = () => {
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
                     <EducationIcon />
-                    Education
+                    {t('services.industry.education')}
                   </Text>
                 </div>
               </div>
@@ -96,7 +99,7 @@ const Industries = () => {
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
                     <TransportIcon />
-                    Transport
+                    {t('services.industry.transport')}
                   </Text>
                 </div>
               </div>
@@ -104,7 +107,7 @@ const Industries = () => {
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
                     <EventIcon />
-                    Event
+                    {t('services.industry.event')}
                   </Text>
                 </div>
               </div>
@@ -112,7 +115,7 @@ const Industries = () => {
                 <div className={styles.inustriesItem}>
                   <Text as="p" className={styles.industriesText}>
                     <GroceryIcon />
-                    Grocery
+                    {t('services.industry.grocery')}
                   </Text>
                 </div>
               </div>

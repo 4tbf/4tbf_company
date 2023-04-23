@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 import styles from './Technologies.module.scss';
 import Text from '../../../atoms/text';
 import ReactIcon from '../../../../components/svgs/ReactIcon';
@@ -40,14 +41,16 @@ import NotionIcon from '../../../../components/svgs/NotionIcon';
 import MiroIcon from '../../../../components/svgs/MiroIcon';
 
 const Technologies = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.technologies}>
       <div className="container">
-        <Text as="h2">TECHNOLOGIES WE USE</Text>
+        <Text as="h2">{t('services.technologiesweuse')}</Text>
         <div className={styles.technologiesWrapper}>
           <div className={styles.technologiesList}>
             <div className={styles.listItem}>
-              <Text as="h3">front end technologies</Text>
+              <Text as="h3">{t('services.front')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -82,7 +85,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">back end technologies</Text>
+              <Text as="h3">{t('services.back')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -114,7 +117,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">Databases</Text>
+              <Text as="h3">{t('services.db')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -149,7 +152,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">devops technologies</Text>
+              <Text as="h3">{t('services.devops')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -186,7 +189,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">Testing</Text>
+              <Text as="h3">{t('services.testing')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -215,7 +218,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">Content handling tools</Text>
+              <Text as="h3">{t('services.content')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -238,7 +241,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">ux/ui Design</Text>
+              <Text as="h3">{t('services.design')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -268,7 +271,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">project management</Text>
+              <Text as="h3">{t('services.projmanag')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
@@ -288,7 +291,7 @@ const Technologies = () => {
               </div>
             </div>
             <div className={styles.listItem}>
-              <Text as="h3">documentation & project roadmaps</Text>
+              <Text as="h3">{t('services.doc')}</Text>
               <div className={styles.technologiesItems}>
                 <div className={styles.technologiesItem}>
                   <Text as="p">

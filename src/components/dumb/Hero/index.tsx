@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'next-i18next';
 import styles from './Hero.module.scss';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       className={styles.heroSection}
@@ -17,14 +20,15 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              Spark your success with our bright development solutions.
+              {t('main.pretitle')}
             </motion.p>
             <motion.h1
               initial={{ x: -1000, scale: 0.7 }}
               animate={{ x: 0, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
-              Crafting <br /> exceptional <br /> digital <br /> solutions .
+              {t('main.title.1')} <br /> {t('main.title.2')} <br /> {t('main.title.3')} <br />
+              {t('main.title.4')}
             </motion.h1>
           </div>
         </div>
