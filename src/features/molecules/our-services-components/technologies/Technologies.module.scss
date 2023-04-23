@@ -26,7 +26,7 @@
                     @include fontRem(32, 400, 42);
                     margin-bottom: 24px;
                     @media (max-width: 767.98px) {
-                        @include fontRem(24, 400, 31);
+                        @include fontRem(20, 400, 26);
                     }
                 }
                 .technologiesItems {
@@ -43,6 +43,9 @@
                             height: 44px;
                             svg {
                                 object-fit: contain;
+                            }
+                            @media (max-width: 767.98px) {
+                                @include fontRem(14, 400, 19);
                             }
                         }
                     }

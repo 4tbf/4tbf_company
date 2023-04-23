@@ -3,8 +3,12 @@
 
 .contactFrom {
     padding-top: 120px;
+    @media (max-width: 1279.98px) {
+        transform: translateY(-230px);
+    }
     @media (max-width: 767.98px) {
         padding-top: 80px;
+        transform: translateY(0);
     }
     .contactRow {
         @include RowItems(30);

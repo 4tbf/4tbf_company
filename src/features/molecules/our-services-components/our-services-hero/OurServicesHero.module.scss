@@ -25,18 +25,15 @@
             @include fontRem(16, 400, 22);
             color: $white;
             margin-bottom: 40px;
-        } 
+        }
     }
 }
 .ourServices {
     .mainItem {
         position: relative;
-        transform: translateX(-40px);
-        @media (max-width: 1279.98px) {
-            transform: translateX(0);
-        }
+       
         .mainText {
-            @include fontRem(24, 400, 33);
+            @include fontRem(22, 400, 30);
             color: $white;
             max-width: 384px;
             @media (max-width: 1279.98px) {
@@ -69,6 +66,8 @@
             transition: 0.3s;
             display: block;
             text-decoration: none;
+            min-height: 235px;
+
             @media (max-width: 767.98px) {
                 padding: 18px 24px 24px 24px;
             }
@@ -92,13 +91,7 @@
                     @include fontRem(14, 400, 19);
                 }
             }
-            &:hover {
-                border-color: $blue;
-                background-color: $blue;
-                * {
-                    color: $white;
-                }
-            }
+           
         }
     }
 }

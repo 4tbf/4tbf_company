@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import styles from './OurServicesHero.module.scss';
@@ -33,7 +32,7 @@ const OurServicesHero = () => {
                 </div>
               )}
               <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
+                <div className={styles.clasicItem}>
                   <div className={styles.imageItem}>
                     <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
                   </div>
@@ -41,10 +40,10 @@ const OurServicesHero = () => {
                   <Text className={styles.serviceDescr} as="p">
                     {t('services.mobile.subtitle')}
                   </Text>
-                </Link>
+                </div>
               </div>
               <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
+                <div className={styles.clasicItem}>
                   <div className={styles.imageItem}>
                     <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
                   </div>
@@ -54,34 +53,34 @@ const OurServicesHero = () => {
                   <Text className={styles.serviceDescr} as="p">
                     {t('services.web.subtitle')}
                   </Text>
-                </Link>
+                </div>
               </div>
               <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
+                <div className={styles.clasicItem}>
                   <div className={styles.imageItem}>
                     <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
                   </div>
                   <h2 className={styles.serviceTitle}>{t('services.cloud.title')}</h2>
                   <p className={styles.serviceDescr}>{t('services.cloud.subtitle')} </p>
-                </Link>
+                </div>
               </div>
               <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
+                <div className={styles.clasicItem}>
                   <div className={styles.imageItem}>
                     <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
                   </div>
                   <h2 className={styles.serviceTitle}>{t('services.ui.title')}</h2>
                   <p className={styles.serviceDescr}>{t('services.ui.subtitle')} </p>
-                </Link>
+                </div>
               </div>
               <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
+                <div className={styles.clasicItem}>
                   <div className={styles.imageItem}>
                     <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
                   </div>
                   <h2 className={styles.serviceTitle}>{t('services.support.title')}</h2>
                   <p className={styles.serviceDescr}>{t('services.support.subtitle')} </p>
-                </Link>
+                </div>
               </div>
             </div>
           </div>

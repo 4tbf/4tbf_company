@@ -16,17 +16,17 @@
         font-family: "MADE";
         color: $white;
         @media (max-width: 1279.98px) {
-            @include fontRem(64, 400, 90);
+            @include fontRem(48, 400, 63);
         }
         @media (max-width: 767.98px) {
-            @include fontRem(34, 400, 46);
+            @include fontRem(26, 400, 34);
         }
     }
     .heroSubTitle {
         margin-top: 60px;
         color: $white;
-        max-width: 768px;
-        @include fontRem(40, 400, 54);
+        max-width: 888px;
+        @include fontRem(32, 400, 43);
         @media (max-width: 1279.98px) {
             @include fontRem(20, 400, 27);
             margin-top: 24px;

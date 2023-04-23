@@ -15,7 +15,7 @@
        
     }
     @media (max-width: 767.98px) {
-        transform: translateY(-100px);
+        transform: translateY(-170px);
         background-image: none;
         padding-bottom: 0;
         padding-top: 0;
@@ -34,8 +34,8 @@
             padding: 48px 32px;
             border: 1px solid $white;
             color: $white;
+            min-height: 320px;
             @media (max-width: 1279.98px) {
-                min-height: 320px;
                 padding: 28px 24px;
             }
             @media (max-width: 767.98px) {

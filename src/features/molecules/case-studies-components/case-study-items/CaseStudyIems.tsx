@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './CaseStudyIems.module.scss';
 import Text from '../../../atoms/text';
 import ArrowButton from '../../../../components/multiusable/arrow-button/ArrowButton';
@@ -13,7 +14,14 @@ const CaseStudyIems = () => {
               <div className={styles.innerRow}>
                 <div className="col_">
                   <div className={styles.innerContent}>
-                    <div className={styles.imageWrapper}>{/* IMAGE */}</div>
+                    <div className={styles.imageWrapper}>
+                      <Image
+                        alt="case study"
+                        src="/images/case-studies/nft.png"
+                        width={576}
+                        height={269}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="col_">
