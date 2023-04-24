@@ -4,11 +4,18 @@
 .stepContainer {
     .stepRow {
         @include RowItems(30);
+        @media (max-width: 1279.98px) {
+            flex-direction: column-reverse;
+        }
         :global {
             .col_ {
                 flex: 1;
                 &:first-child {
                     flex: 0 0 65%;
+                }
+                @media (max-width: 1279.98px) {
+                    flex: 0 0 100% !important;
+                    max-width: 100%;
                 }
             }
         }
@@ -24,16 +31,32 @@
                 align-items: flex-end;
                 padding: 0;
                 list-style-type: none;
+                @media (max-width: 1279.98px) {
+                    flex-direction: row;
+                    align-items: flex-start;
+                    margin-bottom: 32px;
+                }
                 li {
                     padding-bottom: 32px;
                     position: relative;
+                    @media (max-width: 1279.98px) {
+                        width: 120px;
+                        padding-bottom: 11px;
+                    }
                     .stepContent {
                         @include flex-center-vert;
                         z-index: 1;
                         position: relative;
                         gap: 16px;
+                        @media (max-width: 1279.98px) {
+                            flex-direction: column-reverse;
+                        }
                         .stepText {
                             @include fontRem(16, 400, 19);
+                            @media (max-width: 1279.98px) {
+                                text-align: center;
+                                @include fontRem(14, 400, 16);
+                            }
                         }
                         .stepNumber {
                             @include fontRem(20, 700, 24);
@@ -41,6 +64,7 @@
                             height: 33px;
                             border: 1px solid $blue;
                             border-radius: 50%;
+                            background-color: $black;
                             @include flex-center;
                         }
                     }
@@ -56,6 +80,12 @@
                             width: 1px;
                             right: 16px;
                             background-color: $blue;
+                            @media (max-width: 1279.98px) {
+                                width: 100%;
+                                height: 1px;
+                                top: 16px;
+                                left: 36px;
+                            }
                         }
                     }
                     &.selectedLastStep {
