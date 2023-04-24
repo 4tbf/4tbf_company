@@ -51,11 +51,14 @@
                     svg {
                         display: none;
                     }
-                    &:hover {
-                        border-color: $white;
-                        background-color: transparent;
-                        color: $blue;
+                    &.notChecked{
+                        &:hover {
+                            border-color: $white;
+                            background-color: transparent;
+                            color: $blue;
+                        }
                     }
+                    
                     &.checked {
                         background-color: $blue;
                         border: 1px solid $blue;

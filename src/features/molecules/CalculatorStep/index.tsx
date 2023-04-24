@@ -73,6 +73,7 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
                         <Text
                           className={clsx(styles.checkItem, {
                             [styles.checked]: isChecked,
+                            [styles.notChecked]: !isChecked,
                           })}
                         >
                           <CheckIcon />
@@ -102,6 +103,7 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
                         <Text
                           className={clsx(styles.checkItem, {
                             [styles.checked]: isChecked,
+                            [styles.notChecked]: !isChecked,
                           })}
                         >
                           <CheckIcon />
