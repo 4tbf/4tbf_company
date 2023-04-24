@@ -7,10 +7,7 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      className={styles.heroSection}
-      style={{ backgroundImage: 'url(/images/brand_image.png)' }}
-    >
+    <section className={styles.heroSection} style={{ backgroundImage: 'url(/images/hero_bg.png)' }}>
       <div className="container">
         <div className={styles.heroRow}>
           <div className="col_">
