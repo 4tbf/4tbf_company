@@ -35,6 +35,9 @@
         @include flex-center-vert;
         justify-content: flex-end;
         gap: 32px;
+        @media (max-width: 767.98px) {
+            justify-content: center;
+        }
         .recalculate {
             @include buttonNulled;
             font-family: "MADE";
