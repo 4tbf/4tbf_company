@@ -1,10 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 import styles from './CaseStudyIems.module.scss';
 import Text from '../../../atoms/text';
 import ArrowButton from '../../../../components/multiusable/arrow-button/ArrowButton';
 
 const CaseStudyIems = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.caseStudiItems}>
       <div className="container">
@@ -26,17 +29,14 @@ const CaseStudyIems = () => {
                 </div>
                 <div className="col_">
                   <div className={styles.itemContent}>
-                    <Text as="h2">Some title</Text>
+                    <Text as="h2">NFCS Portal</Text>
                     <div className={styles.itemMarks}>
-                      <Text as="p">PHP</Text>
-                      <Text as="p">Laravel</Text>
-                      <Text as="p">JavaScript</Text>
+                      <Text as="p">React</Text>
+                      <Text as="p">Node JS</Text>
+                      <Text as="p">MongoDB</Text>
                     </div>
                     <Text as="p" className={styles.itemDescr}>
-                      Lorem ipsum dolor sit amet consectetur. Fusce neque pharetra suspendisse sed
-                      ullamcorper imperdiet aliquet. Justo lobortis nam nulla ac enim amet. Arcu
-                      nulla platea quis viverra integer quam integer id diam. Nulla urna elit id
-                      nullam. Eget odio molestie quam leo consequat suscipit ut elementum aliquam.
+                      {t('cases.nfcs')}
                     </Text>
                     <ArrowButton text="Show more" href="#" />
                   </div>
@@ -61,17 +61,14 @@ const CaseStudyIems = () => {
                 </div>
                 <div className="col_">
                   <div className={styles.itemContent}>
-                    <Text as="h2">Some title</Text>
+                    <Text as="h2">Investonus</Text>
                     <div className={styles.itemMarks}>
-                      <Text as="p">PHP</Text>
-                      <Text as="p">Laravel</Text>
-                      <Text as="p">JavaScript</Text>
+                      <Text as="p">React</Text>
+                      <Text as="p">WEB3</Text>
+                      <Text as="p">Solidity</Text>
                     </div>
                     <Text as="p" className={styles.itemDescr}>
-                      Lorem ipsum dolor sit amet consectetur. Fusce neque pharetra suspendisse sed
-                      ullamcorper imperdiet aliquet. Justo lobortis nam nulla ac enim amet. Arcu
-                      nulla platea quis viverra integer quam integer id diam. Nulla urna elit id
-                      nullam. Eget odio molestie quam leo consequat suscipit ut elementum aliquam.
+                      {t('cases.investonus')}
                     </Text>
                     <ArrowButton text="Show more" href="#" />
                   </div>
@@ -96,17 +93,14 @@ const CaseStudyIems = () => {
                 </div>
                 <div className="col_">
                   <div className={styles.itemContent}>
-                    <Text as="h2">Some title</Text>
+                    <Text as="h2">QR Generator</Text>
                     <div className={styles.itemMarks}>
-                      <Text as="p">PHP</Text>
-                      <Text as="p">Laravel</Text>
-                      <Text as="p">JavaScript</Text>
+                      <Text as="p">React Native</Text>
+                      <Text as="p">Python</Text>
+                      <Text as="p">PostgreSQL</Text>
                     </div>
                     <Text as="p" className={styles.itemDescr}>
-                      Lorem ipsum dolor sit amet consectetur. Fusce neque pharetra suspendisse sed
-                      ullamcorper imperdiet aliquet. Justo lobortis nam nulla ac enim amet. Arcu
-                      nulla platea quis viverra integer quam integer id diam. Nulla urna elit id
-                      nullam. Eget odio molestie quam leo consequat suscipit ut elementum aliquam.
+                      {t('cases.qr')}
                     </Text>
                     <ArrowButton text="Show more" href="#" />
                   </div>

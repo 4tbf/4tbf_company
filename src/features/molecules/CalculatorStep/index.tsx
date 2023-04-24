@@ -10,6 +10,7 @@ import Text from '../../atoms/text';
 import CheckIcon from '../../../components/svgs/CheckIcon';
 import Button from '../../../components/multiusable/button/Button';
 import LongArrowIcon from '../../../components/svgs/LongArrowIcon';
+import NoSsr from '../../../components/multiusable/NoSSR/NoSSR';
 
 const CustomToolTIp = dynamic(
   () => import('../../../components/multiusable/CustomToolTIp/CustomToolTIp'),
@@ -46,7 +47,11 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
               <Text as="h3" className={styles.title}>
                 {t(element.title)}
               </Text>
-              {element.tooltipText && <CustomToolTIp text={t(element.tooltipText)} />}
+              {element.tooltipText && (
+                <NoSsr>
+                  <CustomToolTIp text={t(element.tooltipText)} />
+                </NoSsr>
+              )}
             </div>
             <Text as="p" className={styles.descr}>
               {t(element.description)}
@@ -73,6 +78,7 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
                         <Text
                           className={clsx(styles.checkItem, {
                             [styles.checked]: isChecked,
+                            [styles.notChecked]: !isChecked,
                           })}
                         >
                           <CheckIcon />
@@ -102,6 +108,7 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
                         <Text
                           className={clsx(styles.checkItem, {
                             [styles.checked]: isChecked,
+                            [styles.notChecked]: !isChecked,
                           })}
                         >
                           <CheckIcon />
