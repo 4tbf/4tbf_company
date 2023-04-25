@@ -39,7 +39,14 @@
                 padding: 23px 32px;
             }
             @media (max-width: 767.98px) {
-                padding: 32px 17px;
+                padding: 32px 24px;
+                &:last-child {
+                    .projecstsImage {
+                        display: flex;
+                        justify-content: center;
+                        
+                    }
+                }
             }
             .projectsRow {
                 @include flexRow(45, 2);
@@ -57,13 +64,19 @@
                     height: 445px;
                     overflow: hidden;
                     @media (max-width: 767.98px) {
-                        max-height: 440px;
+                        max-height: 392px;
+                        text-align: center;
                     }
                     img {
                         height: 100%;
                         width: 100%;
                         object-fit: contain;
                         min-height: 445px;
+                        @media (max-width: 767.98px) {
+                            max-width: 274px;
+                            height: auto;
+                            
+                        }
                         
                         @media (max-width: 767.98px) {
                             min-height: unset;
