@@ -19,7 +19,7 @@
             @include fontRem(40, 400, 53);
         }
         @media (max-width: 767.98px) {
-            @include fontRem(32, 400, 42);
+            @include fontRem(28, 400, 32);
             margin-bottom: 16px;
         }
     }

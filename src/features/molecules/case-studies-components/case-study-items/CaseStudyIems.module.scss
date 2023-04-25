@@ -4,9 +4,18 @@
 .caseStudiItems {
     background-color: $white;
     padding: 100px 0;
+    @media (max-width: 1279.98px) {
+        padding: 56px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 24px 0 56px;
+    }
     .itemsRow {
         @include flexRow(0, 1);
         row-gap: 56px;
+        @media (max-width: 767.98px) {
+            row-gap: 48px;
+        }
     }
     .item {
         .innerRow {
@@ -16,6 +25,9 @@
                     flex: 1;
                     &:first-child {
                         flex: 0 0 576px;
+                        @media (max-width: 1279.98px) {
+                            flex: 0 0 360px;
+                        }
                     }
                 }
             }
@@ -24,6 +36,9 @@
                 height: 270px;
                 border: 1px solid $black;
                 padding: 6px;
+                @media (max-width: 767.98px) {
+                    margin-bottom: 16px;
+                }
                 img {
                     object-fit: cover;
                     height: 100%;
@@ -35,11 +50,21 @@
                     font-family: "MADE";
                     @include fontRem(32, 400, 42);
                     margin-bottom: 10px;
+                    @media (max-width: 1279.98px) {
+                        @include fontRem(24, 400, 32);
+                    }
                 }
                 .itemDescr {
                     @include textShorten(5);
                     margin-bottom: 26px;
                     margin-top: 25px;
+                    @media (max-width: 1279.98px) {
+                        @include textShorten(6);
+                    }
+                    @media (max-width: 767.98px) {
+                        @include textShorten(4);
+                        margin-bottom: 12px;
+                    }
                 }
                 .itemMarks {
                     display: flex;
@@ -51,6 +76,10 @@
                         padding: 3px 12px;
                         border: 1px solid $blue;
                         color: $blue;
+                        @media (max-width: 1279.98px) {
+                            @include fontRem(12, 400, 16);
+                            padding: 3px 8px;
+                        }
                     }
                 }
             }
