@@ -50,7 +50,7 @@ const CalcualateWebsite = () => {
                 <Text as="p" className={styles.calcuatetext}>
                   {t('main.calculator.basic.description')}
                 </Text>
-                <ArrowButton href="/calculator/basic" text="Calculate" />
+                <ArrowButton href="/calculator/basic" text={t('main.calculate.button')} />
               </motion.div>
             </div>
             <div className="col_">
@@ -67,7 +67,7 @@ const CalcualateWebsite = () => {
                 <Text as="p" className={styles.calcuatetext}>
                   {t('main.calculator.advanced.description')}
                 </Text>
-                <ArrowButton href="/calculator/advanced" text="Calculate" />
+                <ArrowButton href="/calculator/advanced" text={t('main.calculate.button')} />
               </motion.div>
             </div>
           </div>
