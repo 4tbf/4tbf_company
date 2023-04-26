@@ -39,10 +39,19 @@ const LANGS = [
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-
+  const [currLang, setCurrLang] = useState('');
   const handleBurgerClick = useCallback(() => {
     setIsBurgerOpen((prev) => !prev);
   }, []);
+
+  useEffect(() => {
+    console.log(currLang);
+    if (Boolean(currLang) && router.pathname.includes('calculator')) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
+    }
+  }, [currLang]);
 
   useEffect(() => {
     if (isBurgerOpen) {
@@ -118,7 +127,13 @@ const Header = () => {
                     {LANGS.map((curr) => {
                       return (
                         <li key={curr.locale}>
-                          <button onClick={() => changeLang(curr.locale)} type="button">
+                          <button
+                            onClick={async () => {
+                              changeLang(curr.locale);
+                              setCurrLang(curr.locale);
+                            }}
+                            type="button"
+                          >
                             {curr.title}
                           </button>
                         </li>
