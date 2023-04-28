@@ -17,6 +17,7 @@ const Hero: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
+                key={t('main.pretitle')}
               >
                 {t('main.pretitle')}
               </motion.p>
@@ -24,6 +25,7 @@ const Hero: React.FC = () => {
                 initial={{ x: -1000, scale: 0.7 }}
                 animate={{ x: 0, scale: 1 }}
                 transition={{ duration: 0.8 }}
+                key={t('main.title.1')}
               >
                 {t('main.title.1')} <br /> {t('main.title.2')} <br /> {t('main.title.3')} <br />
                 {t('main.title.4')}

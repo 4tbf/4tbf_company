@@ -2,10 +2,8 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import styles from './Progress.module.scss';
 import Text from '../../../atoms/text';
-import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 
 const Progress = () => {
-  const mobile = useMediaQuery('(max-width: 767.98px)');
   const { t } = useTranslation();
 
   return (
