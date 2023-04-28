@@ -33,6 +33,9 @@
         
     }
     .servicesRow {
+        &::-webkit-scrollbar {
+            background-color: transparent
+        }
         @include flexRow(8, 3);
         row-gap: 8px;
         @media (max-width: 767.98px) {
@@ -55,12 +58,21 @@
             display: block;
             text-decoration: none;
             height: 235px;
+            position: relative;
             @media (max-width: 767.98px) {
                 padding: 18px 24px 24px 24px;
             }
+            .imageItem {
+                height: 66px;
+                .brandImage {
+                    position: absolute;
+                }
+                .brandImageHovered{
+                    position: absolute;
+                }
+            }
             .serviceTitle {
                 font-family: "MADE";
-
                 @include fontRem(24, 400, 32);
                 max-width: 290px;
                 margin-bottom: 12px;
