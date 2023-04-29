@@ -45,7 +45,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    console.log(currLang);
     if (Boolean(currLang) && router.pathname.includes('calculator')) {
       setTimeout(() => {
         window.location.reload();
@@ -66,6 +65,7 @@ const Header = () => {
   const changeLang = (locale: string) => {
     router.push(router.pathname, null, { locale });
   };
+
   return (
     <header className={styles.header}>
       <div className="container">

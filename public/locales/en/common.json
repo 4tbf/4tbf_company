@@ -53,7 +53,7 @@
     "contact.error": "Requiere field",
     "contact.form.submit": "Submit",
     "contact.getinTouch": "Get In touch",
-    "contact.title.1": "Contact our development experts",
+    "contact.title.1": "Contact our experts",
     "contact.title.2": "to solve your business problems",
     "contact.description": "Thank you for considering our development services. Our team of experts is ready to work with you to create a functional and visually stunning website or app that reflects your brand and achieves your business goals.",
     "header.footer.whywe": "Why We?",
@@ -324,5 +324,9 @@
     "case.subtitle": "The Case Studies page showcases our successful web and mobile development projects for various industries. We work closely with clients to understand their unique needs and goals, and we use our technical skills and creativity to create websites that are tailored to their specific requirements. Explore our Case Studies to see how we've helped businesses like yours succeed online.",
     "cases.nfcs": "NFCS is a website that provides analytics and insights for NFTs, cryptocurrency, and stock markets. The website provides users with real-time data and analysis on market trends, pricing, trading volumes, and other key metrics, helping them make informed decisions about their investments. With a user-friendly interface and customizable dashboards, NFCS makes it easy for users to track their portfolios and stay up-to-date on the latest market developments. Whether you're a seasoned investor or just getting started, NFCS is a valuable tool for anyone looking to stay ahead in the fast-paced world of digital assets and financial markets.",
     "cases.investonus": "Investonus is a website that provides a crypto trading bot service to its users. This service allows users to automate their trading strategies and execute trades without requiring constant monitoring of the markets. Users can pay a fee to access the trading bot, which is built on advanced machine learning algorithms. These algorithms analyze real-time market data and trends to identify profitable trading opportunities.",
-    "cases.qr": "The QR Generator app is a powerful tool that allows users to create customized QR codes and VCards. With this app, users can quickly generate a QR code for any purpose, including links to websites, email addresses, phone numbers, and more. The app also supports VCard generation, allowing users to create digital business cards that can be easily shared and saved by others."
+    "cases.qr": "The QR Generator app is a powerful tool that allows users to create customized QR codes and VCards. With this app, users can quickly generate a QR code for any purpose, including links to websites, email addresses, phone numbers, and more. The app also supports VCard generation, allowing users to create digital business cards that can be easily shared and saved by others.",
+    "404.oops": "Oops!",
+    "404.title": "You’ve lost in space.",
+    "404.subtitle": "We can’t find the page that you are looking for.",
+    "404.home": "GO HOME"
 }
