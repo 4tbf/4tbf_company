@@ -7,6 +7,7 @@ import styles from './CaseStudyIems.module.scss';
 import Text from '../../../atoms/text';
 import ArrowButton from '../../../../components/multiusable/arrow-button/ArrowButton';
 import { useCardVariants } from '../../../../hooks/useCardVariants';
+import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 
 interface ICaseStudiItems {
   declude?: 'qr' | 'investonus' | 'nfcs' | 'none';
@@ -15,6 +16,7 @@ interface ICaseStudiItems {
 const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
   const cardVariants = useCardVariants(120);
   const { t } = useTranslation();
+  const mobile = useMediaQuery('(max-width: 767.98px)');
 
   return (
     <section className={styles.caseStudiItems}>
@@ -37,7 +39,11 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <div className={styles.imageWrapper}>
                           <Image
                             alt="case study"
-                            src="/images/case-studies/nft.png"
+                            src={
+                              mobile
+                                ? '/images/case-studies/nft-mobile.png'
+                                : '/images/case-studies/nft.png'
+                            }
                             width={576}
                             height={269}
                           />
@@ -78,7 +84,11 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <div className={styles.imageWrapper}>
                           <Image
                             alt="case study"
-                            src="/images/case-studies/tonus.png"
+                            src={
+                              mobile
+                                ? '/images/case-studies/tonus-mobile.png'
+                                : '/images/case-studies/tonus.png'
+                            }
                             width={576}
                             height={269}
                           />
@@ -119,7 +129,11 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <div className={styles.imageWrapper}>
                           <Image
                             alt="case study"
-                            src="/images/case-studies/qr.png"
+                            src={
+                              mobile
+                                ? '/images/case-studies/qr-mobile.png'
+                                : '/images/case-studies/qr.png'
+                            }
                             width={576}
                             height={269}
                           />

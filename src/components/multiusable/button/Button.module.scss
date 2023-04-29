@@ -6,8 +6,12 @@
     font-family: "MADE";
     background-color: transparent;
     @include fontRem(14, 400, 18);
-    @include flex-center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     transition: 0.3s;
+    text-decoration: none;
     &:active,
     &:focus {
         background-color: transparent;

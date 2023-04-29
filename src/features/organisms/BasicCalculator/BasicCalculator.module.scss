@@ -2,6 +2,12 @@
 @import "/src/styles/pallete";
 
 .stepContainer {
+    @media (max-width: 1279.98px) {
+        padding-bottom: 88px;
+     }
+    @media (max-width: 767.98px) {
+        padding-bottom: 48px;
+     }
     .stepRow {
         @include RowItems(30);
         @media (max-width: 1279.98px) {
@@ -117,6 +123,31 @@
                             background-color: $blue;
                         }
                     }
+                }
+            }
+        }
+    }
+    .mobileStepCounts {
+        @include flex-center;
+        justify-content: space-between;
+        margin: 0 -16px 32px;
+        padding: 0 16px 21px;
+        border-bottom: 1px solid $white;
+        .stepText {
+            @include fontRem(14, 400, 16);
+        }
+        .stepNumbers {
+            display: flex;
+            gap: 2px;
+            align-items: baseline;
+            span {
+                &:first-child {
+                    color: $white;
+                    @include fontRem(22, 700, 26);
+                }
+                &:last-child {
+                    color: $blue;
+                    @include fontRem(18, 700, 19);
                 }
             }
         }
