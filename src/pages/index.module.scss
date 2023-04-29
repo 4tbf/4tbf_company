@@ -27,7 +27,7 @@
     h1 {
         font-family: "MADE";
         color: $white;
-        @include fontRem(92, 400, 121);
+        @include fontRem(80, 400, 121);
     }
 }
 
@@ -68,6 +68,9 @@
                 font-family: "MADE";
                 white-space: nowrap;
                 text-transform: uppercase;
+                @media (max-width: 767.98px) {
+                    @include fontRem(20, 400, 24);
+                }
             }
         }
     }

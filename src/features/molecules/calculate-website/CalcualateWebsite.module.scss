@@ -22,7 +22,6 @@
         margin-bottom: 24px;
         @media (max-width: 1279.98px) {
             @include fontRem(40, 400, 53);
-            max-width: 408px;
         }
         @media (max-width: 767.98px) {
             @include fontRem(32, 400, 42);
@@ -59,7 +58,8 @@
             border: 1px solid $white;
             text-decoration: none;
             color: $white;
-            min-height: 325px;
+            height: 100%;
+            
             @media (max-width: 1279.98px) {
                 padding: 24px;
             }

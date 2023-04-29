@@ -10,6 +10,9 @@
     @media (max-width: 1279.98px) {
         padding-top: 90px;
     }
+    @media (max-width: 767.98px) {
+        padding-top: 38px;
+    }
     .whoWeTitle {
         @include fontRem(64, 400, 84);
         color: $white;
@@ -24,8 +27,13 @@
     .whoWeDescr {
         margin: 32px 0;
         max-width: 840px;
+        @media (max-width: 1279.98px) {
+            max-width: 100%;
+            text-align: justify;
+        }
         @media (max-width: 767.98px) {
             margin: 22px 0;
+            text-align: left;
         }
         p {
             width: 100%;

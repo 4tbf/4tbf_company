@@ -4,11 +4,14 @@
 .aboutHero {
     padding-top: 90px;
     background-color: $black;
+    @media (max-width: 1279.98px) {
+        padding-top: 48px;
+    }
     @media (max-width: 767.98px) {
         padding-top: 32px;
     }
     .aboutTitle {
-        @include fontRem(88, 400, 116);
+        @include fontRem(72, 400, 94);
         color: $white;
         font-family: "MADE";
         @media (max-width: 1279.98px) {
@@ -19,7 +22,7 @@
         }
     }
     .aboutSubTitle {
-        @include fontRem(40, 400, 54);
+        @include fontRem(24, 400, 32);
         color: $white;
         max-width: 652px;
         margin: 32px 0;

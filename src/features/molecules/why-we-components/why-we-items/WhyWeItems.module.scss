@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-position: right -50px;
     padding-top: 230px;
+    transform: translateY(-140px);
     @media (max-width: 1279.98px) {
         transform: translateY(-150px);
         padding-bottom: 0;
@@ -34,7 +35,7 @@
             padding: 48px 32px;
             border: 1px solid $white;
             color: $white;
-            min-height: 320px;
+            height: 100%;
             @media (max-width: 1279.98px) {
                 padding: 28px 24px;
             }

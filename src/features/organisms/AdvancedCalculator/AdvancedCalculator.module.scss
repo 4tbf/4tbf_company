@@ -2,6 +2,12 @@
 @import "/src/styles/pallete";
 
 .stepContainer {
+    @media (max-width: 1279.98px) {
+       padding-bottom: 88px;
+    }
+    @media (max-width: 767.98px) {
+        padding-bottom: 48px;
+     }
     .stepRow {
         @include RowItems(30);
         @media (max-width: 1279.98px) {

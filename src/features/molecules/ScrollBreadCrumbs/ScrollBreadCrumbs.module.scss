@@ -30,6 +30,10 @@
             &:not(:last-child) {
                 padding-right: 41px;
                 margin-right: 41px;
+                @media (max-width: 767.98px) {
+                    padding-right: 26px;
+                    margin-right: 26px;
+                }
                 &::after {
                     content: "";
                     @include absoluteCenter(vertical);
@@ -48,6 +52,9 @@
                 font-family: "MADE";
                 white-space: nowrap;
                 text-transform: uppercase;
+                @media (max-width: 767.98px) {
+                    @include fontRem(20, 400, 24);
+                }
             }
         }
     }
