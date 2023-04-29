@@ -78,6 +78,7 @@
         @media (max-width: 1279.98px) {
             margin-top: 56px;
             margin-bottom: 56px;
+            @include flex-center-column;
         }
         @media (max-width: 767.98px) {
             margin-top: 56px;
@@ -89,14 +90,15 @@
             color: $white;
             font-family: "MADE";
         }
-        .getInTouchTop {
-        }
         .socialList {
             @include flex-center-vert;
             gap: 28px;
             div {
                 cursor: pointer;
                 @include flex-center-vert;
+            }
+            @media (max-width: 1279.98px) {
+                justify-content: center;
             }
         }
         a {
@@ -105,6 +107,9 @@
             @include flex-center-vert;
             margin-bottom: 16px;
             text-decoration: none;
+            @media (max-width: 1279.98px) {
+                justify-content: center;
+            }
         }
     }
     .getInTouchBottom {
