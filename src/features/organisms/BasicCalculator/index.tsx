@@ -15,6 +15,7 @@ import Text from '../../atoms/text';
 import CheckIcon from '../../../components/svgs/CheckIcon';
 import { TCalculatorCurrentElement } from '../../../constants_types/calculator.types';
 import SuccessModal from '../../atoms/SuccessModal';
+import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
 const BasicCalculator: React.FC = () => {
   const currentCalcSteps = CALCULATOR.basic;
@@ -24,6 +25,8 @@ const BasicCalculator: React.FC = () => {
   const [step, setStep] = useState(1);
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [email, setEmail] = useState('');
+
+  const mobile = useMediaQuery('(max-width: 767.98px)');
 
   const handleFetch = async (values: Record<string, string>) => {
     await emailjs.send(
@@ -68,29 +71,43 @@ const BasicCalculator: React.FC = () => {
             </div>
             <div className="col_">
               <div className={styles.stepRight}>
-                <ul className={styles.setepList}>
-                  {currentCalcSteps.map((current: TCalculatorCurrentElement[], index) => {
-                    return (
-                      <li
-                        key={current[0].stepName}
-                        className={clsx({
-                          [styles.selectedStep]: index < step,
-                          [styles.selectedLastStep]:
-                            index === currentCalcSteps.length - 1 && index < step,
-                        })}
-                      >
-                        <div className={styles.stepContent}>
-                          <Text as="p" className={styles.stepText}>
-                            {t(current[0].stepName)}
-                          </Text>
-                          <Text as="p" className={styles.stepNumber}>
-                            {index < step - 1 ? <CheckIcon /> : index + 1}
-                          </Text>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {mobile ? (
+                  <div>
+                    <div className={styles.mobileStepCounts}>
+                      <Text as="p" className={styles.stepText}>
+                        Current Step
+                      </Text>
+                      <Text as="p" className={styles.stepNumbers}>
+                        <Text as="span">2</Text>
+                        <Text as="span">/8</Text>
+                      </Text>
+                    </div>
+                  </div>
+                ) : (
+                  <ul className={styles.setepList}>
+                    {currentCalcSteps.map((current: TCalculatorCurrentElement[], index) => {
+                      return (
+                        <li
+                          key={current[0].stepName}
+                          className={clsx({
+                            [styles.selectedStep]: index < step,
+                            [styles.selectedLastStep]:
+                              index === currentCalcSteps.length - 1 && index < step,
+                          })}
+                        >
+                          <div className={styles.stepContent}>
+                            <Text as="p" className={styles.stepText}>
+                              {t(current[0].stepName)}
+                            </Text>
+                            <Text as="p" className={styles.stepNumber}>
+                              {index < step - 1 ? <CheckIcon /> : index + 1}
+                            </Text>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
               </div>
             </div>
           </div>

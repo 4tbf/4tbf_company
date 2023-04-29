@@ -127,4 +127,29 @@
             }
         }
     }
+    .mobileStepCounts {
+        @include flex-center;
+        justify-content: space-between;
+        margin: 0 -16px 32px;
+        padding: 0 16px 21px;
+        border-bottom: 1px solid $white;
+        .stepText {
+            @include fontRem(14, 400, 16);
+        }
+        .stepNumbers {
+            display: flex;
+            gap: 2px;
+            align-items: baseline;
+            span {
+                &:first-child {
+                    color: $white;
+                    @include fontRem(22, 700, 26);
+                }
+                &:last-child {
+                    color: $blue;
+                    @include fontRem(18, 700, 19);
+                }
+            }
+        }
+    }
 }
