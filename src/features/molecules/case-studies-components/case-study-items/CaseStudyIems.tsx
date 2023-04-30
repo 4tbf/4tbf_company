@@ -61,7 +61,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <Text as="p" className={styles.itemDescr}>
                           {t('cases.nfcs')}
                         </Text>
-                        <ArrowButton text={t('services.showmore')} href="/cases/nfcs" />
+                        <ArrowButton text={t('gotocase')} blank href="https://www.nfcs.space/" />
                       </div>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <Text as="p" className={styles.itemDescr}>
                           {t('cases.investonus')}
                         </Text>
-                        <ArrowButton text={t('services.showmore')} href="/cases/investonus" />
+                        <ArrowButton text={t('gotocase')} blank href="https://investonus.pro/" />
                       </div>
                     </div>
                   </div>
@@ -141,7 +141,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                       </div>
                     </div>
                     <div className="col_">
-                      <div className={styles.itemContent}>
+                      <div className={`${styles.itemContent} ${styles.qr}`}>
                         <Text as="h2">QR Generator</Text>
                         <div className={styles.itemMarks}>
                           <Text as="p">React Native</Text>
@@ -151,7 +151,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <Text as="p" className={styles.itemDescr}>
                           {t('cases.qr')}
                         </Text>
-                        <ArrowButton text={t('services.showmore')} href="/cases/qr" />
+                        <ArrowButton text={t('inprogress')} href="#" />
                       </div>
                     </div>
                   </div>

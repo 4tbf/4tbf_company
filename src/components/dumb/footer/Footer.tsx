@@ -68,7 +68,7 @@ const Footer = () => {
                 <ul className={styles.footerLanguage}>
                   <li className={styles.dropdownWrapper}>
                     <div className={styles.languageControl}>
-                      <span>{t('header.footer.calc')}</span>
+                      <span style={{ textTransform: 'none' }}>{t('header.footer.calc')}</span>
                       <ArrowIcon />
                     </div>
                     <ul>

@@ -68,7 +68,7 @@ const Projects = () => {
                       {t('main.cases.nfcs.subtitle')}
                     </Text>
                     <Button
-                      onClick={() => router.push('/cases/nfcs')}
+                      onClick={() => window.open('https://www.nfcs.space/', '_ blank')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}
@@ -116,7 +116,7 @@ const Projects = () => {
                       {t('main.cases.investonus.subtitle')}
                     </Text>
                     <Button
-                      onClick={() => router.push('/cases/investonus')}
+                      onClick={() => window.open('https://investonus.pro/', '_ blank')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}
@@ -164,7 +164,7 @@ const Projects = () => {
                       {t('main.cases.qr.subtitle')}
                     </Text>
                     <Button
-                      onClick={() => router.push('/cases/qr')}
+                      onClick={() => router.push('/case-studies')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}

@@ -79,11 +79,14 @@ const AdvancedCalculator: React.FC = () => {
                   <div>
                     <div className={styles.mobileStepCounts}>
                       <Text as="p" className={styles.stepText}>
-                        Current Step
+                        {step <= currentCalcSteps.length &&
+                          t(currentCalcSteps[step - 1][0].stepName)}
                       </Text>
                       <Text as="p" className={styles.stepNumbers}>
-                        <Text as="span">2</Text>
-                        <Text as="span">/8</Text>
+                        <Text as="span">
+                          {step > currentCalcSteps.length ? currentCalcSteps.length : step}
+                        </Text>
+                        <Text as="span">/{currentCalcSteps.length}</Text>
                       </Text>
                     </div>
                   </div>
