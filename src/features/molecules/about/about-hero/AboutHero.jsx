@@ -1,18 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import styles from './AboutHero.module.scss';
 import Text from '../../../atoms/text';
 import Button from '../../../../components/multiusable/button/Button';
-import SuccessModal from '../../../atoms/SuccessModal';
 
 const AboutHero = () => {
   const { t } = useTranslation();
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const router = useRouter();
 
   return (
     <section className={styles.aboutHero}>
-      <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
-
       <div className="container">
         <Text as="h1" className={styles.aboutTitle}>
           {t('about.subtitle')}
@@ -23,7 +21,7 @@ const AboutHero = () => {
         <Button
           type="button"
           children={t('about.workwithus')}
-          onClick={() => setIsOpen(true)}
+          onClick={() => router.push('/contact-us')}
           variant="light"
         />
       </div>

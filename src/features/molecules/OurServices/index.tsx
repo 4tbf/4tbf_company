@@ -73,7 +73,7 @@ const OurServices: React.FC = () => {
           )}
           <div className="col_">
             <motion.div initial="rest" whileHover="hover" animate="rest">
-              <Link href="#" className={styles.clasicItem}>
+              <Link href="/services" className={styles.clasicItem}>
                 <div className={styles.imageItem}>
                   <motion.div variants={brandImageMotion}>
                     <Image
@@ -103,7 +103,7 @@ const OurServices: React.FC = () => {
           </div>
           <div className="col_">
             <motion.div initial="rest" whileHover="hover" animate="rest">
-              <Link href="#" className={styles.clasicItem}>
+              <Link href="/services" className={styles.clasicItem}>
                 <div className={styles.imageItem}>
                   <motion.div variants={brandImageMotion}>
                     <Image
@@ -135,7 +135,7 @@ const OurServices: React.FC = () => {
           </div>
           <div className="col_">
             <motion.div initial="rest" whileHover="hover" animate="rest">
-              <Link href="#" className={styles.clasicItem}>
+              <Link href="/services" className={styles.clasicItem}>
                 <div className={styles.imageItem}>
                   <motion.div variants={brandImageMotion}>
                     <Image
@@ -163,7 +163,7 @@ const OurServices: React.FC = () => {
           </div>
           <div className="col_">
             <motion.div initial="rest" whileHover="hover" animate="rest">
-              <Link href="#" className={styles.clasicItem}>
+              <Link href="/services" className={styles.clasicItem}>
                 <div className={styles.imageItem}>
                   <motion.div variants={brandImageMotion}>
                     <Image
@@ -191,7 +191,7 @@ const OurServices: React.FC = () => {
           </div>
           <div className="col_">
             <motion.div initial="rest" whileHover="hover" animate="rest">
-              <Link href="#" className={styles.clasicItem}>
+              <Link href="/services" className={styles.clasicItem}>
                 <div className={styles.imageItem}>
                   <motion.div variants={brandImageMotion}>
                     <Image

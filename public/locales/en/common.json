@@ -328,5 +328,7 @@
     "404.oops": "Oops!",
     "404.title": "You’ve lost in space.",
     "404.subtitle": "We can’t find the page that you are looking for.",
-    "404.home": "GO HOME"
+    "404.home": "GO HOME",
+    "gotocase": "Go to Case",
+    "inprogress": "In Progress"
 }
