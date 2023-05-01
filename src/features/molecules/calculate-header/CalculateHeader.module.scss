@@ -1,0 +1,34 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.calculateHeader {
+    padding: 80px 0 60px;
+    @media (max-width: 1279.98px) {
+        margin-bottom: 60px;
+        padding-top: 160px;
+    }
+    @media (max-width: 767.98px) {
+        padding-top: 100px;
+        margin-bottom: 0;
+    }
+    .title {
+        @include fontRem(64, 400, 84);
+        margin-bottom: 16px;
+        font-family: "MADE";
+        color: $white;
+        @media (max-width: 767.98px) {
+            @include fontRem(26, 400, 34);
+        }
+    }
+    .descr {
+        color: $white;
+        max-width: 768px;
+        @include fontRem(40, 400, 54);
+        @media (max-width: 1279.98px) {
+            @include fontRem(20, 400, 27);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(16, 400, 21);
+        }
+    }
+}

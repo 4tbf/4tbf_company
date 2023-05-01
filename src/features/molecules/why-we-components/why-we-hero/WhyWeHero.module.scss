@@ -1,0 +1,42 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.whyweHero {
+    padding-top: 92px;
+    @media (max-width: 1279.98px) {
+        padding-top: 48px;
+    }
+    @media (max-width: 767.98px) {
+        background-image: url("/images/contact_bg.png");
+        background-repeat: no-repeat;
+        background-position: 20px top;
+        background-size: 600px;
+        padding-bottom: 260px;
+        padding-top: 40px;
+    }
+    .heroTitle {
+        @include fontRem(72, 400, 94);
+        font-family: "MADE";
+        color: $white;
+        @media (max-width: 1279.98px) {
+            @include fontRem(48, 400, 63);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(26, 400, 34);
+        }
+    }
+    .heroSubTitle {
+        margin-top: 60px;
+        color: $white;
+        max-width: 888px;
+        @include fontRem(24, 400, 33);
+        @media (max-width: 1279.98px) {
+            @include fontRem(20, 400, 27);
+            margin-top: 24px;
+        }
+        @media (max-width: 767.98px) {
+            margin-top: 16px;
+            @include fontRem(16, 400, 22);
+        }
+    }
+}

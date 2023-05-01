@@ -1,0 +1,64 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.faqListItem {
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    padding: 30px 0;
+    @media (max-width: 1279.98px) {
+        padding: 24px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 16px 0;
+    }
+    .itemHeader {
+        @include flex-center-vert;
+        justify-content: space-between;
+        .itemTitle {
+            font-family: "MADE";
+            @include fontRem(24, 400, 32);
+            @media (max-width: 1279.98px) {
+                @include fontRem(20, 400, 26);
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(16, 400, 21);
+            }
+        }
+        button {
+            @include buttonNulled;
+            svg {
+                @media (max-width: 1279.98px) {
+                    margin-left: 8px;
+                    width: 24px;
+                    height: 24px;
+                    min-width: 24px;
+                    min-height: 24px;
+                    max-width: 24px;
+                    max-height: 24px;
+                }
+            }
+            &.openedBtn {
+                svg {
+                    path {
+                        &:last-child {
+                            transition: 0.4s;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .itemContentWrapper {
+        height: 0;
+        overflow: hidden;
+        transition: height ease 0.4s;
+        .itemContent {
+            p {
+                margin-top: 11px;
+                @include fontRem(14, 400, 19);
+                padding: 0 15px 0 10px;
+            }
+        }
+    }
+}

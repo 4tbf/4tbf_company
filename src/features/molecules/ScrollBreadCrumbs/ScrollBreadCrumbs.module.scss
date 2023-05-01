@@ -1,0 +1,61 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+.scrolledSection {
+    width: 100%;
+    overflow: hidden;
+    padding: 23px 0px;
+    border-bottom: 2px solid $black;
+    [class="overlay"]{
+        display: none;
+    }
+    :global {
+        .marquee-container {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
+    .scroledItems {
+        @include flex-center-vert;
+        flex-wrap: nowrap;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        .scroledItem {
+            position: relative;
+            &:not(:last-child) {
+                padding-right: 41px;
+                margin-right: 41px;
+                @media (max-width: 767.98px) {
+                    padding-right: 26px;
+                    margin-right: 26px;
+                }
+                &::after {
+                    content: "";
+                    @include absoluteCenter(vertical);
+                    right: 0;
+                    transform: translate(50%, -50%);
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='26' viewBox='0 0 13 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0C9.55219 0 6.24558 1.36964 3.80761 3.80761C1.36964 6.24558 2.60303e-07 9.55219 0 13C-2.60303e-07 16.4478 1.36964 19.7544 3.80761 22.1924C6.24558 24.6304 9.55218 26 13 26L13 13L13 0Z' fill='%233D65F7'/%3E%3C/svg%3E");
+                    width: 26px;
+                    height: 26px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+            p {
+                @include fontRem(28, 400, 37);
+                font-family: "MADE";
+                white-space: nowrap;
+                text-transform: uppercase;
+                @media (max-width: 767.98px) {
+                    @include fontRem(20, 400, 24);
+                }
+            }
+        }
+    }
+}

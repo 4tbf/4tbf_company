@@ -1,0 +1,66 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.finalWrapper {
+    color: $white;
+    min-height: 450px;
+    @include flex-column;
+    .finalHeader {
+        padding-bottom: 24px;
+        border-bottom: 1px solid $white;
+        margin-bottom: 22px;
+        .finalTitle {
+            margin-bottom: 16px;
+            @include fontRem(20, 400, 26);
+            font-family: "MADE";
+        }
+        .appoximateName {
+            @include fontRem(14, 400, 16);
+            margin-bottom: 4px;
+        }
+        .count {
+            @include fontRem(32, 400, 36);
+            font-family: "MADE";
+            margin-top: 15px;
+            color: $blue;
+        }
+    }
+    .submitText {
+        max-width: 406px;
+        @include fontRem(14, 400, 21);
+        margin-bottom: 32px;
+    }
+    .finalButtons {
+        margin-top: auto;
+        @include flex-center-vert;
+        justify-content: flex-end;
+        gap: 32px;
+        @media (max-width: 767.98px) {
+            justify-content: center;
+        }
+        .recalculate {
+            @include buttonNulled;
+            font-family: "MADE";
+            @include flex-center-vert;
+            gap: 8px;
+            @include fontRem(14, 400, 21);
+            transition: 0.3s;
+            color: $blue;
+            text-decoration: none;
+            svg {
+                transition: 0.3s;
+                transform: rotate(180deg);
+            }
+            &:hover {
+                svg {
+                    transform: rotate(360deg);
+                }
+            }
+            &:active {
+                svg {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

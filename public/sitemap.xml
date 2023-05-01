@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://www.4tbf.company</loc>
+       <priority>1.00</priority>
+   </url>
+    <url>
+      <loc>https://www.4tbf.company/why-we</loc>
+          <priority>0.60</priority>
+   </url>
+    <url>
+      <loc>https://www.4tbf.company/services</loc>
+          <priority>0.60</priority>
+   </url>
+    <url>
+      <loc>https://www.4tbf.company/case-studies</loc>
+          <priority>0.60</priority>
+   </url>
+    <url>
+      <loc>https://www.4tbf.company/calculator/basic</loc>
+          <priority>0.80</priority>
+   </url>
+    <url>
+      <loc>https://www.4tbf.company/calculator/advanced</loc>
+          <priority>0.80</priority>
+   </url>
+    <url>
+      <loc>https://www.4tbf.company/calculator/about</loc>
+          <priority>0.60</priority>
+   </url>
+    <url>
+      <loc>https://www.4tbf.company/calculator/contact-us</loc>
+          <priority>0.60</priority>
+   </url>
+</urlset>

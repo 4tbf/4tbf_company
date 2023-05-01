@@ -1,0 +1,155 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.stepContainer {
+    @media (max-width: 1279.98px) {
+        padding-bottom: 88px;
+    }
+    @media (max-width: 767.98px) {
+        padding-bottom: 48px;
+    }
+    .stepRow {
+        @include RowItems(30);
+        @media (max-width: 1279.98px) {
+            flex-direction: column-reverse;
+        }
+        :global {
+            .col_ {
+                flex: 1;
+                &:first-child {
+                    flex: 0 0 65%;
+                }
+                @media (max-width: 1279.98px) {
+                    flex: 0 0 100% !important;
+                    max-width: 100%;
+                }
+            }
+        }
+        .stepLet {
+            overflow: hidden;
+            border: 1px solid $white;
+            padding: 24px;
+            @media (max-width: 767.98px) {
+                border: 0;
+                padding: 0;
+            }
+        }
+        .stepRight {
+            color: $white;
+            .setepList {
+                @include flex-column;
+                align-items: flex-end;
+                padding: 0;
+                list-style-type: none;
+                @media (max-width: 1279.98px) {
+                    flex-direction: row;
+                    align-items: flex-start;
+                    margin-bottom: 32px;
+                    justify-content: center;
+                }
+                @media (max-width: 767.98px) {
+                    overflow: auto;
+                    justify-content: flex-start;
+                }
+                li {
+                    padding-bottom: 32px;
+                    position: relative;
+                    @media (max-width: 1279.98px) {
+                        width: 102px;
+                        padding-bottom: 11px;
+                    }
+                    @media (max-width: 767.98px) {
+                        width: 102px;
+                        flex: 0 0 102px;
+                        max-width: 102px;
+                    }
+                    .stepContent {
+                        @include flex-center-vert;
+                        z-index: 1;
+                        position: relative;
+                        gap: 16px;
+                        @media (max-width: 1279.98px) {
+                            flex-direction: column-reverse;
+                        }
+                        .stepText {
+                            @include fontRem(16, 400, 19);
+                            @media (max-width: 1279.98px) {
+                                text-align: center;
+                                @include fontRem(12, 400, 14);
+                            }
+                        }
+                        .stepNumber {
+                            @include fontRem(20, 700, 24);
+                            width: 33px;
+                            height: 33px;
+                            border: 1px solid $blue;
+                            border-radius: 50%;
+                            background-color: $black;
+                            @include flex-center;
+                        }
+                    }
+                    &.selectedStep {
+                        .stepNumber {
+                            background-color: $blue;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            height: calc(100% - 34px);
+                            width: 1px;
+                            right: 16px;
+                            background-color: $blue;
+                            @media (max-width: 1279.98px) {
+                                width: 100%;
+                                height: 1px;
+                                top: 16px;
+                                left: 36px;
+                            }
+                        }
+                    }
+                    &.selectedLastStep {
+                        .stepNumber {
+                            background-color: $blue;
+                        }
+                        &::after {
+                            display: none;
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            height: calc(100% - 34px);
+                            width: 1px;
+                            right: 16px;
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobileStepCounts {
+        @include flex-center;
+        justify-content: space-between;
+        margin: 0 -16px 32px;
+        padding: 0 16px 21px;
+        border-bottom: 1px solid $white;
+        .stepText {
+            @include fontRem(14, 400, 16);
+        }
+        .stepNumbers {
+            display: flex;
+            gap: 2px;
+            align-items: baseline;
+            span {
+                &:first-child {
+                    color: $white;
+                    @include fontRem(22, 700, 26);
+                }
+                &:last-child {
+                    color: $blue;
+                    @include fontRem(18, 700, 19);
+                }
+            }
+        }
+    }
+}

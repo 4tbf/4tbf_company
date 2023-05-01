@@ -1,0 +1,217 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.footer {
+    background-color: $black;
+    padding-top: 50px;
+    padding-bottom: 24px;
+    .footerMainRow {
+        row-gap: 33px;
+        @include flex-center-column;
+        @media (max-width: 1279.98px) {
+            row-gap: 27px;
+        }
+    }
+    menu {
+        padding: 0;
+        @include flex-center-vert;
+        gap: 16px;
+        @media (max-width: 1279.98px) {
+            gap: 16px;
+            margin: 0;
+        }
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+            row-gap: 16px;
+        }
+        .footerLinks {
+            cursor: pointer;
+            position: relative;
+            @include flex-center-vert;
+            padding: 30px 8px;
+            z-index: 2;
+            color: $white;
+            text-decoration: none;
+            @include fontRem(16, 400, 22);
+            @media (max-width: 1279.98px) {
+                @include fontRem(14, 400, 20);
+            }
+            @media (max-width: 767.98px) {
+                padding: 0;
+            }
+           
+            span {
+                z-index: 2;
+            }
+            .footerLanguage {
+                list-style-type: none;
+                padding: 0;
+                z-index: 2;
+                cursor: pointer;
+                .languageControl {
+                    span{
+                        text-transform: uppercase;
+                    }
+                    a{
+                        text-transform: uppercase;
+                    }
+                    color: $white;
+                    @include fontRem(16, 400, 22);
+                    @include flex-center-vert;
+                    @media (max-width: 1279.98px) {
+                        @include fontRem(14, 400, 20);
+                    }
+                    @media (max-width: 767.98px) {
+                        color: $white;
+                        @include flex-center;
+                    }
+                    gap: 8px;
+                    svg {
+                        transform: rotate(180deg);@media (max-width: 767.98px) {
+                            transform: none;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                @media (max-width: 767.98px) {
+                    color: $white;
+                }
+                &::before {
+                    top: 0;
+                }
+                .footerLanguage {
+                    z-index: 2;
+                    .languageControl {
+                        span{
+                            text-transform: uppercase;
+                        }
+                        @media (max-width: 767.98px) {
+                            color: $white;
+                            @include flex-center;
+                        }
+                        svg {
+                            path {
+                                @media (max-width: 767.98px) {
+                                    stroke: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .dropdownWrapper {
+                    > ul {
+                        display: block;
+                        visibility: visible;
+                        opacity: 1;
+                        bottom: calc(100% + 30px);
+                    }
+                }
+            }
+            &:not(:nth-child(4)):not(:nth-child(7)) {
+                overflow: hidden;
+            }
+            &:nth-child(4), &:nth-child(7) {
+                &::before {
+                    visibility: hidden;
+                    transition: top 0.3s, visibility 0s !important;
+                }
+                &:hover {
+                    &::before {
+                        transition: top 0.3s, visibility 0s !important;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    .dropdownWrapper {
+        position: relative;
+
+        > ul {
+            min-width: 120px;
+            position: absolute;
+            list-style-type: none;
+            padding: 0;
+            bottom: calc(100% + 60px);
+            left: -8px;
+            background-color: $white;
+            box-shadow: 0 3px 6px rgba($black, 0.16);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            width: 100%;
+            button, a {
+                @include buttonNulled;
+                padding: 8px 12px;
+                width: 100%;
+                text-align: left;
+                width: 100%;
+                display: flex;
+                color: $black;
+                text-decoration: none;
+                @media (max-width: 767.98px) {
+                    text-align: center;
+                    color: $white;
+                }
+                &:hover {
+                    background-color: rgba($black, 0.05);
+                }
+            }
+            @media (max-width: 767.98px) {
+                position: static;
+                background-color: transparent;
+                display: none;
+            }
+        }
+    }
+    .footerSocials {
+        @include flex-center;
+        cursor: pointer;
+        gap: 28px;
+        a {
+            @include flex-center-vert;
+        }
+    }
+    .footerDocumens {
+        @include flex-center;
+        gap: 32px;
+        a {
+            color: $white;
+            text-decoration: none;
+            @media (max-width: 1279.98px) {
+                @include fontRem(14, 400, 20);
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .footerCopyRight {
+        margin-top: 13px;
+        @include flex-center-vert;
+        justify-content: space-between;
+        @media (max-width: 767.98px) {
+            flex-direction: column-reverse;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        p {
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(14, 400, 20);
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

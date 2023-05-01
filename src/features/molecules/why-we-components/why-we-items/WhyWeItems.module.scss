@@ -1,0 +1,62 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.whyeWeItems {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 92px;
+    background-image: url("/images/why_we_bg.png");
+    background-repeat: no-repeat;
+    background-position: right -50px;
+    padding-top: 230px;
+    transform: translateY(-140px);
+    @media (max-width: 1279.98px) {
+        transform: translateY(-150px);
+        padding-bottom: 0;
+       
+    }
+    @media (max-width: 767.98px) {
+        transform: translateY(-170px);
+        background-image: none;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .itemsRow {
+        @include flexRow(24, 2);
+        row-gap: 24px;
+        @media (max-width: 1279.98px) {
+            @include flexRow(10, 2);
+            row-gap: 10px;
+        }
+        @media (max-width: 767.98px) {
+            @include flexRow(24, 1);
+        }
+        .itemContent {
+            padding: 48px 32px;
+            border: 1px solid $white;
+            color: $white;
+            height: 100%;
+            @media (max-width: 1279.98px) {
+                padding: 28px 24px;
+            }
+            @media (max-width: 767.98px) {
+                padding: 32px 24px;
+                min-height: unset;
+            }
+            .itemTitle {
+                @include fontRem(32, 400, 32);
+                margin-bottom: 16px;
+                font-family: "MADE";
+                @media (max-width: 1279.98px) {
+                    @include fontRem(24, 400, 32);
+                }
+            }
+            .itemDescr {
+                @include fontRem(16, 400, 22);
+                @media (max-width: 1279.98px) {
+                    @include fontRem(14, 400, 20);
+                }
+            }
+        }
+    }
+}

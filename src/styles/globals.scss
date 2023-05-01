@@ -1,7 +1,16 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
 html,
 body {
   height: 100%;
   scroll-behavior: smooth;
+  overscroll-behavior: none;
+
+  main{
+    // position: sticky;
+    // top: 85px;
+  }
 }
 body {
   margin: 0;
@@ -10,6 +19,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   font-family: "Open Sans", sans-serif;
+  &.menu-open {
+    overflow: hidden;
+  }
+}
+#__next {
+  @media (max-width: 1279.98px) {
+    overflow-x: hidden;
+  }
 }
 * {
   box-sizing: border-box;
@@ -55,7 +72,6 @@ h5,
 h6,
 p {
   overflow-wrap: break-word;
-  hyphens: auto;
   margin: 0;
 }
 button,
@@ -92,6 +108,11 @@ legend {
   color: inherit;
   white-space: normal;
 }
+main {
+  @media (max-width: 1279.98px) {
+    padding-top: 85px;
+  }
+}
 
 .container {
   max-width: 1196px;
@@ -100,4 +121,27 @@ legend {
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 1279.98px) {
+    padding: 0 24px;
+    margin: 0;
+    max-width: 100%;
+  }
+  @media (max-width: 767.98px) {
+    padding: 0 16px;
+  }
+}
+.about-page,
+.contact-page,
+.why-we-page,
+.calc-page,
+.services-page {
+  background-color: $black;
+}
+
+
+// PAGE IMAGES
+
+.nfcs_hero_image {
+  width: 100%;
+  height: auto;
 }

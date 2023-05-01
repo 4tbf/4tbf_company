@@ -1,132 +1,35 @@
-import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
-import Logo from '../../public/logo.png';
+import Header from '../components/dumb/header/Header';
+import ScrollBreadCrumbs from '../features/molecules/ScrollBreadCrumbs';
+import OurServices from '../features/molecules/OurServices';
+import Hero from '../components/dumb/Hero';
+import CalcualateWebsite from '../features/molecules/calculate-website/CalcualateWebsite';
+import WhyWe from '../features/molecules/whe-we/WhyWe';
+import FaqSection from '../features/molecules/faq-section/FaqSection';
+import Footer from '../components/dumb/footer/Footer';
+import Projects from '../features/molecules/projects/Projects';
+import SEO from '../components/multiusable/SEO/SEO';
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>4TBF</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {/* <Header /> */}
-      {/* <main className={styles.main}>
-        <section
-          className={styles.heroSection}
-          style={{ backgroundImage: 'url(/images/brand_image.png)' }}
-        >
-          <div className="container">
-            <div className={styles.heroRow}>
-              <div className="col_">
-                <p className={styles.subTitle}>
-                  Hit a line and our friendly folks will get back to you as soon as possible.
-                </p>
-                <h1>Stex Mi Hat Bomb Title Mrrr</h1>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className={styles.scrolledSection}>
-          <div className={styles.scroledItems}>
-            <div className={styles.scroledItem}>
-              <p>Quality assurance</p>
-            </div>
-            <div className={styles.scroledItem}>
-              <p>Safety</p>
-            </div>
-            <div className={styles.scroledItem}>
-              <p>modernity</p>
-            </div>
-            <div className={styles.scroledItem}>
-              <p>rapidity</p>
-            </div>
-            <div className={styles.scroledItem}>
-              <p>adaptability</p>
-            </div>
-            <div className={styles.scroledItem}>
-              <p>uniqueness</p>
-            </div>
-          </div>
-        </section>
-        <section className={styles.ourServices}>
-          <div className="container">
-            <div className={styles.servicesRow}>
-              <div className="col_">
-                <div className={styles.mainItem}>
-                  <h2 className={styles.mainTitle}>OUR SERVICES</h2>
-                  <Link href="#" className={styles.arrowLink}>
-                    Show more <LongArrowIcon />
-                  </Link>
-                </div>
-              </div>
-              <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
-                  <div className={styles.imageItem}>
-                    <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
-                  </div>
-                  <h2 className={styles.serviceTitle}>Web Development</h2>
-                  <p className={styles.serviceDescr}>
-                    Hit a line and our friendly folks will get back to you as soon as possible.
-                  </p>
-                </Link>
-              </div>
-              <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
-                  <div className={styles.imageItem}>
-                    <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
-                  </div>
-                  <h2 className={styles.serviceTitle}>Web Development</h2>
-                  <p className={styles.serviceDescr}>
-                    Hit a line and our friendly folks will get back to you as soon as possible.
-                  </p>
-                </Link>
-              </div>
-              <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
-                  <div className={styles.imageItem}>
-                    <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
-                  </div>
-                  <h2 className={styles.serviceTitle}>Web Development</h2>
-                  <p className={styles.serviceDescr}>
-                    Hit a line and our friendly folks will get back to you as soon as possible.
-                  </p>
-                </Link>
-              </div>
-              <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
-                  <div className={styles.imageItem}>
-                    <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
-                  </div>
-                  <h2 className={styles.serviceTitle}>Web Development</h2>
-                  <p className={styles.serviceDescr}>
-                    Hit a line and our friendly folks will get back to you as soon as possible.
-                  </p>
-                </Link>
-              </div>
-              <div className="col_">
-                <Link href="#" className={styles.clasicItem}>
-                  <div className={styles.imageItem}>
-                    <Image src="/images/brand_image.png" height={66} width={72} alt="image" />
-                  </div>
-                  <h2 className={styles.serviceTitle}>Web Development</h2>
-                  <p className={styles.serviceDescr}>
-                    Hit a line and our friendly folks will get back to you as soon as possible.
-                  </p>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main> */}
-      <main className={styles.soon}>
-        <div>
-          <Image alt="logo" src={Logo} />
-          <h1>coming soon</h1>
-        </div>
+      <SEO
+        description="4TBF (For The Bright Future) is a web and mobile app development company that creates innovative and custom solutions for businesses of all sizes. Contact us to start building your next digital solution today."
+        title="Spark your success with our bright development solutions."
+        url="https://www.4tbf.company/en"
+        image="meta_main.png"
+      />
+      <Header />
+      <main>
+        <Hero />
+        <ScrollBreadCrumbs />
+        <OurServices />
+        <CalcualateWebsite />
+        <WhyWe />
+        <Projects />
+        <FaqSection />
       </main>
+      <Footer />
     </>
   );
 }

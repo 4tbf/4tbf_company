@@ -1,0 +1,122 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.contactFrom {
+    padding-top: 120px;
+    transform: translateY(-140px);
+    @media (max-width: 1279.98px) {
+        transform: translateY(-230px);
+    }
+    @media (max-width: 767.98px) {
+        padding-top: 80px;
+        transform: translateY(0);
+    }
+    .contactRow {
+        @include RowItems(30);
+        justify-content: space-between;
+        @media (max-width: 767.98px) {
+            flex-wrap: wrap;
+        }
+        &:global {
+            > .col_ {
+                flex: 1;
+                &:first-child {
+                    flex: 0 0 75%;
+                    max-width: 75%;
+                }
+                @media (max-width: 1279.98px) {
+                    flex: 0 0 100% !important;
+                    max-width: 100% !important;
+                }
+            }
+        }
+        .formWrapper {
+            max-width: 762px;
+            width: 100%;
+            @media (max-width: 1279.98px) {
+                max-width: 100%;
+            }
+            button {
+                margin-top: 80px;
+                min-width: 133px;
+                @media (max-width: 1279.98px) {
+                    margin-top: 40px;
+                }
+                @media (max-width: 767.98px) {
+                    width: 100%;
+                    margin-top: 50px;
+                }
+            }
+            .formRow {
+                @include flexRow(24, 2);
+
+                row-gap: 40px;
+                @media (max-width: 767.98px) {
+                    @include flexRow(24, 1);
+                    row-gap: 24px;
+                }
+                &:global {
+                    > .col_ {
+                        &:last-child {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                        &:nth-last-child(2) {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                        &:nth-last-child(3) {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .getInTouch {
+        @media (max-width: 1279.98px) {
+            margin-top: 56px;
+            margin-bottom: 56px;
+            @include flex-center-column;
+        }
+        @media (max-width: 767.98px) {
+            margin-top: 56px;
+            margin-bottom: 56px;
+        }
+        .getInTouchTitle {
+            @include fontRem(24, 400, 32);
+            margin-bottom: 32px;
+            color: $white;
+            font-family: "MADE";
+        }
+        .socialList {
+            @include flex-center-vert;
+            gap: 28px;
+            div {
+                cursor: pointer;
+                @include flex-center-vert;
+            }
+            @media (max-width: 1279.98px) {
+                justify-content: center;
+            }
+        }
+        a {
+            @include fontRem(16, 400, 22);
+            color: $white;
+            @include flex-center-vert;
+            margin-bottom: 16px;
+            text-decoration: none;
+            @media (max-width: 1279.98px) {
+                justify-content: center;
+            }
+        }
+    }
+    .getInTouchBottom {
+        margin-top: 60px;
+        .getInTouchAddress {
+            @include fontRem(16, 400, 22);
+            color: $white;
+        }
+    }
+}

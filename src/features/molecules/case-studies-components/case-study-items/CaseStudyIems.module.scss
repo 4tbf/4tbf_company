@@ -1,0 +1,96 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.caseStudiItems {
+    background-color: $white;
+    padding: 100px 0;
+    @media (max-width: 1279.98px) {
+        padding: 56px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 24px 0 56px;
+    }
+    .itemsRow {
+        @include flexRow(0, 1);
+        row-gap: 56px;
+        @media (max-width: 767.98px) {
+            row-gap: 48px;
+        }
+    }
+    .item {
+        .innerRow {
+            @include RowItems(40);
+            :global {
+                .col_ {
+                    flex: 1;
+                    &:first-child {
+                        flex: 0 0 576px;
+                        @media (max-width: 1279.98px) {
+                            flex: 0 0 360px;
+                        }
+                    }
+                }
+            }
+            .imageWrapper {
+                width: 100%;
+                height: 270px;
+                border: 1px solid $black;
+                padding: 6px;
+                @media (max-width: 767.98px) {
+                    margin-bottom: 16px;
+                }
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .itemContent {
+                h2 {
+                    font-family: "MADE";
+                    @include fontRem(32, 400, 42);
+                    margin-bottom: 10px;
+                    @media (max-width: 1279.98px) {
+                        @include fontRem(24, 400, 32);
+                    }
+                }
+                .itemDescr {
+                    @include textShorten(5);
+                    margin-bottom: 26px;
+                    margin-top: 25px;
+                    @media (max-width: 1279.98px) {
+                        @include textShorten(6);
+                    }
+                    @media (max-width: 767.98px) {
+                        @include textShorten(4);
+                        margin-bottom: 12px;
+                    }
+                }
+                .itemMarks {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    row-gap: 8px;
+                    p {
+                        @include fontRem(14, 400, 19);
+                        padding: 3px 12px;
+                        border: 1px solid $blue;
+                        color: $blue;
+                        @media (max-width: 1279.98px) {
+                            @include fontRem(12, 400, 16);
+                            padding: 3px 8px;
+                        }
+                    }
+                }
+            }
+            .qr{
+                a{
+                    pointer-events: none;
+                    svg{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

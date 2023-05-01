@@ -1,0 +1,56 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.technologies {
+    padding: 102px 0;
+    color: $white;  
+    @media (max-width: 767.98px) {
+        padding-top: 64px;
+    }
+    h2 {
+        @include fontRem(64, 400, 84);
+        max-width: 600px;
+        margin-bottom: 48px;
+        font-family: "MADE";
+        @media (max-width: 767.98px) {
+            @include fontRem(32, 400, 48);
+        }
+    }
+    .technologiesWrapper {
+        .technologiesList {
+            @include flex-column;
+            row-gap: 64px;
+            .listItem {
+                h3 {
+                    font-family: "MADE";
+                    @include fontRem(32, 400, 42);
+                    margin-bottom: 24px;
+                    @media (max-width: 767.98px) {
+                        @include fontRem(20, 400, 26);
+                    }
+                }
+                .technologiesItems {
+                    @include flex-center-vert;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    row-gap: 8px;
+                    .technologiesItem {
+                        p {
+                            padding: 8px 12px;
+                            @include flex-center-vert;
+                            border: 1px solid $white;
+                            gap: 12px;
+                            height: 44px;
+                            svg {
+                                object-fit: contain;
+                            }
+                            @media (max-width: 767.98px) {
+                                @include fontRem(14, 400, 19);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

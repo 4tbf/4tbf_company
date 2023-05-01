@@ -1,0 +1,8 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.errorText {
+    @include fontRem(14, 400, 19);
+    color: $red;
+    margin: 4px 0 0;
+}

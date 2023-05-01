@@ -1,0 +1,36 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.faqSection {
+    padding: 76px 0;
+    color: $white;
+    background-color: $black;
+    @media (max-width: 1279.98px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 37px 0;
+    }
+    .faqTitle {
+        @include fontRem(48, 400, 63);
+        font-family: "MADE";
+        margin-bottom: 24px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(40, 400, 53);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(28, 400, 32);
+            margin-bottom: 16px;
+        }
+    }
+    .faqDescr {
+        @include fontRem(14, 400, 19);
+        max-width: 520px;
+    }
+    .faqList {
+        margin-top: 56px;
+        @media (max-width: 767.98px) {
+            margin-top: 22px;
+        }
+    }
+}

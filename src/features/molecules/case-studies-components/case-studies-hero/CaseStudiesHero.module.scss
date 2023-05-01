@@ -1,0 +1,35 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.caseStudiesHero {
+    background-color: $black;
+    padding: 92px 0 64px;
+    color: $white;
+    @media (max-width: 767.98px) {
+        padding: 58px 0;
+    }
+    .caseStudiTitle {
+        @include fontRem(72, 400, 94);
+        font-family: "MADE";
+        color: $white;
+        @media (max-width: 1279.98px) {
+            @include fontRem(64, 400, 84);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(26, 400, 34);
+        }
+    }
+    .caseStudiSubTitle {
+        margin-top: 60px;
+        color: $white;
+        max-width: 1010px;
+        @include fontRem(24, 400, 33);
+        @media (max-width: 1279.98px) {
+            margin-top: 16px;
+            @include fontRem(20, 400, 27);
+        }
+        @media (max-width: 1279.98px) {
+            @include fontRem(16, 400, 21);
+        }
+    }
+}

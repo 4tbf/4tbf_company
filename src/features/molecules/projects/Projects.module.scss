@@ -1,0 +1,139 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.projectsSection {
+    background-color: $white;
+    padding: 96px 0;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transition: all 0.3s ease-in-out;
+    }
+    @media (max-width: 1279.98px) {
+        padding: 24px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 40px 0 0;
+        margin: 0 - 16px;
+    }
+    .itemOfProjects {
+        @include flex-column;
+        row-gap: 54px;
+        @media (max-width: 1279.98px) {
+           row-gap: 24px;
+        }
+        @media (max-width: 767.98px) {
+           row-gap: 0;
+        }
+        .projectsContainer {
+            &:nth-child(even) {
+                background-color: #dff4ee;
+                .projectsRow {
+                    flex-direction: row-reverse;
+                    @media (max-width: 767.98px) {
+                        flex-direction: column-reverse;
+                     }
+                }
+            }
+        }
+        .projectsContainer {
+            background-color: $lightBlue;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                box-shadow: 0px 3px 20px #0000000f;
+            }
+            @media (max-width: 1279.98px) {
+                padding: 23px 32px;
+            }
+            @media (max-width: 767.98px) {
+                padding: 32px 24px;
+                &:last-child {
+                    .projecstsImage {
+                        display: flex;
+                        justify-content: center;
+                        
+                    }
+                }
+            }
+            .projectsRow {
+                @include flexRow(45, 2);
+                align-items: center;
+                @media (max-width: 1279.98px) {
+                    @include flexRow(40, 2);
+                    justify-content: center;
+                    align-items: center;
+                }
+                @media (max-width: 767.98px) {
+                    @include flexRow(45, 1);
+                    flex-direction: column-reverse;
+                }
+                .projecstsImage {
+                    height: 445px;
+                    overflow: hidden;
+                    @media (max-width: 767.98px) {
+                        max-height: 392px;
+                        text-align: center;
+                    }
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                        min-height: 445px;
+                        @media (max-width: 767.98px) {
+                            max-width: 274px;
+                            height: auto;
+                            
+                        }
+                        
+                        @media (max-width: 767.98px) {
+                            min-height: unset;
+                        }
+                    }
+                }
+                .aboutProjectInfo {
+                    max-width: 480px;
+                    @media (max-width: 1279.98px) {
+                        max-width: 394px;
+                    }
+                    .projectName {
+                        @include fontRem(14, 400, 19);
+                        @media (max-width: 1279.98px) {
+                            margin-bottom: 18px;
+                        }
+                        @media (max-width: 767.98px) {
+                            margin-bottom: 8px;
+                        }
+                    }
+                    .projectTitle {
+                        @include fontRem(40, 400, 53);
+                        font-family: "MADE";
+                        @media (max-width: 1279.98px) {
+                            @include fontRem(24, 400, 32);
+                        }
+                        @media (max-width: 767.98px) {
+                            @include fontRem(28, 400, 37);
+                        }
+                    }
+                    .projectDescr {
+                        margin-top: 12px;
+                        @include fontRem(14, 400, 19);
+                        max-width: 368px;
+                        @media (max-width: 767.98px) {
+                            margin-top: 16px;
+                        }
+                    }
+                    button {
+                        margin-top: 59px;
+                        @media (max-width: 1279.98px) {
+                            margin-top: 28px;
+                        }
+                        @media (max-width: 767.98px) {
+                            margin: 24px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
