@@ -20,7 +20,7 @@
     @media (max-width: 767.98px) {
         padding-top: 33px;
         background-size: contain;
-        background-position: 80px bottom;
+        background-position: 100% bottom;
     }
     .heroRow {
         @include RowItems(30);
