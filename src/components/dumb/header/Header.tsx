@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
+import ym from 'react-yandex-metrika';
 import styles from './Header.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
 import LogoIcon from '../../svgs/LogoIcon';
@@ -63,6 +64,9 @@ const Header = () => {
   const router = useRouter();
   const tablet = useMediaQuery('(max-width: 1279.98px)');
   const changeLang = (locale: string) => {
+    if (locale === 'ru') {
+      ym('reachGoal', 'lang_ru');
+    }
     router.push(router.pathname, null, { locale });
   };
 
