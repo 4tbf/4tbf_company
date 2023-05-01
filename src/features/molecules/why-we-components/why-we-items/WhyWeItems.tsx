@@ -5,23 +5,24 @@ import { motion } from 'framer-motion';
 import styles from './WhyWeItems.module.scss';
 import Text from '../../../atoms/text';
 import { useCardVariants } from '../../../../hooks/useCardVariants';
+import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 
 const WhyWeItems = () => {
   const { t } = useTranslation();
   const cardVariants = useCardVariants();
-
+  const mobile = useMediaQuery('(max-width: 767.98px)');
   return (
     <section className={styles.whyeWeItems}>
       <AnimatePresence>
         <motion.div
           className={styles.projectsContainer}
-          key="1"
-          viewport={{ once: true, amount: 0.8 }}
-          initial="offscreen"
-          whileInView="onscreen"
+          key={mobile ? '' : '1'}
+          viewport={mobile ? {} : { once: true, amount: 0.8 }}
+          initial={mobile ? '' : 'offscreen'}
+          whileInView={mobile ? '' : 'onscreen'}
         >
           <div className="container">
-            <motion.div className={styles.itemsRow} variants={cardVariants}>
+            <motion.div className={styles.itemsRow} variants={mobile ? undefined : cardVariants}>
               <div className="col_">
                 <div className={styles.itemContent}>
                   <Text as="h2" className={styles.itemTitle}>

@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -33,25 +33,27 @@ const Projects = () => {
               className={styles.projectsContainer}
               onMouseEnter={() => setHoveredProject('1')}
               onMouseLeave={() => setHoveredProject(null)}
-              key="1"
-              viewport={{ once: true, amount: 0.8 }}
-              initial="offscreen"
-              whileInView="onscreen"
+              key={mobile ? '1.mobile' : '1'}
+              viewport={mobile ? {} : { once: true, amount: 0.8 }}
+              initial={mobile ? '' : 'offscreen'}
+              whileInView={mobile ? '' : 'onscreen'}
             >
-              <motion.div className={styles.projectsRow} variants={cardVariants} key="1.1">
+              <motion.div
+                className={styles.projectsRow}
+                variants={mobile ? undefined : cardVariants}
+                key={mobile ? '1.1.mobile' : '1.1'}
+              >
                 <div className="col_">
                   <div className={styles.projecstsImage}>
-                    <Image
+                    <img
                       width={1447}
                       height={1400}
-                      alt="image"
-                      src={
-                        tablet
-                          ? '/images/home-projects/tablet_nfc-image.png'
-                          : mobile
-                          ? '/images/home-projects/mobile_nfc-image.png'
-                          : '/images/home-projects/nfc-image.png'
-                      }
+                      alt="project-nfc"
+                      srcSet="
+                      /images/home-projects/nfc-image.png 1x,
+                      /images/home-projects/tablet_nfc-image-2x.png 2x,
+                      /images/home-projects/mobile_nfc-image-3x.png 3x"
+                      sizes="(max-width: 1279.98px) 100vw 1279.98px"
                     />
                   </div>
                 </div>
@@ -81,25 +83,27 @@ const Projects = () => {
               className={styles.projectsContainer}
               onMouseEnter={() => setHoveredProject('2')}
               onMouseLeave={() => setHoveredProject(null)}
-              viewport={{ once: true, amount: 0.8 }}
-              initial="offscreen"
-              whileInView="onscreen"
-              key="2"
+              key={mobile ? '2.mobile' : '2'}
+              viewport={mobile ? {} : { once: true, amount: 0.8 }}
+              initial={mobile ? '' : 'offscreen'}
+              whileInView={mobile ? '' : 'onscreen'}
             >
-              <motion.div className={styles.projectsRow} variants={cardVariants} key="2.1">
+              <motion.div
+                className={styles.projectsRow}
+                variants={mobile ? undefined : cardVariants}
+                key={mobile ? '2.2.mobile' : '2.2'}
+              >
                 <div className="col_">
                   <div className={styles.projecstsImage}>
-                    <Image
+                    <img
                       width={1447}
                       height={1400}
-                      alt="image"
-                      src={
-                        tablet
-                          ? '/images/home-projects/tablet_invest-image.png'
-                          : mobile
-                          ? '/images/home-projects/mobile_invest-image.png'
-                          : '/images/home-projects/invest-image.png'
-                      }
+                      alt="project-invest"
+                      srcSet="
+                      /images/home-projects/invest-image.png 1x,
+                      /images/home-projects/tablet_invest-image-2x.png 2x,
+                      /images/home-projects/mobile_invest-image-3x.png 3x"
+                      sizes="(max-width: 1279.98px) 100vw 1279.98px"
                     />
                   </div>
                 </div>
@@ -129,25 +133,27 @@ const Projects = () => {
               className={styles.projectsContainer}
               onMouseEnter={() => setHoveredProject('3')}
               onMouseLeave={() => setHoveredProject(null)}
-              viewport={{ once: true, amount: 0.8 }}
-              initial="offscreen"
-              whileInView="onscreen"
-              key="3"
+              key={mobile ? '3.mobile' : '3'}
+              viewport={mobile ? {} : { once: true, amount: 0.8 }}
+              initial={mobile ? '' : 'offscreen'}
+              whileInView={mobile ? '' : 'onscreen'}
             >
-              <motion.div className={styles.projectsRow} variants={cardVariants} key="3.1">
+              <motion.div
+                className={styles.projectsRow}
+                variants={mobile ? undefined : cardVariants}
+                key={mobile ? '3.1.mobile' : '3.1'}
+              >
                 <div className="col_">
                   <div className={styles.projecstsImage}>
-                    <Image
+                    <img
                       width={1447}
                       height={1400}
-                      alt="image"
-                      src={
-                        tablet
-                          ? '/images/home-projects/tablet_qr-image.png'
-                          : mobile
-                          ? '/images/home-projects/mobile_qr-image.png'
-                          : '/images/home-projects/qr-image.png'
-                      }
+                      alt="project-qr"
+                      srcSet="
+                      /images/home-projects/qr-image.png 1x,
+                      /images/home-projects/tablet_qr-image-2x.png 2x,
+                      /images/home-projects/mobile_qr-image-3x.png 3x"
+                      sizes="(max-width: 1279.98px) 100vw 1279.98px"
                     />
                   </div>
                 </div>

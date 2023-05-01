@@ -26,11 +26,11 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'nfcs' && (
               <motion.div
                 className="col_"
-                key="1"
-                viewport={{ once: true, amount: 0.8 }}
-                initial="offscreen"
-                whileInView="onscreen"
-                variants={cardVariants}
+                key={mobile ? '' : '1'}
+                viewport={mobile ? {} : { once: true, amount: 0.8 }}
+                initial={mobile ? '' : 'offscreen'}
+                whileInView={mobile ? '' : 'onscreen'}
+                variants={mobile ? undefined : cardVariants}
               >
                 <div className={styles.item}>
                   <div className={styles.innerRow}>
@@ -71,11 +71,11 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'investonus' && (
               <motion.div
                 className="col_"
-                key="2"
-                viewport={{ once: true, amount: 0.8 }}
-                initial="offscreen"
-                whileInView="onscreen"
-                variants={cardVariants}
+                key={mobile ? '' : '2'}
+                viewport={mobile ? {} : { once: true, amount: 0.8 }}
+                initial={mobile ? '' : 'offscreen'}
+                whileInView={mobile ? '' : 'onscreen'}
+                variants={mobile ? undefined : cardVariants}
               >
                 <div className={styles.item}>
                   <div className={styles.innerRow}>
@@ -116,11 +116,11 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'qr' && (
               <motion.div
                 className="col_"
-                key="3"
-                viewport={{ once: true, amount: 0.8 }}
-                initial="offscreen"
-                whileInView="onscreen"
-                variants={cardVariants}
+                key={mobile ? '' : '3'}
+                viewport={mobile ? {} : { once: true, amount: 0.8 }}
+                initial={mobile ? '' : 'offscreen'}
+                whileInView={mobile ? '' : 'onscreen'}
+                variants={mobile ? undefined : cardVariants}
               >
                 <div className={styles.item}>
                   <div className={styles.innerRow}>

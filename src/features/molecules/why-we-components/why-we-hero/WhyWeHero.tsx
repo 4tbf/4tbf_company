@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './WhyWeHero.module.scss';
-import Text from '../../../atoms/text';
 
 const WhyWeHero = () => {
   const { t } = useTranslation();
@@ -9,12 +9,26 @@ const WhyWeHero = () => {
   return (
     <section className={styles.whyweHero}>
       <div className="container">
-        <Text as="h1" className={styles.heroTitle}>
-          {t('whywe.title')} <br /> {t('whywe.title2')}
-        </Text>
-        <Text as="p" className={styles.heroSubTitle}>
-          {t('whywe.subtitle')}
-        </Text>
+        <AnimatePresence>
+          <motion.h1
+            className={styles.heroTitle}
+            initial={{ x: -1000, scale: 0.7 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            key={t('whywe.title')}
+          >
+            {t('whywe.title')} <br /> {t('whywe.title2')}
+          </motion.h1>
+          <motion.p
+            className={styles.heroSubTitle}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            key={t('whywe.subtitle')}
+          >
+            {t('whywe.subtitle')}
+          </motion.p>
+        </AnimatePresence>
       </div>
     </section>
   );
