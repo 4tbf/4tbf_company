@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import ym from 'react-yandex-metrika';
 import styles from './Footer.module.scss';
 import ArrowIcon from '../../svgs/ArrowIcon';
 import LinkedInIcon from '../../svgs/LinkedInIcon';
@@ -44,6 +45,9 @@ const Footer = () => {
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const changeLang = (locale: string) => {
+    if (locale === 'ru') {
+      ym('reachGoal', 'lang_ru');
+    }
     router.push(router.pathname, null, { locale });
   };
   return (
