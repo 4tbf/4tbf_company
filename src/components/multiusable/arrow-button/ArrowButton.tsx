@@ -3,9 +3,24 @@ import Link from 'next/link';
 import LongArrowIcon from '../../svgs/LongArrowIcon';
 import styles from './ArrowButton.module.scss';
 
-const ArrowButton = ({ href, text, blank }: { href: string; text: string; blank?: boolean }) => {
+const ArrowButton = ({
+  href,
+  text,
+  blank,
+  onClick,
+}: {
+  href: string;
+  text: string;
+  blank?: boolean;
+  onClick?: any;
+}) => {
   return (
-    <Link href={href} target={`${blank ? '_blank' : '_self'}`} className={styles.arrowLink}>
+    <Link
+      onClick={onClick?.()}
+      href={href}
+      target={`${blank ? '_blank' : '_self'}`}
+      className={styles.arrowLink}
+    >
       {text} <LongArrowIcon />
     </Link>
   );

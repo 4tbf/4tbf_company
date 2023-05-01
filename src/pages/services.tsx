@@ -1,5 +1,4 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Head from 'next/head';
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/dumb/header/Header';
@@ -7,6 +6,7 @@ import Footer from '../components/dumb/footer/Footer';
 import OurServicesHero from '../features/molecules/our-services-components/our-services-hero/OurServicesHero';
 import Technologies from '../features/molecules/our-services-components/technologies/Technologies';
 import Industries from '../features/molecules/our-services-components/induscries/Industries';
+import SEO from '../components/multiusable/SEO/SEO';
 
 export default function OurServices() {
   return (
@@ -22,10 +22,12 @@ export default function OurServices() {
         x: { duration: 1 },
       }}
     >
-      <Head>
-        <title>4The BRIGHT Future</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO
+        description="4TBF (For The Bright Future) is a web and mobile app development company that creates innovative and custom solutions for businesses of all sizes. Contact us to start building your next digital solution today."
+        title="Spark your success with our bright development solutions."
+        url="https://www.4tbf.company/services"
+        image="meta_main.png"
+      />
       <Header />
       <main>
         <OurServicesHero />

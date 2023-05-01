@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'next-i18next';
+import ym from 'react-yandex-metrika';
 import styles from './CalcualateWebsite.module.scss';
 import Text from '../../atoms/text';
 import ArrowButton from '../../../components/multiusable/arrow-button/ArrowButton';
@@ -42,6 +43,9 @@ const CalcualateWebsite = () => {
                 animate={control}
                 variants={boxVariant}
                 initial="hidden"
+                onClick={() => {
+                  ym('reachGoal', 'calc_basic');
+                }}
                 className={styles.calculateItem}
               >
                 <Text as="h3" className={styles.calcualteTitle}>
@@ -55,6 +59,10 @@ const CalcualateWebsite = () => {
             </div>
             <div className="col_">
               <motion.div
+                onClick={() => {
+                  console.log('as');
+                  ym('reachGoal', 'calc_advanced');
+                }}
                 ref={ref}
                 variants={boxVariant}
                 initial="hidden"
