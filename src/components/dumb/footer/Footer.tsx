@@ -147,12 +147,12 @@ const Footer = () => {
             <CopyrightIcon />
             Copyright 2023 4TBF
           </Text>
-          <Text as="p">
+          {/* <Text as="p">
             Design By:
             <Link href="#" target="_blank">
               Mosheni Studio
             </Link>
-          </Text>
+          </Text> */}
         </div>
       </div>
     </footer>

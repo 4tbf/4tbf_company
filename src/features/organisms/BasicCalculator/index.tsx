@@ -46,13 +46,13 @@ const BasicCalculator: React.FC = () => {
       handleFetch(values);
     },
   });
-  const cost = useCalculateData(formik.values, currentCalcSteps);
+  const cost = useCalculateData(formik.values, currentCalcSteps, t);
 
   return (
     <div>
       <CalculateHeader title={t('main.calculator.basic.title')} descr={t('calculator.subtitle')} />
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
-      <div className="container">
+      <div className="container" id="main_calc">
         <div className={styles.stepContainer}>
           <div className={styles.stepRow}>
             <div className="col_">
