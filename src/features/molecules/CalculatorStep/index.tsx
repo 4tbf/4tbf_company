@@ -36,6 +36,7 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
   };
   const { t } = useTranslation();
   const element = typeof window !== 'undefined' && document.getElementById('main_calc');
+
   return (
     <div className={styles.stepWrapper}>
       {currentStepData.map((element: TCalculatorCurrentElement) => {
