@@ -43,7 +43,7 @@ const AdvancedCalculator: React.FC = () => {
       handleFetch(values);
     },
   });
-  const cost = useCalculateData(formik.values, currentCalcSteps);
+  const cost = useCalculateData(formik.values, currentCalcSteps, t);
 
   return (
     <div>

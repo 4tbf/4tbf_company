@@ -136,7 +136,7 @@ const Technologies = () => {
                 </div>
                 <div className={styles.technologiesItem}>
                   <Text as="p">
-                    <Oracle /> PostgreSQL
+                    <Oracle /> Oracle Database
                   </Text>
                 </div>
                 <div className={styles.technologiesItem}>

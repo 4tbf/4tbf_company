@@ -32,11 +32,10 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>, key: string) => {
     const { value } = event.target;
-    console.log(value);
     formik.setFieldValue(key, value);
   };
   const { t } = useTranslation();
-
+  const element = typeof window !== 'undefined' && document.getElementById('main_calc');
   return (
     <div className={styles.stepWrapper}>
       {currentStepData.map((element: TCalculatorCurrentElement) => {
@@ -118,18 +117,41 @@ const CalculatorStep: React.FC<ICalculatorStep> = ({
       })}
       <div className={styles.buttonWrapper}>
         {currentStep > 1 && (
-          <button className={styles.prevButton} type="button" onClick={() => previousStep?.()}>
+          <button
+            className={styles.prevButton}
+            type="button"
+            onClick={() => {
+              window.scrollTo({
+                top: Number(element?.offsetTop) - 90,
+                behavior: 'smooth',
+              });
+              previousStep?.();
+            }}
+          >
             <LongArrowIcon /> {t('calculator.finalcalc.back')}
           </button>
         )}
         {currentStep !== totalSteps ? (
-          <Button type="button" onClick={() => nextStep?.()}>
+          <Button
+            type="button"
+            onClick={() => {
+              window.scrollTo({
+                top: Number(element?.offsetTop) - 90,
+                behavior: 'smooth',
+              });
+              nextStep?.();
+            }}
+          >
             {t('calculator.finalcalc.next')}
           </Button>
         ) : (
           <button
             type="submit"
             onClick={() => {
+              window.scrollTo({
+                top: Number(element?.offsetTop) - 90,
+                behavior: 'smooth',
+              });
               nextStep?.();
             }}
           >
