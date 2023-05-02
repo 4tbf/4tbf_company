@@ -135,7 +135,6 @@ const Header = () => {
                             onClick={async () => {
                               changeLang(curr.locale);
                               setCurrLang(curr.locale);
-                              handleBurgerClick();
                             }}
                             type="button"
                           >
