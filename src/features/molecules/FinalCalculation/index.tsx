@@ -56,7 +56,7 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({
     while (pattern.test(x)) x = x.replace(pattern, '$1.$2');
     return x;
   }
-
+  const finalCost = cost * 3.2;
   return (
     <div className={styles.finalWrapper}>
       <div className={styles.finalHeader}>
@@ -67,7 +67,8 @@ const FinalCalculation: React.FC<IFinalCalculation> = ({
           {t('calculator.finalcalc.subtitle')}
         </Text>
         <Text as="p" className={styles.count}>
-          ${numberWithCommas(10000)} - ${numberWithCommas(15000)}
+          ${numberWithCommas(Math.round(0.85 * finalCost))} - $
+          {numberWithCommas(Math.round(1.1 * finalCost))}{' '}
         </Text>
       </div>
       <div className={styles.submitItem}>
