@@ -15,12 +15,14 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <AnimatePresence mode="wait" initial={false}>
-        {process.env.NEXT_PUBLIC_ANALYTICS_ID && (
+        {process.env.NEXT_PUBLIC_ANALYTICS_ID ? (
           <YMInitializer
             accounts={[Number(process.env.NEXT_PUBLIC_ANALYTICS_ID)]}
             options={{ webvisor: true }}
             version="2"
           />
+        ) : (
+          <YMInitializer accounts={[0]} options={{ webvisor: true }} version="2" />
         )}
         <Component {...pageProps} />
       </AnimatePresence>

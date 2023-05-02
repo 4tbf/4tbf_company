@@ -14,7 +14,7 @@ const Progress = () => {
             <div className="col_">
               <div className={styles.barItem}>
                 <Text as="h3" className={styles.barTitle}>
-                  2013
+                  2023
                 </Text>
                 <Text as="p" className={styles.barText}>
                   {t('about.progress.1')}
@@ -24,7 +24,7 @@ const Progress = () => {
             <div className="col_">
               <div className={styles.barItem}>
                 <Text as="h3" className={styles.barTitle}>
-                  2014
+                  2024
                 </Text>
                 <Text as="p" className={styles.barText}>
                   {t('about.progress.2')}
@@ -34,7 +34,7 @@ const Progress = () => {
             <div className="col_">
               <div className={styles.barItem}>
                 <Text as="h3" className={styles.barTitle}>
-                  2014
+                  2024
                 </Text>
                 <Text as="p" className={styles.barText}>
                   {t('about.progress.3')}
@@ -44,7 +44,7 @@ const Progress = () => {
             <div className="col_">
               <div className={styles.barItem}>
                 <Text as="h3" className={styles.barTitle}>
-                  2015
+                  2025
                 </Text>
                 <Text as="p" className={styles.barText}>
                   {t('about.progress.4')}
@@ -54,7 +54,7 @@ const Progress = () => {
             <div className="col_">
               <div className={styles.barItem}>
                 <Text as="h3" className={styles.barTitle}>
-                  2015
+                  2025
                 </Text>
                 <Text as="p" className={styles.barText}>
                   {t('about.progress.5')}

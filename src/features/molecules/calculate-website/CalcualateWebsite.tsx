@@ -60,7 +60,6 @@ const CalcualateWebsite = () => {
             <div className="col_">
               <motion.div
                 onClick={() => {
-                  console.log('as');
                   ym('reachGoal', 'calc_advanced');
                 }}
                 ref={ref}

@@ -190,7 +190,7 @@
     .footerCopyRight {
         margin-top: 13px;
         @include flex-center-vert;
-        justify-content: space-between;
+        justify-content: center;
         @media (max-width: 767.98px) {
             flex-direction: column-reverse;
             gap: 16px;

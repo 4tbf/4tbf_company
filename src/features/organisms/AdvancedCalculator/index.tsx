@@ -43,7 +43,7 @@ const AdvancedCalculator: React.FC = () => {
       handleFetch(values);
     },
   });
-  const cost = useCalculateData(formik.values, currentCalcSteps);
+  const cost = useCalculateData(formik.values, currentCalcSteps, t);
 
   return (
     <div>
@@ -52,7 +52,7 @@ const AdvancedCalculator: React.FC = () => {
         descr={t('main.calculator.advanced.description')}
       />
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
-      <div className="container">
+      <div className="container" id="main_calc">
         <div className={styles.stepContainer}>
           <div className={styles.stepRow}>
             <div className="col_">
