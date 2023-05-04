@@ -16,6 +16,8 @@ const LogoIcon = () => {
           <use
             xlinkHref="#image0_617_53"
             transform="matrix(0.000437445 0 0 0.00081367 -0.30315 -0.181448)"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
           />
         </pattern>
         <image

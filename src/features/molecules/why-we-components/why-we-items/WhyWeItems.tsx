@@ -22,7 +22,11 @@ const WhyWeItems = () => {
           whileInView={mobile ? '' : 'onscreen'}
         >
           <div className="container">
-            <motion.div className={styles.itemsRow} variants={mobile ? undefined : cardVariants}>
+            <motion.div
+              className={styles.itemsRow}
+              variants={mobile ? undefined : cardVariants}
+              key={mobile ? '' : '1.1'}
+            >
               <div className="col_">
                 <div className={styles.itemContent}>
                   <Text as="h2" className={styles.itemTitle}>
