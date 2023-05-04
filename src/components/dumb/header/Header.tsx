@@ -41,9 +41,12 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [currLang, setCurrLang] = useState('');
+  const [opened, setOpened] = useState(null);
   const handleBurgerClick = useCallback(() => {
     setIsBurgerOpen((prev) => !prev);
   }, []);
+
+  console.log('opened =>', opened);
 
   useEffect(() => {
     if (Boolean(currLang) && router.pathname.includes('calculator')) {
@@ -60,9 +63,14 @@ const Header = () => {
       document.body.classList.remove('menu-open');
     }
   }, [isBurgerOpen]);
+  const changeLanguage = async (curr) => {
+    changeLang(curr.locale);
+    setCurrLang(curr.locale);
+  };
 
   const router = useRouter();
   const tablet = useMediaQuery('(max-width: 1279.98px)');
+  const mobile = useMediaQuery('(max-width: 767.98px)');
   const changeLang = (locale: string) => {
     if (locale === 'ru') {
       ym('reachGoal', 'lang_ru');
@@ -92,22 +100,49 @@ const Header = () => {
             <div className={styles.headerLinks}>
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
-                  <div className={styles.languageControl}>
+                  <div
+                    className={styles.languageControl}
+                    onClick={() => {
+                      if (opened === 'calc') {
+                        setOpened(null);
+                      } else {
+                        setOpened('calc');
+                      }
+                    }}
+                  >
                     <span>{t('header.footer.calc')}</span>
+                    {/* <span style={{ transform: opened === 'calc' ? 'rotate(180deg)' : 'none' }}> */}
                     <ArrowIcon />
+                    {/* </span> */}
                   </div>
-                  <ul>
-                    <li>
-                      <Link href="/calculator/basic">
-                        <span>{t('header.footer.calc.basic')}</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/calculator/advanced">
-                        <span>{t('header.footer.calc.advanced')}</span>
-                      </Link>
-                    </li>
-                  </ul>
+                  {opened === 'calc' && (tablet || mobile) && (
+                    <ul>
+                      <li>
+                        <Link href="/calculator/basic" onClick={() => setIsBurgerOpen(false)}>
+                          <span>{t('header.footer.calc.basic')}</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/calculator/advanced" onClick={() => setIsBurgerOpen(false)}>
+                          <span>{t('header.footer.calc.advanced')}</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                  {!(tablet || mobile) && (
+                    <ul>
+                      <li>
+                        <Link href="/calculator/basic">
+                          <span>{t('header.footer.calc.basic')}</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/calculator/advanced">
+                          <span>{t('header.footer.calc.advanced')}</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
                 </li>
               </ul>
             </div>
@@ -123,27 +158,60 @@ const Header = () => {
             <div className={styles.headerLinks}>
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
-                  <div className={styles.languageControl} style={{ textTransform: 'uppercase' }}>
+                  <div
+                    className={styles.languageControl}
+                    style={{ textTransform: 'uppercase' }}
+                    onClick={() => {
+                      if (opened === 'languages') {
+                        setOpened(null);
+                      } else {
+                        setOpened('languages');
+                      }
+                    }}
+                  >
                     <span>{i18n && i18n.options && i18n.options.lng}</span>
+                    {/* <span style={{ transform: opened === 'languages' ? 'rotate(180deg)' : 'none' }}> */}
                     <ArrowIcon />
+                    {/* </span> */}
                   </div>
-                  <ul>
-                    {LANGS.map((curr) => {
-                      return (
-                        <li key={curr.locale}>
-                          <button
-                            onClick={async () => {
-                              changeLang(curr.locale);
-                              setCurrLang(curr.locale);
-                            }}
-                            type="button"
-                          >
-                            {curr.title}
-                          </button>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  {opened === 'languages' && (tablet || mobile) && (
+                    <ul>
+                      {LANGS.map((curr) => {
+                        return (
+                          <li key={curr.locale}>
+                            <button
+                              onClick={() => {
+                                changeLanguage(curr);
+                                setIsBurgerOpen(false);
+                              }}
+                              type="button"
+                            >
+                              {curr.title}
+                            </button>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                  {!(tablet || mobile) && (
+                    <ul>
+                      {LANGS.map((curr) => {
+                        return (
+                          <li key={curr.locale}>
+                            <button
+                              onClick={() => {
+                                changeLanguage(curr);
+                                setIsBurgerOpen(false);
+                              }}
+                              type="button"
+                            >
+                              {curr.title}
+                            </button>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
                 </li>
               </ul>
             </div>
