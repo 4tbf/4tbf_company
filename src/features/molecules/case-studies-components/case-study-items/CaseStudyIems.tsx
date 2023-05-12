@@ -26,7 +26,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'nfcs' && (
               <motion.div
                 className="col_"
-                key={mobile ? '' : '1'}
+                key={mobile ? 'mobile.1' : '1'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}
@@ -71,7 +71,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'investonus' && (
               <motion.div
                 className="col_"
-                key={mobile ? '' : '2'}
+                key={mobile ? 'mobile.2' : '2'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}
@@ -116,7 +116,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'qr' && (
               <motion.div
                 className="col_"
-                key={mobile ? '' : '3'}
+                key={mobile ? 'mobile.3' : '3'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}

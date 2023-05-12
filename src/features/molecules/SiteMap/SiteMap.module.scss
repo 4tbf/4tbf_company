@@ -1,0 +1,56 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    .wrapper {
+        padding-left: 131px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        @media (max-width: 1279.98px) {
+            padding-left: 22px;
+        }
+        @media (max-width: 767.98px) {
+            padding: 0 16px;
+        }
+        .title {
+            @include fontRem(54, 700);
+            color: $black;
+            @media (max-width: 1279.98px) {
+                @include fontRem(28, 700, 39)
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(22, 700, 31)
+            }
+        }
+        .description {
+            @include fontRem(20, 400, 28);
+            color: $black;
+            max-width: 739px;
+            margin-top: 25px;
+            margin-bottom: 89px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(16, 400, 22);
+                max-width: 600px;
+                margin-top: 22px;
+                margin-bottom: 26px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(14, 400, 20);
+                margin-top: 18px;
+            }
+        }
+    }
+    .siteMapImage {
+        object-fit: contain;
+        max-height: initial;
+        align-self: center;
+        @media (max-width: 1279.98px) {
+            height: 100%;
+        }
+    }
+}
+
+

@@ -1,0 +1,101 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+
+.title {
+    @include fontRem(54, 700);
+    color: $black;
+    margin-bottom: 26px;
+    @media (max-width: 1279.98px) {
+        @include fontRem(28,700,39);
+        margin-bottom: 12px;
+    }
+    @media (max-width: 767.98px) {
+        @include fontRem(22,700,31);
+        margin-bottom: 12px;
+        margin-left: 16px;
+    };
+}
+.wrapper{
+    display: flex;
+    gap: 33px;
+    margin-left: 4px;
+    @media (max-width: 1279.98px) {
+        flex-direction: column;
+        margin-left: 0px;
+        gap: 28px;
+    }
+    @media (max-width: 767.98px) {
+        gap: 19px;
+    };
+    .info {
+        @include fontRem(28, 400, 39);
+        color: $black;
+        margin-bottom: 22px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(18,400,25);
+            margin-bottom: 9px;
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(16,400,22);
+            margin-bottom: 12px;
+            margin-left: 16px;
+        };
+    }
+    .list {
+        @include fontRem(18, 400, 27);
+        font-family: 'Montserrat';
+        color: $black;
+        max-width: 340px;
+        letter-spacing: 0.04em;
+        margin-bottom: 38px;
+        margin-left: 16px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(16,400,24);
+            max-width: 360px;
+            margin-bottom: 0;
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(14,400,21);
+            margin-bottom: 12px;
+            margin-left: 32px;
+            margin-bottom: 8px;
+        };
+        &::marker {
+            font-size: 10px;
+        }
+    }
+    .description {
+        @include fontRem(20, 400, 28);
+        color: $black;
+        max-width: 397px;
+        margin-top: 55px;
+        margin-left: -4px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(16,400,22);
+            margin-top: 7px;
+            max-width: 290px;
+            margin-left: 0px;
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(14,400,20);
+            max-width: 295px;
+            margin-left: 16px;
+        };
+    }
+    .promocodeImage{
+        object-fit: contain;
+        margin-top: 8px;
+        margin-left: 2px;
+        @media (max-width: 1279.98px) {
+            max-height: 384px;;
+            margin-left: 0px;
+        }
+        @media (max-width: 767.98px) {
+            height: 968px;
+            max-height: none;
+            object-fit: contain;
+            margin-top: 2px;
+        };
+    }
+}

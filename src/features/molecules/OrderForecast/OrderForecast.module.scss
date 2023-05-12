@@ -1,0 +1,78 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+
+.mainWrapper {
+    margin-top: 195px;
+    padding: 0 64px;
+    @media (max-width: 1279.98px) {
+        margin-top: 65px;
+        padding: 0 24px;
+    }
+    @media (max-width: 767.98px) {
+        margin-top: 34px;
+        padding: 0
+    }
+    .title {
+        @include fontRem(54, 700);
+        color: $black;
+        margin-bottom: 91px;
+        text-align: end;
+        margin-right: 210px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(28,700,39);
+            text-align: start;
+            margin-bottom: 11px;
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(22,700,31);
+            margin-right: 0;
+            margin-left: 16px;
+        };
+    }
+    .wrapper{
+        display: flex;
+        gap: 37px;
+        @media (max-width: 1279.98px) {
+            flex-direction: column-reverse;
+            gap: 80px;
+        }
+        @media (max-width: 767.98px) {
+            gap: 58px;
+        };
+        .list {
+            @include fontRem(18, 400, 28);
+            color: $black;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 7px;
+            margin-left: 5px;
+            letter-spacing: 0.05em;
+            @media (max-width: 1279.98px) {
+                @include fontRem(16,400,22);
+                max-width: 415px;
+                gap: 22px;
+                margin-left: 0;
+                letter-spacing: 0;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(14,400,20);
+                margin: 5px 15px 0px 15px;
+            };
+        }
+        .forecastImage{
+            object-fit: contain;
+            margin-top: -37px;
+            @media (max-width: 1279.98px) {
+                max-height: 406px;;
+            }
+            @media (max-width: 767.98px) {
+                max-height: 800px;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+}

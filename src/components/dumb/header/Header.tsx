@@ -46,8 +46,6 @@ const Header = () => {
     setIsBurgerOpen((prev) => !prev);
   }, []);
 
-  console.log('opened =>', opened);
-
   useEffect(() => {
     if (Boolean(currLang) && router.pathname.includes('calculator')) {
       setTimeout(() => {

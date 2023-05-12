@@ -1,0 +1,131 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+
+.mainWrapper {
+    margin-top: 277px;
+    padding-left: 133px;
+    @media (max-width: 1279.98px) {
+        margin-top: 50px;
+        padding-left: 0;
+    }
+    @media (max-width: 767.98px) {
+        margin-top: 27px;
+    }
+    
+    
+    .wrapper{
+        display: flex;
+        gap: 37px;
+        @media (max-width: 1279.98px) {
+            flex-direction: column;
+        }
+        @media (max-width: 767.98px) {
+            gap: 3px;
+        }
+        .info {
+            @include fontRem(28, 400, 28);
+            color: $black;
+            margin-bottom: 22px;
+            
+        }
+        .text {
+            @media (max-width: 1279.98px) {
+                padding: 0 24px;
+            }
+            @media (max-width: 767.98px) {
+                padding: 0
+            };
+            .title {
+                @include fontRem(54, 700);
+                color: $black;
+                margin-bottom: 36px;
+                white-space: nowrap;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(28, 700, 39);
+                    margin-bottom: 16px;
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(22, 700, 31);
+                    margin: 0 18px 18px;
+                }
+            }
+            .list {
+                @include fontRem(18, 400, 28);
+                font-family: 'Montserrat';
+                // line-height: 150%;
+                color: $black;
+                max-width: 410px;
+                display: flex;
+                flex-direction: column;
+                gap: 23px;
+                max-width: 461px;
+                letter-spacing: 0.06em;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(16, 400, 22);
+                    max-width: 505px;
+                    letter-spacing: 0;
+                    gap: 20px;
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(14, 400, 20);
+                    margin: 0 17px 24px;
+                }
+            }
+        }
+        .imageWrapper {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            margin-top: 6px;
+            margin-left: 5px;
+            @media (max-width: 1279.98px) {
+                margin: 0 auto;
+                gap: 23px;
+            }
+            @media (max-width: 767.98px) {
+                padding: 0;
+                margin: 0 auto;
+            }
+            .imagesColumnSecond{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                object-fit: contain;
+                gap: 77px;
+                @media (max-width: 1279.98px) {
+                    gap: 24px;
+                    // max-height: 329px;
+                    max-width: 278px;
+                    margin-top: -26px;
+                    img {
+                        object-fit: contain;
+                        max-height: 100%;
+                        height: auto;
+                    }
+                    &:first-child {
+                        max-height: 215px;
+                    }
+                }
+            }
+            .imagesColumn{
+                display: flex;
+                flex-direction: column;
+                gap: 37px;
+                object-fit: contain;
+                @media (max-width: 1279.98px) {
+                    gap: 21px;
+                    height: auto;
+                    margin-top: 7px;
+                    // max-height: 420px;
+                    img {
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 278px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
