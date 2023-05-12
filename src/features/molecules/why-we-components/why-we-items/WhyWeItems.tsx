@@ -16,7 +16,7 @@ const WhyWeItems = () => {
       <AnimatePresence>
         <motion.div
           className={styles.projectsContainer}
-          key={mobile ? '' : '1'}
+          key={mobile ? 'mobile.1' : '1'}
           viewport={mobile ? {} : { once: true, amount: 0.8 }}
           initial={mobile ? '' : 'offscreen'}
           whileInView={mobile ? '' : 'onscreen'}
@@ -25,7 +25,7 @@ const WhyWeItems = () => {
             <motion.div
               className={styles.itemsRow}
               variants={mobile ? undefined : cardVariants}
-              key={mobile ? '' : '1.1'}
+              key={mobile ? 'mobile.1.1' : '1.1'}
             >
               <div className="col_">
                 <div className={styles.itemContent}>

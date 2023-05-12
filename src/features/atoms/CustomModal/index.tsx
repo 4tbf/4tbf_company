@@ -9,7 +9,6 @@ const CustomModal = forwardRef((props: { children: React.ReactNode }, ref) => {
     return {
       open: () => {
         setOpen(true);
-        console.log('asd');
       },
       close: () => setOpen(false),
     };
@@ -36,6 +35,7 @@ const CustomModal = forwardRef((props: { children: React.ReactNode }, ref) => {
             }}
             onClick={() => setOpen(false)}
             className={styles.modal_backdrop}
+            key="child.1"
           />
           <motion.div
             initial={{
@@ -54,6 +54,7 @@ const CustomModal = forwardRef((props: { children: React.ReactNode }, ref) => {
               },
             }}
             className={styles.modal_content_wrapper}
+            key="child.2"
           >
             <motion.div
               initial={{
@@ -77,6 +78,7 @@ const CustomModal = forwardRef((props: { children: React.ReactNode }, ref) => {
                 },
               }}
               className={styles.modal_content}
+              key="child.3"
             >
               {props.children}
             </motion.div>

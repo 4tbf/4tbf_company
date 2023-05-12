@@ -1,0 +1,64 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.itesmRow {
+    @include flexRow(64, 4);
+    @media (max-width: 1279.98px) {
+        margin: 0;
+        gap: 9px;
+    }
+    :global {
+        .col_ {
+            @media (max-width: 1279.98px) {
+                padding: 0;
+                max-width: 24%;
+            }
+            @media (max-width: 767.98px) {
+                flex: 0 0 48%;
+                max-width: 50%;
+                gap: 11px;
+            }
+            
+        }
+    }
+    .itemContent {
+        background: #182062;
+        border-radius: 12px;
+        padding: 20px 20px 30px 16px;
+        color: $white;
+        @media (max-width: 1279.98px) {
+            padding: 7px 0 14px 13px;
+        }
+
+    .itesmTop {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 4px;
+        @media (max-width: 1279.98px) {
+            flex-direction: column-reverse;
+            gap: 0;
+        }
+        svg {
+            @media (max-width: 1279.98px) {
+                height: 35px;
+                margin: 4px 0 0;
+            }
+        }
+        
+            .itemTitle {
+                @include fontRem(24, 700, 29);
+                @media (max-width: 1279.98px) {
+                    @include fontRem(18, 700, 22);
+                }
+            }
+            .itemDescr {
+                @include fontRem(16, 400, 19);
+                @media (max-width: 1279.98px) {
+                    @include fontRem(14, 400, 17);
+
+                }
+            }
+        }
+    }
+}

@@ -2,13 +2,20 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Header from '../../components/dumb/header/Header';
 import Footer from '../../components/dumb/footer/Footer';
-import CaseStudyIems from '../../features/molecules/case-studies-components/case-study-items/CaseStudyIems';
 import NfcsHero from '../../features/molecules/nfcs-components/nfcs-hero/NfcsHero';
-import NfcsAbout from '../../features/molecules/nfcs-components/nfcs-about/NfcsAbout';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+
+const NfcsAbout = dynamic(
+  () => import('../../features/molecules/nfcs-components/nfcs-about/NfcsAbout'),
+  { ssr: false }
+);
 
 export default function NFCS() {
+  const mobile = useMediaQuery('(max-width: 767.98px)');
+
   return (
     <motion.div
       className="calc-page"
@@ -32,11 +39,10 @@ export default function NFCS() {
         className="nfcs_hero_image"
         width={1435}
         height={913}
-        src="/images/nfcs/nfcs-hero.png"
+        src={mobile ? '/images/nfcs/nfcs-hero-mobile.png' : '/images/nfcs/nfcs-hero.png'}
         alt="page"
       />
       <NfcsAbout />
-      <CaseStudyIems declude="nfcs" />
       <Footer />
     </motion.div>
   );
