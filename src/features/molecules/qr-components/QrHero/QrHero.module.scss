@@ -1,0 +1,115 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.qrHero {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 77px;
+    max-height: 536px;
+    overflow: hidden;
+    background-color: $black;
+    @media (max-width: 1279.98px) {
+        flex-direction: column;
+        margin-left: 2px;
+        height: 652px;
+        max-height: 652px;
+    }
+    @media (max-width: 767.98px) {
+        max-height: 462px;
+    }
+    .main{
+        max-width: 936px;
+        padding-left: 132px;
+        width: 100%;
+        @media (max-width: 1279.98px) {
+            padding: 37px 0 0 20px;
+        }
+        @media (max-width: 767.98px) {
+            padding: 1px 0 0 12px;
+            margin: 0;
+            max-width: 295px;
+        }
+        .arrowLink {
+            @media (max-width: 767.98px) {
+                width: 47px;
+            }
+        }
+        h1 {
+            @include fontRem(72, 400, 95);
+            font-family: 'MADE';
+            color: $white;
+            margin: 14px 0 29px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(64, 400, 84);
+                margin: 17px 0px 14px 2px;
+                max-width: 470px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(26, 400, 34);
+                max-width: 210px;
+            }
+        }
+        p{
+            @include fontRem(24, 400, 33);
+            color: $white;
+            max-width: 435px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(20, 400, 27);
+                max-width: 340px;
+                margin-left: 2px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(16, 400, 22);
+            }
+        }
+        .btn {
+            @include fontRem(14, 400, 18);
+            font-family: 'MADE';
+            color: $blue;
+            background-color: transparent;
+            border: none;
+            padding: 13px 15px;
+            margin: 32px 0 0px -14px;
+            @media (max-width: 1279.98px) {
+                margin: 32px 0 0px 10px;
+            }
+            @media (max-width: 767.98px) {
+                margin: 16px 0 0px 8px;
+            }  
+        }
+    }
+    .imagesContainer {
+        display: flex;
+        margin: 29px 18px;
+        gap: 56px;
+        @media (max-width: 1279.98px) {
+            gap: 41px;
+            justify-content: flex-end;
+            margin: -138px -90px 0 0;
+        }
+        @media (max-width: 767.98px) {
+            margin: 11px -54px 0;
+            gap: 0;
+        }  
+        img {
+            transform: rotate(-34deg);
+            &:nth-child(2) {
+                margin-top: -40px;
+                @media (max-width: 1279.98px) {
+                    margin-top: -28px;
+                }
+                @media (max-width: 767.98px) {
+                    margin-top: -96px;
+                }   
+            }
+            @media (max-width: 1279.98px) {
+                width: 183px;
+                height: 400px; 
+            }
+            @media (max-width: 767.98px) {
+                width: 102px;
+                height: auto;
+            }           
+        }
+    }
+}
