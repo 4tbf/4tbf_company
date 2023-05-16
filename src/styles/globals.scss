@@ -43,6 +43,13 @@ body {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		 url("/fonts/Montserrat-SemiBold.ttf") format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
 *::after,
 *::before {
   box-sizing: border-box;
@@ -147,5 +154,21 @@ main {
   @media (max-width: 767.98px) {
     max-height: 700px;
     object-fit: contain;
+  }
+}
+
+.qr-page {
+  background-color: $black;
+  background-color: $white;
+  background-position-x: -582px;
+  background-position-y: 194px;
+  @media (max-width: 1279.98px) {
+    background-position-x:100%;
+    background-position-y: 628px;
+    background-size: 100%;
+  }
+  @media (max-width: 767.98px) {
+    background-size: contain;
+    background-position-y: 462px;
   }
 }
