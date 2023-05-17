@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import promocodeImage from 'public/images/nfcs/promocode-min.png';
 import promocodeImageMobile from 'public/images/nfcs/promocode-mobile.png';
+import { AnimatePresence, motion } from 'framer-motion';
 import styles from './MyPromocode.module.scss';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
@@ -27,15 +28,24 @@ const MyPromocode = () => {
           </ul>
           <p className={styles.description}>{t('cases.nfcs.promocode.description')}</p>
         </div>
-        <div className={styles.promocodeImage}>
-          <Image
-            src={mobile ? promocodeImageMobile : promocodeImage}
-            alt="nfcs"
+        <AnimatePresence>
+          <motion.div
             className={styles.promocodeImage}
-            width={888}
-            height={474}
-          />
-        </div>
+            initial={{ x: 100, opacity: 0 }}
+            viewport={{ once: true }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            key="promocodeImage"
+          >
+            <Image
+              src={mobile ? promocodeImageMobile : promocodeImage}
+              alt="nfcs"
+              className={styles.promocodeImage}
+              width={888}
+              height={474}
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

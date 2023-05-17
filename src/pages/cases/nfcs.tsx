@@ -5,11 +5,15 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Header from '../../components/dumb/header/Header';
 import Footer from '../../components/dumb/footer/Footer';
-import NfcsHero from '../../features/molecules/nfcs-components/nfcs-hero/NfcsHero';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const NfcsAbout = dynamic(
   () => import('../../features/molecules/nfcs-components/nfcs-about/NfcsAbout'),
+  { ssr: false }
+);
+
+const NfcsHero = dynamic(
+  () => import('../../features/molecules/nfcs-components/nfcs-hero/NfcsHero'),
   { ssr: false }
 );
 

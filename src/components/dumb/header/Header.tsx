@@ -41,7 +41,7 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [currLang, setCurrLang] = useState('');
-  const [opened, setOpened] = useState(null);
+  const [opened, setOpened] = useState('');
   const handleBurgerClick = useCallback(() => {
     setIsBurgerOpen((prev) => !prev);
   }, []);
@@ -102,7 +102,7 @@ const Header = () => {
                     className={styles.languageControl}
                     onClick={() => {
                       if (opened === 'calc') {
-                        setOpened(null);
+                        setOpened('');
                       } else {
                         setOpened('calc');
                       }
@@ -161,7 +161,7 @@ const Header = () => {
                     style={{ textTransform: 'uppercase' }}
                     onClick={() => {
                       if (opened === 'languages') {
-                        setOpened(null);
+                        setOpened('');
                       } else {
                         setOpened('languages');
                       }

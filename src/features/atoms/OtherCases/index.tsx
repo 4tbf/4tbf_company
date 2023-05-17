@@ -7,7 +7,7 @@ const OtherCases = () => {
   return (
     <div className={styles.otherCases_container}>
       <h1 className={styles.otherCases_title}>{t('cases.nfcs.otherCases')}</h1>
-      <CaseStudyIems declude="nfcs" />
+      <CaseStudyIems declude="qr" />
     </div>
   );
 };
