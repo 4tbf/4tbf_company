@@ -4,12 +4,12 @@
 .scanQr {
     @include flex-column;
     align-items: end;
-    margin-top: 148px;
+    margin-top: 143px;
     @media (max-width: 1279.98px) {
-        margin-top: 123px;
+        margin-top: 118px;
      }
      @media (max-width: 767.98px) {
-        margin-top: 42px;
+        margin-top: 36px;
     }
     .mainContainer {
         margin-right: 75px;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import createQr from 'public/images/qr/createQR.png';
+import { AnimatePresence, motion } from 'framer-motion';
 import styles from './CreateQR.module.scss';
 
 const CreateQR: React.FC = () => {
@@ -17,7 +18,17 @@ const CreateQR: React.FC = () => {
         </div>
         <p>{t(`${scope}.description`)}</p>
       </div>
-      <Image src={createQr} alt="create Qr" width={1500} height={1360} />
+      <AnimatePresence>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          viewport={{ once: true }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          key="create Qr"
+        >
+          <Image src={createQr} alt="create Qr" width={1500} height={1360} />
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };

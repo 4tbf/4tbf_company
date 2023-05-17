@@ -10,7 +10,7 @@
     background-color: $black;
     @media (max-width: 1279.98px) {
         flex-direction: column;
-        margin-left: 2px;
+        padding-left: 2px;
         height: 652px;
         max-height: 652px;
     }
@@ -80,36 +80,47 @@
     }
     .imagesContainer {
         display: flex;
-        margin: 29px 18px;
-        gap: 56px;
+        margin: 40px -47px;
+        gap: 82px;
         @media (max-width: 1279.98px) {
-            gap: 41px;
+            gap: 62px;
             justify-content: flex-end;
-            margin: -138px -90px 0 0;
+            margin: -138px -113px 0 0;
         }
         @media (max-width: 767.98px) {
-            margin: 11px -54px 0;
-            gap: 0;
-        }  
-        img {
+            margin: 11px -85px 0;
+            gap: 32px;
+        }
+        div {
             transform: rotate(-34deg);
-            &:nth-child(2) {
-                margin-top: -40px;
-                @media (max-width: 1279.98px) {
-                    margin-top: -28px;
-                }
-                @media (max-width: 767.98px) {
-                    margin-top: -96px;
-                }   
-            }
+            width: 249px;
             @media (max-width: 1279.98px) {
-                width: 183px;
-                height: 400px; 
+                width: 184px
             }
             @media (max-width: 767.98px) {
-                width: 102px;
-                height: auto;
-            }           
+                width: 101px
+            }
+            &:nth-child(2) {
+                img {
+                    margin-top: -44px;
+                    @media (max-width: 1279.98px) {
+                        margin-top: -35px;                    
+                    }
+                    @media (max-width: 767.98px) {
+                        margin-top: -102px;
+                    }
+                }
+            }
+            img {
+                @media (max-width: 1279.98px) {
+                    width: 183px;
+                    height: 400px; 
+                }
+                @media (max-width: 767.98px) {
+                    width: 102px;
+                    height: auto;
+                }           
+            }
         }
     }
 }

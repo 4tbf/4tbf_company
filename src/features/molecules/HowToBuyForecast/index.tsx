@@ -5,6 +5,7 @@ import howToBuyForecastImage2 from 'public/images/nfcs/how-to-buy-forecast-2-min
 import howToBuyForecastImage3 from 'public/images/nfcs/how-to-buy-forecast-3-min.png';
 import howToBuyForecastImage4 from 'public/images/nfcs/how-to-buy-forecast-4-min.png';
 import mobileImage from 'public/images/nfcs/binance-future-forecast-mobile.png';
+import { AnimatePresence, motion } from 'framer-motion';
 import styles from './HowToBuyForecast.module.scss';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
@@ -24,22 +25,31 @@ const HowToBuyForecast = () => {
             </div>
           </div>
         </div>
-        <div className={styles.imageWrapper}>
-          {mobile ? (
-            <Image src={mobileImage} alt="nfcs" />
-          ) : (
-            <>
-              <div className={styles.imagesColumn}>
-                <Image src={howToBuyForecastImage1} alt="nfcs" height={516} width={341} />
-                <Image src={howToBuyForecastImage2} alt="nfcs" height={195} width={341} />
-              </div>
-              <div className={styles.imagesColumnSecond}>
-                <Image src={howToBuyForecastImage3} alt="nfcs" height={264} width={341} />
-                <Image src={howToBuyForecastImage4} alt="nfcs" height={410} width={341} />
-              </div>
-            </>
-          )}
-        </div>
+        <AnimatePresence>
+          <motion.div
+            className={styles.imageWrapper}
+            initial={{ x: 100, opacity: 0 }}
+            viewport={{ once: true }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            key="imageWrapper"
+          >
+            {mobile ? (
+              <Image src={mobileImage} alt="nfcs" />
+            ) : (
+              <>
+                <div className={styles.imagesColumn}>
+                  <Image src={howToBuyForecastImage1} alt="nfcs" height={516} width={341} />
+                  <Image src={howToBuyForecastImage2} alt="nfcs" height={195} width={341} />
+                </div>
+                <div className={styles.imagesColumnSecond}>
+                  <Image src={howToBuyForecastImage3} alt="nfcs" height={264} width={341} />
+                  <Image src={howToBuyForecastImage4} alt="nfcs" height={410} width={341} />
+                </div>
+              </>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

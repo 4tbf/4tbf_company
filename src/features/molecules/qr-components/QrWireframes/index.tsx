@@ -24,7 +24,7 @@ const QrWireframes: React.FC = () => {
             <p className={styles.text}>{t(`${scope}.color.description`)}</p>
             {mobile && <Pallete data={PALLETE.filter((el) => el.color)} />}
           </div>
-          <div className={mobile && styles.font}>
+          <div className={mobile ? styles.font : ''}>
             <h2>{t(`${scope}.font`)}</h2>
             {mobile && <Pallete data={PALLETE.filter((el) => el.font)} />}
           </div>

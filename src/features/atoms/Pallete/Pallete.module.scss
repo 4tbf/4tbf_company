@@ -54,7 +54,9 @@
                 @include fontRem(12, 400, 16);
                 margin-top: 9px;
             }
-            
+            @media (max-width: 767.98px) {
+                margin-top:11px
+            }
         }
     }
     .fontWrapper {

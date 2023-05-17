@@ -4,14 +4,14 @@
 .createQR {
     @include flex-center-column;
     gap: 83px;
-    margin-top: 155px;
+    margin-top: 150px;
     @media (max-width: 1279.98px) {
        align-items: baseline;
-       margin-top: 80px;
+       margin-top: 75px;
        gap: 37px;
     }
     @media (max-width: 767.98px) {
-        margin-top: 44px;
+        margin-top: 40px;
         gap: 23px;
     }
     .mainContainer {
@@ -39,7 +39,7 @@
                 }
                 @media (max-width: 767.98px) {
                     @include fontRem(24, 700, 32);
-                    margin-bottom: 15px;
+                    margin-bottom: 16px;
                 }
             }
             p {

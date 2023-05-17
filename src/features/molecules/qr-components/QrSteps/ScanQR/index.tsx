@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import scanQR from 'public/images/qr/scanQR.png';
+import { AnimatePresence, motion } from 'framer-motion';
 import styles from './ScanQR.module.scss';
 
 const ScanQR: React.FC = () => {
@@ -14,7 +15,17 @@ const ScanQR: React.FC = () => {
         <h1>{t(`${scope}.title`)}</h1>
         <p>{t(`${scope}.info`)}</p>
       </div>
-      <Image src={scanQR} alt="scan Qr" width={1174} height={888} />
+      <AnimatePresence>
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          viewport={{ once: true }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          key="scan Qr"
+        >
+          <Image src={scanQR} alt="scan Qr" width={1174} height={888} />
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
