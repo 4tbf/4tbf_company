@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import promocodeImage from 'public/images/nfcs/promocode-min.png';
 import promocodeImageMobile from 'public/images/nfcs/promocode-mobile.png';
 import { AnimatePresence, motion } from 'framer-motion';
+import { memo } from 'react';
 import styles from './MyPromocode.module.scss';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
@@ -50,4 +51,4 @@ const MyPromocode = () => {
     </div>
   );
 };
-export default MyPromocode;
+export default memo(MyPromocode);

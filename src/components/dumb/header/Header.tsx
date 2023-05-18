@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
@@ -9,6 +9,7 @@ import ArrowIcon from '../../svgs/ArrowIcon';
 import LogoIcon from '../../svgs/LogoIcon';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 import BurgerIcon from '../../svgs/BurgerIcon';
+import useOutsideClick from '../../../hooks/useOutsideClick';
 
 const LANGS = [
   {
@@ -76,6 +77,28 @@ const Header = () => {
     router.push(router.pathname, null, { locale });
   };
 
+  const handleClickOutside = () => {};
+
+  const handleOutsideClick = (event) => {
+    if (
+      (calcRef.current && calcRef.current.contains(event.target)) ||
+      (langRef.current && langRef.current.contains(event.target))
+    ) {
+      return;
+    }
+    setOpened('');
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
+
+  const calcRef = useRef<HTMLDivElement>(null);
+  const langRef = useRef<HTMLDivElement>(null);
+  useOutsideClick([calcRef, langRef], handleClickOutside);
   return (
     <header className={styles.header}>
       <div className="container">
@@ -95,23 +118,26 @@ const Header = () => {
             <Link className={styles.headerLinks} href="/case-studies">
               <span>{t('header.footer.case')}</span>
             </Link>
-            <div className={styles.headerLinks}>
+            <div
+              className={styles.headerLinks}
+              onClick={() => {
+                setOpened((prevState) => (prevState === 'calc' ? '' : 'calc'));
+              }}
+              ref={calcRef}
+            >
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
-                  <div
-                    className={styles.languageControl}
-                    onClick={() => {
-                      if (opened === 'calc') {
-                        setOpened('');
-                      } else {
-                        setOpened('calc');
-                      }
-                    }}
-                  >
+                  <div className={styles.languageControl}>
                     <span>{t('header.footer.calc')}</span>
-                    {/* <span style={{ transform: opened === 'calc' ? 'rotate(180deg)' : 'none' }}> */}
-                    <ArrowIcon />
-                    {/* </span> */}
+                    <span
+                      className={styles.arrowIcon}
+                      style={{
+                        transform:
+                          opened === 'calc' && (tablet || mobile) ? 'rotate(180deg)' : 'none',
+                      }}
+                    >
+                      <ArrowIcon />
+                    </span>
                   </div>
                   {opened === 'calc' && (tablet || mobile) && (
                     <ul>
@@ -153,24 +179,26 @@ const Header = () => {
             <Link className={styles.headerLinks} href="/contact-us">
               <span>{t('header.footer.contact')}</span>
             </Link>
-            <div className={styles.headerLinks}>
+            <div
+              className={styles.headerLinks}
+              onClick={() => {
+                setOpened((prevState) => (prevState === 'languages' ? '' : 'languages'));
+              }}
+              ref={langRef}
+            >
               <ul className={styles.headerLanguage}>
                 <li className={styles.dropdownWrapper}>
-                  <div
-                    className={styles.languageControl}
-                    style={{ textTransform: 'uppercase' }}
-                    onClick={() => {
-                      if (opened === 'languages') {
-                        setOpened('');
-                      } else {
-                        setOpened('languages');
-                      }
-                    }}
-                  >
+                  <div className={styles.languageControl} style={{ textTransform: 'uppercase' }}>
                     <span>{i18n && i18n.options && i18n.options.lng}</span>
-                    {/* <span style={{ transform: opened === 'languages' ? 'rotate(180deg)' : 'none' }}> */}
-                    <ArrowIcon />
-                    {/* </span> */}
+                    <span
+                      className={styles.arrowIcon}
+                      style={{
+                        transform:
+                          opened === 'languages' && (tablet || mobile) ? 'rotate(180deg)' : 'none',
+                      }}
+                    >
+                      <ArrowIcon />
+                    </span>
                   </div>
                   {opened === 'languages' && (tablet || mobile) && (
                     <ul>

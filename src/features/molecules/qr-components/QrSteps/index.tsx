@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import dynamic from 'next/dynamic';
 import styles from './QrSteps.module.scss';
 
@@ -18,4 +18,4 @@ const QrSteps: React.FC = () => {
   );
 };
 
-export default QrSteps;
+export default memo(QrSteps);

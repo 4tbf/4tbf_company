@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import onboarding from 'public/images/qr/onboarding.png';
@@ -27,4 +27,4 @@ const OnBoarding: React.FC = () => {
   );
 };
 
-export default OnBoarding;
+export default memo(OnBoarding);

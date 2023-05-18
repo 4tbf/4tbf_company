@@ -6,6 +6,7 @@ import howToBuyForecastImage3 from 'public/images/nfcs/how-to-buy-forecast-3-min
 import howToBuyForecastImage4 from 'public/images/nfcs/how-to-buy-forecast-4-min.png';
 import mobileImage from 'public/images/nfcs/binance-future-forecast-mobile.png';
 import { AnimatePresence, motion } from 'framer-motion';
+import { memo } from 'react';
 import styles from './HowToBuyForecast.module.scss';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
@@ -54,4 +55,4 @@ const HowToBuyForecast = () => {
     </div>
   );
 };
-export default HowToBuyForecast;
+export default memo(HowToBuyForecast);

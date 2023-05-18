@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import scanQR from 'public/images/qr/scanQR.png';
@@ -29,4 +29,4 @@ const ScanQR: React.FC = () => {
     </div>
   );
 };
-export default ScanQR;
+export default memo(ScanQR);

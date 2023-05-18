@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -50,10 +50,10 @@ const Projects = () => {
                       height={1400}
                       alt="project-nfc"
                       srcSet="
-                      /images/home-projects/nfc-image.png 1x,
+                      /images/home-projects/nfc-image.webp 1x,
                       /images/home-projects/tablet_nfc-image-2x.png 2x,
                       /images/home-projects/mobile_nfc-image-3x.png 3x"
-                      sizes="(max-width: 1279.98px) 100vw 1279.98px"
+                      sizes="(min-width: 1279.98px) 100vw 1279.98px"
                     />
                   </div>
                 </div>
@@ -100,7 +100,7 @@ const Projects = () => {
                       height={1400}
                       alt="project-invest"
                       srcSet="
-                      /images/home-projects/invest-image.png 1x,
+                      /images/home-projects/invest-image.webp 1x,
                       /images/home-projects/tablet_invest-image-2x.png 2x,
                       /images/home-projects/mobile_invest-image-3x.png 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
@@ -150,7 +150,7 @@ const Projects = () => {
                       height={1400}
                       alt="project-qr"
                       srcSet="
-                      /images/home-projects/qr-image.png 1x,
+                      /images/home-projects/qr-image.webp 1x,
                       /images/home-projects/tablet_qr-image-2x.png 2x,
                       /images/home-projects/mobile_qr-image-3x.png 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
@@ -186,4 +186,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default memo(Projects);

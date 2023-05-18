@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import createQr from 'public/images/qr/createQR.png';
@@ -32,4 +32,4 @@ const CreateQR: React.FC = () => {
     </div>
   );
 };
-export default CreateQR;
+export default memo(CreateQR);

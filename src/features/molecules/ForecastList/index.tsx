@@ -10,6 +10,7 @@ import yourForecastImage from 'public/images/nfcs/your-forecast-min.png';
 import yourForecastImageMobile from 'public/images/nfcs/your-forecast-min-mobile.png';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import { memo } from 'react';
 import styles from './ForecastList.module.scss';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
@@ -97,4 +98,4 @@ const ForecastList = () => {
     </AnimatePresence>
   );
 };
-export default ForecastList;
+export default memo(ForecastList);

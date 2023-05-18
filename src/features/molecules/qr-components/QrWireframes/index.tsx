@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import wireframes from 'public/images/qr/wireframes.png';
@@ -35,4 +35,4 @@ const QrWireframes: React.FC = () => {
   );
 };
 
-export default QrWireframes;
+export default memo(QrWireframes);

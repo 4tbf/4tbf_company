@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import Iphone1 from 'public/images/qr/hero-iphone-1.png';
@@ -41,17 +41,17 @@ const QrHero: React.FC = () => {
         </div>
         <div className={styles.imagesContainer}>
           <motion.div
-            initial={{ x: -1000, scale: 0.7, rotate: 0 }}
+            initial={{ x: -2000, scale: 0.7, rotate: 0 }}
             animate={{ x: 0, scale: 1, rotate: -34 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
             key={Iphone1.src}
           >
             <Image src={Iphone1} alt="iPhone" width={249} height={540} />
           </motion.div>
           <motion.div
-            initial={{ x: -1000, scale: 0.7, rotate: 0 }}
+            initial={{ x: -2000, scale: 0.7, rotate: 0 }}
             animate={{ x: 0, scale: 1, rotate: -34 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2 }}
             key={Iphone2.src}
           >
             <Image src={Iphone2} alt="iPhone" width={249} height={540} />
@@ -62,4 +62,4 @@ const QrHero: React.FC = () => {
   );
 };
 
-export default QrHero;
+export default memo(QrHero);

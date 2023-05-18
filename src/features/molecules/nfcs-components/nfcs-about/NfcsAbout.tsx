@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
@@ -104,4 +104,4 @@ const NfcsAbout = () => {
   );
 };
 
-export default NfcsAbout;
+export default memo(NfcsAbout);

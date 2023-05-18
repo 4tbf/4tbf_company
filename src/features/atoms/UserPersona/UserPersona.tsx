@@ -34,12 +34,13 @@ const UserPersona = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              key="mainInfo"
             >
-              <motion.div variants={itemVariants}>
+              <motion.div variants={itemVariants} key={el.bio}>
                 <h3 className={styles.title}>Bio</h3>
                 <div className={styles.info}>{el.bio}</div>
               </motion.div>
-              <motion.div variants={itemVariants}>
+              <motion.div variants={itemVariants} key={el.name}>
                 <h3 className={styles.title}>Pain Points</h3>
                 <ul className={styles.infoList}>
                   {el.painPoints.map((el) => (
@@ -47,7 +48,7 @@ const UserPersona = () => {
                   ))}
                 </ul>
               </motion.div>
-              <motion.div variants={itemVariants}>
+              <motion.div variants={itemVariants} key={el.goals[0]}>
                 <h3 className={(styles.title, styles.titleGoals)}>Goals</h3>
                 <ul className={styles.infoListGoals}>
                   {el.goals.map((el) => (
