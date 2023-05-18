@@ -52,7 +52,7 @@ const Projects = () => {
                       srcSet="
                       /images/home-projects/nfc-image.webp 1x,
                       /images/home-projects/tablet_nfc-image-2x.png 2x,
-                      /images/home-projects/mobile_nfc-image-3x.png 3x"
+                      /images/home-projects/mobile_nfc-image-3x.webp 3x"
                       sizes="(min-width: 1279.98px) 100vw 1279.98px"
                     />
                   </div>
@@ -102,7 +102,7 @@ const Projects = () => {
                       srcSet="
                       /images/home-projects/invest-image.webp 1x,
                       /images/home-projects/tablet_invest-image-2x.png 2x,
-                      /images/home-projects/mobile_invest-image-3x.png 3x"
+                      /images/home-projects/mobile_invest-image-3x.webp 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
                     />
                   </div>
@@ -152,7 +152,7 @@ const Projects = () => {
                       srcSet="
                       /images/home-projects/qr-image.webp 1x,
                       /images/home-projects/tablet_qr-image-2x.png 2x,
-                      /images/home-projects/mobile_qr-image-3x.png 3x"
+                      /images/home-projects/mobile_qr-image-3x.webp 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
                     />
                   </div>

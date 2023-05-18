@@ -79,8 +79,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImage}
                       src="/images/brand_image.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -88,8 +88,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImageHovered}
                       src="/images/brand_image-hovered.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -109,8 +109,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImage}
                       src="/images/brand_image.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -118,8 +118,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImageHovered}
                       src="/images/brand_image-hovered.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -141,8 +141,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImage}
                       src="/images/brand_image.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -150,8 +150,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImageHovered}
                       src="/images/brand_image-hovered.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -169,8 +169,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImage}
                       src="/images/brand_image.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -178,8 +178,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImageHovered}
                       src="/images/brand_image-hovered.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -197,8 +197,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImage}
                       src="/images/brand_image.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>
@@ -206,8 +206,8 @@ const OurServices: React.FC = () => {
                     <Image
                       className={styles.brandImageHovered}
                       src="/images/brand_image-hovered.png"
-                      height={66}
-                      width={72}
+                      height={67}
+                      width={81}
                       alt="image"
                     />
                   </motion.div>

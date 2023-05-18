@@ -43,8 +43,9 @@ export default function NFCS() {
         className="nfcs_hero_image"
         width={1435}
         height={913}
-        src={mobile ? '/images/nfcs/nfcs-hero-mobile.png' : '/images/nfcs/nfcs-hero.png'}
+        src={mobile ? '/images/nfcs/nfcs-hero-mobile.webp' : '/images/nfcs/nfcs-hero.webp'}
         alt="page"
+        priority
       />
       <NfcsAbout />
       <Footer />
