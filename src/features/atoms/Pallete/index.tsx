@@ -15,6 +15,7 @@ const Pallete: React.FC<any> = ({ data }) => {
                 transition={{ duration: 0.8 }}
                 style={{ backgroundColor: `#${el.color}` }}
                 className={styles.color}
+                key={`${el.color}`}
               />
               <p className={styles.colorTitle}>{el.color}</p>
             </div>
@@ -26,6 +27,7 @@ const Pallete: React.FC<any> = ({ data }) => {
                   viewport={{ once: true, amount: 0.8 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5 }}
+                  key={`${el.font}`}
                 >
                   {el.font}
                 </motion.h1>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import qrHistory from 'public/images/qr/history.png';
@@ -38,4 +38,4 @@ const QRHistory: React.FC = () => {
     </div>
   );
 };
-export default QRHistory;
+export default memo(QRHistory);

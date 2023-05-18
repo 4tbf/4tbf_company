@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -114,4 +114,4 @@ const QrReview: React.FC = () => {
   );
 };
 
-export default QrReview;
+export default memo(QrReview);

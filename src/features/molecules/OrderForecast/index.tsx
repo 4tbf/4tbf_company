@@ -4,6 +4,7 @@ import forecastImage from 'public/images/nfcs/forecast-min.png';
 import forecastImageMobile from 'public/images/nfcs/forecast-min-mobile.png';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import { memo } from 'react';
 import styles from './OrderForecast.module.scss';
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
 
@@ -43,4 +44,4 @@ const OrderForecast = () => {
     </div>
   );
 };
-export default OrderForecast;
+export default memo(OrderForecast);

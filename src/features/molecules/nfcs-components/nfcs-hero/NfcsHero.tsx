@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -42,4 +42,4 @@ const NfcsHero = () => {
   );
 };
 
-export default NfcsHero;
+export default memo(NfcsHero);

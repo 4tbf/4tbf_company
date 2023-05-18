@@ -20,9 +20,10 @@ function App({ Component, pageProps }: AppProps) {
             accounts={[Number(process.env.NEXT_PUBLIC_ANALYTICS_ID)]}
             options={{ webvisor: true }}
             version="2"
+            key="app"
           />
         ) : (
-          <YMInitializer accounts={[0]} options={{ webvisor: true }} version="2" />
+          <YMInitializer accounts={[0]} options={{ webvisor: true }} version="2" key="app" />
         )}
         <Component {...pageProps} />
       </AnimatePresence>

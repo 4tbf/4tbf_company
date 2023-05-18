@@ -18,6 +18,7 @@ const NfcsCards: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+        key="itesmRow"
       >
         {data.map((el) => (
           <motion.div className="col_" key={el.title} variants={itemVariants}>
