@@ -15,6 +15,7 @@ const Collapse = ({ title, children }: { title: string; children: any }) => {
         </Text>
         <button
           type="button"
+          aria-label={title}
           className={clsx(styles.itemControl, {
             [styles.openedBtn]: open,
           })}

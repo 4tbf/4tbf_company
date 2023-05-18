@@ -104,7 +104,7 @@ const Header = () => {
       <div className="container">
         <div className={styles.headerWrapper}>
           <div className={styles.logo}>
-            <Link href="/">
+            <Link href="/" aria-label="home">
               <LogoIcon />
             </Link>
           </div>

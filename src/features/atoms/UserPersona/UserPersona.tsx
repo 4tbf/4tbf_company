@@ -37,11 +37,11 @@ const UserPersona = () => {
               key="mainInfo"
             >
               <motion.div variants={itemVariants} key={el.bio}>
-                <h3 className={styles.title}>Bio</h3>
+                <h2 className={styles.title}>Bio</h2>
                 <div className={styles.info}>{el.bio}</div>
               </motion.div>
               <motion.div variants={itemVariants} key={el.name}>
-                <h3 className={styles.title}>Pain Points</h3>
+                <h2 className={styles.title}>Pain Points</h2>
                 <ul className={styles.infoList}>
                   {el.painPoints.map((el) => (
                     <li key={el}>{el}</li>
@@ -49,7 +49,7 @@ const UserPersona = () => {
                 </ul>
               </motion.div>
               <motion.div variants={itemVariants} key={el.goals[0]}>
-                <h3 className={(styles.title, styles.titleGoals)}>Goals</h3>
+                <h2 className={(styles.title, styles.titleGoals)}>Goals</h2>
                 <ul className={styles.infoListGoals}>
                   {el.goals.map((el) => (
                     <li key={el}>{el}</li>

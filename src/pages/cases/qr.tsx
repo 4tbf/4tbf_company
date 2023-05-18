@@ -40,9 +40,9 @@ export default function QR() {
       }}
       style={{
         backgroundImage:
-          (mobile && 'url(/images/qr/bg-mobile.png)') ||
-          (tablet && 'url(/images/qr/bg-tablet.png)') ||
-          'url(/images/qr/review-bg.png)',
+          (mobile && 'url(/images/qr/bg-mobile.webp)') ||
+          (tablet && 'url(/images/qr/bg-tablet.webp)') ||
+          'url(/images/qr/review-bg.webp)',
       }}
     >
       <Head>

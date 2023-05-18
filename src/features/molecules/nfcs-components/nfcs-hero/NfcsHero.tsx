@@ -12,7 +12,7 @@ const NfcsHero = () => {
   return (
     <section className={styles.nfcsHero}>
       <div className="container">
-        <Link href="/" className={styles.arrowLink}>
+        <Link href="/" className={styles.arrowLink} aria-label="back">
           <LongArrow />
         </Link>
         <AnimatePresence>

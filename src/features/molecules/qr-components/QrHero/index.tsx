@@ -16,7 +16,7 @@ const QrHero: React.FC = () => {
       <section className={styles.qrHero}>
         <div className={styles.main}>
           <div className={styles.arrowLink}>
-            <Link href="/">
+            <Link href="/" aria-label="back">
               <LongArrow />
             </Link>
           </div>

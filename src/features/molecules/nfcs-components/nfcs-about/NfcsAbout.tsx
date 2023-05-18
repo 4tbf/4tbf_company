@@ -23,13 +23,13 @@ const NfcsAbout = () => {
     <section
       className={styles.aboutSection}
       style={{
-        backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-right.png)',
+        backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-right.webp)',
       }}
     >
       <div
         className={styles.aboutTop}
         style={{
-          backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.png)',
+          backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.webp)',
           backgroundPositionX: 'right',
           backgroundPositionY: 'center',
           backgroundRepeat: 'no-repeat',
@@ -58,7 +58,7 @@ const NfcsAbout = () => {
       <div
         className={styles.aboutBottom}
         style={{
-          backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.png)',
+          backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.webp)',
         }}
       >
         <div className="container">
@@ -75,7 +75,7 @@ const NfcsAbout = () => {
         <div
           className={styles.container}
           style={{
-            backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.png)',
+            backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.webp)',
             backgroundPositionX: 'right',
             backgroundPositionY: '',
             backgroundRepeat: 'no-repeat',
@@ -87,7 +87,7 @@ const NfcsAbout = () => {
         <div
           className={styles.forecastWrapper}
           style={{
-            backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-right.png)',
+            backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-right.webp)',
           }}
         >
           <OrderForecast />
