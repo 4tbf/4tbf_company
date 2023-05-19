@@ -73,6 +73,7 @@
             }
             @media (max-width: 767.98px) {
                 @include fontRem(14, 400, 19);
+                margin-top:16px;
             }
             &_second{
                 margin: 0;
@@ -86,21 +87,21 @@
                 }
                 @media (max-width: 767.98px) {
                     @include fontRem(14, 400, 19);
-                    max-width: 300px;
+                    max-width: 318px;
                 }
             }
             
         }
         .aboutItems {
             margin-top: 51px;
-            margin-bottom: 152px;
+            margin-bottom: 144px;
             @media (max-width: 1279.98px) {
                 margin-top: 39px;
-                margin-bottom: 68px;
+                margin-bottom: 65px;
             }
             @media (max-width: 767.98px) {
-                margin-top: 16px;
-                margin-bottom: 50px;
+                margin-top: 19px;
+                margin-bottom: 48px;
             }
             .itesmRow {
                 @include flexRow(64, 4);
@@ -177,8 +178,8 @@
         font-family: 'MADE';
         font-style: normal;
         color: $black;
-        margin-top: 159px;
-        margin-bottom: 68px;
+        margin-top: 161px;
+        margin-bottom: 61px;
         @media (max-width: 1279.98px) {
             @include fontRem(48, 400, 63);
             margin-top: 94px;

@@ -5,14 +5,14 @@
 .title {
     @include fontRem(54, 700);
     color: $black;
-    margin-bottom: 31px;
+    margin-bottom: 25px;
     @media (max-width: 1279.98px) {
         @include fontRem(28,700,39);
         margin-bottom: 12px;
     }
     @media (max-width: 767.98px) {
         @include fontRem(22,700,31);
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         margin-left: 16px;
     };
 }
@@ -79,7 +79,7 @@
         }
         @media (max-width: 767.98px) {
             @include fontRem(14,400,20);
-            max-width: 280px;
+            max-width: 295px;
             margin-left: 16px;
             margin-top: 7px;
         };

@@ -3,7 +3,7 @@
 
 
 .mainWrapper {
-    margin-top: 286px;
+    margin-top: 278px;
     padding-left: 133px;
     @media (max-width: 1279.98px) {
         margin-top: 50px;
@@ -39,7 +39,7 @@
             .title {
                 @include fontRem(54, 700);
                 color: $black;
-                margin-bottom: 40px;
+                margin-bottom: 34px;
                 white-space: nowrap;
                 @media (max-width: 1279.98px) {
                     @include fontRem(28, 700, 39);
@@ -70,7 +70,7 @@
                 @media (max-width: 767.98px) {
                     @include fontRem(14, 400, 20);
                     margin: 0 17px 24px;
-                    max-width: 305px;
+                    max-width: 330px;
                 }
             }
         }
@@ -78,8 +78,8 @@
             display: flex;
             align-items: center;
             gap: 26px;
-            margin-top: -4px;
-            margin-left: 15px;
+            margin-top: 5px;
+            margin-left: 4px;
             @media (max-width: 1279.98px) {
                 margin: 0 auto;
                 gap: 23px;
@@ -117,7 +117,7 @@
                 @media (max-width: 1279.98px) {
                     gap: 21px;
                     height: auto;
-                    margin-top: 7px;
+                    margin-top: 5px;
                     // max-height: 420px;
                     img {
                         object-fit: contain;

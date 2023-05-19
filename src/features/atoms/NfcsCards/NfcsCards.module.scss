@@ -7,6 +7,9 @@
         margin: 0;
         gap: 9px;
     }
+    @media (max-width: 767.98px) {
+        gap: 13px;
+    }
     :global {
         .col_ {
             @media (max-width: 1279.98px) {
@@ -27,7 +30,7 @@
         padding: 20px 20px 30px 16px;
         color: $white;
         @media (max-width: 1279.98px) {
-            padding: 7px 0 19px 13px;
+            padding: 7px 0 14px 16px;
         }
 
     .itesmTop {
