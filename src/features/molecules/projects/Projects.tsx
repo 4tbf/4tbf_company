@@ -53,7 +53,8 @@ const Projects = () => {
                       /images/home-projects/nfc-image.webp 1x,
                       /images/home-projects/tablet_nfc-image-2x.png 2x,
                       /images/home-projects/mobile_nfc-image-3x.webp 3x"
-                      sizes="(min-width: 1279.98px) 100vw 1279.98px"
+                      sizes="(min-width: 1279.98px) 1447, 100vw"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -104,6 +105,7 @@ const Projects = () => {
                       /images/home-projects/tablet_invest-image-2x.png 2x,
                       /images/home-projects/mobile_invest-image-3x.webp 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -154,6 +156,7 @@ const Projects = () => {
                       /images/home-projects/tablet_qr-image-2x.png 2x,
                       /images/home-projects/mobile_qr-image-3x.webp 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
+                      loading="lazy"
                     />
                   </div>
                 </div>

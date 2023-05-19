@@ -152,6 +152,19 @@
                         height: auto;
                     } 
                 }
+                &:nth-child(3) {
+                    .comment {
+                        height: 188px;
+                        width: 327px;
+                        img{
+                            width: 327px;
+
+                            @media (max-width: 767.98px) {
+                                width: 327px;
+                            } 
+                        }
+                    }
+                }
             }
             
         }

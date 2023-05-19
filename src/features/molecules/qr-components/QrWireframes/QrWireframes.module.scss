@@ -29,7 +29,8 @@
                 height: 894px;
             }
             @media (max-width: 767.98px) {
-                height: 419px;
+                height: 100%;
+                max-height: 419px;
             }
         }
     }

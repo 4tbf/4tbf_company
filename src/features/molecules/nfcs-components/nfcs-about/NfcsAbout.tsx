@@ -23,18 +23,10 @@ const NfcsAbout = () => {
     <section
       className={styles.aboutSection}
       style={{
-        backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-right.webp)',
+        backgroundImage: mobile ? '' : 'url(/images/nfcs/nfcs_bg.webp)',
       }}
     >
-      <div
-        className={styles.aboutTop}
-        style={{
-          backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.webp)',
-          backgroundPositionX: 'right',
-          backgroundPositionY: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <div className={styles.aboutTop}>
         <div className="container">
           <Text as="h2" className={clsx(styles.title, styles.topTitle)}>
             About Project
@@ -55,12 +47,7 @@ const NfcsAbout = () => {
           </div>
         </div>
       </div>
-      <div
-        className={styles.aboutBottom}
-        style={{
-          backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.webp)',
-        }}
-      >
+      <div className={styles.aboutBottom}>
         <div className="container">
           <Text as="h2" className={clsx(styles.userPersona)}>
             User Persona
@@ -72,24 +59,11 @@ const NfcsAbout = () => {
           </Text>
           <UserPersona />
         </div>
-        <div
-          className={styles.container}
-          style={{
-            backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-left.webp)',
-            backgroundPositionX: 'right',
-            backgroundPositionY: '',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
+        <div className={styles.container}>
           <h1 className={styles.designTitle}>{t('cases.nfcs.title.2')}</h1>
           <MyPromocode />
         </div>
-        <div
-          className={styles.forecastWrapper}
-          style={{
-            backgroundImage: mobile ? '' : 'url(/images/nfcs/background-squares-right.webp)',
-          }}
-        >
+        <div className={styles.forecastWrapper}>
           <OrderForecast />
           <HowToBuyForecast />
         </div>

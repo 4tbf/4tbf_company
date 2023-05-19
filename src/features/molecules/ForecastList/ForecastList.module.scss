@@ -6,15 +6,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 229px 130px 220px;
+    padding: 237px 160px 228px 130px;
     @media (max-width: 1279.98px) {
-        padding: 60px 23px 54px;
+        padding: 60px 23px 57px;
+        align-items: baseline;
     }
     @media (max-width: 767.98px) {
-        padding: 48px 0px 37px;
+        padding: 48px 0px 42px;
     }
     .mainTitle {
-        font-family: 'Open Sans';
         @include fontRem(54, 700);
         color: $black;
         margin-bottom: 12px;
@@ -30,7 +30,7 @@
         display: flex;
         justify-content: space-between;
         @include fontRem(20, 400, 28);
-        margin-top: 25px;
+        margin-top: 29px;
         @media (max-width: 1279.98px) {
             @include fontRem(16, 400, 22);
             margin-top: 16px;
@@ -38,7 +38,7 @@
         }
         @media (max-width: 767.98px) {
             @include fontRem(14, 400, 20);
-            margin: 0 17px;
+            margin: 0 40px 0 17px;
         }
         &_first {
             max-width: 310px;
@@ -47,10 +47,10 @@
             }
         }
         &_second {
-            max-width: 375px;
-            margin-top: -61px;
+            max-width: 360px;
+            margin-top: -63px;
             margin-bottom: 53px;
-            margin-right: -40px;
+            margin-right: -52px;
             @media (max-width: 1279.98px) {  
                 margin-top: 15px;
                 max-width: 480px;
@@ -63,10 +63,10 @@
         }
     }
     .readyForecast {
-        padding-top: 99px;
+        padding: 106px 0 0 16px;
         object-fit: contain;
         @media (max-width: 1279.98px) {  
-            padding-top:  56px ;
+            padding: 56px 0px 0 0;
         }
         @media (max-width: 767.98px) {
             padding-top: 42px ;
@@ -90,7 +90,7 @@
         }
     }
     .yourForecast {
-        padding: 103px 0px 0px 0px;
+        padding: 101px 0 0 15px;
         @media (max-width: 1279.98px) {  
             padding: 52px 0px 0px 0
         }
@@ -149,10 +149,11 @@
     }
     .forecastImage{
         object-fit: contain;
+        margin-left: 18px;
         @media (max-width: 1279.98px) {  
             margin-left: 0;
             height: auto;
-            width: auto;
+            width: 100vw;
         }
         @media (max-width: 767.98px) {
             height: 100%;

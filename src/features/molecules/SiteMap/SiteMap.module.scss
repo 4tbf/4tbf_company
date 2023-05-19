@@ -13,7 +13,7 @@
             padding-left: 22px;
         }
         @media (max-width: 767.98px) {
-            padding: 0 16px;
+            padding: 0 25px 0 16px;
         }
         .title {
             @include fontRem(54, 700);
@@ -28,9 +28,9 @@
         .description {
             @include fontRem(20, 400, 28);
             color: $black;
-            max-width: 739px;
+            max-width: 700px;
             margin-top: 25px;
-            margin-bottom: 89px;
+            margin-bottom: 96px;
             @media (max-width: 1279.98px) {
                 @include fontRem(16, 400, 22);
                 max-width: 600px;
@@ -47,6 +47,7 @@
         object-fit: contain;
         max-height: initial;
         align-self: center;
+        height: auto;
         @media (max-width: 1279.98px) {
             height: 100%;
         }
