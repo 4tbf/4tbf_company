@@ -11,9 +11,9 @@
     gap: 85px;
     margin-top: 43px;
     @media (max-width: 1279.98px) {
-        margin-top: 37px;
-        padding: 46px 33px 62px 20px;
-        gap: 39px;
+        margin-top: 35px;
+        padding: 46px 42px 59px 20px;
+        gap: 40px;
     }
     @media (max-width: 767.98px) {
         margin-top: 70px;
@@ -45,7 +45,7 @@
         display: flex;
         align-items: center;
         gap: 17px;
-        margin-top: 19px;
+        margin-top: 20px;
         @media (max-width: 1279.98px) {
             @include fontRem(12, 400, 16);
             margin-top: 10px;
@@ -64,7 +64,7 @@
         }
     }
     .userShortInfo {
-        margin-top: 28px;
+        margin-top: 31px;
         letter-spacing: 0.013em;
         @media (max-width: 1279.98px) {
             @include fontRem(12, 400, 16);
@@ -101,6 +101,7 @@
         }
         .info {
             @include fontRem(18, 400, 25);
+            margin-top: 5px;
             @media (max-width: 1279.98px) {
                 @include fontRem(16, 400, 22);
                 margin-top: 12px;
@@ -127,13 +128,14 @@
         }
         .infoListGoals {
             @include fontRem(18, 400, 25);
-            padding: 7px 0px 0px 27px;
+            padding: 2px 0px 0px 27px;
             @media (max-width: 1279.98px) {
-                @include fontRem(16, 400, 22)
+                @include fontRem(16, 400, 22);
+                padding: 9px 0px 0px 24px;
             }
             @media (max-width: 767.98px) {
                 @include fontRem(14, 400, 20);
-                padding: 8px 0px 0px 21px;
+                padding: 8px 25px 0px 21px;
             }
             ::marker {
                 font-size: 12px;

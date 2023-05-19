@@ -3,7 +3,7 @@
 
 
 .mainWrapper {
-    margin-top: 277px;
+    margin-top: 286px;
     padding-left: 133px;
     @media (max-width: 1279.98px) {
         margin-top: 50px;
@@ -39,11 +39,11 @@
             .title {
                 @include fontRem(54, 700);
                 color: $black;
-                margin-bottom: 36px;
+                margin-bottom: 40px;
                 white-space: nowrap;
                 @media (max-width: 1279.98px) {
                     @include fontRem(28, 700, 39);
-                    margin-bottom: 16px;
+                    margin-bottom: 20px;
                 }
                 @media (max-width: 767.98px) {
                     @include fontRem(22, 700, 31);
@@ -65,11 +65,12 @@
                     @include fontRem(16, 400, 22);
                     max-width: 505px;
                     letter-spacing: 0;
-                    gap: 20px;
+                    gap: 18px;
                 }
                 @media (max-width: 767.98px) {
                     @include fontRem(14, 400, 20);
                     margin: 0 17px 24px;
+                    max-width: 305px;
                 }
             }
         }
@@ -77,8 +78,8 @@
             display: flex;
             align-items: center;
             gap: 26px;
-            margin-top: 6px;
-            margin-left: 5px;
+            margin-top: -4px;
+            margin-left: 15px;
             @media (max-width: 1279.98px) {
                 margin: 0 auto;
                 gap: 23px;
