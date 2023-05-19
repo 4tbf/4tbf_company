@@ -13,7 +13,7 @@
             padding-left: 22px;
         }
         @media (max-width: 767.98px) {
-            padding: 0 25px 0 16px;
+            padding: 0 17px 0 16px;
         }
         .title {
             @include fontRem(54, 700);
@@ -29,8 +29,8 @@
             @include fontRem(20, 400, 28);
             color: $black;
             max-width: 700px;
-            margin-top: 25px;
-            margin-bottom: 96px;
+            margin-top: 22px;
+            margin-bottom: 93px;
             @media (max-width: 1279.98px) {
                 @include fontRem(16, 400, 22);
                 max-width: 600px;

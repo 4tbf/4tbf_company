@@ -11,12 +11,12 @@
     gap: 85px;
     margin-top: 43px;
     @media (max-width: 1279.98px) {
-        margin-top: 35px;
-        padding: 46px 42px 59px 20px;
+        margin-top: 37px;
+        padding: 46px 37px 59px 20px;
         gap: 40px;
     }
     @media (max-width: 767.98px) {
-        margin-top: 70px;
+        margin-top: 71px;
         border-radius: 0;
         padding: 24px 27px 26px 16px;
         flex-direction: column;
@@ -135,7 +135,7 @@
             }
             @media (max-width: 767.98px) {
                 @include fontRem(14, 400, 20);
-                padding: 8px 25px 0px 21px;
+                padding: 8px 25px 0px 20px;
             }
             ::marker {
                 font-size: 12px;

@@ -80,7 +80,7 @@
     }
     .imagesContainer {
         display: flex;
-        margin: 40px -47px;
+        margin: 43px -47px;
         gap: 82px;
         @media (max-width: 1279.98px) {
             gap: 62px;
@@ -102,7 +102,7 @@
             }
             &:nth-child(2) {
                 img {
-                    margin-top: -44px;
+                    margin-top: -47px;
                     @media (max-width: 1279.98px) {
                         margin-top: -35px;                    
                     }
