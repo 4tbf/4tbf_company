@@ -1,0 +1,223 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.invesTonusPersonUser{
+       margin-top: 70px;
+    background-color: $white;
+    @media (max-width: 1279.98px) {
+        margin-top: 64px;
+        gap: 16px;
+    }
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        row-gap: 16px; 
+        margin-top: 48px;
+    }
+    .invesTnusMobilePersonUser{
+      .ifoUserdetails{
+        padding: 16px;
+        box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+        border-radius: 0%;
+        @media (max-width: 1279.98px) {
+            }
+            @media (max-width: 767.98px) {
+            }
+      }
+    }
+        .title{
+        @include fontRem(32, 700, 44);
+        margin-bottom: 16px;
+        @media (max-width: 1279.98px) {
+        @include fontRem(28, 700, 38);
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(22, 700, 30);
+        }
+    }
+        .infoInvesTonus{
+        @include fontRem(18, 400, 25);
+        max-width: 740px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(16, 400, 22);
+            max-width: 515px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(14, 400, 19);
+            }
+    }
+        .ifoUserdetails{
+        color: $lightBlack;
+         margin-top: 40px;
+        display: flex;
+        gap: 40px;
+        box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+        border-radius: 16px;
+        @media (max-width: 1279.98px) {
+            margin-top: 32px;
+            gap: 16px;
+        }
+        @media (max-width: 767.98px) {
+           flex-direction: column;
+           border-radius: none;
+           box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+           margin-top: 0;
+            gap: 32px;
+           
+        }
+        .cardUserPersona{
+            @include flex-column;
+            @include fontRem(18, 400, 25);
+            justify-content: space-between;
+            margin-top: 27px;
+            margin-bottom: 20px;
+            @media (max-width: 1279.98px) {
+            @include fontRem(16, 400, 22);
+            margin-top: 10px;
+            margin-bottom: 23px;
+            }
+            @media (max-width: 767.98px) {
+               margin: 0;
+            }
+            li{
+                margin-bottom: 10px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(16, 400, 22);
+                    margin-bottom: 6px;
+                    }
+                    @media (max-width: 767.98px) {
+                    }
+            }
+
+            .bioInfoDetail{
+                @include fontRem(24, 700, 33);
+                color: $lightBlack;
+                margin-bottom: 8px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(24, 700, 32);
+                    }
+                    @media (max-width: 767.98px) {
+                        @include fontRem(22, 700, 30);   
+                        margin-bottom: 0px;
+                    }
+            }
+            .bioUserInfo{
+                @media (max-width: 1279.98px) {
+                    @include fontRem(16, 400, 22);
+                    }
+                    @media (max-width: 767.98px) {
+                        @include fontRem(14, 400, 19);   
+                        margin-bottom: 24px;
+                    }
+            }
+            .bioList{
+                margin-left: 25px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(24, 700, 32);
+                    }
+                    @media (max-width: 767.98px) {
+                        @include fontRem(14, 400, 19);
+                        margin-bottom: 24px;   
+                    }
+            }
+        }
+    }
+        .cardUserPersona{
+         @include fontRem(18, 400, 25);
+         max-width: 660px;
+         @media (max-width: 1279.98px) {
+            @include fontRem(16, 400, 22);
+            }
+            @media (max-width: 767.98px) {
+            }
+    }
+    .userPersonMainInfo{
+        display: flex;
+        position: relative;
+        flex-direction: column-reverse;
+        @media (max-width: 1279.98px) {
+            @include fontRem(16, 400, 22);
+            }
+            @media (max-width: 767.98px) {
+
+            }
+        img{
+        border-radius: 16px 0 0 16px;
+         @media (max-width: 1279.98px) {
+          min-width: 285px;
+          min-height: 765px;
+          object-fit: cover;
+      }
+        @media (max-width: 767.98px) {
+            max-height: 275px;
+            min-height: auto;
+            min-width: auto;
+            max-width: 210px;
+            border-radius: 12px;
+        }
+          
+        }
+        .detailsInfo{
+            margin-left: 24px;
+            margin-bottom: 32px;
+            @media (max-width: 1279.98px) {
+               
+             }
+             @media (max-width: 767.98px) {
+                @include fontRem(24, 600, 33);
+                margin-left: 12px;
+                margin-bottom: 10px;
+             }
+            .userName{
+                @include fontRem(32, 700, 44);
+                color: $white;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(24, 700, 33);
+                 }
+                 @media (max-width: 767.98px) {
+                    @include fontRem(24, 600, 33);
+                 }
+            }
+            .userLocation{
+
+                margin-top: 12px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                @media (max-width: 767.98px) {
+                    margin-top: 8px;
+                 }
+                .infoUserLocation{
+                    @include fontRem(18, 600, 25);
+                    color: $white;
+                    @media (max-width: 1279.98px) {
+                        @include fontRem(12, 600, 16);
+                     }
+                     @media (max-width: 767.98px) {
+                        margin-top: 8px;
+                     }
+                }
+                .locationSvg{
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+            .infoUser{
+                @include fontRem(18, 600, 25);
+                margin-top: 12px;
+                color: $white;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(12, 600, 16);
+                 }
+                 @media (max-width: 767.98px) {
+                    @include fontRem(12, 600, 16);
+                    margin-top: 8px;
+                 }
+            }
+        }
+    }
+    .detailsInfo{
+        position: absolute;
+        margin-top: 25px ;
+    }
+    
+}
