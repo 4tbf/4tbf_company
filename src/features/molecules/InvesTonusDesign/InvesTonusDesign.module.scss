@@ -33,9 +33,6 @@
             flex-direction: column !important;
             padding-bottom: 0px;
          }
-         @media (max-width: 767.98px) {
-     
-         }
          .designeInvesTonusPage1{
             display: flex;
             justify-content: space-between;
@@ -173,7 +170,6 @@
                 @include fontRem(16,400,22); 
                 margin-top: 12px;
                 margin-bottom: 12px;
-         
              }
         }
         .designDetails{
@@ -191,9 +187,6 @@
             margin-bottom: 38px;
             @media (max-width: 1279.98px) {
                 margin-bottom: 8px;
-             }
-             @media (max-width: 767.98px) {
-                  
              }
         }
         .designInfo{
@@ -217,9 +210,6 @@
             @include fontRem(16,400,24);
             max-width: 440px;
          }
-         @media (max-width: 767.98px) {
-     
-         }
     }
     .designeImages{
         img {
@@ -232,8 +222,6 @@
         color: $black;
         @media (max-width: 1279.98px) {
             @include fontRem(32, 400, 42);
-        }
-        @media (max-width: 767.98px) {
         }
     }
 }

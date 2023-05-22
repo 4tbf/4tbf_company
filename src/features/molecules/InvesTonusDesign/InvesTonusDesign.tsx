@@ -25,7 +25,7 @@ const InvesTonusDesign = () => {
                 viewport={{ once: true }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                key={current.image}
+                key={current.title}
                 className={styles.invesTonusDetailsDesigne}
                 style={
                   current.reversed
@@ -48,7 +48,7 @@ const InvesTonusDesign = () => {
                       <div className={styles.designdetailsList}>
                         {designeDetailsInfo.map((item) => {
                           return (
-                            <Text as="ul">
+                            <Text as="ul" key={item}>
                               <Text as="li" className={styles.designDetails}>
                                 {t(item)}
                               </Text>

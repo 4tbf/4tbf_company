@@ -29,7 +29,7 @@ const InvesTonusHero = () => {
                           initial={{ opacity: 0, scale: 0.5 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 0.5 }}
-                          key={t('invesTonus.arow')}
+                          key="invesTonus.arow.1"
                         >
                           <Link href="/" className={styles.arrowLink}>
                             <LongArrow />
@@ -59,7 +59,7 @@ const InvesTonusHero = () => {
                           initial={{ x: -1000, scale: 0.7 }}
                           animate={{ x: 0, scale: 1 }}
                           transition={{ duration: 0.8 }}
-                          key={t('invesTonus.subtitle')}
+                          key="invesTonus.subtitle.2"
                         >
                           <Button href="/" target="_blank">
                             {t('invesTonus.view.website')}
@@ -99,7 +99,7 @@ const InvesTonusHero = () => {
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5 }}
-                        key={t('invesTonus.arow')}
+                        key="invesTonus.arow.3"
                       >
                         <Link href="/" className={styles.arrowLink}>
                           <LongArrow />
@@ -109,7 +109,7 @@ const InvesTonusHero = () => {
                         initial={{ x: -1000, scale: 0.7 }}
                         animate={{ x: 0, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        key={t('invesTonus.title')}
+                        key="invesTonus.title.4"
                       >
                         {t('invesTonus.title')}
                       </motion.h1>
@@ -117,7 +117,7 @@ const InvesTonusHero = () => {
                         initial={{ x: -1000, scale: 0.7 }}
                         animate={{ x: 0, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        key={t('invesTonus.subtitle')}
+                        key="invesTonus.subtitle.5"
                       >
                         {' '}
                         {t('invesTonus.subtitle')}
@@ -129,7 +129,7 @@ const InvesTonusHero = () => {
                         initial={{ x: -1000, scale: 0.7 }}
                         animate={{ x: 0, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        key={t('invesTonus.subtitle')}
+                        key="invesTonus.subtitle.6"
                       >
                         <Button href="/" target="_blank">
                           {t('invesTonus.view.website')}
@@ -140,7 +140,7 @@ const InvesTonusHero = () => {
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5 }}
-                        key={t('invesTonus.arow')}
+                        key="invesTonus.arow.7"
                       >
                         <Image
                           className="invesTonus_hero_image"
@@ -160,7 +160,7 @@ const InvesTonusHero = () => {
                       initial={{ opacity: 0, scale: 0.5 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5 }}
-                      key={t('invesTonus.arow')}
+                      key="invesTonus.arow.9"
                     >
                       <Link href="/" className={styles.arrowLink}>
                         <LongArrow />
@@ -170,7 +170,7 @@ const InvesTonusHero = () => {
                       initial={{ x: -1000, scale: 0.7 }}
                       animate={{ x: 0, scale: 1 }}
                       transition={{ duration: 0.8 }}
-                      key={t('invesTonus.title')}
+                      key="invesTonus.title.10"
                     >
                       {t('invesTonus.title')}
                     </motion.h1>
@@ -178,7 +178,7 @@ const InvesTonusHero = () => {
                       initial={{ x: -1000, scale: 0.7 }}
                       animate={{ x: 0, scale: 1 }}
                       transition={{ duration: 0.8 }}
-                      key={t('invesTonus.subtitle')}
+                      key="invesTonus.subtitle.11"
                     >
                       {' '}
                       {t('invesTonus.subtitle')}
@@ -188,7 +188,7 @@ const InvesTonusHero = () => {
                       initial={{ x: -1000, scale: 0.7 }}
                       animate={{ x: 0, scale: 1 }}
                       transition={{ duration: 0.8 }}
-                      key={t('invesTonus.subtitle')}
+                      key="invesTonus.subtitle.12"
                     >
                       <Button href="/" target="_blank">
                         {t('invesTonus.view.website')}
@@ -200,7 +200,7 @@ const InvesTonusHero = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    key={t('invesTonus.arow')}
+                    key="invesTonus.arow.13"
                   >
                     <Image
                       className="invesTonus_hero_image"

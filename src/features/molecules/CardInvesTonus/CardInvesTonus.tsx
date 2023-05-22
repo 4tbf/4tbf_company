@@ -27,7 +27,11 @@ const CardInvesTonus: React.FC = () => {
           >
             {INVES_TONUS_INFO_CARD.map((current: TINvesTonus) => {
               return (
-                <motion.div className={styles.containerCardInvesTonus} variants={itemVariants}>
+                <motion.div
+                  className={styles.containerCardInvesTonus}
+                  variants={itemVariants}
+                  key={current.info}
+                >
                   <InvesTonusInfoCard
                     key={current.title}
                     title={current.title}
