@@ -1,0 +1,239 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.invesTonusDesign{
+    margin-top: 160px;
+    color:$black;
+    @media (max-width: 1279.98px) {
+       margin-top: 80px;
+       display: flex;
+       flex-direction: column;
+    }
+    @media (max-width: 767.98px) {
+        margin-top: 45px;
+    }
+    .designeTonus{
+        @include fontRem(80,400,105);
+        font-family:"MADE";
+        position: relative;
+        @media (max-width: 1279.98px) {
+            @include fontRem(48,400,63);
+         }
+         @media (max-width: 767.98px) {
+            @include fontRem(32,400,42);
+         }
+    }
+    .invesTonusDetailsDesigne{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 215px;
+        width: 100%;
+        @media (max-width: 1279.98px) {
+            display: flex !important;
+            flex-direction: column !important;
+            padding-bottom: 0px;
+         }
+         @media (max-width: 767.98px) {
+     
+         }
+         .designeInvesTonusPage1{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @media (max-width: 1279.98px) {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 56px;
+            img{
+                width: 100%;
+                height: 100%;
+                min-width: 725px;
+           }
+             }
+             @media (max-width: 767.98px) {
+                img{
+                    width: 100%;
+                    height: 100%;
+                    min-width: 125px;
+               }
+               padding-bottom: 32px;
+             }
+             .designdetailsList{
+                 @media (max-width: 767.98px) {
+                      margin-bottom: 8px;
+                 }
+                }
+                .designInfo{
+                    @include fontRem(20,400,28);
+                    margin-top: 0;
+                    @media (max-width: 1279.98px) {
+                        @include fontRem(16,400,24);
+                        // margin-bottom: 40px;
+                     }
+                     @media (max-width: 767.98px) {
+                        margin-top: 8px;
+                        margin-bottom: 24px;
+                     }
+                }
+         }
+         .designeInvesTonusPage2{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            width: 100%;
+            gap: 220px;
+            @media (max-width: 1279.98px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:0;
+                padding-bottom: 42px;
+             }
+             @media (max-width: 767.98px) {
+                padding-bottom: 32px;
+             }
+             .designdashboardTitle{
+                @include fontRem(54,700,76); 
+                margin-top: 32px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(28,700,39); 
+                    text-align: center;
+                 }
+                 @media (max-width: 767.98px) {
+                 }
+            }
+            .invesTonusDetailsInfo{
+                max-width: 400px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(16,400,24);
+                    max-width: 440px;
+                    align-items: center;
+                    text-align: center;
+                 }
+                 @media (max-width: 767.98px) {
+             
+                 }
+            }
+            .designInfo{
+                @include fontRem(20,400,28);
+                margin-top: 16px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(16,400,24);
+                    margin-bottom: 32px;
+                 }
+                 @media (max-width: 767.98px) {
+                    margin-bottom: 24px;
+                 }
+            }
+         }
+         .designeInvesTonusPage3{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @media (max-width: 1279.98px) {
+                display: flex;
+            flex-direction: column;
+            padding-bottom: 120px;
+             img{
+                width: 100%;
+                height: 100%;
+                min-width: 725px;
+           }
+             }
+             @media (max-width: 767.98px) {
+                padding-bottom: 64px;  
+                img{
+                    width: 100%;
+                    height: 100%;
+                    min-width: 225px;
+               }
+             }
+         }
+        .designdashboardTitle{
+            @include fontRem(50,700,66); 
+            margin-top: 32px;
+            @media (max-width: 1279.98px) {
+             @include fontRem(28,700,39); 
+             }
+             @media (max-width: 767.98px) {
+                @include fontRem(22,700,30);
+                // margin-top: 24px; 
+             }
+        }
+        .designDashboardSubtitle{
+            @include fontRem(28,400,39); 
+            margin-top: 30px;
+            margin-bottom: 22px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(18,400,25); 
+                margin-top: 12px;
+            margin-bottom: 8px;
+             }
+             @media (max-width: 767.98px) {
+                @include fontRem(16,400,22); 
+                margin-top: 12px;
+                margin-bottom: 12px;
+         
+             }
+        }
+        .designDetails{
+            @include fontRem(18,400,27);
+            max-width: 330px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(16,400,24);
+                max-width: 380px;
+             }
+             @media (max-width: 767.98px) {
+                @include fontRem(14,400,19);
+             }
+        }
+        .designdetailsList{
+            margin-bottom: 38px;
+            @media (max-width: 1279.98px) {
+                margin-bottom: 8px;
+             }
+             @media (max-width: 767.98px) {
+                  
+             }
+        }
+        .designInfo{
+            @include fontRem(20,400,28);
+            margin-top: 16px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(16,400,24);
+                margin-bottom: 40px;
+             }
+             @media (max-width: 767.98px) {
+                margin-bottom: 24px;
+             }
+        }
+        ul{
+            margin-left: 25px;
+        }
+    }
+    .invesTonusDetailsInfo{
+        max-width: 400px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(16,400,24);
+            max-width: 440px;
+         }
+         @media (max-width: 767.98px) {
+     
+         }
+    }
+    .designeImages{
+        img {
+            box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+        }
+    }
+    .otherCases_title {
+        @include fontRem(56, 400);
+        font-family: 'MADE';
+        color: $black;
+        @media (max-width: 1279.98px) {
+            @include fontRem(32, 400, 42);
+        }
+        @media (max-width: 767.98px) {
+        }
+    }
+}

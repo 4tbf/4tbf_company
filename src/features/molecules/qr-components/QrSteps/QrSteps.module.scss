@@ -4,6 +4,7 @@
 .qrSteps {
     @include flex-center-column;
     margin: 130px 0 206px;
+    overflow: hidden;
     @media (max-width: 1279.98px) {
         margin: 53px 0 -5px;
     }
