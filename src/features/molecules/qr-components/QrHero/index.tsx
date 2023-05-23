@@ -5,18 +5,20 @@ import Iphone1 from 'public/images/qr/hero-iphone-1.png';
 import Iphone2 from 'public/images/qr/hero-iphone-2.png';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import styles from './QrHero.module.scss';
 import LongArrow from '../../../../components/svgs/LongArrow';
 
 const QrHero: React.FC = () => {
   const { t } = useTranslation();
+  const route = useRouter();
 
   return (
     <AnimatePresence>
       <section className={styles.qrHero}>
         <div className={styles.main}>
           <div className={styles.arrowLink}>
-            <Link href="/" aria-label="back">
+            <Link onClick={() => route.back()} href="/" aria-label="back">
               <LongArrow />
             </Link>
           </div>

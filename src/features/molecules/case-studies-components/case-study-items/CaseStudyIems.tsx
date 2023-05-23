@@ -155,7 +155,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <Text as="p" className={styles.itemDescr}>
                           {t('cases.qr')}
                         </Text>
-                        <ArrowButton text={t('inprogress')} href="#" />
+                        <ArrowButton text={t('gotocase')} href="/cases/qr" />
                       </div>
                     </div>
                   </div>
