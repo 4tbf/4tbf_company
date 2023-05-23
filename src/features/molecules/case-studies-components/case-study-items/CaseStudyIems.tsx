@@ -61,7 +61,11 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <Text as="p" className={styles.itemDescr}>
                           {t('cases.nfcs')}
                         </Text>
-                        <ArrowButton text={t('gotocase')} blank href="https://www.nfcs.space/" />
+                        <ArrowButton
+                          text={t('gotocase')}
+                          // blank
+                          href="/cases/nfcs"
+                        />
                       </div>
                     </div>
                   </div>
@@ -106,7 +110,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                         <Text as="p" className={styles.itemDescr}>
                           {t('cases.investonus')}
                         </Text>
-                        <ArrowButton text={t('gotocase')} blank href="https://investonus.pro/" />
+                        <ArrowButton text={t('gotocase')} href="/cases/investonus" />
                       </div>
                     </div>
                   </div>

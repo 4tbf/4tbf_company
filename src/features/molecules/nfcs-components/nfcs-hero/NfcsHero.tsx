@@ -34,7 +34,7 @@ const NfcsHero = () => {
             {t('cases.nfcs.description')}
           </motion.p>
         </AnimatePresence>
-        <Button href="/" target="_blank">
+        <Button href="https://www.nfcs.space/" target="_blank">
           View website
         </Button>
       </div>
