@@ -61,7 +61,7 @@ const InvesTonusHero = () => {
                           transition={{ duration: 0.8 }}
                           key="invesTonus.subtitle.2"
                         >
-                          <Button href="/" target="_blank">
+                          <Button href="https://investonus.pro/" target="_blank">
                             {t('invesTonus.view.website')}
                           </Button>
                         </motion.div>
@@ -131,7 +131,7 @@ const InvesTonusHero = () => {
                         transition={{ duration: 0.8 }}
                         key="invesTonus.subtitle.6"
                       >
-                        <Button href="/" target="_blank">
+                        <Button href="https://investonus.pro/" target="_blank">
                           {t('invesTonus.view.website')}
                         </Button>
                       </motion.div>
@@ -190,7 +190,7 @@ const InvesTonusHero = () => {
                       transition={{ duration: 0.8 }}
                       key="invesTonus.subtitle.12"
                     >
-                      <Button href="/" target="_blank">
+                      <Button href="https://investonus.pro/" target="_blank">
                         {t('invesTonus.view.website')}
                       </Button>
                     </motion.div>
