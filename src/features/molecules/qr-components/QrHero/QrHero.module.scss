@@ -65,6 +65,7 @@
         .btn {
             @include fontRem(14, 400, 18);
             font-family: 'MADE';
+            cursor: default;
             color: $blue;
             background-color: transparent;
             border: none;

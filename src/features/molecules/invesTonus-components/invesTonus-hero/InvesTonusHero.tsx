@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import LongArrow from '../../../../components/svgs/LongArrow';
 import styles from './InvesTonusHero.module.scss';
 import Button from '../../../../components/multiusable/button/Button';
@@ -12,6 +13,7 @@ const InvesTonusHero = () => {
   const tablet = useMediaQuery('(max-width: 1279.98px)');
   const mobile = useMediaQuery('(max-width: 767.98px)');
   const { t } = useTranslation();
+  const route = useRouter();
   return (
     <AnimatePresence>
       <div>
@@ -31,7 +33,7 @@ const InvesTonusHero = () => {
                           transition={{ duration: 0.5 }}
                           key="invesTonus.arow.1"
                         >
-                          <Link href="/" className={styles.arrowLink}>
+                          <Link onClick={() => route.back()} href="/" className={styles.arrowLink}>
                             <LongArrow />
                           </Link>
                         </motion.div>
@@ -101,7 +103,7 @@ const InvesTonusHero = () => {
                         transition={{ duration: 0.5 }}
                         key="invesTonus.arow.3"
                       >
-                        <Link href="/" className={styles.arrowLink}>
+                        <Link onClick={() => route.back()} href="/" className={styles.arrowLink}>
                           <LongArrow />
                         </Link>
                       </motion.div>
@@ -162,7 +164,7 @@ const InvesTonusHero = () => {
                       transition={{ duration: 0.5 }}
                       key="invesTonus.arow.9"
                     >
-                      <Link href="/" className={styles.arrowLink}>
+                      <Link onClick={() => route.back()} href="/" className={styles.arrowLink}>
                         <LongArrow />
                       </Link>
                     </motion.div>

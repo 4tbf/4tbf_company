@@ -173,7 +173,7 @@ const Projects = () => {
                       {t('main.cases.qr.subtitle')}
                     </Text>
                     <Button
-                      onClick={() => router.push('/case-studies')}
+                      onClick={() => router.push('/cases/qr')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}
