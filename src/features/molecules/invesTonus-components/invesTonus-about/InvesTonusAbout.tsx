@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import InvesTonusPersonUser from '../../../atoms/InvesTonusPersonUser/InvesTonusPersonUser';
 import Text from '../../../atoms/text';
 import CardInvesTonus from '../../CardInvesTonus/CardInvesTonus';
-// import InvesTonusDesign from '../../InvesTonusDesign/InvesTonusDesign';
 import styles from './InvesTonusAbout.module.scss';
 
 const InvesTonusDesign = dynamic(() => import('../../InvesTonusDesign/InvesTonusDesign'), {

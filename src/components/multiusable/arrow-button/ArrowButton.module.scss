@@ -9,6 +9,7 @@
     transition: 0.3s;
     color: $blue;
     text-decoration: none;
+    width: fit-content;
     @media (max-width: 767.98px) {
         @include fontRem(14, 400, 19);
         svg {
