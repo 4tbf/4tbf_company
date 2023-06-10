@@ -173,6 +173,9 @@ const Header = () => {
             {/* <Link className={styles.headerLinks} href="#">
               <span> Cost Calculator</span>
             </Link> */}
+            <Link className={styles.headerLinks} href="/process">
+              <span>{t('header.footer.process')}</span>
+            </Link>
             <Link className={styles.headerLinks} href="/about">
               <span>{t('header.footer.about')}</span>
             </Link>

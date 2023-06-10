@@ -6,7 +6,7 @@ import styles from './Button.module.scss';
 const Button = ({
   type = 'button',
   children,
-  variant = 'light',
+  variant = 'light' || 'filled',
   onClick,
   href = '',
   target,

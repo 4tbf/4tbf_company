@@ -30,6 +30,22 @@
             color: rgba(255, 255, 255, 0.32);
         }
     }
+    &.filled{
+        border: 1px solid $white;
+        color: $black;
+        background-color: $white;
+        &:hover {
+            color: $white;
+            border-color: $white;
+            background-color: $black;
+        }
+        &:disabled {
+            background-color: transparent;
+            border-color: rgba(255, 255, 255, 0.32);
+            color: rgba(255, 255, 255, 0.32);
+        }
+
+    }
     &.dark {
         border: 1px solid $black;
         color: $black;
