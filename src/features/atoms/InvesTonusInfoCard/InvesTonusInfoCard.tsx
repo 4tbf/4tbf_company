@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDelayedChildrenAnimation } from '../../../hooks/useDelayedChildrenAnimation';
@@ -12,6 +13,7 @@ const InvesTonusInfoCard: React.FC<TINvesTonus> = ({ title, info, icon }) => {
   const tablet = useMediaQuery('(max-width: 1279.98px)');
   const { t } = useTranslation();
   const { containerVariants, itemVariants } = useDelayedChildrenAnimation();
+  const { locale } = useRouter();
   return (
     <AnimatePresence>
       <motion.div
@@ -34,7 +36,7 @@ const InvesTonusInfoCard: React.FC<TINvesTonus> = ({ title, info, icon }) => {
               </Text>
             </div>
           </motion.div>
-        ) : (
+        ) : locale === 'en' ? (
           <motion.div className={styles.itemContent} variants={itemVariants}>
             <div className={styles.itesmTop}>
               <Text as="p" className={styles.itemTitle}>
@@ -43,6 +45,18 @@ const InvesTonusInfoCard: React.FC<TINvesTonus> = ({ title, info, icon }) => {
               <Componet />
             </div>
             <Text as="p">{t(info)}</Text>
+          </motion.div>
+        ) : (
+          <motion.div className={styles.itemContentTabl} variants={itemVariants}>
+            <Componet />
+            <div className={styles.itesmTopTabl}>
+              <Text as="p" className={styles.itemTitleTabl}>
+                {t(title)}
+              </Text>
+              <Text as="p" className={styles.itemInfo}>
+                {t(info)}
+              </Text>
+            </div>
           </motion.div>
         )}
       </motion.div>

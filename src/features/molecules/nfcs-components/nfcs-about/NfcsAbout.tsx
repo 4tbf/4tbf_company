@@ -29,18 +29,13 @@ const NfcsAbout = () => {
       <div className={styles.aboutTop}>
         <div className="container">
           <Text as="h2" className={clsx(styles.title, styles.topTitle)}>
-            About Project
+            {t('cases.nfcs.aboutProject.title')}
           </Text>
           <Text as="p" className={clsx(styles.topDescr, styles.descr)}>
-            NFCS (NFT, Future, Crypto, Stock) Portal is a Forecast Analytics website, which gives
-            users detailed analytics.
+            {t('cases.nfcs.about.project.info1')}
           </Text>
           <Text as="p" className={clsx(styles.topDescr_second)}>
-            We have a User Personal Token (UPT). Users can earn UPTs when they invite others and
-            than they can pay with the tokens to buy forecasts. With this website, users don&apos;t
-            need to worry about where to invest and how to get information about investment
-            products. Users just need to order a forecast and the website will give them detailed
-            analytics.
+            {t('cases.nfcs.about.project.info2')}
           </Text>
           <div className={styles.aboutItems}>
             <NfcsCards />
@@ -50,12 +45,10 @@ const NfcsAbout = () => {
       <div className={styles.aboutBottom}>
         <div className="container">
           <Text as="h2" className={clsx(styles.userPersona)}>
-            User Persona
+            {t('cases.nfcs.user.person')}
           </Text>
           <Text as="p" className={clsx(styles.userPersonaText)}>
-            Based on interviews and user reserach I created personas and identified common pain
-            points. Personas are fictional users whose goals and characteristics represent common
-            needs .
+            {t('cases.nfcs.user.person.info')}
           </Text>
           <UserPersona />
         </div>
