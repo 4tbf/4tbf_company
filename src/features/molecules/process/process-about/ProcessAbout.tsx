@@ -5,11 +5,9 @@ import styles from './ProcessAbout.module.scss';
 import { TDetails } from '../../../atoms/typesAtoms';
 import { PROCESS_DETAILS } from '../../../atoms/constantsAtoms';
 import ProcessDetail from '../../../atoms/ProcessDetails/ProcessDetail';
-import { useDelayedChildrenAnimation } from '../../../../hooks/useDelayedChildrenAnimation';
 
 const ProcessAbout = () => {
   const { t } = useTranslation();
-  const { containerVariants, itemVariants } = useDelayedChildrenAnimation();
 
   return (
     <AnimatePresence>
@@ -24,17 +22,16 @@ const ProcessAbout = () => {
               {t('process.about.processPrefacTitle')}
             </div>
           </div>
-          <motion.div
-            key="PROCESS_DETAILS"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className={styles.processAboutDetailSection}
-          >
+          <motion.div key="PROCESS_DETAILS" className={styles.processAboutDetailSection}>
             {PROCESS_DETAILS.map((current: TDetails) => {
               return (
-                <motion.div key={current.title} variants={itemVariants}>
+                <motion.div
+                  key={current.title}
+                  initial={{ x: -100, opacity: 0 }}
+                  viewport={{ once: true }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
                   <ProcessDetail
                     key={current.title}
                     detailsPhase={current.detailsPhase}
