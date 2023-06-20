@@ -1,0 +1,163 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 227px 162px 219px 131px;
+    @media (max-width: 1279.98px) {
+        padding: 60px 23px 53px;
+        align-items: baseline;
+    }
+    @media (max-width: 767.98px) {
+        padding: 48px 0px 42px;
+    }
+    .mainTitle {
+        @include fontRem(54, 700);
+        color: $black;
+        margin-bottom: 12px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(28, 700, 39) 
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(22, 700, 31);
+            margin: 0 16px 16px;
+        }
+    }
+    .description {
+        display: flex;
+        justify-content: space-between;
+        @include fontRem(20, 400, 28);
+        margin-top: 25px;
+        @media (max-width: 1279.98px) {
+            @include fontRem(16, 400, 22);
+            margin-top: 16px;
+            flex-direction: column;
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(14, 400, 20);
+            margin: 0 40px 0 17px;
+        }
+        &_first {
+            max-width: 310px;
+            @media (max-width: 1279.98px) {
+                max-width: none;
+            }
+        }
+        &_second {
+            max-width: 375px;
+            margin-top: -63px;
+            margin-bottom: 53px;
+            margin-right: -65px;
+            @media (max-width: 1279.98px) {  
+                margin-top: 15px;
+                max-width: 480px;
+                margin-bottom: 41px;
+            }
+            @media (max-width: 767.98px) {
+                margin-bottom: 26px;
+                max-width: 300px;
+            }
+        }
+    }
+    .readyForecast {
+        padding: 106px 0 0 16px;
+        object-fit: contain;
+        @media (max-width: 1279.98px) {  
+            padding: 56px 0px 0 0;
+        }
+        @media (max-width: 767.98px) {
+            padding-top: 42px ;
+        }
+        .readyForecastImage {
+            margin-left: 0px;
+            margin-top: 24px;
+            @media (max-width: 1279.98px) {  
+                margin-left: 0; 
+                margin-top: 42px;
+                object-fit: contain;
+                height: auto;
+            }
+            @media (max-width: 767.98px) {
+                display: block;
+                margin: 23px auto 0;
+                height: 100%;
+                max-height: 767px;
+                padding: 0 15px;
+            }
+        }
+    }
+    .yourForecast {
+        padding: 101px 0 0 15px;
+        @media (max-width: 1279.98px) {  
+            padding: 52px 0px 0px 0
+        }
+        @media (max-width: 767.98px) {
+            padding: 0
+        }
+        .yourForecastImage {
+            margin-top: 16px;
+            object-fit: contain;
+            @media (max-width: 1279.98px) {  
+                margin-top: 42px;
+                height: auto;
+            }
+            @media (max-width: 767.98px) {
+                display: block;
+                margin: 25px auto 0;
+                height: 100%;
+                max-height: 767px;
+                padding: 0 15px;
+            }
+        }
+    }
+    .forecast {
+        @include fontRem (20, 400, 28);
+        max-width: 488px;
+        @media (max-width: 1279.98px) {  
+            @include fontRem(16, 400 , 22);
+            max-width: 504px;
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(14, 400, 20);
+            padding: 0px 35px 0px 16px;
+        }
+        &_title, &_text {
+            display: inline;
+            @media (max-width: 767.98px) {
+                @include fontRem(14, 400, 20);
+            }
+        }
+    }
+    .your_forecast{
+        @include fontRem (20, 400, 28);
+        max-width: 488px;
+        @media (max-width: 1279.98px) {  
+            @include fontRem(16, 400 , 22);
+            max-width: 345px;
+        }
+        @media (max-width: 767.98px) {
+            padding: 40px 60px 0px 16px;
+
+        }
+        
+        &_title, &_text {
+            display: inline;
+        }
+    }
+    .forecastImage{
+        object-fit: contain;
+        margin-left: 17px;
+        @media (max-width: 1279.98px) {  
+            margin-left: 0;
+            height: auto;
+            width: 100vw;
+        }
+        @media (max-width: 767.98px) {
+            height: 100%;
+            max-height: 767px;
+        }
+    }
+} 

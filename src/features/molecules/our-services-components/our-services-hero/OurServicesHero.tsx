@@ -9,7 +9,6 @@ import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 const OurServicesHero = () => {
   const mobile = useMediaQuery('(max-width: 767.98px)');
   const { t } = useTranslation();
-
   return (
     <section className={styles.ourServicesHero}>
       <div className="container">

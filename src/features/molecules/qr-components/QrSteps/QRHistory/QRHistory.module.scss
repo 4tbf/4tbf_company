@@ -1,0 +1,101 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.qrHistory {
+    margin-top: 116px;
+    padding-right: 2px;
+    @media (max-width: 1279.98px) {
+        margin-top: 131px;
+    }
+    @media (max-width: 767.98px) {
+        margin-top: 19px;
+    }
+    .mainContainer {
+        @media (max-width: 1279.98px) {
+            margin-left: 24px;
+        }
+        @media (max-width: 767.98px) {
+            margin-left: 16px;
+        }
+        h1 {
+            @include fontRem(54, 700, 71);
+            color: $darkestBlue;
+            max-width: 530px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(40, 700, 53);
+                max-width: 370px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(24, 700, 32);
+                max-width: 210px;
+            }
+        }
+        p {
+            @include fontRem(18, 400, 24);
+            margin-top: 28px;
+            max-width: 350px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(16, 400, 21);
+                max-width: 300px;
+                margin-top: 17px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(14, 400, 19);
+                max-width: 290px;
+            }
+        }
+        ul {
+            margin: 21px 0px 0 27px;
+            @media (max-width: 1279.98px) {
+                margin: 5px 0px 0 27px;
+            }
+            li {
+                @include fontRem(18, 400, 24);
+                position: relative;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(16, 400, 21);
+                    max-width: 280px;
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(14, 400, 19);
+                    max-width: 215px;
+                }
+                span {
+                    position: absolute;
+                    top: 7px;
+                    left: -2px;
+                    @media (max-width: 1279.98px) {
+                        left: -9px;
+                    }
+                    @media (max-width: 767.98px) {
+                        top: 10px;
+                        left: -11px;
+                    }
+                }
+                &::marker {
+                    font-size: 28px;
+                    color: $lightBlue;
+                }
+            }
+        }
+    }
+    .imgContainer {
+        @media (max-width: 1279.98px) {
+            background-color: white;
+        }
+        img {
+            margin-top: -182px;
+            @media (max-width: 1279.98px) {
+                height: auto;
+                padding: 0 24px;
+                margin-top: -125px;
+                width: 100vw;
+            }
+            @media (max-width: 767.98px) {
+                margin: 0;
+                padding: 0;
+                object-fit: cover;
+            }
+        }
+    }
+}

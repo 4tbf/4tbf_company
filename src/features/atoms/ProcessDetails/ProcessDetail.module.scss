@@ -1,0 +1,131 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+
+.processDetail{
+    margin-bottom: 100px;
+    color: $black;
+    @media (max-width: 1279.98px) {
+    }
+    @media (max-width: 767.98px) {
+        margin-bottom: 92px;
+    }
+    .processDetailWrapper{
+        display: flex;
+        gap: 339px;
+        @media (max-width: 1279.98px) {
+            gap: 80px;
+        }
+        @media (max-width: 767.98px) {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .processDetailLeftSection{
+            display: flex;
+            @media (max-width: 1279.98px) {
+            }
+            @media (max-width: 767.98px) {
+               svg{
+                max-width: 135px;
+                height: auto
+               }
+            }
+
+            .processDetailPhase{
+                @include fontRem(14, 400, 19);
+                transform:  translateY(58px) rotate(-90deg);
+                 transform-origin: top left;
+                 min-width: 70px;
+                 @media (max-width: 1279.98px) {
+                    min-width: 52px;
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(12, 400, 16);
+                    transform:  translateY(50px) rotate(-90deg);
+                }
+            }
+        }
+        .processDetailRightSection{
+            .processDetailTitle{
+                @include fontRem(32, 400, 42);
+                font-family: "MADE";
+                @media (max-width: 1279.98px) {
+                    @include fontRem(24, 400, 32);
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(20, 400, 26);
+                }
+
+            }
+            .processDetailDescription{
+                @include fontRem(18, 400, 24);
+                margin-top: 24px;
+                max-width: 503px;
+                @media (max-width: 1279.98px) {
+                    max-width: 670px;
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(14, 400, 16);
+                    margin-top: 16px;
+                }
+                
+
+            }
+            .processDetailPhaseDeliverablesTitle{
+                @include fontRem(18, 400, 24);
+                font-family: "MADE";
+                margin-top: 28px;
+                @media (max-width: 1279.98px) {
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(16, 400, 21);
+                    margin-top: 18px;
+
+                }
+
+            }
+            .processDetailPhaseDeliverables{
+                @include fontRem(20, 400, 27);
+                display: flex;
+                align-items: center;
+                margin-top: 16px;
+                max-width: 540px;
+                flex-wrap: wrap;
+                width: 100%;
+                @media (max-width: 1279.98px) {
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(16, 400, 22);
+                    align-items: baseline;
+                    flex-direction: column;
+                    gap: 14px;
+                    
+                    
+                }
+                .processDetailPhaseDeliverablesList{
+                    @include fontRem(20, 400, 27);
+                    display: flex;
+                    align-items: baseline;
+                    flex: 0 0 49%;
+                    gap: 4px;
+                    @media (max-width: 1279.98px) {
+                    }
+                    @media (max-width: 767.98px) {
+                        @include fontRem(16, 400, 22);
+                        align-items: baseline;
+                        
+                        
+                    }
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

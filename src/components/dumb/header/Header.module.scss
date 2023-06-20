@@ -49,6 +49,13 @@
                 z-index: 2;
                 color: $white;
                 text-decoration: none;
+
+                /*trasition effect for background*/
+                background: linear-gradient(to bottom, #fff 50%, transparent 50%);
+                background-size: 101% 200%;
+                background-position: bottom;
+                transition: all .25s ease-in;
+
                 @include fontRem(16, 400, 22);
                 @media (max-width: 1279.98px) {
                     padding-top: 0;
@@ -56,19 +63,19 @@
                     margin-bottom: 30px;
                     @include fontRem(24, 400, 33);
                 }
-                &::before {
-                    content: "";
-                    @include absoluteCenter(horizontal);
-                    top: -100%;
-                    height: 100%;
-                    width: 100%;
-                    background-color: $white;
-                    transition: 0.3s;
-                    z-index: 1;
-                    @media (max-width: 1279.98px) {
-                        content: none;
-                    }
-                }
+                // &::before {
+                //     content: "";
+                //     @include absoluteCenter(horizontal);
+                //     top: -100%;
+                //     height: 100%;
+                //     width: 100%;
+                //     background-color: $white;
+                //     transition: 0.3s;
+                //     z-index: 1;
+                //     @media (max-width: 1279.98px) {
+                //         content: none;
+                //     }
+                // }
                 span {
                     z-index: 2;
                 }
@@ -87,42 +94,59 @@
                             @include fontRem(24, 400, 33);
                             justify-content: center;
                         }
+                        .arrowIcon {
+                            @media (max-width: 1279.98px) {
+                                display: flex;
+                            }
+                        }
+                        
                     }
                 }
-                &:hover {
-                    color: $black;
-                    @media (max-width: 1279.98px) {
-                        color: $white;
-                    }
-                    &::before {
-                        top: 0;
-                    }
-                    .headerLanguage {
-                        z-index: 2;
-                        .languageControl {
-                            color: $black;
-                            @media (max-width: 1279.98px) {
-                                color: $white;
-                            }
-                            svg {
-                                path {
-                                    stroke: $black;
-                                    @media (max-width: 1279.98px) {
-                                        stroke: $white;
+                @media (min-width: 1279.99px) {
+                    &:hover {
+                        color: $black;
+                        background-position: top;
+                        @media (max-width: 1279.98px) {
+                            color: $white;
+                            background-position: bottom;
+                        }
+                        // &::before {
+                        //     top: 0;
+                        // }
+                        .headerLanguage {
+                            z-index: 2;
+                            .languageControl {
+                                color: $black;
+                                @media (max-width: 1279.98px) {
+                                    color: $white;
+                                }
+                                svg {
+                                    path {
+                                        stroke: $black;
+                                        @media (max-width: 1279.98px) {
+                                            stroke: $white;
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
-                    .dropdownWrapper {
-                        > ul {
-                            display: block;
-                            visibility: visible;
-                            opacity: 1;
-                            top: calc(100% + 30px);
+                        .dropdownWrapper {
+                            > ul {
+                                display: block;
+                                visibility: visible;
+                                opacity: 1;
+                                top: calc(100% + 30px);
+                                @media (max-width: 1279.98px) {
+                                    display: block;
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                            
                         }
                     }
                 }
+                
                 &.currentPage {
                     color: $black;
                     &::before {
@@ -152,6 +176,9 @@
                     width: 100%;
                     position: static;
                     background-color: transparent;
+                    display: block;
+                    visibility: visible;
+                    opacity: 1;
                 }
                 button,
                 a {
