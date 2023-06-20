@@ -1,6 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import { INVES_TONUS_INFO_CARD } from '../../atoms/constantsAtoms';
 import { TINvesTonus } from '../../atoms/typesAtoms';
 import styles from './CardInvesTonus.module.scss';
@@ -13,12 +14,13 @@ const InvesTonusInfoCard = dynamic(
 
 const CardInvesTonus: React.FC = () => {
   const { containerVariants, itemVariants } = useDelayedChildrenAnimation();
+  const { locale } = useRouter();
   return (
     <AnimatePresence>
       <div className="container">
         <div className={styles.cardItems}>
           <motion.div
-            className={styles.cardInvesTonus}
+            className={`${locale === 'en' ? styles.cardInvesTonus : styles.cardInvesTonusRu}`}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

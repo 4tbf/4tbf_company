@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import styles from './NfcsCards.module.scss';
 import Text from '../text';
 import { getNfcsCardsData } from './data';
@@ -9,11 +10,12 @@ import { useDelayedChildrenAnimation } from '../../../hooks/useDelayedChildrenAn
 const NfcsCards: React.FC = () => {
   const { t } = useTranslation();
   const data = getNfcsCardsData(t);
+  const { locale } = useRouter();
   const { containerVariants, itemVariants } = useDelayedChildrenAnimation();
   return (
     <AnimatePresence>
       <motion.div
-        className={styles.itesmRow}
+        className={`${locale === 'en' ? styles.itesmRow : styles.itesmRowRu}`}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
