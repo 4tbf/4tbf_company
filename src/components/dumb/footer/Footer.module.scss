@@ -104,13 +104,13 @@
                         display: block;
                         visibility: visible;
                         opacity: 1;
-                        bottom: calc(100% + 30px);
+                        bottom: calc(100% + 15px);
                     }
                 }
             }
-            &:not(:nth-child(4)):not(:nth-child(7)) {
-                overflow: hidden;
-            }
+            // &:not(:nth-child(4)):not(:nth-child(7)) {
+            //     overflow: hidden;
+            // }
             &:nth-child(4), &:nth-child(7) {
                 &::before {
                     visibility: hidden;
@@ -129,7 +129,7 @@
         position: relative;
 
         > ul {
-            min-width: 120px;
+            min-width: 80px;
             position: absolute;
             list-style-type: none;
             padding: 0;

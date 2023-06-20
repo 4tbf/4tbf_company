@@ -20,11 +20,11 @@ import { blank } from '../../../../utils/blank';
 const ContactForm = () => {
   const { t } = useTranslation();
   const validationSchema = object({
-    name: string().required(t('contact.error')),
-    email: string().email(t('contact.field.error.email')).required(t('contact.error')),
+    name: string().required('contact.error'),
+    email: string().email('contact.field.error.email').required('contact.error'),
     phone: string()
-      .matches(/^\+?[1-9][0-9]{7,14}$/, t('contact.field.error.phone'))
-      .required(t('contact.error')),
+      .matches(/^\+?[1-9][0-9]{7,14}$/, 'contact.field.error.phone')
+      .required('contact.error'),
   });
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -45,7 +45,6 @@ const ContactForm = () => {
       resetForm({ values: CONTACT_US });
     },
   });
-
   return (
     <section className={styles.contactFrom}>
       <SuccessModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
@@ -63,7 +62,7 @@ const ContactForm = () => {
                     value={values.name}
                     onChange={(e) => setFieldValue('name', e.target.value)}
                   />
-                  {errors.name && <ErrorMessage text={errors.name} />}
+                  {errors.name && <ErrorMessage text={t(errors.name)} />}
                 </div>
                 <div className="col_">
                   <Input
@@ -83,7 +82,7 @@ const ContactForm = () => {
                     value={values.email}
                     onChange={(e) => setFieldValue('email', e.target.value)}
                   />
-                  {errors.email && <ErrorMessage text={errors.email} />}
+                  {errors.email && <ErrorMessage text={t(errors.email)} />}
                 </div>
                 <div className="col_">
                   <Input
@@ -94,7 +93,7 @@ const ContactForm = () => {
                     value={values.phone}
                     onChange={(e) => setFieldValue('phone', e.target.value)}
                   />
-                  {errors.phone && <ErrorMessage text={errors.phone} />}
+                  {errors.phone && <ErrorMessage text={t(errors.phone)} />}
                 </div>
                 <div className="col_">
                   <Input

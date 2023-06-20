@@ -10,11 +10,12 @@ const Collapse = ({ title, children }: { title: string; children: any }) => {
   return (
     <div className={styles.faqListItem}>
       <div className={styles.itemHeader}>
-        <Text as="h3" className={styles.itemTitle}>
+        <Text as="h3" className={styles.itemTitle} onClick={handleToggle}>
           {title}
         </Text>
         <button
           type="button"
+          aria-label={title}
           className={clsx(styles.itemControl, {
             [styles.openedBtn]: open,
           })}

@@ -1,0 +1,77 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.processAbout{
+    background-color: $white;
+    padding-top: 120px;
+    color: $black;
+    @media (max-width: 1279.98px) {
+        padding-top: 80px;
+
+    }
+    @media (max-width: 767.98px) {
+        padding-top: 48px;
+
+
+    }
+    .processAboutFirstSection{
+        display: flex;
+        align-items: flex-end;
+        gap: 71px;
+        margin-bottom: 224px;
+        @media (max-width: 1279.98px) {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: baseline;
+            margin-bottom: 130px;
+
+        }
+        @media (max-width: 767.98px) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            // align-items: center;
+            margin-bottom: 80px;
+        }
+    .processAboutTitleWrapper{
+        .processAboutSubtitle{
+            @include fontRem(14,400,19);
+
+        }
+        .processAboutTitle{
+            @include fontRem(40,400,53);
+            margin-top: 16px;
+            max-width:576px;
+            font-family: "MADE";
+            @media (max-width: 1279.98px) {
+                @include fontRem(34,400,45);
+                max-width:800px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(28,400,37);
+        
+        
+            }
+
+
+        }
+    }
+    .processPrefaceAboutTitle{
+        @include fontRem(18,400,25);
+        max-width: 548px;
+        @media (max-width: 1279.98px) {
+            max-width: 720px;
+
+        }
+        @media (max-width: 767.98px) {
+            @include fontRem(16,400,22);
+    
+        }
+    }
+   }
+   .processAboutDetailSection{
+    padding-bottom: 20px;
+   }
+
+}

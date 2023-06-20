@@ -90,6 +90,9 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
+              <Link className={styles.footerLinks} href="/process">
+                <span>{t('header.footer.process')}</span>
+              </Link>
               <Link className={styles.footerLinks} href="/about">
                 <span>{t('header.footer.about')}</span>
               </Link>
