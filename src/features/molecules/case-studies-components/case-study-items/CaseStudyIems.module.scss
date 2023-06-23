@@ -20,6 +20,9 @@
     .item {
         .innerRow {
             @include RowItems(40);
+            @media (max-width: 767.98px) {
+                flex-direction: column;
+            }
             :global {
                 .col_ {
                     flex: 1;
@@ -80,14 +83,6 @@
                             @include fontRem(12, 400, 16);
                             padding: 3px 8px;
                         }
-                    }
-                }
-            }
-            .qr{
-                a{
-                    pointer-events: none;
-                    svg{
-                        display: none;
                     }
                 }
             }

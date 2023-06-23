@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -50,10 +50,11 @@ const Projects = () => {
                       height={1400}
                       alt="project-nfc"
                       srcSet="
-                      /images/home-projects/nfc-image.png 1x,
+                      /images/home-projects/nfc-image.webp 1x,
                       /images/home-projects/tablet_nfc-image-2x.png 2x,
-                      /images/home-projects/mobile_nfc-image-3x.png 3x"
-                      sizes="(max-width: 1279.98px) 100vw 1279.98px"
+                      /images/home-projects/mobile_nfc-image-3x.webp 3x"
+                      sizes="(min-width: 1279.98px) 1447, 100vw"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -70,7 +71,7 @@ const Projects = () => {
                       {t('main.cases.nfcs.subtitle')}
                     </Text>
                     <Button
-                      onClick={() => window.open('https://www.nfcs.space/', '_ blank')}
+                      onClick={() => router.push('/cases/nfcs')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}
@@ -100,10 +101,11 @@ const Projects = () => {
                       height={1400}
                       alt="project-invest"
                       srcSet="
-                      /images/home-projects/invest-image.png 1x,
+                      /images/home-projects/invest-image.webp 1x,
                       /images/home-projects/tablet_invest-image-2x.png 2x,
-                      /images/home-projects/mobile_invest-image-3x.png 3x"
+                      /images/home-projects/mobile_invest-image-3x.webp 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -120,7 +122,7 @@ const Projects = () => {
                       {t('main.cases.investonus.subtitle')}
                     </Text>
                     <Button
-                      onClick={() => window.open('https://investonus.pro/', '_ blank')}
+                      onClick={() => router.push('/cases/investonus')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}
@@ -150,10 +152,11 @@ const Projects = () => {
                       height={1400}
                       alt="project-qr"
                       srcSet="
-                      /images/home-projects/qr-image.png 1x,
+                      /images/home-projects/qr-image.webp 1x,
                       /images/home-projects/tablet_qr-image-2x.png 2x,
-                      /images/home-projects/mobile_qr-image-3x.png 3x"
+                      /images/home-projects/mobile_qr-image-3x.webp 3x"
                       sizes="(max-width: 1279.98px) 100vw 1279.98px"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -170,7 +173,7 @@ const Projects = () => {
                       {t('main.cases.qr.subtitle')}
                     </Text>
                     <Button
-                      onClick={() => router.push('/case-studies')}
+                      onClick={() => router.push('/cases/qr')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}
@@ -186,4 +189,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default memo(Projects);

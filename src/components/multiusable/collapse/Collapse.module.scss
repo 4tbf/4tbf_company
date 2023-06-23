@@ -16,6 +16,7 @@
         justify-content: space-between;
         .itemTitle {
             font-family: "MADE";
+            cursor: pointer;
             @include fontRem(24, 400, 32);
             @media (max-width: 1279.98px) {
                 @include fontRem(20, 400, 26);

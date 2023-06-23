@@ -1,0 +1,169 @@
+@import "/src/styles/mixins";
+@import "/src/styles/pallete";
+
+.qrReview {
+    padding: 86px 132px;
+    @include flex-center-column;
+    color: $black;
+    @media (max-width: 1279.98px) {
+        padding: 56px 24px;
+    }
+    @media (max-width: 767.98px) {
+        padding: 32px 16px;
+    }  
+    .wrapper {
+        @include flex-column;
+        align-self: baseline;
+        gap: 56px;
+        color: $black;
+        @media (max-width: 1279.98px) {
+            gap: 40px;
+        }
+        @media (max-width: 767.98px) {
+            gap: 28px;
+        } 
+        .title {
+            @include fontRem(32, 700, 44);
+            margin-bottom: 24px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(28, 700, 38);
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(22, 700, 30);
+                margin-bottom: 16px;
+            } 
+        }
+        .description {
+            @include fontRem(18, 400, 25);
+            max-width: 460px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(16, 400, 22);
+                max-width: 435px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(14, 400, 19);
+                max-width: 310px;
+            }
+        }
+        .list {
+            @include fontRem(18, 400, 25);
+            max-width: 530px;
+            padding-left: 27px;
+            @media (max-width: 1279.98px) {
+                @include fontRem(16, 400, 22);
+                padding-left: 24px;
+            }
+            @media (max-width: 767.98px) {
+                @include fontRem(14, 400, 19);
+                max-width: 312px;
+                padding-left: 21px;
+            }
+            li{
+                &::marker {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .main {
+        margin-top: 188px;
+        @media (max-width: 1279.98px) {
+            margin-top: 84px;
+            align-self: baseline;
+        }
+        @media (max-width: 767.98px) {
+            margin-top: 48px;
+        }
+        .titleWrapper {
+            display: flex;
+            gap:73px;
+            margin-right: 14px;
+            @media (max-width: 1279.98px) {
+                flex-direction: column;
+                gap: 25px;
+            }
+            @media (max-width: 767.98px) {
+                gap: 16px;
+            }
+            h1 {
+                @include fontRem(54, 700, 71);
+                color: $darkestBlue;
+                white-space: nowrap;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(40, 700, 53);
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(24, 700, 32);
+                }
+                span {
+                    color: $lightBlue
+                }
+            }
+            p {
+                @include fontRem(18, 400, 24);
+                color: $black;
+                max-width: 435px;
+                @media (max-width: 1279.98px) {
+                    @include fontRem(16, 400, 21);
+                    max-width: 455px;
+                }
+                @media (max-width: 767.98px) {
+                    @include fontRem(14, 400, 19);
+                    max-width: 300px;
+                }
+            }
+        }
+        .userThoughts {
+            position: relative;
+            min-height: 700px;
+            width: calc(100vw - 264px);
+            @media (max-width: 1279.98px) {
+                min-height: 543px;
+                width: calc(100vw - 270px);
+            }
+            @media (max-width: 767.98px) {
+                min-height: 571px;
+                width: calc(100vw - 47px);
+            }
+            .usersContainer {
+                position: relative;
+                img {
+                    position: absolute;
+                }
+                .icon {
+                    width: auto;
+                    @media (max-width: 1279.98px) {
+                        width: 110px;
+                        height: 110px;
+                    }
+                    @media (max-width: 767.98px) {
+                        width: 80px;
+                        height: 80px;
+                    }            
+                }
+                .emoji {
+                    @media (max-width: 767.98px) {
+                        width: 22px;
+                        height: 22px;
+                    } 
+                }
+                .comment {
+                    @media (max-width: 767.98px) {
+                        height: auto;
+                    } 
+                }
+                &:nth-child(3) {
+                    .comment {
+                        img{
+                            @media (max-width: 767.98px) {
+                                height: 188px;
+                                width: 327px;
+                            } 
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

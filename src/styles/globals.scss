@@ -6,7 +6,6 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   overscroll-behavior: none;
-
   main{
     // position: sticky;
     // top: 85px;
@@ -41,6 +40,14 @@ body {
     url("/fonts/MADESoulmaze.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		 url("/fonts/Montserrat-SemiBold.ttf") format('woff');
+	font-weight: 100;
+	font-style: normal;
   font-display: swap;
 }
 *::after,
@@ -144,4 +151,24 @@ main {
 .nfcs_hero_image {
   width: 100%;
   height: auto;
+  @media (max-width: 767.98px) {
+    max-height: 700px;
+    object-fit: contain;
+  }
+}
+
+.qr-page {
+  background-color: $black;
+  background-color: $white;
+  background-position-x: -582px;
+  background-position-y: 194px;
+  @media (max-width: 1279.98px) {
+    background-position-x:100%;
+    background-position-y: 628px;
+    background-size: 100%;
+  }
+  @media (max-width: 767.98px) {
+    background-size: contain;
+    background-position-y: 462px;
+  }
 }
