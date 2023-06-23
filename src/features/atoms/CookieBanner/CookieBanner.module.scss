@@ -15,6 +15,12 @@
     max-width: 490px;
     max-height: 240px;
     z-index: 999999;
+    @media (max-width: 767.98px) {
+        right: 20px;
+        left: 20px;
+    padding: 25px 28px;
+
+    }
     .cookieBannerInfo{
         @include fontRem(16, 400, 22);
         display: flex;
@@ -23,11 +29,26 @@
         .cookieBannerInfoReadMore{
             color: $white;
        }
+       @media (max-width: 767.98px) {
+        @include fontRem(14, 400, 22);
+        right: 20px;
+        left: 20px;
+        gap: 10px
+    }
     }
     .cookieBannerButns{
         display: flex;
         gap: 24px;
         margin-top: 52px;
         align-items: center;
+        @media (max-width: 767.98px) {
+            margin-top: 25px;
+        }
+        .acceptCookies{
+            
+        }
+        Button{
+            padding: 12px 10px !important;
+        }
     }
 }

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import Text from '../text';
@@ -25,9 +24,9 @@ const CookieBanner: React.FC<ICookieBanner> = ({ setAccept }) => {
         <Text as="p" className={styles.cookieBannerInfoDetails}>
           {t('cookie.banner.info.detail')}
         </Text>
-        <Link href="#" className={styles.cookieBannerInfoReadMore}>
+        <a href="/privacy.policy.pdf" download className={styles.cookieBannerInfoReadMore}>
           {t('cookie.banner.info.read.more')}
-        </Link>
+        </a>
       </div>
       <div className={styles.cookieBannerButns}>
         <div>
