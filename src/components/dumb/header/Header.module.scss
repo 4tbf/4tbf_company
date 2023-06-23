@@ -62,6 +62,7 @@
                     padding-bottom: 0;
                     margin-bottom: 30px;
                     @include fontRem(24, 400, 33);
+                    background: none;
                 }
                 // &::before {
                 //     content: "";
