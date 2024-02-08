@@ -10,7 +10,7 @@ import { useCardVariants } from '../../../../hooks/useCardVariants';
 import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 
 interface ICaseStudiItems {
-  declude?: 'qr' | 'investonus' | 'nfcs' | 'none';
+  declude?: 'qr' | 'investonus' | 'nfcs' | 'none' | 'listInHive';
 }
 
 const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
@@ -23,10 +23,59 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
       <AnimatePresence>
         <div className="container">
           <div className={styles.itemsRow}>
-            {declude !== 'nfcs' && (
+            {declude !== 'listInHive' && (
               <motion.div
                 className="col_"
                 key={mobile ? 'mobile.1' : '1'}
+                viewport={mobile ? {} : { once: true, amount: 0.8 }}
+                initial={mobile ? '' : 'offscreen'}
+                whileInView={mobile ? '' : 'onscreen'}
+                variants={mobile ? undefined : cardVariants}
+              >
+                <div className={styles.item}>
+                  <div className={styles.innerRow}>
+                    <div className="col_">
+                      <div className={styles.innerContent}>
+                        <div className={styles.imageWrapper}>
+                          <Image
+                            alt="List In Hive"
+                            src={
+                              mobile
+                                ? '/images/listInHive/listInHiveMobile.png'
+                                : '/images/listInHive/listInHiveBig.png'
+                            }
+                            width={576}
+                            height={269}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col_">
+                      <div className={styles.itemContent}>
+                        <Text as="h2">List In Hive</Text>
+                        <div className={styles.itemMarks}>
+                          <Text as="p">Next.js</Text>
+                          <Text as="p">React.js</Text>
+                          <Text as="p">Node.js</Text>
+                        </div>
+                        <Text as="p" className={styles.itemDescr}>
+                          {t('cases.listInHive')}
+                        </Text>
+                        <ArrowButton
+                          text={t('gotocase')}
+                          // blank
+                          href="/cases/listInHive"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+            {declude !== 'nfcs' && (
+              <motion.div
+                className="col_"
+                key={mobile ? 'mobile.2' : '2'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}
@@ -75,7 +124,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'investonus' && (
               <motion.div
                 className="col_"
-                key={mobile ? 'mobile.2' : '2'}
+                key={mobile ? 'mobile.3' : '3'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}
@@ -120,7 +169,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'qr' && (
               <motion.div
                 className="col_"
-                key={mobile ? 'mobile.3' : '3'}
+                key={mobile ? 'mobile.4' : '4'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}

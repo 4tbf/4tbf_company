@@ -34,6 +34,29 @@ export const INVES_TONUS_INFO_CARD: TINvesTonus[] = [
   },
 ];
 
+export const LIST_IN_HIVE_INFO_CARD: TINvesTonus[] = [
+  {
+    title: 'listInHive.infoCard.industry',
+    info: 'listInHive.infoCard.crypto',
+    icon: IndustryIconInvesTonus,
+  },
+  {
+    title: 'listInHive.infoCard.duration',
+    info: 'listInHive.infoCard.date',
+    icon: DurationIconInvesTonus,
+  },
+  {
+    title: 'listInHive.infoCard.teamSize',
+    info: 'listInHive.infoCard.teamNumber',
+    icon: TimSizeIconInvesTonus,
+  },
+  {
+    title: 'listInHive.infoCard.technologies',
+    info: 'listInHive.infoCard.devLenguage',
+    icon: TechnologiesIconInvesTonus,
+  },
+];
+
 export const PROCESS_DETAILS: TDetails[] = [
   {
     detailsPhase: 'process.detail.phase1',

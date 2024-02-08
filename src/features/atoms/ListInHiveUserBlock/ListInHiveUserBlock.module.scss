@@ -1,0 +1,253 @@
+@import '/src/styles/mixins';
+@import '/src/styles/pallete';
+
+.invesTonusPersonUser {
+	margin-top: 77px;
+	background-color: $white;
+	@media (max-width: 1279.98px) {
+		margin-top: 64px;
+		gap: 16px;
+	}
+	@media (max-width: 767.98px) {
+		flex-direction: column;
+		row-gap: 16px;
+		margin-top: 45px;
+	}
+	.invesTnusMobilePersonUser {
+		.ifoUserdetails {
+			padding: 16px;
+			box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+			border-radius: 0%;
+			@media (max-width: 1279.98px) {
+			}
+			@media (max-width: 767.98px) {
+				padding: 21px;
+				margin: 31px 15px 0;
+				border-radius: 25px;
+			}
+			@media (max-width: 610px) {
+				flex-direction: column;
+			}
+			@media (max-width: 500.98px) {
+				margin: 31px 0 0;
+			}
+		}
+	}
+	.title {
+		@include fontRem(32, 700, 44);
+		margin-bottom: 24px;
+		@media (max-width: 1279.98px) {
+			@include fontRem(28, 700, 38);
+		}
+		@media (max-width: 767.98px) {
+			@include fontRem(28, 700, 38);
+			margin-bottom: 17px;
+		}
+	}
+	.infoInvesTonus {
+		@include fontRem(18, 400, 25);
+		max-width: 740px;
+		@media (max-width: 1279.98px) {
+			@include fontRem(16, 400, 22);
+			max-width: 515px;
+		}
+		@media (max-width: 767.98px) {
+			@include fontRem(16, 400, 22);
+		}
+	}
+	.ifoUserdetails {
+		color: $lightBlack;
+		background: radial-gradient(
+			70.29% 70.29% at 50% 50%,
+			#6d6ae0 0%,
+			#5957bd 100%
+		);
+		padding: 28px 46px;
+		margin-top: 32px;
+		display: flex;
+		gap: 40px;
+		box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+		border-radius: 35px;
+		position: relative;
+		&:after {
+			content: url('./img/listInHiveLogo.png');
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		@media (max-width: 1279.98px) {
+			margin-top: 32px;
+			gap: 16px;
+		}
+		@media (max-width: 767.98px) {
+			box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+			gap: 28px;
+		}
+		.cardUserPersona {
+			@include flex-column;
+			@include fontRem(18, 400, 25);
+			gap: 24px;
+			color: $white;
+			justify-content: space-between;
+			margin-bottom: 20px;
+			@media (max-width: 1279.98px) {
+				@include fontRem(16, 400, 22);
+				margin-top: 10px;
+				margin-bottom: 23px;
+			}
+			@media (max-width: 767.98px) {
+				margin: 5px 0 0 0;
+			}
+			li {
+				margin-bottom: 10px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(16, 400, 22);
+					margin-bottom: 6px;
+				}
+			}
+
+			.bioInfoDetail {
+				@include fontRem(24, 700, 33);
+				color: $white;
+				margin-bottom: 8px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(24, 700, 32);
+				}
+				@media (max-width: 767.98px) {
+					@include fontRem(22, 700, 30);
+					margin-bottom: 0px;
+				}
+			}
+			.bioUserInfo {
+				@media (max-width: 1279.98px) {
+					@include fontRem(16, 400, 22);
+				}
+				@media (max-width: 767.98px) {
+					@include fontRem(14, 400, 19);
+					margin-bottom: 24px;
+				}
+			}
+			.bioList {
+				margin-left: 25px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(24, 700, 32);
+				}
+				@media (max-width: 767.98px) {
+					@include fontRem(14, 400, 19);
+					margin-bottom: 24px;
+				}
+			}
+		}
+	}
+	.cardUserPersona {
+		@include fontRem(18, 400, 25);
+		max-width: 660px;
+		@media (max-width: 1279.98px) {
+			@include fontRem(16, 400, 22);
+		}
+	}
+	.userPhotoWrapper {
+		width: 242px;
+		height: 242px;
+		border-radius: 35px;
+		position: relative;
+		@media (max-width: 500.98px) {
+			width: 200px;
+			height: 200px;
+		}
+		&:after {
+			content: '';
+			width: 242px;
+			height: 242px;
+			border-radius: 35px;
+			background: #524fb5;
+			position: absolute;
+			right: -6px;
+			bottom: -6px;
+			z-index: 1;
+			@media (max-width: 500.98px) {
+				width: 200px;
+				height: 200px;
+			}
+		}
+		img {
+			width: 242px;
+			height: 242px;
+			position: relative;
+			z-index: 2;
+			@media (max-width: 500.98px) {
+				width: 200px;
+				height: 200px;
+			}
+		}
+	}
+
+	.userPersonMainInfo {
+		display: flex;
+		position: relative;
+		flex-direction: column-reverse;
+		@media (max-width: 1279.98px) {
+			@include fontRem(16, 400, 22);
+		}
+	}
+	.userBlock {
+		min-width: 376px;
+		margin: 18px 0 0;
+		@media (max-width: 767.98px) {
+			min-width: 252px;
+		}
+	}
+	.detailsInfo {
+		margin-top: 17px;
+		@media (max-width: 767.98px) {
+			@include fontRem(24, 600, 33);
+			margin-left: 12px;
+			margin-bottom: 10px;
+		}
+		.userName {
+			color: $white;
+			@include fontRem(32, 700, 44);
+			@media (max-width: 1279.98px) {
+				@include fontRem(24, 700, 33);
+			}
+			@media (max-width: 767.98px) {
+				@include fontRem(24, 600, 33);
+			}
+		}
+		.userLocation {
+			margin-top: 6px;
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			@media (max-width: 767.98px) {
+				margin-top: 8px;
+			}
+			.infoUserLocation {
+				@include fontRem(18, 600, 25);
+				color: $white;
+				@media (max-width: 1279.98px) {
+					@include fontRem(12, 600, 16);
+				}
+				@media (max-width: 767.98px) {
+					margin-top: 8px;
+				}
+			}
+			.locationSvg {
+				width: 28px;
+				height: 28px;
+			}
+		}
+		.infoUser {
+			@include fontRem(18, 600, 25);
+			margin-top: 12px;
+			color: $white;
+			@media (max-width: 1279.98px) {
+				@include fontRem(12, 600, 16);
+			}
+			@media (max-width: 767.98px) {
+				@include fontRem(12, 600, 16);
+				margin-top: 8px;
+			}
+		}
+	}
+}

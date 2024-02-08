@@ -1,0 +1,119 @@
+@import '/src/styles/mixins';
+@import '/src/styles/pallete';
+
+.invesTonusHero {
+	@include flex-center-vert;
+	height: 540px;
+	color: $white;
+	gap: 49px;
+	width: 100%;
+	@media (max-width: 1279.98px) {
+		height: 710px;
+		display: flex;
+		align-items: end;
+		margin-top: 85px;
+	}
+	& > div {
+		width: 100%;
+	}
+	@media (max-width: 767.98px) {
+		margin-top: 19px;
+		height: 383px;
+		padding-left: 7px;
+	}
+	.invesTonusHerocontainer {
+		display: flex;
+		gap: 137px;
+		.invesTonusWiewBtn {
+			min-width: 166px;
+			@media (max-width: 767.98px) {
+				margin-bottom: 24px;
+				margin-top: 8px;
+			}
+		}
+		@media (max-width: 1279.98px) {
+		}
+		@media (max-width: 767.98px) {
+			gap: 25px;
+			img {
+				height: auto;
+			}
+			flex-direction: column;
+		}
+	}
+	.invesTonusHeroDesk {
+		display: flex;
+		@include flex-center-vert;
+		height: 540px;
+		color: $white;
+		gap: 49px;
+		width: 100%;
+	}
+	.arrowLink {
+		margin-bottom: 70px;
+	}
+	h1 {
+		@include fontRem(72, 400, 95);
+		font-family: 'MADE';
+		margin-bottom: 32px;
+		margin-top: 29px;
+		@media (max-width: 1279.98px) {
+			@include fontRem(64, 400, 84);
+			margin-top: 32px;
+			margin-bottom: 16px;
+		}
+		@media (max-width: 767.98px) {
+			@include fontRem(64, 400, 84);
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+		@media (max-width: 500.98px) {
+			@include fontRem(34, 400);
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+	}
+	p {
+		@include fontRem(24, 400, 33);
+		margin-bottom: 55px;
+		max-width: 457px;
+		@media (max-width: 1279.98px) {
+			margin-bottom: 32px;
+			@include fontRem(20, 400, 27);
+		}
+		@media (max-width: 767.98px) {
+			@include fontRem(20, 400, 27);
+			margin-bottom: 23px;
+		}
+		@media (max-width: 500.98px) {
+			@include fontRem(16, 400);
+		}
+	}
+}
+.invesTonusPageImg {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	align-items: end;
+	justify-content: end;
+	@media (max-width: 1279.98px) {
+		img {
+			height: 370px;
+			width: 420px;
+		}
+	}
+	@media (max-width: 767.98px) {
+		justify-content: end;
+	}
+}
+
+.mainText {
+	@media (min-width: 1279.98px) {
+		margin-top: 16px !important;
+		white-space: nowrap;
+	}
+}
+
+.mainLeftSide {
+	margin: 0 0 49px;
+}
