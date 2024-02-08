@@ -1,0 +1,443 @@
+@import '/src/styles/mixins';
+@import '/src/styles/pallete';
+
+.invesTonusDesign {
+	margin-top: 135px;
+	color: $black;
+	@media (max-width: 1279.98px) {
+		margin-top: 80px;
+		display: flex;
+		flex-direction: column;
+	}
+	@media (max-width: 767.98px) {
+		margin-top: 82px;
+	}
+	.designeTonus {
+		@include fontRem(80, 400, 105);
+		font-family: 'MADE';
+		position: relative;
+		@media (max-width: 1279.98px) {
+			@include fontRem(48, 400, 63);
+		}
+		@media (max-width: 767.98px) {
+			@include fontRem(48, 400, 63);
+		}
+	}
+	.invesTonusDetailsDesigne {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 67px;
+		width: 100%;
+		@media (max-width: 1279.98px) {
+			display: flex !important;
+			flex-direction: column !important;
+			padding-bottom: 0px;
+		}
+		.designeInvesTonusPage1 {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding-bottom: 79px;
+			@media (max-width: 1279.98px) {
+				& > div:first-child {
+					max-width: none;
+				}
+				& > div:last-child {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+				}
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 56px;
+				img {
+					width: 100%;
+					height: 100%;
+					min-width: 725px;
+				}
+			}
+			@media (max-width: 767.98px) {
+				img {
+					width: 100%;
+					height: 100%;
+					min-width: 125px;
+				}
+				padding-bottom: 32px;
+			}
+			.designdashboardTitle {
+				@include fontRem(54, 700, 76);
+				margin-bottom: 22px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(28, 700, 39);
+					text-align: start;
+				}
+			}
+			.designdetailsList {
+				@media (max-width: 767.98px) {
+					margin-bottom: 8px;
+				}
+			}
+			.designInfo {
+				@include fontRem(20, 400, 28);
+				margin-top: 0;
+				@media (max-width: 1279.98px) {
+					@include fontRem(16, 400, 24);
+				}
+				@media (max-width: 767.98px) {
+					margin-top: 8px;
+					margin-bottom: 24px;
+				}
+			}
+		}
+		.designeInvesTonusPage2 {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			width: 100%;
+			gap: 220px;
+			padding-bottom: 52px;
+			& > div:first-child {
+				max-width: 520px;
+
+				& > p:first-child {
+					margin-top: 45px;
+				}
+				& > p:last-child {
+					margin-top: 32px;
+				}
+			}
+			@media (max-width: 1279.98px) {
+				& > div:first-child {
+					max-width: none;
+				}
+				& > div:last-child {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+				}
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 0;
+				padding-bottom: 42px;
+			}
+			@media (max-width: 767.98px) {
+				padding-bottom: 32px;
+			}
+			.designdashboardTitle {
+				@include fontRem(54, 700, 76);
+				margin-top: 32px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(28, 700, 39);
+					text-align: start;
+				}
+				@media (max-width: 767.98px) {
+				}
+			}
+			.invesTonusDetailsInfo {
+				max-width: 400px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(16, 400, 24);
+					max-width: 440px;
+					align-items: start;
+					text-align: start;
+				}
+				@media (max-width: 767.98px) {
+				}
+			}
+			.designInfo {
+				@include fontRem(20, 400, 28);
+				margin-top: 16px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(16, 400, 24);
+					margin-bottom: 32px;
+				}
+				@media (max-width: 767.98px) {
+					margin-bottom: 24px;
+				}
+			}
+		}
+		.designeInvesTonusPage3 {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding-bottom: 58px;
+			& > div:first-child {
+				max-width: 590px !important;
+				.designdashboardTitle {
+					@include fontRem(54, 700, 76);
+					margin-bottom: 28px;
+					@media (max-width: 1279.98px) {
+						@include fontRem(28, 700, 39);
+					}
+				}
+			}
+			& > div:last-child {
+				display: flex;
+				align-items: center;
+			}
+			@media (max-width: 1279.98px) {
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 120px;
+				& > div:first-child {
+					max-width: none !important;
+				}
+				& > div:last-child {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					min-width: 725px;
+				}
+			}
+			@media (max-width: 767.98px) {
+				padding-bottom: 64px;
+				img {
+					width: 100%;
+					height: 100%;
+					min-width: 225px;
+				}
+			}
+		}
+		.designeInvesTonusPage4 {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			width: 100%;
+			gap: 250px;
+			padding-bottom: 120px;
+			& > div:first-child {
+				max-width: 580px;
+			}
+			@media (max-width: 1279.98px) {
+				& > div:first-child {
+					max-width: none;
+				}
+				& > div:last-child {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+				}
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 0;
+				padding-bottom: 42px;
+			}
+			@media (max-width: 767.98px) {
+				padding-bottom: 32px;
+				.designeImages {
+					& > img {
+						width: 100%;
+						height: 103px;
+					}
+				}
+			}
+			.designdashboardTitle {
+				@include fontRem(54, 700, 76);
+				margin-top: 32px;
+				margin-bottom: 28px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(28, 700, 39);
+				}
+				@media (max-width: 767.98px) {
+				}
+			}
+			.invesTonusDetailsInfo {
+				max-width: 400px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(16, 400, 24);
+					max-width: 440px;
+					align-items: start;
+					text-align: start;
+				}
+				@media (max-width: 767.98px) {
+				}
+			}
+			.designInfo {
+				@include fontRem(20, 400, 28);
+				margin-top: 16px;
+				@media (max-width: 1279.98px) {
+					@include fontRem(16, 400, 24);
+					margin-bottom: 32px;
+				}
+				@media (max-width: 767.98px) {
+					margin-bottom: 24px;
+				}
+			}
+		}
+		.designeInvesTonusPage5 {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding-bottom: 100px;
+			& > div:first-child {
+				max-width: 490px;
+				& > p:first-child {
+					margin-bottom: 35px;
+				}
+			}
+			@media (max-width: 1279.98px) {
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 120px;
+				& > div:first-child {
+					max-width: none;
+				}
+				& > div:last-child {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					min-width: 725px;
+				}
+			}
+			@media (max-width: 767.98px) {
+				padding-bottom: 64px;
+				img {
+					width: 100%;
+					height: 100%;
+					min-width: 225px;
+				}
+			}
+		}
+		.designdashboardTitle {
+			@include fontRem(50, 700, 66);
+			margin-top: 32px;
+			@media (max-width: 1279.98px) {
+				@include fontRem(28, 700, 39);
+			}
+			@media (max-width: 767.98px) {
+				@include fontRem(22, 700, 30);
+			}
+		}
+		.designDashboardSubtitle {
+			@include fontRem(28, 400, 39);
+			margin-top: 30px;
+			margin-bottom: 22px;
+			@media (max-width: 1279.98px) {
+				@include fontRem(18, 400, 25);
+				margin-top: 12px;
+				margin-bottom: 8px;
+			}
+			@media (max-width: 767.98px) {
+				@include fontRem(16, 400, 22);
+				margin-top: 12px;
+				margin-bottom: 12px;
+			}
+		}
+		.designDetails {
+			@include fontRem(18, 400, 27);
+			max-width: 330px;
+			@media (max-width: 1279.98px) {
+				@include fontRem(16, 400, 24);
+				max-width: 380px;
+			}
+			@media (max-width: 767.98px) {
+				@include fontRem(14, 400, 19);
+			}
+		}
+		.designdetailsList {
+			margin-bottom: 38px;
+			@media (max-width: 1279.98px) {
+				margin-bottom: 8px;
+			}
+		}
+		.designInfo {
+			@include fontRem(20, 400, 28);
+			margin-top: 16px;
+			@media (max-width: 1279.98px) {
+				@include fontRem(16, 400, 24);
+				margin-bottom: 40px;
+			}
+			@media (max-width: 767.98px) {
+				margin-bottom: 24px;
+			}
+		}
+		ul {
+			margin-left: 25px;
+		}
+	}
+	.invesTonusDetailsInfo {
+		max-width: 400px;
+		@media (max-width: 1279.98px) {
+			@include fontRem(16, 400, 24);
+			max-width: 440px;
+		}
+	}
+	.designeImages {
+		img {
+			box-shadow: 0px 14px 36px rgba(14, 114, 102, 0.1);
+		}
+	}
+	.otherCases_title {
+		@include fontRem(56, 400);
+		font-family: 'MADE';
+		color: $black;
+		@media (max-width: 1279.98px) {
+			@include fontRem(32, 400, 42);
+		}
+	}
+}
+
+.colorsHeader {
+	margin: 58px 0 153px;
+	@media (max-width: 767.98px) {
+		margin: 30px 0 53px;
+	}
+	.title {
+		font-size: 54px;
+		@media (max-width: 767.98px) {
+			font-size: 28px;
+		}
+	}
+	.colorWrapper {
+		display: flex;
+		gap: 32px;
+		align-self: center;
+		margin-top: 39px;
+		@media (max-width: 767.98px) {
+			gap: 18px;
+			margin-top: 25px;
+		}
+		.colorBlock {
+			width: 284px;
+			height: 84px;
+			border-radius: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 32px;
+			color: $white;
+			@media (max-width: 767.98px) {
+				width: 177px;
+				height: 53px;
+				font-size: 18px;
+				border-radius: 8px;
+			}
+		}
+		.primary {
+			background: #6d6ae0;
+		}
+		.gray {
+			background: #575574;
+		}
+		.white {
+			background: #f5f4f9;
+			color: #575574;
+		}
+	}
+}
+

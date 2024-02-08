@@ -1,48 +1,75 @@
-@import "/src/styles/mixins";
-@import "/src/styles/pallete";
+@import '/src/styles/mixins';
+@import '/src/styles/pallete';
 
 .cardInvesTonus {
-  display: flex;
-  gap: 64px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  .containerCardInvesTonus {
-    width: 100%;
-    @media (max-width: 767.98px) {
-      width: 100%;
-      flex: 0 0 48%;
-    }
-  }
-  @media (max-width: 1279.98px) {
-    gap: 10px;
-    margin: 0;
-  }
-  @media (max-width: 767.98px) {
-    row-gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 16px;
-  }
+	display: flex;
+	gap: 64px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	.containerCardInvesTonus {
+		width: 100%;
+		@media (max-width: 767.98px) {
+			width: 100%;
+			flex: 0 0 48%;
+		}
+	}
+	@media (max-width: 1279.98px) {
+		gap: 10px;
+		margin: 0;
+	}
+	@media (max-width: 767.98px) {
+		row-gap: 16px;
+		flex-wrap: wrap;
+		margin-top: 16px;
+	}
 }
-.cardInvesTonusRu{
-  display: flex;
-  gap: 64px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  .containerCardInvesTonus {
-    width: 100%;
-    @media (max-width: 767.98px) {
-      display: flex;
-    }
-  }
-  @media (max-width: 1279.98px) {
-    gap: 10px;
-    margin: 0;
-  }
-  @media (max-width: 767.98px) {
-    row-gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 16px;
-  }
+
+.cardInvesTonusListInHive {
+	display: flex;
+	gap: 64px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	.containerCardInvesTonus {
+		width: 100%;
+		@media (max-width: 767.98px) {
+			width: 100%;
+			flex: 0 0 48%;
+		}
+		@media (max-width: 610px) {
+			flex: 0 0 100%;
+		}
+	}
+	@media (max-width: 1279.98px) {
+		gap: 10px;
+		margin: 0;
+	}
+	@media (max-width: 767.98px) {
+		row-gap: 16px;
+		flex-wrap: wrap;
+		margin-top: 16px;
+	}
+}
+.cardInvesTonusRu {
+	display: flex;
+	gap: 64px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	.containerCardInvesTonus {
+		width: 100%;
+		@media (max-width: 767.98px) {
+			display: flex;
+		}
+	}
+	@media (max-width: 1279.98px) {
+		gap: 10px;
+		margin: 0;
+	}
+	@media (max-width: 767.98px) {
+		row-gap: 16px;
+		flex-wrap: wrap;
+		margin-top: 16px;
+	}
 }
