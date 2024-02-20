@@ -2,7 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { INVES_TONUS_INFO_CARD, LIST_IN_HIVE_INFO_CARD } from '../../atoms/constantsAtoms';
+import { AILLUSION_INFO_CARS, INVES_TONUS_INFO_CARD, LIST_IN_HIVE_INFO_CARD } from '../../atoms/constantsAtoms';
 import { TINvesTonus } from '../../atoms/typesAtoms';
 import styles from './CardInvesTonus.module.scss';
 import { useDelayedChildrenAnimation } from '../../../hooks/useDelayedChildrenAnimation';
@@ -12,7 +12,10 @@ const InvesTonusInfoCard = dynamic(
   { ssr: false }
 );
 
-const CardInvesTonus: React.FC<{ forListInHive?: boolean }> = ({ forListInHive }) => {
+const CardInvesTonus: React.FC<{ forListInHive?: boolean; forAIllusion?: boolean }> = ({
+  forListInHive,
+  forAIllusion,
+}) => {
   const { containerVariants, itemVariants } = useDelayedChildrenAnimation();
   const { locale } = useRouter();
   return (
@@ -27,28 +30,29 @@ const CardInvesTonus: React.FC<{ forListInHive?: boolean }> = ({ forListInHive }
             viewport={{ once: true }}
             key="itesmRow"
           >
-            {(forListInHive ? LIST_IN_HIVE_INFO_CARD : INVES_TONUS_INFO_CARD).map(
-              (current: TINvesTonus) => {
-                return (
-                  <motion.div
-                    className={
-                      forListInHive
-                        ? styles.cardInvesTonusListInHive
-                        : styles.containerCardInvesTonus
-                    }
-                    variants={itemVariants}
-                    key={current.info}
-                  >
-                    <InvesTonusInfoCard
-                      key={current.title}
-                      title={current.title}
-                      info={current.info}
-                      icon={current.icon}
-                    />
-                  </motion.div>
-                );
-              }
-            )}
+            {(forListInHive
+              ? LIST_IN_HIVE_INFO_CARD
+              : forAIllusion
+              ? AILLUSION_INFO_CARS
+              : INVES_TONUS_INFO_CARD
+            ).map((current: TINvesTonus) => {
+              return (
+                <motion.div
+                  className={
+                    forListInHive ? styles.cardInvesTonusListInHive : styles.containerCardInvesTonus
+                  }
+                  variants={itemVariants}
+                  key={current.info}
+                >
+                  <InvesTonusInfoCard
+                    key={current.title}
+                    title={current.title}
+                    info={current.info}
+                    icon={current.icon}
+                  />
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
