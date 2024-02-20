@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import LongArrow from '../../../../components/svgs/LongArrow';
 import styles from './aIllusionHero.module.scss';
-import Button from '../../../../components/multiusable/button/Button';
 import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 
 const InvesTonusHero = () => {

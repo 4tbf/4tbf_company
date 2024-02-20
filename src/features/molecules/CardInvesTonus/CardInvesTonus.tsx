@@ -2,7 +2,11 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { AILLUSION_INFO_CARS, INVES_TONUS_INFO_CARD, LIST_IN_HIVE_INFO_CARD } from '../../atoms/constantsAtoms';
+import {
+  AILLUSION_INFO_CARS,
+  INVES_TONUS_INFO_CARD,
+  LIST_IN_HIVE_INFO_CARD,
+} from '../../atoms/constantsAtoms';
 import { TINvesTonus } from '../../atoms/typesAtoms';
 import styles from './CardInvesTonus.module.scss';
 import { useDelayedChildrenAnimation } from '../../../hooks/useDelayedChildrenAnimation';

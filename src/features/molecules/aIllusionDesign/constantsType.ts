@@ -1,6 +1,6 @@
 export type TINvesTonusDesigne = {
-  title: string;
-  info: string;
+  title?: string;
+  info?: string;
   subtitle?: string;
   detailsInfo?: string[];
   image: string;
