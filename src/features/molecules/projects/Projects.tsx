@@ -116,13 +116,13 @@ const Projects = () => {
                       {t('main.cases.title')}
                     </Text>
                     <Text as="h2" className={styles.projectTitle}>
-                      List in hive
+                      AILLUSION
                     </Text>
                     <Text as="p" className={styles.projectDescr}>
-                      {t('listInHive.home.subtitle')}
+                      {t('cases.aIllusion')}
                     </Text>
                     <Button
-                      onClick={() => router.push('/cases/listInHive')}
+                      onClick={() => router.push('/cases/aIllusion')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}
