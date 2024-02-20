@@ -57,6 +57,29 @@ export const LIST_IN_HIVE_INFO_CARD: TINvesTonus[] = [
   },
 ];
 
+export const AILLUSION_INFO_CARS: TINvesTonus[] = [
+  {
+    title: 'aIllusion.infoCard.industry',
+    info: 'aIllusion.infoCard.crypto',
+    icon: IndustryIconInvesTonus,
+  },
+  {
+    title: 'aIllusion.infoCard.duration',
+    info: 'aIllusion.infoCard.date',
+    icon: DurationIconInvesTonus,
+  },
+  {
+    title: 'aIllusion.infoCard.teamSize',
+    info: 'aIllusion.infoCard.teamNumber',
+    icon: TimSizeIconInvesTonus,
+  },
+  {
+    title: 'aIllusion.infoCard.technologies',
+    info: 'aIllusion.infoCard.devLenguage',
+    icon: TechnologiesIconInvesTonus,
+  },
+];
+
 export const PROCESS_DETAILS: TDetails[] = [
   {
     detailsPhase: 'process.detail.phase1',
