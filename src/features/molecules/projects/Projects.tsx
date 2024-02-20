@@ -101,9 +101,9 @@ const Projects = () => {
                       height={1400}
                       alt="List In Hive"
                       srcSet="
-                      /images/aIllusion/homeCardBig.png 1x,
-                      /images/aIllusion/homeCardMobile.png 2x,
-                      /images/aIllusion/homeCardMobile.png 3x"
+                      /images/aillusion/homeCardBig.png 1x,
+                      /images/aillusion/homeCardMobile.png 2x,
+                      /images/aillusion/homeCardMobile.png 3x"
                       sizes="(min-width: 1279.98px) 1447, 100vw"
                       loading="lazy"
                     />
