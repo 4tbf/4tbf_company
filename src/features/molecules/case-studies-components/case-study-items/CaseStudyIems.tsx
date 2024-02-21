@@ -72,58 +72,10 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                 </div>
               </motion.div>
             )}
-            {declude !== 'aIllusion' && (
-              <motion.div
-                className="col_"
-                key={mobile ? 'mobile.2' : '2'}
-                viewport={mobile ? {} : { once: true, amount: 0.8 }}
-                initial={mobile ? '' : 'offscreen'}
-                whileInView={mobile ? '' : 'onscreen'}
-                variants={mobile ? undefined : cardVariants}
-              >
-                <div className={styles.item}>
-                  <div className={styles.innerRow}>
-                    <div className="col_">
-                      <div className={styles.innerContent}>
-                        <div className={styles.imageWrapper}>
-                          <Image
-                            alt="AILLUSION"
-                            src={
-                              mobile
-                                ? '/images/aIllusion/aIllusionSmall.png'
-                                : '/images/aIllusion/aIllusionBig.png'
-                            }
-                            width={576}
-                            height={269}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col_">
-                      <div className={styles.itemContent}>
-                        <Text as="h2">AILLUSION</Text>
-                        <div className={styles.itemMarks}>
-                          <Text as="p">Vue.js</Text>
-                          <Text as="p">Java</Text>
-                        </div>
-                        <Text as="p" className={styles.itemDescr}>
-                          {t('cases.aIllusion')}
-                        </Text>
-                        <ArrowButton
-                          text={t('gotocase')}
-                          // blank
-                          href="/cases/aIllusion"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
             {declude !== 'nfcs' && (
               <motion.div
                 className="col_"
-                key={mobile ? 'mobile.3' : '3'}
+                key={mobile ? 'mobile.2' : '2'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}
@@ -172,7 +124,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'investonus' && (
               <motion.div
                 className="col_"
-                key={mobile ? 'mobile.4' : '4'}
+                key={mobile ? 'mobile.3' : '3'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}
@@ -217,7 +169,7 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
             {declude !== 'qr' && (
               <motion.div
                 className="col_"
-                key={mobile ? 'mobile.5' : '5'}
+                key={mobile ? 'mobile.4' : '4'}
                 viewport={mobile ? {} : { once: true, amount: 0.8 }}
                 initial={mobile ? '' : 'offscreen'}
                 whileInView={mobile ? '' : 'onscreen'}
@@ -253,6 +205,54 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                           {t('cases.qr')}
                         </Text>
                         <ArrowButton text={t('gotocase')} href="/cases/qr" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+            {declude !== 'aIllusion' && (
+              <motion.div
+                className="col_"
+                key={mobile ? 'mobile.5' : '5'}
+                viewport={mobile ? {} : { once: true, amount: 0.8 }}
+                initial={mobile ? '' : 'offscreen'}
+                whileInView={mobile ? '' : 'onscreen'}
+                variants={mobile ? undefined : cardVariants}
+              >
+                <div className={styles.item}>
+                  <div className={styles.innerRow}>
+                    <div className="col_">
+                      <div className={styles.innerContent}>
+                        <div className={styles.imageWrapper}>
+                          <Image
+                            alt="AILLUSION"
+                            src={
+                              mobile
+                                ? '/images/aIllusion/aIllusionSmall.png'
+                                : '/images/aIllusion/aIllusionBig.png'
+                            }
+                            width={576}
+                            height={269}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col_">
+                      <div className={styles.itemContent}>
+                        <Text as="h2">AILLUSION</Text>
+                        <div className={styles.itemMarks}>
+                          <Text as="p">Vue.js</Text>
+                          <Text as="p">Java</Text>
+                        </div>
+                        <Text as="p" className={styles.itemDescr}>
+                          {t('cases.aIllusion')}
+                        </Text>
+                        <ArrowButton
+                          text={t('gotocase')}
+                          // blank
+                          href="/cases/aIllusion"
+                        />
                       </div>
                     </div>
                   </div>
