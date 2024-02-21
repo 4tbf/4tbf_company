@@ -67,6 +67,7 @@ const InvesTonusHero = () => {
               key={t('invesTonus.arow')}
             >
               <Image
+                unoptimized
                 className="invesTonus_hero_image"
                 width={421}
                 height={368}
@@ -120,6 +121,7 @@ const InvesTonusHero = () => {
                         key="invesTonus.arow.7"
                       >
                         <Image
+                          unoptimized
                           className="invesTonus_hero_image"
                           width={577}
                           height={506}
@@ -170,6 +172,7 @@ const InvesTonusHero = () => {
                     key="invesTonus.arow.13"
                   >
                     <Image
+                      unoptimized
                       className="invesTonus_hero_image"
                       width={577}
                       height={506}
