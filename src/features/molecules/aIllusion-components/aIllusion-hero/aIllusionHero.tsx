@@ -1,12 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
-import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 import LongArrow from '../../../../components/svgs/LongArrow';
-import styles from './aIllusionHero.module.scss';
 import { useMediaQuery } from '../../../../hooks/useMediaQuery';
+import styles from './aIllusionHero.module.scss';
 
 const InvesTonusHero = () => {
   const tablet = useMediaQuery('(max-width: 1279.98px)');
@@ -71,7 +70,7 @@ const InvesTonusHero = () => {
                 className="invesTonus_hero_image"
                 width={421}
                 height={368}
-                src="/images/aIllusion/aIllusionPageMainSmall.png"
+                src="/images/aillusion/aIllusionPageMainSmall.png"
                 alt="page"
               />
             </motion.div>
@@ -125,7 +124,7 @@ const InvesTonusHero = () => {
                           className="invesTonus_hero_image"
                           width={577}
                           height={506}
-                          src="/images/aIllusion/aIllusionPageMain.png"
+                          src="/images/aillusion/aIllusionPageMain.png"
                           alt="page"
                         />
                       </motion.div>
@@ -176,7 +175,7 @@ const InvesTonusHero = () => {
                       className="invesTonus_hero_image"
                       width={577}
                       height={506}
-                      src="/images/aIllusion/aIllusionPageMain.png"
+                      src="/images/aillusion/aIllusionPageMain.png"
                       alt="page"
                     />
                   </motion.div>

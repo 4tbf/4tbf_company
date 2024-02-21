@@ -1,13 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
-import { AnimatePresence } from 'framer-motion';
-import { motion } from 'framer-motion';
-import styles from './CaseStudyIems.module.scss';
-import Text from '../../../atoms/text';
+import Image from 'next/image';
+import React from 'react';
 import ArrowButton from '../../../../components/multiusable/arrow-button/ArrowButton';
 import { useCardVariants } from '../../../../hooks/useCardVariants';
 import { useMediaQuery } from '../../../../hooks/useMediaQuery';
+import Text from '../../../atoms/text';
+import styles from './CaseStudyIems.module.scss';
 
 interface ICaseStudiItems {
   declude?: 'qr' | 'aIllusion' | 'investonus' | 'nfcs' | 'none' | 'listInHive';
@@ -229,8 +228,8 @@ const CaseStudyIems: React.FC<ICaseStudiItems> = ({ declude = 'none' }) => {
                             alt="AILLUSION"
                             src={
                               mobile
-                                ? '/images/aIllusion/aIllusionSmall.png'
-                                : '/images/aIllusion/aIllusionBig.png'
+                                ? '/images/aillusion/aIllusionSmall.png'
+                                : '/images/aillusion/aIllusionBig.png'
                             }
                             width={576}
                             height={269}
