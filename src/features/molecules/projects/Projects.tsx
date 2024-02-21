@@ -99,57 +99,6 @@ const Projects = () => {
                     <img
                       width={1447}
                       height={1400}
-                      alt="List In Hive"
-                      srcSet="
-                      /images/aillusion/homeCardBig.png 1x,
-                      /images/aillusion/homeCardMobile.png 2x,
-                      /images/aillusion/homeCardMobile.png 3x"
-                      sizes="(min-width: 1279.98px) 1447, 100vw"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-
-                <div className="col_">
-                  <div className={styles.aboutProjectInfo}>
-                    <Text as="p" className={styles.projectName}>
-                      {t('main.cases.title')}
-                    </Text>
-                    <Text as="h2" className={styles.projectTitle}>
-                      AILLUSION
-                    </Text>
-                    <Text as="p" className={styles.projectDescr}>
-                      {t('cases.aIllusion')}
-                    </Text>
-                    <Button
-                      onClick={() => router.push('/cases/aIllusion')}
-                      type="button"
-                      variant="dark"
-                      children={t('main.cases.goToCas')}
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-            <motion.div
-              className={styles.projectsContainer}
-              onMouseEnter={() => setHoveredProject('3')}
-              onMouseLeave={() => setHoveredProject(null)}
-              key={mobile ? '3.mobile' : '3'}
-              viewport={mobile ? {} : { once: true, amount: 0.8 }}
-              initial={mobile ? '' : 'offscreen'}
-              whileInView={mobile ? '' : 'onscreen'}
-            >
-              <motion.div
-                className={styles.projectsRow}
-                variants={mobile ? undefined : cardVariants}
-                key={mobile ? '3.1.mobile' : '3.1'}
-              >
-                <div className="col_">
-                  <div className={styles.projecstsImage}>
-                    <img
-                      width={1447}
-                      height={1400}
                       alt="project-nfc"
                       srcSet="
                       /images/home-projects/nfc-image.webp 1x,
@@ -184,9 +133,9 @@ const Projects = () => {
             </motion.div>
             <motion.div
               className={styles.projectsContainer}
-              onMouseEnter={() => setHoveredProject('4')}
+              onMouseEnter={() => setHoveredProject('3')}
               onMouseLeave={() => setHoveredProject(null)}
-              key={mobile ? '4.mobile' : '4'}
+              key={mobile ? '3.mobile' : '3'}
               viewport={mobile ? {} : { once: true, amount: 0.8 }}
               initial={mobile ? '' : 'offscreen'}
               whileInView={mobile ? '' : 'onscreen'}
@@ -194,7 +143,7 @@ const Projects = () => {
               <motion.div
                 className={styles.projectsRow}
                 variants={mobile ? undefined : cardVariants}
-                key={mobile ? '4.2.mobile' : '4.2'}
+                key={mobile ? '3.2.mobile' : '3.2'}
               >
                 <div className="col_">
                   <div className={styles.projecstsImage}>
@@ -235,9 +184,9 @@ const Projects = () => {
             </motion.div>
             <motion.div
               className={styles.projectsContainer}
-              onMouseEnter={() => setHoveredProject('5')}
+              onMouseEnter={() => setHoveredProject('4')}
               onMouseLeave={() => setHoveredProject(null)}
-              key={mobile ? '5.mobile' : '5'}
+              key={mobile ? '4.mobile' : '4'}
               viewport={mobile ? {} : { once: true, amount: 0.8 }}
               initial={mobile ? '' : 'offscreen'}
               whileInView={mobile ? '' : 'onscreen'}
@@ -245,7 +194,7 @@ const Projects = () => {
               <motion.div
                 className={styles.projectsRow}
                 variants={mobile ? undefined : cardVariants}
-                key={mobile ? '5.1.mobile' : '5.1'}
+                key={mobile ? '4.1.mobile' : '4.1'}
               >
                 <div className="col_">
                   <div className={styles.projecstsImage}>
@@ -276,6 +225,57 @@ const Projects = () => {
                     </Text>
                     <Button
                       onClick={() => router.push('/cases/qr')}
+                      type="button"
+                      variant="dark"
+                      children={t('main.cases.goToCas')}
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              className={styles.projectsContainer}
+              onMouseEnter={() => setHoveredProject('5')}
+              onMouseLeave={() => setHoveredProject(null)}
+              key={mobile ? '5.mobile' : '5'}
+              viewport={mobile ? {} : { once: true, amount: 0.8 }}
+              initial={mobile ? '' : 'offscreen'}
+              whileInView={mobile ? '' : 'onscreen'}
+            >
+              <motion.div
+                className={styles.projectsRow}
+                variants={mobile ? undefined : cardVariants}
+                key={mobile ? '5.1.mobile' : '5.1'}
+              >
+                <div className="col_">
+                  <div className={styles.projecstsImage}>
+                    <img
+                      width={1447}
+                      height={1400}
+                      alt="List In Hive"
+                      srcSet="
+                      /images/aIllusion/homeCardBig.png 1x,
+                      /images/aIllusion/homeCardMobile.png 2x,
+                      /images/aIllusion/homeCardMobile.png 3x"
+                      sizes="(min-width: 1279.98px) 1447, 100vw"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <div className="col_">
+                  <div className={styles.aboutProjectInfo}>
+                    <Text as="p" className={styles.projectName}>
+                      {t('main.cases.title')}
+                    </Text>
+                    <Text as="h2" className={styles.projectTitle}>
+                      AILLUSION
+                    </Text>
+                    <Text as="p" className={styles.projectDescr}>
+                      {t('cases.aIllusion')}
+                    </Text>
+                    <Button
+                      onClick={() => router.push('/cases/aIllusion')}
                       type="button"
                       variant="dark"
                       children={t('main.cases.goToCas')}

@@ -64,6 +64,7 @@ const AIllusionDesign = () => {
 
                   <div className={styles.designeImages}>
                     <Image
+                      unoptimized
                       className="invesTonus_designe_image"
                       width={current.with}
                       height={current.height}
