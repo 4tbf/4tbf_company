@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { memo, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { AnimatePresence, motion } from 'framer-motion';
-import styles from './Projects.module.scss';
-import Text from '../../atoms/text';
+import { memo, useState } from 'react';
 import Button from '../../../components/multiusable/button/Button';
-import { useMediaQuery } from '../../../hooks/useMediaQuery';
 import { useBackbroundColor } from '../../../hooks/useBackgroundColor';
 import { useCardVariants } from '../../../hooks/useCardVariants';
+import { useMediaQuery } from '../../../hooks/useMediaQuery';
+import Text from '../../atoms/text';
+import styles from './Projects.module.scss';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -254,9 +254,9 @@ const Projects = () => {
                       height={1400}
                       alt="List In Hive"
                       srcSet="
-                      /images/aIllusion/homeCardBig.png 1x,
-                      /images/aIllusion/homeCardMobile.png 2x,
-                      /images/aIllusion/homeCardMobile.png 3x"
+                      /images/aillusion/homeCardBig.png 1x,
+                      /images/aillusion/homeCardMobile.png 2x,
+                      /images/aillusion/homeCardMobile.png 3x"
                       sizes="(min-width: 1279.98px) 1447, 100vw"
                       loading="lazy"
                     />
